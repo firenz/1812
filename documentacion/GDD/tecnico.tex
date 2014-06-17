@@ -1,0 +1,42 @@
+En este apartado detallaremos las partes relacionadas con el desarrollo del videojuego como software, tales como para qué plataforma se va a desarrollar, y cómo y con qué se va a desarrollar \nombrejuego.
+
+    \section{Hardware objetivo}
+    \nombrejuego al ser una aventura gráfica, estará enfocado principalmente al PC. Tendrá que ser jugado con teclado y ratón. Sin embargo, si hubiera tiempo durante el desarrollo, no se descarta una conversión a Android.
+    
+    \section{Hardware y Software de desarrollo}
+    Algunas veces, pueden ocurrir incidencias debido a las peculiaridades del hardware y software concretos con el que se desarrolla un juego. Por lo tanto, siempre es recomendable escribir las especificaciones tanto de hardware como de software en los que se desarrollan los videojuegos. En este caso, \nombrejuego se desarrollará en un PC con las siguientes especificaciones técnicas:
+    
+    \begin{itemize}
+    \item Procesador: Intel(R) Core(TM) i7-2700K CPU @ 3.50GHz (8 CPUs), ~3.5GHz
+    \item Memoria: 16384 MB RAM
+    \item Tarjeta Gráfica: NVIDIA GeForce GTX 570 1GB
+    \item Sistema Operativo: Windows 7 Enterprise 64 bis (6.1, compilación 7601)
+    \end{itemize}
+    
+    \section{Procedimientos y estándares de desarrollo}
+    Un proceso para el desarrollo de software, también denominado ciclo de vida del desarrollo de software es una estructura aplicada al desarrollo de un producto de software, en este caso un videojuego. Hay varios modelos a seguir para el establecimiento de un proceso para el desarrollo de software, cada uno de los cuales describe un enfoque diferente para diferentes actividades que tienen lugar durante el proceso. 
+    
+    En el caso de \nombrejuego, el proceso que se va a seguir es el de Modelo de desarrollo en Cascada. Este modelo se caracteriza en que se ordenan las etapas del proceso para el desarrollo de software, de tal forma que el inicio de cada etapa debe esperar a la finalización de la etapa anterior. Al final de cada etapa, el modelo está diseñado para llevar a cabo una revisión final, que se encarga de determinar si el proyecto está listo para avanzar a la siguiente fase.
+    
+    Las etapas son las siguientes:
+    \begin{enumerate}
+    \item \negrita{Análisis}: En esta fase se analizan las necesidades de los usuarios finales del software para determinar qué objetivos debe cubrir. De esta fase surge una memoria llamada documento de especificación de requisitos, que contiene la especificación completa de lo que debe hacer el sistema sin entrar en detalles internos.
+Es importante señalar que en esta etapa se debe consensuar todo lo que se requiere del sistema y será aquello lo que seguirá en las siguientes etapas, no pudiéndose requerir nuevos resultados a mitad del proceso de elaboración del software de una manera.
+    
+    \item \negrita{Diseño}: Descompone y organiza el sistema en elementos que puedan elaborarse por separado, aprovechando las ventajas del desarrollo en equipo. Como resultado surge el SDD (Documento de Diseño del Software), que contiene la descripción de la estructura relacional global del sistema y la especificación de lo que debe hacer cada una de sus partes, así como la manera en que se combinan unas con otras.
+Es conveniente distinguir entre diseño de alto nivel o arquitectónico y diseño detallado. El primero de ellos tiene como objetivo definir la estructura de la solución (una vez que la fase de análisis ha descrito el problema) identificando grandes módulos (conjuntos de funciones que van a estar asociadas) y sus relaciones. Con ello se define la arquitectura de la solución elegida. El segundo define los algoritmos empleados y la organización del código para comenzar la implementación.
+    \item \negrita{Implementación}: Es la fase en donde se implementa el código fuente, haciendo uso de prototipos así como de pruebas y ensayos para corregir errores.
+Dependiendo del lenguaje de programación y su versión se crean las bibliotecas y componentes reutilizables dentro del mismo proyecto para hacer que la programación sea un proceso mucho más rápido.
+
+    \item \negrita{Pruebas}: Al final de la implementación, normalmente hay un proceso de verificación o de pruebas. De manera que los elementos, ya programados, se ensamblan para componer el sistema y se comprueba que funciona correctamente y que cumple con los requisitos.
+    
+    \item \negrita{Mantenimiento}: Una vez terminado el desarrollo del software, hay una última fase de duración indefinida que es la de mantenimiento. En esta simplemente es que durante el ciclo de vida útil del software, hay que reparar errores que se hayan pasado en la etapa de pruebas o irle añadiendo nuevas funcionalidades que el público objetivo pida y así alargar su vida útil.
+    \end{enumerate}
+    
+    Si bien esta manera de desarrollar no puede ser la más óptima, pues en cuanto se descubra un fallo que pasó desapercibido en una etapa y haya que modificarlo, hay que invertir mucho esfuerzo y parar el desarrollo. Pero es la más sencilla para proyectos de poca envergadura y que tengan bajo coste. Además de fomentar las buenas prácticas al poner un orden a la hora del desarrollo, y hacer que pensemos cómo hacer las cosas antes de llevarlas a cabo. También es una buena opción para los proyectos que están orientados a documentos como el de \nombrejuego, por ello, este es el procedimiento de desarrollo elegido. 
+    
+    \section{\emph{Game Engine}}
+    \programa{Unity3D} será el \emph{Game Engine} con el que se desarrollará \nombrejuego. Los motivos son porque es uno de los \emph{Game Engines} más usados en la industria del videojuego independiente por su capacidad de prototipado rápido y de bajo coste, además de ser uno de los que más gente usa para iniciarse en el mundo del desarrollo de los videojuegos. 
+    
+    \section{Lenguaje de programación}
+    Unity3D acepta C\#, JavaScript y Boo como lenguajes de programación para sus scripts. \nombrejuego se desarrollará por C\# por sus similitudes con Java y C++, lenguajes enseñados en la carrera. Además de poseer una estructura clara para poder realizar Programación Orientada a Objetos (POO) y hacer uso de Estructuras de Datos. 

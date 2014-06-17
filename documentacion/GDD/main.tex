@@ -1,0 +1,117 @@
+\documentclass[a4paper,11pt,titlepage]{book}
+%\usepackage{filecontents}
+%\usepackage[style=authoryear,backend=bibtex]{biblatex}
+% Necesario para poder hacer funcionar la bibliografia hecha en BibTeX
+
+\usepackage{./estilos/estiloBase} % Basicamente son todas las
+                                  % librerias usadas. En caso de que
+                                  % falten librerias se van añadiendo
+                                  % al fichero.
+\usepackage{./estilos/colores}  % Algunos colores ya generados, para
+                                % los algunos estilos más avanzados.
+\usepackage{./estilos/comandos} % Algunos comandos personalizados
+
+\graphicspath{{./imagenes/}} % Indicamos la ruta donde se encuentran
+                             % las imagenes, para ahorrarnos la ruta
+                             % completa, y solo modificar aquí si en
+                             % un momento dado lo movemos
+
+%---------------------------------------------------------------------------------
+
+\title{{\Huge \bf 1812: La aventura}\\{\large \em Documento de diseño}\\{\normalsize Versión 0.1}}
+\author{Alicia Guardeño Albertos}
+\date{\today}
+
+\begin{document}
+
+
+% Renombramos las figuras y las tablas
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listfigurename}{Indice de figuras}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Indice de tablas}
+
+\vfill
+\maketitle
+\vfill
+%\newpage
+%\frontmatter
+    \tableofcontents
+    %\listoffigures
+    %\listoftables
+
+\setlength{\parskip}{\baselineskip} %Lo pongo aqui para evitar el salto de línea en los índices
+%\mainmatter
+
+%\newpage
+\chapter{Historial de cambios}
+\label{chap:historial}
+\input{historial.tex}
+
+%\newpage
+\chapter{Introducción}%Game overview
+\label{chap:introduccion}
+\input{introduccion.tex}
+
+%\newpage        
+\chapter{Jugabilidad y mecánicas}
+\label{chap:jugabilidad}
+\input{jugabilidad.tex}
+
+%\newpage            
+\chapter{Interfaz}
+\label{chap:interfaz}
+\input{interfaz.tex}
+
+%\newpage        
+\chapter{Argumento y personajes}%Story Setting and Character
+\label{chap:argumento}
+\input{argumento.tex}
+
+%\newpage        
+\chapter{Niveles}
+\label{chap:niveles}
+\input{niveles.tex}
+
+%%\newpage
+%\chapter{Interfaz}
+%
+%    \section{Sistema visual}
+%        \subsection{HUD}
+%        \subsection{Menús}
+%        
+%    \section{Controles del sistema}
+%        
+%        \section{Audio}
+%        \subsection{Música}
+%        \subsection{Efectos de sonido}
+%
+
+%\newpage
+%\chapter{Inteligencia Artificial}
+
+%    \section{ \emph{Non Player Characters} (NPCs)}
+        
+%    \section{Jugador y sistema de colisiones}
+
+
+        
+%\newpage
+\chapter{Apartado técnico}
+\label{chap:tecnico}
+\input{tecnico.tex}
+
+%\newpage    
+\chapter{Apartado artístico}
+\label{chap:artistico}
+\input{artistico.tex}
+
+    
+%\newpage    
+\chapter{Apéndice}
+\label{chap:apendice}
+\input{apendice.tex}
+   
+
+
+\end{document}
