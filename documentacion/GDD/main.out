@@ -1,6 +1,6 @@
 \BOOKMARK [0][-]{chapter.1}{Historial de cambios}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Introducci\363n}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Concepto del videojuego}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.1}{Sinopsis}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{G\351nero}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Prop\363sito y p\372blico objetivo}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{Resumen del flujo de juego}{chapter.2}% 6
@@ -21,30 +21,30 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Objetos}{section.3.3}% 21
 \BOOKMARK [2][-]{subsection.3.3.3}{Acciones}{section.3.3}% 22
 \BOOKMARK [1][-]{section.3.4}{Inteligencia Artificial}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.4.1}{Personajes No Jugables \(PNJs\) o Non Player Characters \(NPCs\)}{section.3.4}% 24
-\BOOKMARK [2][-]{subsection.3.4.2}{Jugador y sistema de colisiones}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.1}{C\341lculo de la ruta del movimiento del personaje principal}{section.3.4}% 24
+\BOOKMARK [2][-]{subsection.3.4.2}{Personajes No Jugables \(PNJs\) o Non Player Characters \(NPCs\)}{section.3.4}% 25
 \BOOKMARK [1][-]{section.3.5}{F\355sicas}{chapter.3}% 26
-\BOOKMARK [0][-]{chapter.4}{Interfaz}{}% 27
-\BOOKMARK [1][-]{section.4.1}{HUD \(Heads-Up Display\)}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.2}{Diagrama de flujo}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.3}{Descripciones de las pantallas}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.3.1}{Men\372 principal}{section.4.3}% 31
-\BOOKMARK [2][-]{subsection.4.3.2}{Cargar Partida}{section.4.3}% 32
-\BOOKMARK [2][-]{subsection.4.3.3}{Cr\351ditos}{section.4.3}% 33
-\BOOKMARK [2][-]{subsection.4.3.4}{Men\372 Opciones}{section.4.3}% 34
-\BOOKMARK [2][-]{subsection.4.3.5}{Mapa}{section.4.3}% 35
-\BOOKMARK [2][-]{subsection.4.3.6}{Partidas guardadas dentro del juego}{section.4.3}% 36
-\BOOKMARK [2][-]{subsection.4.3.7}{Gadipedia}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.8}{Notas}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.9}{Ajustes}{section.4.3}% 39
-\BOOKMARK [2][-]{subsection.4.3.10}{Salir}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.3.5.1}{Sistema de colisiones}{section.3.5}% 27
+\BOOKMARK [0][-]{chapter.4}{Interfaz}{}% 28
+\BOOKMARK [1][-]{section.4.1}{HUD \(Heads-Up Display\)}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Diagrama de flujo}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.3}{Descripciones de las pantallas}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.3.1}{Men\372 principal}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.2}{Cargar Partida}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.3}{Cr\351ditos}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.4}{Men\372 Opciones}{section.4.3}% 35
+\BOOKMARK [2][-]{subsection.4.3.5}{Mapa}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.6}{Partidas guardadas dentro del juego}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.7}{Gadipedia}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.8}{Notas}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.9}{Ajustes}{section.4.3}% 40
 \BOOKMARK [0][-]{chapter.5}{Argumento y personajes}{}% 41
 \BOOKMARK [1][-]{section.5.1}{Argumento y narrativa}{chapter.5}% 42
 \BOOKMARK [2][-]{subsection.5.1.1}{Trasfondo argumental}{section.5.1}% 43
 \BOOKMARK [2][-]{subsection.5.1.2}{Elementos clave}{section.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.1.3}{Secuencias cinem\341ticas}{section.5.1}% 45
 \BOOKMARK [1][-]{section.5.2}{Mundo del juego}{chapter.5}% 46
-\BOOKMARK [2][-]{subsection.5.2.1}{Estilo visual general}{section.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.2.1}{Estilo general}{section.5.2}% 47
 \BOOKMARK [2][-]{subsection.5.2.2}{Primer escenario}{section.5.2}% 48
 \BOOKMARK [2][-]{subsection.5.2.3}{Segundo escenario}{section.5.2}% 49
 \BOOKMARK [1][-]{section.5.3}{Personajes}{chapter.5}% 50

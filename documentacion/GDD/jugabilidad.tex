@@ -14,7 +14,7 @@ En esta sección entraremos más en detalle en lo que a las mecánicas de \nombr
         \subsection{Flujo de juego}%Play flow
         A lo largo de esta sección, se detallará el transcurso de una partida típica a \nombrejuego. Se comentarán los pasos que ha de seguir el \emph{Jugador} desde el arranque del juego hasta completar un puzzle y pasar al siguiente nivel. De esta forma, desentrañamos el funcionamiento exacto del juego. Más adelante se definen las mecánicas y el contenido de cada pantalla.
         
-        El \emph{Jugador} inicia \nombrejuego y se le presenta el \emph{Menú Principal}. Si desea iniciar una partida el \emph{Jugador} seleccionará la opción \emph{Partida nueva}, o en el caso de tener una partida ya guardada, a la opción \emph{Cargar partida} (para saber más de los menús, véase la sección ~\ref{sec:menus}).
+        El \emph{Jugador} inicia \nombrejuego y se le presenta el \emph{Menú Principal}. Si desea iniciar una partida el \emph{Jugador} seleccionará la opción \emph{Partida nueva}, o en el caso de tener una partida ya guardada, a la opción \emph{Cargar partida} (para saber más de los menús, véase la sección ~\ref{sec:diagrama-flujo-menus}).
         
         Una vez dentro del juego, veremos al personaje principal en un escenario. Dentro del cual, podremos interactuar con el escenario haciendo \emph{clicks} para ver o interactuar con sus elementos: ver lo que son, hablar con otros personajes, coger objetos, etc. Si estamos al inicio de un escenario nuevo, se sucederá una escena cinemática (de forma en la que el protagonista se mueva y hable sin requerir ninguna acción por parte del \emph{Jugador}), y un personaje de dicho escenario nos planteará un puzzle a resolver si queremos recibir una pista sobre el paradero del profesor. Según cómo hagamos dichas interacciones resolveremos el puzzle a resolver en dicho escenario y obtendremos un nuevo escenario a donde ir.
     
@@ -23,7 +23,7 @@ En esta sección entraremos más en detalle en lo que a las mecánicas de \nombr
         
         \begin{figure}[H] 
 			\begin{center}
-				\includegraphics[scale=0.45]{controles.png}
+				\includegraphics[scale=0.5]{controles.png}
 			\end{center}
 			\caption{Controles del juego}
 			\label{fig:controles}
@@ -36,7 +36,7 @@ En esta sección entraremos más en detalle en lo que a las mecánicas de \nombr
         En esta sección definiremos cómo se moverá el personaje principal que maneja el \emph{Jugador}, además de otros movimientos tales como trasladar un objeto de sitio.
             
             \subsubsection{Movimiento general}
-            Para el movimiento general del personaje principal, el jugador solo se limitará en hacer click en alguna zona donde no haya obstáculos. En el caso de que hubiera obstáculos pero fuera posible llegar desde una ruta que no sea en línea recta, el personaje principal seguirá una ruta realizada con un algoritmo A\* o similar. De esta manera el algoritmo calcula la ruta más corta desde donde esta nuestro personaje principal hasta el punto donde queremos llevarlo, y finalmente lo ejecuta para llevar a cabo el movimiento.
+            Para el movimiento general del personaje principal, el jugador solo se limitará en hacer click en alguna zona donde no haya obstáculos o encima de un objeto que se pueda examinar, de forma que el personaje principal se acerque para examinarlo más detenidamente.
             
             \subsubsection{Otros movimientos}
             Los otros personajes, no se moverán o simplemente se moverán unos pasos, siento su ruta únicamente una línea recta de escasa distancia.
@@ -72,13 +72,26 @@ En esta sección entraremos más en detalle en lo que a las mecánicas de \nombr
 	\section{Inteligencia Artificial}
 	En la mayoría de los videojuegos es uno de los puntos más importante, pues ella rige el comportamiento de todos los personajes, e incluso de objetos. Un enemigo que sigue una ruta y te persiga si te ve, un semáforo que cambia de luces y los coches se mueven con ello, todo esto y mucho más es gracias a las inteligencia artificial. Existen muchos y variados algoritmos para realizar distintos comportamientos dependiendo de si buscas que un personaje haga una ruta, una estrategia, o que actúen a modo de colmena los personajes que aparecen el juego, y más aún que desconozco. Sin embargo, en las aventuras gráficas no se suele hacer un gran uso de estas pues los personajes no suelen moverse de su sitio, y las conversaciones son lineales. Pero si hay un punto que a veces usa una inteligencia artificial, cuando queremos que el personaje que lleva el \emph{Jugador} se mueva en un escenario con obstáculos.
         
+            \subsection{Cálculo de la ruta del movimiento del personaje principal}
+             Cuando el \emph{Jugador} quiera mover al personaje principal y haga \emph{click} en el escenario para ello. Pueden pasar varias cosas según la distancia que hay entre el punto al que el \emph{Jugador} quiere ir, y si hay obstáculos en el camino para llegar a ese punto.
+             
+             Si la distancia fuera corta, en línea recta y sin obstáculos, el movimiento se calcularía como una línea recta directa.
+             
+             En el caso de que hubiera obstáculos pero fuera posible llegar desde una ruta que no sea en línea recta, el personaje principal seguirá una ruta realizada con un algoritmo A\* o similar. De esta manera calcula la ruta más corta desde donde esta nuestro personaje principal hasta el punto donde queremos llevarlo, y finalmente lo ejecuta para llevar a cabo el movimiento.
+            
             \subsection{Personajes No Jugables (PNJs) o \emph{Non Player Characters} (NPCs)}
         	Si algunas veces en las aventuras gráficas aparecen PNJs enemigos que persiguen al Protagonista o amistosos que estén dando vueltas por una ruta prefijada, en el caso de \nombrejuego no va a ser así. Los PNJs se quedarán en un sitio prefijado sin moverse y solo interactuarán con el Protagonista para iniciar una conversación. 
-        	
-            \subsection{Jugador y sistema de colisiones}
-            
-            
             
 	%\newpage
 	    \section{Físicas}
-	    El juego poseerá físicas en 2D, osease, colisiones entre planos. De esta manera, el jugador solo podrá mover su personaje sobre ciertas áreas, saber cuándo estamos pulsando encima de un objeto o personaje con el que podemos interactuar, poder acceder al menú gracias a un menú gráfico, etc.
+	    El juego poseerá físicas en 2D, osease, colisiones entre planos. De esta manera, el jugador solo podrá mover su personaje sobre ciertas áreas, saber cuándo estamos pulsando encima de un objeto o personaje con el que podemos interactuar, poder acceder al menú gracias a un menú gráfico, etc. No poseerá elementos gravitacionales y toda colisión tendrá valores discretos (no analógicos) para indicar si se ha producido una colisión o no.
+	    
+	    	\subsection{Sistema de colisiones}
+	    	El sistema de colisiones será por cajas poligonales, en las que al colisionar unas con otras no podrán atravesarse mutuamente. Los elementos del juego que poseerán una caja de colisiones son:
+	    	
+	    	\begin{itemize}
+	    	\item \negrita{Personaje principal:} Tendrá una caja de colisión en la parte inferior del \emph{sprite}. Esto es debido a que la parte superior de este puede superponerse parcialmente a un objeto que posea una caja de colisión y esté situado en un plano de fondo. Un ejemplo para esclarecer esto: el personaje principal puede estar encima de una pared parcialmente, pero sus pies no para evitar que camine sobre ella. A su vez el protagonista no podrá atravesar elementos en primer plano bajo ningún concepto, pero si puede aparecer detrás de ellos.
+	    	\item \negrita{PNJs:} Su caja de colisión será idéntica a la del personaje principal. Pero esta servirá para que cuando el ratón se ponga encima del PNJ, el sistema lo detectará y contará como que el personaje principal puede hablar con dicho PNJ. El icono del ratón cambiará para mostrar que se puede realizar dicha acción.
+	    	\item \negrita{Objetos:} Los objetos tendrán otra caja de colisión que no podrá atravesarse, pero esta estará más enfocada a que colisione con el ratón. Pues cuando este se ponga encima del objeto, se detectará la colisión y contará como que se puede examinar o interactuar con dicho objeto. El icono del ratón cambiará para mostrar que se puede realizar dicha acción.
+	    	\item \negrita{Obstáculos:} Poseerán cajas de colisiones en la que su única función será el de no poder ser atravesados por el personaje principal. 
+	    	\end{itemize}

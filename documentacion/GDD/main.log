@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  18 JUN 2014 01:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  19 JUN 2014 21:35
 entering extended mode
 **main.tex
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.tex
@@ -944,60 +944,11 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (C:\Users\Alicia\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
-)))
-(C:\Users\Alicia\AppData\Roaming\MiKTeX\2.9\tex\latex\ulem\ulem.sty
-\UL@box=\box45
-\UL@hyphenbox=\box46
-\UL@skip=\skip56
-\UL@hook=\toks47
-\UL@height=\dimen198
-\UL@pe=\count147
-\UL@pixel=\dimen199
-\ULC@box=\box47
-Package: ulem 2012/05/18
-\ULdepth=\dimen200
-)
-(C:\Users\Alicia\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.sty
-Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box48
-\beforetitleunit=\skip57
-\aftertitleunit=\skip58
-\ttl@plus=\dimen201
-\ttl@minus=\dimen202
-\ttl@toksa=\toks48
-\titlewidth=\dimen203
-\titlewidthlast=\dimen204
-\titlewidthfirst=\dimen205
-)
-(C:\Users\Alicia\AppData\Roaming\MiKTeX\2.9\tex\latex\blindtext\blindtext.sty
-Package: blindtext 2012/01/06 V2.0 blindtext-Package
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
-)
-\c@blindtext=\count148
-\c@Blindtext=\count149
-\c@blind@countparstart=\count150
-\blind@countxx=\count151
-\blindtext@numBlindtext=\count152
-\blind@countyy=\count153
-\c@blindlist=\count154
-\c@blindlistlevel=\count155
-\c@blindlist@level=\count156
-\blind@listitem=\count157
-\c@blind@listcount=\count158
-\c@blind@levelcount=\count159
-\blind@mathformula=\count160
-\blind@Mathformula=\count161
-\c@blind@randomcount=\count162
-\c@blind@randommax=\count163
-\c@blind@pangramcount=\count164
-\c@blind@pangrammax=\count165
-))
+))))
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\estilos\colores.sty)
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\estilos\comandos.sty
-\c@defin=\count166
-\savedwidth=\skip59
+\c@defin=\count147
+\savedwidth=\skip56
 )
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -1021,19 +972,19 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (C:\Users\Alicia\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count167
-\scratchdimen=\dimen206
-\scratchbox=\box49
-\nofMPsegments=\count168
-\nofMParguments=\count169
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count170
-\MPscratchDim=\dimen207
-\MPnumerator=\count171
-\makeMPintoPDFobject=\count172
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count148
+\scratchdimen=\dimen198
+\scratchbox=\box45
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen199
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks48
 )
-\AtBeginShipoutBox=\box50
+\AtBeginShipoutBox=\box46
 Package hyperref Info: Link coloring ON on input line 25.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1041,7 +992,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count173
+\c@section@level=\count154
 )
 LaTeX Info: Redefining \ref on input line 25.
 LaTeX Info: Redefining \pageref on input line 25.
@@ -1085,7 +1036,7 @@ LaTeX Info: Redefining \nameref on input line 25.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count174
+\c@lstlisting=\count155
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1110,14 +1061,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
- [3])
+ [3] [4])
 \tf@toc=\write5
- [4]
-Cap\'{\i }tulo 1.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\historial.tex)
-[5
 
-] [6
+[5] [6
+
+] (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.lof)
+\tf@lof=\write6
+
+[7] [8
+
+]
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\historial.tex)
+[9] [10
 
 ]
 Cap\'{\i }tulo 2.
@@ -1125,118 +1084,176 @@ Cap\'{\i }tulo 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
 
-[7]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
-) [8]
-Cap\'{\i }tulo 3.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\jugabilidad.tex
-[9
-
-] <./imagenes/controles.png, id=464, 402.50375pt x 327.2225pt>
-File: ./imagenes/controles.png Graphic file (type png)
-
-<use ./imagenes/controles.png>
-Package pdftex.def Info: ./imagenes/controles.png used on input line 26.
-(pdftex.def)             Requested size: 181.125pt x 147.24876pt.
- [10 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/controle
-s.png>]
-Underfull \vbox (badness 2035) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 75.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
 
 [12]) [13] [14
 
 ]
-Cap\'{\i }tulo 4.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\interfaz.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 3.
+Cap\'{\i }tulo 3.
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\jugabilidad.tex
+Underfull \vbox (badness 1082) has occurred while \output is active []
 
-<./imagenes/diagrama_flujo_menu.png, id=490, 1093.08376pt x 804.00375pt>
+ [15]
+<./imagenes/controles.png, id=514, 421.575pt x 327.2225pt>
+File: ./imagenes/controles.png Graphic file (type png)
+
+<use ./imagenes/controles.png>
+Package pdftex.def Info: ./imagenes/controles.png used on input line 26.
+(pdftex.def)             Requested size: 210.78697pt x 163.61084pt.
+ [16 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/controle
+s.png>]
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [17]
+[18]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 82.
+ [19]) [20]
+Cap\'{\i }tulo 4.
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\interfaz.tex [21
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 4.
+
+<./imagenes/dentro_del_juego.png, id=552, 503.8825pt x 374.39874pt>
+File: ./imagenes/dentro_del_juego.png Graphic file (type png)
+
+<use ./imagenes/dentro_del_juego.png>
+Package pdftex.def Info: ./imagenes/dentro_del_juego.png used on input line 11.
+
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+ [22 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/dentro_d
+el_juego.png>]
+<./imagenes/diagrama_flujo_menu.png, id=558, 1093.08376pt x 827.09pt>
 File: ./imagenes/diagrama_flujo_menu.png Graphic file (type png)
 
 <use ./imagenes/diagrama_flujo_menu.png>
 Package pdftex.def Info: ./imagenes/diagrama_flujo_menu.png used on input line 
-11.
-(pdftex.def)             Requested size: 491.88315pt x 361.79836pt.
+32.
+(pdftex.def)             Requested size: 491.88315pt x 372.18706pt.
 
-Overfull \hbox (38.91525pt too wide) in paragraph at lines 11--12
+Overfull \hbox (38.91525pt too wide) in paragraph at lines 32--33
  [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-[16 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/diagrama_
+[23 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/diagrama_
 flujo_menu.png>]
-<./imagenes/men_principal.png, id=501, 503.8825pt x 374.39874pt>
+<./imagenes/men_principal.png, id=564, 503.8825pt x 374.39874pt>
 File: ./imagenes/men_principal.png Graphic file (type png)
 
 <use ./imagenes/men_principal.png>
-Package pdftex.def Info: ./imagenes/men_principal.png used on input line 26.
+Package pdftex.def Info: ./imagenes/men_principal.png used on input line 48.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
- [17 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/men_prin
+ [24 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/men_prin
 cipal.png>]
-<./imagenes/cargar_partida.png, id=508, 503.8825pt x 374.39874pt>
+<./imagenes/cargar_partida.png, id=570, 503.8825pt x 374.39874pt>
 File: ./imagenes/cargar_partida.png Graphic file (type png)
 
 <use ./imagenes/cargar_partida.png>
-Package pdftex.def Info: ./imagenes/cargar_partida.png used on input line 47.
+Package pdftex.def Info: ./imagenes/cargar_partida.png used on input line 69.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
- [18 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
-artida.png>] [19] [20] [21]
-<./imagenes/cargar_partida_dentro_del_juego.png, id=528, 503.8825pt x 374.39874
+ [25 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
+artida.png>]
+<./imagenes/crditos.png, id=577, 503.8825pt x 374.39874pt>
+File: ./imagenes/crditos.png Graphic file (type png)
+
+<use ./imagenes/crditos.png>
+Package pdftex.def Info: ./imagenes/crditos.png used on input line 89.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+ [26 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/crditos.
+png>]
+<./imagenes/men_opciones.png, id=583, 503.8825pt x 374.39874pt>
+File: ./imagenes/men_opciones.png Graphic file (type png)
+
+<use ./imagenes/men_opciones.png>
+Package pdftex.def Info: ./imagenes/men_opciones.png used on input line 107.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 122.
+ [27 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/men_opci
+ones.png>]
+<./imagenes/mapa.png, id=589, 503.8825pt x 374.39874pt>
+File: ./imagenes/mapa.png Graphic file (type png)
+
+<use ./imagenes/mapa.png>
+Package pdftex.def Info: ./imagenes/mapa.png used on input line 131.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+ [28 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/mapa.png
+>]
+<./imagenes/cargar_partida_dentro_del_juego.png, id=595, 503.8825pt x 374.39874
 pt>
 File: ./imagenes/cargar_partida_dentro_del_juego.png Graphic file (type png)
  <use ./imagenes/cargar_partida_dentro_del_juego.png>
 Package pdftex.def Info: ./imagenes/cargar_partida_dentro_del_juego.png used on
- input line 79.
+ input line 152.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
- [22 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
-artida_dentro_del_juego.png>] [23] [24] [25]) [26]
+ [29 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
+artida_dentro_del_juego.png>] <./imagenes/gadipedia.png, id=601, 503.8825pt x 3
+74.39874pt>
+File: ./imagenes/gadipedia.png Graphic file (type png)
+
+<use ./imagenes/gadipedia.png>
+Package pdftex.def Info: ./imagenes/gadipedia.png used on input line 173.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+ [30 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/gadipedi
+a.png>]
+<./imagenes/notas.png, id=607, 503.8825pt x 374.39874pt>
+File: ./imagenes/notas.png Graphic file (type png)
+
+<use ./imagenes/notas.png>
+Package pdftex.def Info: ./imagenes/notas.png used on input line 194.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+ [31 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/notas.pn
+g>]
+<./imagenes/ajustes.png, id=614, 503.8825pt x 374.39874pt>
+File: ./imagenes/ajustes.png Graphic file (type png)
+
+<use ./imagenes/ajustes.png>
+Package pdftex.def Info: ./imagenes/ajustes.png used on input line 214.
+(pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
+) [32 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/ajustes
+.png>]
 Cap\'{\i }tulo 5.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\argumento.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\argumento.tex [33
 
 ]
-[28]) [29] [30
-
-]
+[34] [35]) [36]
 Cap\'{\i }tulo 6.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\niveles.tex) [31]
-[32
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\niveles.tex) [37
+
+]
+[38
 
 ]
 Cap\'{\i }tulo 7.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\tecnico.tex [33]
-Underfull \vbox (badness 4391) has occurred while \output is active []
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\tecnico.tex
+Underfull \vbox (badness 1173) has occurred while \output is active []
 
- [34])
-[35] [36
+ [39]
+[40]) [41] [42
 
 ]
 Cap\'{\i }tulo 8.
-(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\artistico.tex [37]
-[38]) [39] [40
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\artistico.tex [43]
+[44]) [45] [46
 
 ]
 Cap\'{\i }tulo 9.
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\apendice.tex
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 7.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
- [41] [42]
-[43] [44]) [45]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
+ [47] [48]
+[49] [50]) [51]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
 
@@ -1244,26 +1261,26 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7AEBCF1D3480DB870E51787F9EA34A5D;5652.
+(rerunfilecheck)             Checksum: F83F9E6B0FAD7F94376AB4E33D04B790;5674.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
  ) 
 Here is how much of TeX's memory you used:
- 20623 strings out of 493921
- 368312 string characters out of 3144924
- 446769 words of memory out of 3000000
- 23358 multiletter control sequences out of 15000+200000
- 43528 words of font info for 63 fonts, out of 3000000 for 9000
+ 20192 strings out of 493921
+ 362671 string characters out of 3144924
+ 430126 words of memory out of 3000000
+ 22880 multiletter control sequences out of 15000+200000
+ 50637 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,7n,56p,971b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,7n,56p,971b,585s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (45 pages, 298260 bytes).
+Output written on main.pdf (51 pages, 554499 bytes).
 PDF statistics:
- 688 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
- 702 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 793 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
+ 737 words of extra memory for PDF output out of 10000 (max. 10000000)
 
