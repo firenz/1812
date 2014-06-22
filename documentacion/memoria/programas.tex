@@ -1,0 +1,75 @@
+% -*-programas.tex-*-
+% Este fichero es parte de la plantilla LaTeX para
+% la realización de Proyectos Final de Carrera, protejido
+% bajo los términos de la licencia GFDL.
+% Para más información, la licencia completa viene incluida en el
+% fichero fdl-1.3.tex
+
+% Copyright (C) 2009 Pablo Recio Quijano 
+Es usual en un PFC referenciar que software has usado para la
+realización del mismo. Aprovecharé este apartado para que conozcas
+alguna herramienta que puede serte de ayuda para realizar tus
+documentos en \LaTeX{}
+
+\section*{Emacs + Auc\TeX}
+
+Emacs es uno de los programas de edición más usados por
+desarrolladores de software, ya que es bastante versatil admitiendo
+gran cantidad de ``plugins'' o extensiones que permiten ampliar aun
+más sus funcionalidades.\\
+
+Uno de estos plugins es Auc\TeX \cite{pdf:auctex}, el cual incluye
+rutas para ciertos comandos, resaltado de sintaxis, previsualización
+del documento, menú matemático en el cual podemos acceder e insertar
+la gran mayoria de los símbolos matemáticos, para no tener que
+memorizarlos. Podemos ver un ejemplo de Emacs + Auc\TeX en la figura
+\ref{auctex}
+
+\figura{Auctex.png}{scale=0.6}{Emacs + Auc\TeX}{auctex}{h}
+
+Por ejemplo, para cerrar un entorno $\backslash$\texttt{begin()}, con su
+respectivo $\backslash$\texttt{end()}, utilizaremos el atajo
+\comando{C-c M-]}, para añadir un $\backslash$\texttt{item}, tenemos
+el atajo \comando{C-c C-j}, y así unos cuantos, que una vez que nos
+habituamos a ellos, son bastante cómodos.\\
+
+Además, es bastante configurable, con indentado automático, corrector
+ortográfico y demás. El fichero adjunto a este documento,
+\emph{conf\_emacs} incluye una configuración con varias de estas
+opciones.
+
+\section*{Doxygen}
+
+Realmente, \programa{Doxygen} \cite{website:doxygen} no es una herramienta
+que vayamos a utilizar para realizar documentos \LaTeX{}
+directmaente. Sin embargo, para la documentación de código si es
+bastante util.\\
+
+Esta herramienta realiza una documentación automática de código
+fuente. Es decir, para nuestro PFC, podemos utilizar para generar la
+documentación de las APIs de nuestras librerias y demás. Puede generar
+esta documentación en varios formatos, y entre ellos, \LaTeX, de forma
+que podemos utilizar ese código generado en nuestra memoria de forma
+automática.
+
+\section*{GNU Make}
+
+\programa{GNU Make} es el programa de recompilación y de control de
+dependencias por excelencia. Se puede utilizar para compilar proyectos
+software en diversos códigos, o como en el caso de este documento,
+para compilar documentos \LaTeX{} con diversas opciones.\\
+
+Para más información \cite{pdf:make}
+
+\section*{Dia}
+
+\programa{Dia} es un editor de gráficos vectoriales el cual incluye
+distintas plantillas para distintos tipos de gráficos, como pueden ser
+UML, ERe, diagramas de flujo, esquemas Cisco de red y un larguísimo
+etcétera. Podemos ver el interfaz en la figura \ref{dia}
+
+\figura{dia.png}{scale=0.6}{Interfaz de Dia}{dia}{h}
+
+Estos diagramas podemos exportarlos a diversos formatos de imagen
+(\texttt{.png}, \texttt{.eps}, ...) o a formato \texttt{.tex}, como
+vimos anteriormente.

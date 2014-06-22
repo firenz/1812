@@ -1,0 +1,37 @@
+% -*-instalacion.tex-*-
+% Este fichero es parte de la plantilla LaTeX para
+% la realización de Proyectos Final de Carrera, protejido
+% bajo los términos de la licencia GFDL.
+% Para más información, la licencia completa viene incluida en el
+% fichero fdl-1.3.tex
+
+% Copyright (C) 2009 Pablo Recio Quijano 
+
+Veamos que tenemos que hacer para instalar \LaTeX{} con todas sus
+capacidades en un sistema basado en Debian, como Ubuntu.
+Primero hay que tener en cuenta que \LaTeX{} es relativamente pesado
+con respecto a otros compiladores. \\
+
+Nosotros vamos a utilizar la distribución de \LaTeX{} incluida en los
+repositorios de Ubuntu llamada \programa{texlive}. Si la buscas en
+tu gestor de paquetes, encontrarás infinidad de paquetes aparte
+del principal. Existen otras distribuciones como Te\TeX\\
+
+Si instalas solo los básicos, es decir instalas \programa{texlive} y
+los programas necesarios para él, no podrás compilar este documento,
+ya que faltarian paquetes tales como \programa{supertabular} y
+varios. Por eso, si no tienes problema de espacio en el disco duro te
+recomiendo que instales el paquete \programa{texlive-full}, que
+instala \negrita{todos} los paquetes de \programa{texlive}, incluyendo
+documentación en todos los idiomas disponibles. Si buscas no tener
+problemas de dependencias, este es tu método.\\
+
+\begin{lstlisting}[style=consola]
+  sudo apt-get install texlive-full
+\end{lstlisting}
+
+En caso de querer ser un poco más concreto, en principio puedes
+trabajar con la más básica (\programa{texlive} y sus dependencias) y
+en función de los paquetes que te vayan faltando, los instalas.
+
+% TO-DO: paquetes concretos e instalación en otros sistemas
