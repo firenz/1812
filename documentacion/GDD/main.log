@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  20 JUN 2014 18:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  24 JUN 2014 21:11
 entering extended mode
 **main.tex
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.tex
@@ -1069,21 +1069,36 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 ] (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.lof)
 \tf@lof=\write6
 
-[7] [8
+[7]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
+
+ []
+
+[8]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 62.
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\historial.tex)
-[9] [10
+[9
+
+] [10
 
 ]
 Cap\'{\i }tulo 2.
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\introduccion.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
@@ -1098,7 +1113,7 @@ Cap\'{\i }tulo 3.
 Underfull \vbox (badness 1082) has occurred while \output is active []
 
  [15]
-<./imagenes/controles.png, id=514, 421.575pt x 327.2225pt>
+<./imagenes/controles.png, id=515, 421.575pt x 327.2225pt>
 File: ./imagenes/controles.png Graphic file (type png)
 
 <use ./imagenes/controles.png>
@@ -1120,7 +1135,7 @@ Cap\'{\i }tulo 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 4.
 
-<./imagenes/dentro_del_juego.png, id=552, 503.8825pt x 374.39874pt>
+<./imagenes/dentro_del_juego.png, id=553, 503.8825pt x 374.39874pt>
 File: ./imagenes/dentro_del_juego.png Graphic file (type png)
 
 <use ./imagenes/dentro_del_juego.png>
@@ -1129,7 +1144,7 @@ Package pdftex.def Info: ./imagenes/dentro_del_juego.png used on input line 11.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [22 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/dentro_d
 el_juego.png>]
-<./imagenes/diagrama_flujo_menu.png, id=558, 1093.08376pt x 827.09pt>
+<./imagenes/diagrama_flujo_menu.png, id=559, 1093.08376pt x 827.09pt>
 File: ./imagenes/diagrama_flujo_menu.png Graphic file (type png)
 
 <use ./imagenes/diagrama_flujo_menu.png>
@@ -1143,7 +1158,7 @@ Overfull \hbox (38.91525pt too wide) in paragraph at lines 32--33
 
 [23 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/diagrama_
 flujo_menu.png>]
-<./imagenes/men_principal.png, id=564, 503.8825pt x 374.39874pt>
+<./imagenes/men_principal.png, id=565, 503.8825pt x 374.39874pt>
 File: ./imagenes/men_principal.png Graphic file (type png)
 
 <use ./imagenes/men_principal.png>
@@ -1151,7 +1166,7 @@ Package pdftex.def Info: ./imagenes/men_principal.png used on input line 48.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [24 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/men_prin
 cipal.png>]
-<./imagenes/cargar_partida.png, id=570, 503.8825pt x 374.39874pt>
+<./imagenes/cargar_partida.png, id=571, 503.8825pt x 374.39874pt>
 File: ./imagenes/cargar_partida.png Graphic file (type png)
 
 <use ./imagenes/cargar_partida.png>
@@ -1159,7 +1174,7 @@ Package pdftex.def Info: ./imagenes/cargar_partida.png used on input line 69.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [25 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
 artida.png>]
-<./imagenes/crditos.png, id=577, 503.8825pt x 374.39874pt>
+<./imagenes/crditos.png, id=578, 503.8825pt x 374.39874pt>
 File: ./imagenes/crditos.png Graphic file (type png)
 
 <use ./imagenes/crditos.png>
@@ -1167,7 +1182,7 @@ Package pdftex.def Info: ./imagenes/crditos.png used on input line 89.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [26 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/crditos.
 png>]
-<./imagenes/men_opciones.png, id=583, 503.8825pt x 374.39874pt>
+<./imagenes/men_opciones.png, id=584, 503.8825pt x 374.39874pt>
 File: ./imagenes/men_opciones.png Graphic file (type png)
 
 <use ./imagenes/men_opciones.png>
@@ -1177,7 +1192,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 122.
  [27 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/men_opci
 ones.png>]
-<./imagenes/mapa.png, id=589, 503.8825pt x 374.39874pt>
+<./imagenes/mapa.png, id=590, 503.8825pt x 374.39874pt>
 File: ./imagenes/mapa.png Graphic file (type png)
 
 <use ./imagenes/mapa.png>
@@ -1185,7 +1200,7 @@ Package pdftex.def Info: ./imagenes/mapa.png used on input line 131.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [28 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/mapa.png
 >]
-<./imagenes/cargar_partida_dentro_del_juego.png, id=595, 503.8825pt x 374.39874
+<./imagenes/cargar_partida_dentro_del_juego.png, id=596, 503.8825pt x 374.39874
 pt>
 File: ./imagenes/cargar_partida_dentro_del_juego.png Graphic file (type png)
  <use ./imagenes/cargar_partida_dentro_del_juego.png>
@@ -1193,7 +1208,7 @@ Package pdftex.def Info: ./imagenes/cargar_partida_dentro_del_juego.png used on
  input line 152.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [29 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/cargar_p
-artida_dentro_del_juego.png>] <./imagenes/gadipedia.png, id=601, 503.8825pt x 3
+artida_dentro_del_juego.png>] <./imagenes/gadipedia.png, id=602, 503.8825pt x 3
 74.39874pt>
 File: ./imagenes/gadipedia.png Graphic file (type png)
 
@@ -1202,7 +1217,7 @@ Package pdftex.def Info: ./imagenes/gadipedia.png used on input line 173.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [30 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/gadipedi
 a.png>]
-<./imagenes/notas.png, id=607, 503.8825pt x 374.39874pt>
+<./imagenes/notas.png, id=608, 503.8825pt x 374.39874pt>
 File: ./imagenes/notas.png Graphic file (type png)
 
 <use ./imagenes/notas.png>
@@ -1210,7 +1225,7 @@ Package pdftex.def Info: ./imagenes/notas.png used on input line 194.
 (pdftex.def)             Requested size: 352.71535pt x 262.07733pt.
  [31 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/GDD/imagenes/notas.pn
 g>]
-<./imagenes/ajustes.png, id=614, 503.8825pt x 374.39874pt>
+<./imagenes/ajustes.png, id=615, 503.8825pt x 374.39874pt>
 File: ./imagenes/ajustes.png Graphic file (type png)
 
 <use ./imagenes/ajustes.png>
@@ -1253,22 +1268,36 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
  [49] [50]
-[51] [52]) [53]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
+[51] [52]) (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\fdl-1.3.tex
+[53] [54
+
+] [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+[57] [58] [59] [60] [61]) [62]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 
 (C:\Users\Alicia\Documents\GitHub\1812\documentacion\GDD\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C789A88E708411533EB5AA2FC1D2F848;5651.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: C789A88E708411533EB5AA2FC1D2F848;5651
+(rerunfilecheck)             After:  E50CED74D901EA0A01E7EDBF1AD47C40;6626.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 20200 strings out of 493921
- 362727 string characters out of 3144924
+ 20245 strings out of 493921
+ 363342 string characters out of 3144924
  430126 words of memory out of 3000000
- 22880 multiletter control sequences out of 15000+200000
+ 22898 multiletter control sequences out of 15000+200000
  50637 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,7n,56p,971b,585s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1278,9 +1307,9 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 560053 bytes).
+Output written on main.pdf (62 pages, 588392 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 198 named destinations out of 1000 (max. 500000)
+ 868 PDF objects out of 1000 (max. 8388607)
+ 222 named destinations out of 1000 (max. 500000)
  737 words of extra memory for PDF output out of 10000 (max. 10000000)
 
