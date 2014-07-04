@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+ 
+.icon-infinity:before { content: '\221e'; } /* '∞' */
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-keyboard:before { content: '\2328'; } /* '⌨' */
+.icon-cloud:before { content: '\2601'; } /* '☁' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-flash:before { content: '\26a1'; } /* '⚡' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-feather:before { content: '\2712'; } /* '✒' */
+.icon-eye-1:before { content: '\e802'; } /* '' */
+.icon-eye:before { content: '\e70a'; } /* '' */
+.icon-tag:before { content: '\e70c'; } /* '' */
+.icon-tag-1:before { content: '\e800'; } /* '' */
+.icon-comment:before { content: '\e718'; } /* '' */
+.icon-vcard:before { content: '\e722'; } /* '' */
+.icon-window:before { content: '\e74e'; } /* '' */
+.icon-paper-plane:before { content: '\e79b'; } /* '' */
+.icon-emo-happy:before { content: '\e801'; } /* '' */
+.icon-emo-coffee:before { content: '\e808'; } /* '' */
+.icon-emo-squint:before { content: '\e811'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-lightbulb:before { content: '\f0eb'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-tablet:before { content: '\f10a'; } /* '' */
+.icon-mobile-1:before { content: '\f10b'; } /* '' */
+.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
+.icon-dribbble:before { content: '\f31b'; } /* '' */
+.icon-rdio:before { content: '\f324'; } /* '' */
+.icon-instagram:before { content: '\f32d'; } /* '' */
+.icon-comment-1:before { content: '\f4ac'; } /* '' */
+.icon-globe:before { content: '🌎'; } /* '\1f30e' */
+.icon-user:before { content: '👤'; } /* '\1f464' */
+.icon-user-1:before { content: '\e803'; } /* '' */
+.icon-newspaper:before { content: '📰'; } /* '\1f4f0' */
+.icon-mobile:before { content: '📱'; } /* '\1f4f1' */
+.icon-search:before { content: '🔍'; } /* '\1f50d' */
+.icon-rocket:before { content: '🚀'; } /* '\1f680' */
