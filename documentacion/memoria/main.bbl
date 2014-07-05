@@ -1,5 +1,54 @@
 \begin{thebibliography}{10}
 
+\bibitem{website:gimp}
+{GIMP}.
+\newblock \url{http://www.gimp.org/}.
+
+\bibitem{website:git}
+{Git}.
+\newblock \url{http://git-scm.com/}.
+
+\bibitem{website:git-for-windows}
+{Git for Windows}.
+\newblock \url{http://msysgit.github.io/}.
+
+\bibitem{website:github}
+{GitHub}.
+\newblock \url{https://github.com/}.
+
+\bibitem{website:github-windows}
+{GitHub Windows}.
+\newblock \url{https://windows.github.com/}.
+
+\bibitem{website:graphicsgale}
+{GraphicsGale}.
+\newblock \url{http://www.humanbalance.net/gale/us/}.
+
+\bibitem{website:monodevelop}
+{Monodevelop}.
+\newblock \url{http://monodevelop.com/}.
+
+\bibitem{website:latex-project}
+{\LaTeX project site}.
+\newblock \url{http://latex-project.org/}.
+
+\bibitem{website:sharelatex}
+{ShareLaTeX}.
+\newblock \url{https://www.sharelatex.com/}.
+
+\bibitem{website:texstudio}
+{TeXstudio}.
+\newblock \url{http://texstudio.sourceforge.net/}.
+
+\bibitem{website:unityvsexpress}
+{UnityVSExpress}.
+\newblock \url{https://github.com/BogTurtleGamesLLC/UnityVSExpress}.
+
+\bibitem{website:visual-studio-express}
+{Visual Studio Express}.
+\newblock
+  \url{http://www.visualstudio.com/es-es/products/visual-studio-express-vs}.
+
 \bibitem{website:wii-fit}
 {Wii Fit}.
 \newblock \url{http://wiifit.com/es/}.
@@ -29,6 +78,11 @@ Susana Pollack Victoria Abrash Meghan Ventura y Hsing~Wei Asi~Burak,
 {Comunidad, y desarrolladores de CollabNet, Elego, VisualSVN, WANdisco}.
 \newblock {Apache Subversion}.
 \newblock \url{http://subversion.apache.org/}.
+
+\bibitem{website:doxygen}
+{Dimitri Van Heesch}.
+\newblock {Pagina oficial de Doxygen}.
+\newblock \url{http://www.doxygen.org}.
 
 \bibitem{website:eco-quest}
 Wikipedia inglesa.

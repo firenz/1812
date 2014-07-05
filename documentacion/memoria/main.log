@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  23 JUN 2014 00:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.24)  5 JUL 2014 22:12
 entering extended mode
 **main.tex
-(C:\Users\Alicia\Documents\GitHub\PFC\main.tex
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -31,7 +31,8 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\Alicia\Documents\GitHub\PFC\estilos\estiloBase.sty
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\estilos\estiloBase
+.sty
 
 LaTeX Warning: You have requested package `./estilos/estiloBase',
                but the package provides `estiloBase'.
@@ -945,12 +946,13 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
-(C:\Users\Alicia\Documents\GitHub\PFC\estilos\colores.sty)
-(C:\Users\Alicia\Documents\GitHub\PFC\estilos\comandos.sty
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\estilos\colores.st
+y)
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\estilos\comandos.s
+ty
 \c@defin=\count147
 \savedwidth=\skip56
-)
-(C:\Users\Alicia\Documents\GitHub\PFC\main.aux)
+) (C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
@@ -998,8 +1000,8 @@ LaTeX Info: Redefining \ref on input line 37.
 LaTeX Info: Redefining \pageref on input line 37.
 LaTeX Info: Redefining \nameref on input line 37.
 
-(C:\Users\Alicia\Documents\GitHub\PFC\main.out)
-(C:\Users\Alicia\Documents\GitHub\PFC\main.out)
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.out)
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.out)
 \@outlinefile=\write4
 
 *geometry* driver: auto-detecting
@@ -1041,7 +1043,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-(C:\Users\Alicia\Documents\GitHub\PFC\portada.tex
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\portada.tex
 <./imagenes/logo_uca.png, id=106, 468.75125pt x 602.25pt>
 File: ./imagenes/logo_uca.png Graphic file (type png)
 
@@ -1056,9 +1058,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 
 {C:/Users/Alicia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/A
-licia/Documents/GitHub/PFC/imagenes/logo_uca.png>]) [2
+licia/Documents/GitHub/1812/documentacion/memoria/imagenes/logo_uca.png>]) [2
 
-] (C:\Users\Alicia\Documents\GitHub\PFC\primerahoja.tex
+]
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\primerahoja.tex
 File: ./imagenes/logo_uca.png Graphic file (type png)
 
 <use ./imagenes/logo_uca.png>
@@ -1067,7 +1070,8 @@ Package pdftex.def Info: ./imagenes/logo_uca.png used on input line 12.
 ) [3] [4
 
 ]
-(C:\Users\Alicia\Documents\GitHub\PFC\previo.tex [1
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\previo.tex
+[1
 
 ] [2
 
@@ -1114,7 +1118,8 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 52.
 
-(C:\Users\Alicia\Documents\GitHub\PFC\codigo\hola_mundo.cs
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\codigo\hola_mundo.
+cs
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 3.
 )) [5] [6
@@ -1123,7 +1128,7 @@ LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 58.
 
-(C:\Users\Alicia\Documents\GitHub\PFC\main.toc
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -1140,22 +1145,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [8
 
 ]
-(C:\Users\Alicia\Documents\GitHub\PFC\main.lof)
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.lof)
 \tf@lof=\write6
- [9] [10
+ [9]
+[10
 
-]
-(C:\Users\Alicia\Documents\GitHub\PFC\main.lot)
+] (C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.lot)
 \tf@lot=\write7
- [11] [12
+
+[11] [12
 
 ]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
-(C:\Users\Alicia\Documents\GitHub\PFC\introduccion.texpdfTeX warning (ext4): de
-stination with the same identifier (name{page.1}) has been already used, duplic
-ate ignored
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\introduccion.texpd
+fTeX warning (ext4): destination with the same identifier (name{page.1}) has be
+en already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.27 
@@ -1186,8 +1192,9 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.49 
-      [2 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/first-text-adventure.pn
-g>] <./imagenes/maniac-mansion-commodore64.png, id=293, 321.2pt x 200.75pt>
+      [2 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/
+first-text-adventure.png>]
+<./imagenes/maniac-mansion-commodore64.png, id=293, 321.2pt x 200.75pt>
 File: ./imagenes/maniac-mansion-commodore64.png Graphic file (type png)
 
 <use ./imagenes/maniac-mansion-commodore64.png>
@@ -1209,9 +1216,10 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.67 
-      [3 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/mystery-house-first-gra
-phic-adventure.png> <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/maniac-mansi
-on-commodore64.png>] <./imagenes/shadow-comet.png, id=311, 321.2pt x 200.75pt>
+      [3 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/
+mystery-house-first-graphic-adventure.png> <C:/Users/Alicia/Documents/GitHub/18
+12/documentacion/memoria/imagenes/maniac-mansion-commodore64.png>]
+<./imagenes/shadow-comet.png, id=311, 321.2pt x 200.75pt>
 File: ./imagenes/shadow-comet.png Graphic file (type png)
 
 <use ./imagenes/shadow-comet.png>
@@ -1222,8 +1230,8 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.88 
-      [4 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/manhunter.png>]
-<./imagenes/grim-fandango.jpg, id=332, 292.0pt x 219.0pt>
+      [4 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/
+manhunter.png>] <./imagenes/grim-fandango.jpg, id=332, 292.0pt x 219.0pt>
 File: ./imagenes/grim-fandango.jpg Graphic file (type jpg)
 
 <use ./imagenes/grim-fandango.jpg>
@@ -1232,16 +1240,17 @@ Package pdftex.def Info: ./imagenes/grim-fandango.jpg used on input line 115.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/shadow-comet.png>]
-<./imagenes/hotel-dusk.png, id=348, 409.53pt x 273.02pt>
+ [5 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/shado
+w-comet.png>] <./imagenes/hotel-dusk.png, id=348, 409.53pt x 273.02pt>
 File: ./imagenes/hotel-dusk.png Graphic file (type png)
 
 <use ./imagenes/hotel-dusk.png>
 Package pdftex.def Info: ./imagenes/hotel-dusk.png used on input line 127.
 (pdftex.def)             Requested size: 286.66904pt x 191.11269pt.
- [6 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/grim-fandango.jpg> <C:/Users
-/Alicia/Documents/GitHub/PFC/imagenes/hotel-dusk.png>] <./imagenes/walking-dead
-.jpg, id=362, 451.6875pt x 301.125pt>
+ [6 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/grim-
+fandango.jpg> <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imag
+enes/hotel-dusk.png>]
+<./imagenes/walking-dead.jpg, id=362, 451.6875pt x 301.125pt>
 File: ./imagenes/walking-dead.jpg Graphic file (type jpg)
 
 <use ./imagenes/walking-dead.jpg>
@@ -1252,8 +1261,8 @@ Package pdftex.def Info: ./imagenes/walking-dead.jpg used on input line 139.
 LaTeX Warning: Citation `website:heavy-raiin' on page 7 undefined on input line
  145.
 
-[7 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/walking-dead.jpg>]
-<./imagenes/broken-age.jpg, id=387, 1927.2pt x 1084.05pt>
+[7 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/walkin
+g-dead.jpg>] <./imagenes/broken-age.jpg, id=387, 1927.2pt x 1084.05pt>
 File: ./imagenes/broken-age.jpg Graphic file (type jpg)
 
 <use ./imagenes/broken-age.jpg>
@@ -1270,8 +1279,8 @@ Package pdftex.def Info: ./imagenes/hollywood-monsters.jpg used on input line 1
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/broken-age.jpg>]
-<./imagenes/ajedrez-edad-media.jpg, id=407, 1581.91pt x 935.495pt>
+ [8 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/broke
+n-age.jpg>] <./imagenes/ajedrez-edad-media.jpg, id=407, 1581.91pt x 935.495pt>
 File: ./imagenes/ajedrez-edad-media.jpg Graphic file (type jpg)
 
 <use ./imagenes/ajedrez-edad-media.jpg>
@@ -1286,8 +1295,9 @@ Overfull \hbox (21.60876pt too wide) in paragraph at lines 180--181
 
 Underfull \vbox (badness 8151) has occurred while \output is active []
 
- [9 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/hollywood-monsters.jpg>]
-<./imagenes/army-battlezone-atari.png, id=415, 401.5pt x 298.11375pt>
+ [9 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/holly
+wood-monsters.jpg>] <./imagenes/army-battlezone-atari.png, id=415, 401.5pt x 29
+8.11375pt>
 File: ./imagenes/army-battlezone-atari.png Graphic file (type png)
 
 <use ./imagenes/army-battlezone-atari.png>
@@ -1297,7 +1307,8 @@ e 194.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/ajedrez-edad-media.jpg>]
+ [10 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/ajed
+rez-edad-media.jpg>]
 <./imagenes/carmen-sandiego-original.png, id=425, 321.2pt x 200.75pt>
 File: ./imagenes/carmen-sandiego-original.png Graphic file (type png)
 
@@ -1316,9 +1327,10 @@ Package pdftex.def Info: ./imagenes/mario-is-missing.jpg used on input line 212
 
 Underfull \vbox (badness 5741) has occurred while \output is active []
 
- [11 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/army-battlezone-atari.png> 
-<C:/Users/Alicia/Documents/GitHub/PFC/imagenes/carmen-sandiego-original.png>] [
-12 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/mario-is-missing.jpg>]
+ [11 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/army
+-battlezone-atari.png> <C:/Users/Alicia/Documents/GitHub/1812/documentacion/mem
+oria/imagenes/carmen-sandiego-original.png>] [12 <C:/Users/Alicia/Documents/Git
+Hub/1812/documentacion/memoria/imagenes/mario-is-missing.jpg>]
 <./imagenes/brain-training.jpg, id=447, 394.47375pt x 256.96pt>
 File: ./imagenes/brain-training.jpg Graphic file (type jpg)
 
@@ -1336,14 +1348,13 @@ ut line 248.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/brain-training.jpg>] [14 <C
-:/Users/Alicia/Documents/GitHub/PFC/imagenes/simulador-vuelo-profesional.jpg>] 
-[15]
-[16]) [17] [18
+ [13 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes/brai
+n-training.jpg>] [14 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memor
+ia/imagenes/simulador-vuelo-profesional.jpg>] [15] [16]) [17] [18
 
 ]
 Cap\'{\i }tulo 2.
-(C:\Users\Alicia\Documents\GitHub\PFC\planificacion.tex
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\planificacion.tex
 <./imagenes/planificacionv2-1.png, id=494, 1215.03937pt x 519.44063pt>
 File: ./imagenes/planificacionv2-1.png Graphic file (type png)
 
@@ -1351,91 +1362,103 @@ File: ./imagenes/planificacionv2-1.png Graphic file (type png)
 Package pdftex.def Info: ./imagenes/planificacionv2-1.png used on input line 22
 .
 (pdftex.def)             Requested size: 537.75343pt x 229.89407pt.
- [19] [20 <C:/Users/Alicia/Documents/GitHub/PFC/imagenes/planificacionv2-1.png>
-] [21] [22]) [23] [24
+ [19] [20 <C:/Users/Alicia/Documents/GitHub/1812/documentacion/memoria/imagenes
+/planificacionv2-1.png>] [21] [22])
+[23] [24
 
 ]
-(C:\Users\Alicia\Documents\GitHub\PFC\main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 13--16
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\programas.tex
+[25] [26]) [27] [28
+
+]
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+[]\T1/ptm/m/n/10.95 Visual Stu-dio Ex-press.  [][]$\T1/pcr/m/n/10.95 http : / /
+ www . visualstudio . com / es-[]es / products /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
 []\T1/ptm/m/n/10.95 AI Lo-we.  AI Lo-we's Ga-me De-signs.  [][]$\T1/pcr/m/n/10.
 95 http : / / www . allowe . com / games /$
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 39--42
+Underfull \hbox (badness 3029) in paragraph at lines 93--96
 []\T1/ptm/m/n/10.95 Wikipedia in-gle-sa.  Man-hun-ter: New York.  [][]$\T1/pcr/
 m/n/10.95 http : / / en . wikipedia . org / wiki /$
  []
 
+[29
 
-Underfull \hbox (badness 3098) in paragraph at lines 66--70
+
+]
+Underfull \hbox (badness 3098) in paragraph at lines 120--124
 []\T1/ptm/m/n/10.95 Kickstarter.  Dead Syn-chro-ni-city.  [][]$\T1/pcr/m/n/10.9
 5 https : / / www . kickstarter . com / projects /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 []\T1/ptm/m/n/10.95 Vince Twel-ve.  Re-so-nan-ce's Ori-gi-nal De-sign Do-cu-men
 t.  [][]$\T1/pcr/m/n/10.95 http : / / www .$
  []
 
-[25
 
-
-]
-Underfull \hbox (badness 1552) in paragraph at lines 144--147
+Underfull \hbox (badness 1552) in paragraph at lines 198--201
 []\T1/ptm/m/n/10.95 Wikipedia.  Dream-fall: The Lon-gest Jour-ney.  [][]$\T1/pc
 r/m/n/10.95 http : / / es . wikipedia . org / wiki /$
  []
 
-
-Underfull \hbox (badness 4647) in paragraph at lines 174--177
+[30]
+Underfull \hbox (badness 4647) in paragraph at lines 228--231
 []\T1/ptm/m/n/10.95 Wikipedia.  Hu-man En-ter-tain-ment.  [][]$\T1/pcr/m/n/10.9
 5 http : / / es . wikipedia . org / wiki / Human _$
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 184--188
+Underfull \hbox (badness 2990) in paragraph at lines 238--242
 []\T1/ptm/m/n/10.95 Wikipedia.  In-dia-na Jo-nes and the Last Cru-sa-de: The Gr
 ap-hic Ad-ven-tu-re.  [][]$\T1/pcr/m/n/10.95 http :$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
 $\T1/pcr/m/n/10.95 / / es . wikipedia . org / wiki / Indiana _ Jones _ and _ th
 e _ Last _ Crusade :$
  []
 
-[26]) (C:\Users\Alicia\Documents\GitHub\PFC\fdl-1.3.tex [27] [28
-
-]
+[31]) (C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\fdl-1.3.tex
+[32]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 14.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
- [29] [30]
-[31] [32] [33] [34]) [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
- (C:\Users\Alicia\Documents\GitHub\PFC\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+ [33
+
+]
+[34] [35] [36] [37] [38]) [39]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
+
+(C:\Users\Alicia\Documents\GitHub\1812\documentacion\memoria\main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ABCD348357A5CB4263821B2BA2DC0F89;1839.
+(rerunfilecheck)             Checksum: A86DC3644940D32094CFA88452FF11A6;1843.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
  ) 
 Here is how much of TeX's memory you used:
- 20793 strings out of 493921
- 370497 string characters out of 3144924
- 457280 words of memory out of 3000000
- 23441 multiletter control sequences out of 15000+200000
+ 20837 strings out of 493921
+ 372329 string characters out of 3144924
+ 457871 words of memory out of 3000000
+ 23455 multiletter control sequences out of 15000+200000
  58878 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  60i,7n,68p,1206b,1264s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1448,9 +1471,9 @@ MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on main.pdf (51 pages, 3140563 bytes).
+Output written on main.pdf (55 pages, 3160437 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 200 named destinations out of 1000 (max. 500000)
+ 837 PDF objects out of 1000 (max. 8388607)
+ 227 named destinations out of 1000 (max. 500000)
  303 words of extra memory for PDF output out of 10000 (max. 10000000)
 
