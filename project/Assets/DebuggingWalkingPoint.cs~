@@ -1,0 +1,20 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class DebuggingWalkingPoint : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	public void Called(){
+		Debug.Log("Hola!");
+		Debug.Log("WalkingPoint X: " + this.transform.position.x + " Y:" + this.transform.position.y);
+	}
+}

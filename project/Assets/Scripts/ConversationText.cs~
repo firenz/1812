@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class DisplayActorText : MonoBehaviour {
+	//public LanguageTextLocalization localizationScript; referencia para el futuro
+	public float secondsDisplayingText = 3.0f;
+	
+	//bool canSwitchDialog = false;
+	//bool isWaitActive = false;
+	
+	// Use this for initialization
+	void Start () {
+		this.renderer.sortingLayerName = "Dialogs";
+		this.renderer.sortingOrder = 0;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+	
+	IEnumerator WaitDialogToBeFullySpoken(){
+		//isWaitActive = true;
+		yield return new WaitForSeconds(secondsDisplayingText);
+	}
+	
+	public void UpdateTextDialogue(string line){
+		this.guiText.text = line;
+		StartCoroutine(WaitDialogToBeFullySpoken);
+	}
+}

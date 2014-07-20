@@ -1,0 +1,46 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TargetController : MonoBehaviour {
+	public Vector2 target;
+	public bool isTargetReached = true;
+	public bool isTargetAnInteractivePoint = false;
+	public InteractiveObject targetedInteractiveObject = null;
+	private Vector3 mousePosition;
+
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if(Input.GetMouseButtonDown(0)){
+			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+			RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+			
+			if(hit.collider != null){
+
+				if(hit.collider.transform.tag == "InteractivePoint"){
+					isTargetAnInteractivePoint = true;
+					targetedInteractiveObject = hit.collider.gameObject.GetComponent<InteractiveObject>();
+					target = targetedInteractiveObject.position;
+					targetedInteractiveObject.isSelectedByPlayer = true;
+				}
+				else if(hit.collider.transform.tag == "NavigationPolygon"){
+					//Cuando añada la IA del grafo de camino sera algo tal que asi
+					//NavigationPolygonController.IsPlayerAndTargetInSameNavPolygon(Player.transform.position,Input.mousePosition)
+					target = new Vector2(mousePosition.x, mousePosition.y);
+					isTargetAnInteractivePoint = false;
+					targetedInteractiveObject = null;
+				}
+			}
+			
+			isTargetReached = false;
+		}
+			
+	}
+	
+}
