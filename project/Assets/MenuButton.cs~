@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class MenuButton : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	void OnMouseOver(){
+		Debug.Log("MouseOver");
+		this.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = true;
+	}
+
+	void OnMouseExit(){
+		Debug.Log("MouseExit");
+		this.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = false;
+	}
+}

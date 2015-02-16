@@ -17,54 +17,116 @@
 using UnityEngine;
 using System.Collections;
 
-
-public class Window : InteractiveObject {
-	
-	public bool isWindowsClosed = true;
-	private Vector2 childPosition;
+public class Window : InteractiveElement {	
+	public bool isOpened;
 
 	protected override void InitializeInformation(){
-		//Write here the info for your interactive object
-		currentType = interactiveTypes.interactiveButNotPickable;
+		groupID = "SCENE_PROFESSOROFFICE";
+		nameID = "OBJECT_WINDOW";
 
-		definitionText.Add("Es una ventana");
+		isOpened = GameState.LevelProfessorOfficeData.isWindowOpened;
 
-		interactionText.Add("Voy a");
-		interactionText.Add("abrirla");
-
-	}
-
-	void Update(){
-		/*
-		childPosition = this.GetComponentInChildren<Transform>().position;
-		this.GetComponentInChildren<DebuggingWalkingPoint>().Called();
-		if(isWindowsClosed){
-			this.GetComponent<SpriteRenderer>().enabled = true;
+		if(isOpened){
+			this.Open();
 		}
 		else{
-			this.GetComponent<SpriteRenderer>().enabled = false;
+			this.Close();
 		}
-		*/
 	}
 
-	public override void Mechanism(){
-		if(isInteractiveObjectMechanismActivated){
-			if(isWindowsClosed){
-				this.GetComponent<SpriteRenderer>().enabled = false;
-				interactionText.Clear();
-				interactionText.Add("Voy a");
-				interactionText.Add("cerrarla");
-				isWindowsClosed = false;
-			}
-			else{
-				this.GetComponent<SpriteRenderer>().enabled = true;
-				interactionText.Clear();
-				interactionText.Add("Voy a");
-				interactionText.Add("abrirla");
-				isWindowsClosed = true;
-			}
-			isInteractiveObjectMechanismActivated = false;
+	protected override IEnumerator WaitForLeftClickAction(){
+		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
+		if(_distanceBetweenActorAndInteractivePosition >= permisiveErrorBetweenPlayerPositionAndInteractivePosition){
+			Player.Instance.GoTo(interactivePosition);
+			
+			do{
+				yield return null;
+			}while(Player.Instance.IsWalking());
 		}
 
+        if(Player.Instance.LastTargetedPosition() == interactivePosition){
+            Player.Instance.SetInteractionActive();
+            if(isOpened){
+                Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED");
+			}
+			else{
+				Player.Instance.Speak(groupID, nameID, "INTERACTION_CLOSED");
+			}
+
+			do{
+				yield return null;
+			}while(Player.Instance.IsSpeaking());
+
+			Player.Instance.SetUpperInteractionActive();
+
+			Player.Instance.UpperInteraction(this);
+
+            Player.Instance.SetInteractionInactive();
+        }
+    }
+    
+    public override void ActionOnItemInventoryUsed(string nameItemInventory){
+		Debug.Log("ActionOnItemInventaryUsed: " + nameItemInventory);
+		switch(nameItemInventory){
+		case "FailedTestInventory":
+			StartCoroutine(FailedTestOnWindow());
+			break;
+		default:
+			break;
+		}
+	}
+	
+	private IEnumerator FailedTestOnWindow(){
+		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
+		if(_distanceBetweenActorAndInteractivePosition >= permisiveErrorBetweenPlayerPositionAndInteractivePosition){
+			Player.Instance.GoTo(interactivePosition);
+			
+			do{
+				yield return null;
+			}while(Player.Instance.IsWalking());
+		}
+		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.SetInteractionActive();
+			if(isOpened){
+				Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED_FAILEDTEST");
+
+				do{
+					yield return null;
+				}while(Player.Instance.IsSpeaking());
+
+				Inventory.Instance.RemoveItem("FailedTestInventory");
+			}
+			else{
+				Player.Instance.Speak(groupID, nameID, "INTERACTION_CLOSED_FAILEDTEST");
+
+				do{
+					yield return null;
+				}while(Player.Instance.IsSpeaking());
+			}
+			Player.Instance.SetInteractionInactive();
+		}
+	}
+
+	public override void OnPlayerTouchingAction(){
+		if(isOpened){
+			this.Close();
+		}
+		else{
+			this.Open();
+		}
+	}
+
+	private void Close(){
+		isOpened = false;
+		this.gameObject.renderer.enabled = true;
+	}
+
+	private void Open(){
+		isOpened = true;
+		this.gameObject.renderer.enabled = false;
+	}
+
+	public bool IsOpened(){
+		return isOpened;
 	}
 }

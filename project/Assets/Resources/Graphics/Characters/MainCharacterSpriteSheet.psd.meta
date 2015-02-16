@@ -1,6 +1,71 @@
 fileFormatVersion: 2
 guid: db7c70a210a96ab419d549b70b282fbe
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerSpriteRightIdle00
+    21300002: PlayerSpriteRightWalk00
+    21300004: PlayerSpriteRightWalk01
+    21300006: PlayerSpriteRightWalk02
+    21300008: PlayerSpriteRightWalk03
+    21300010: PlayerSpriteRightWalk04
+    21300012: PlayerSpriteRightWalk05
+    21300014: PlayerSpriteRightWalk06
+    21300016: PlayerSpriteLeftIdle00
+    21300018: PlayerSpriteLeftWalk00
+    21300020: PlayerSpriteLeftWalk01
+    21300022: PlayerSpriteLeftWalk02
+    21300024: PlayerSpriteLeftWalk03
+    21300026: PlayerSpriteLeftWalk04
+    21300028: PlayerSpriteLeftWalk05
+    21300030: PlayerSpriteLeftWalk06
+    21300032: PlayerSpriteRightSpeak00
+    21300034: PlayerSpriteRightSpeak01
+    21300036: PlayerSpriteRightSpeak02
+    21300038: PlayerSpriteRightSpeak03
+    21300040: PlayerSpriteLeftSpeak00
+    21300042: PlayerSpriteLeftSpeak01
+    21300044: PlayerSpriteLeftSpeak02
+    21300046: PlayerSpriteLeftSpeak03
+    21300048: PlayerSpriteRightUpGrab00
+    21300050: PlayerSpriteRightUpGrab01
+    21300052: PlayerSpriteRightUpGrab02
+    21300054: PlayerSpriteRightUpGrab03
+    21300056: PlayerSpriteRightUpGrab04
+    21300058: PlayerSpriteRightUpGrab05
+    21300060: PlayerSpriteRightUpGrab06
+    21300062: PlayerSpriteLeftUpGrab00
+    21300064: PlayerSpriteLeftUpGrab01
+    21300066: PlayerSpriteLeftUpGrab02
+    21300068: PlayerSpriteLeftUpGrab03
+    21300070: PlayerSpriteLeftUpGrab04
+    21300072: PlayerSpriteLeftUpGrab05
+    21300074: PlayerSpriteLeftUpGrab06
+    21300076: PlayerSpriteRightDownGrab00
+    21300078: PlayerSpriteRightDownGrab01
+    21300080: PlayerSpriteRightDownGrab02
+    21300082: PlayerSpriteRightDownGrab03
+    21300084: PlayerSpriteRightDownGrab04
+    21300086: PlayerSpriteRightDownGrab05
+    21300088: PlayerSpriteRightDownGrab06
+    21300090: PlayerSpriteRightDownGrab07
+    21300092: PlayerSpriteLeftDownGrab00
+    21300094: PlayerSpriteLeftDownGrab01
+    21300096: PlayerSpriteLeftDownGrab02
+    21300098: PlayerSpriteLeftDownGrab03
+    21300100: PlayerSpriteLeftDownGrab04
+    21300102: PlayerSpriteLeftDownGrab05
+    21300104: PlayerSpriteLeftDownGrab06
+    21300106: PlayerSpriteLeftDownGrab07
+    21300108: PlayerSpriteRightUsePhone00
+    21300110: PlayerSpriteRightUsePhone01
+    21300112: PlayerSpriteRightUsePhone02
+    21300114: PlayerSpriteRightUsePhone03
+    21300116: PlayerSpriteRightUsePhone04
+    21300118: PlayerSpriteLeftUsePhone00
+    21300120: PlayerSpriteLeftUsePhone01
+    21300122: PlayerSpriteLeftUsePhone02
+    21300124: PlayerSpriteLeftUsePhone03
+    21300126: PlayerSpriteLeftUsePhone04
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

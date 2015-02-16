@@ -45,3 +45,9 @@ obj/
 ehthumbs.db
 Thumbs.db
 documentacion/GDD/imagenes/Thumbs.db
+
+# ============ #
+#    Others    #
+# ============ #
+project/Assets/Scripts/Backup/
+*.psd

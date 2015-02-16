@@ -17,19 +17,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class FrameRateController : MonoBehaviour {
+public class FrameRateController : PersistentSingleton<FrameRateController> {
 
 	void Awake(){
 		Application.targetFrameRate = 60;
+		QualitySettings.vSyncCount = 1;
+		DontDestroyOnLoad(this.gameObject);
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

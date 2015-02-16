@@ -21,6 +21,7 @@ using System.Collections;
 public class ActorStateController : MonoBehaviour {
 	protected Actor actor;
 
+	/*
 	protected enum actorStates{
 		leftIdle = 0,
 		rightIdle,
@@ -32,18 +33,22 @@ public class ActorStateController : MonoBehaviour {
 		rightUpperGrabbing,
 		leftBottomGrabbing,
 		rightBottomGrabbing
-		//leftUsingPhone, To be implemented
-        //rightUsingPhone To be implemented
     }
+
 
 	protected actorStates currentState;
 	protected actorStates previousState;
+	*/
+
+	protected ActorStates currentState;
+	protected ActorStates previousState;
 
 	protected Animator actorAnimator = null;
 	protected Vector2 actorMoveDirection;
 	protected bool isDirectionToGoReached = true;
 	protected bool isSpeaking = false;
 	protected bool hasEndedSpeaking = true;
+
 
 	// Use this for initialization
 	protected virtual void Start () {
@@ -52,67 +57,54 @@ public class ActorStateController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected void LateUpdate(){
+	protected virtual void LateUpdate(){
 		actorMoveDirection = actor.moveDirection;
 		isDirectionToGoReached = actor.isDirectionToGoReached;
 		
 		if(!isDirectionToGoReached){
 			if(actorMoveDirection.x > 0f){
-				//if(OnStateChange != null){
-					OnStateChange(actorStates.rightWalking);
-					currentState = actorStates.rightWalking;
-				//} 
+					OnStateChange(ActorStates.rightWalking);
+					currentState = ActorStates.rightWalking;
 			}
 			else if(actorMoveDirection.x < 0f){
-				//if(OnStateChange != null){
-					OnStateChange(actorStates.leftWalking);
-					currentState = actorStates.leftWalking;
-				//} 
+					OnStateChange(ActorStates.leftWalking);
+					currentState = ActorStates.leftWalking;
 			}
 			
 		}
 		else if(isDirectionToGoReached){
 			this.ActionStatesHandler();
         }
-        
-        
     }
 
 	protected virtual void ActionStatesHandler(){
+
 		isSpeaking = actor.isSpeaking;
 		hasEndedSpeaking = actor.hasEndedSpeaking;
 		
-		if(!actor.isSpeaking){
+		if(!isSpeaking){
 			
 			switch(currentState){
-			case actorStates.leftWalking:
-				//if(OnStateChange != null){
-				OnStateChange(actorStates.leftIdle);
-				//}
+			case ActorStates.leftWalking:
+				OnStateChange(ActorStates.leftIdle);
 				break;
 				
-			case actorStates.rightWalking:
-				//if(OnStateChange != null){
-				OnStateChange(actorStates.rightIdle);
-				//}
+			case ActorStates.rightWalking:
+				OnStateChange(ActorStates.rightIdle);
 				break;
 				
-			case actorStates.leftIdle:
+			case ActorStates.leftIdle:
 				break;
 				
-			case actorStates.rightIdle:
+			case ActorStates.rightIdle:
 				break;
 				
-			case actorStates.leftSpeaking:
-				//if(OnStateChange != null){
-				OnStateChange(actorStates.leftIdle);
-				//}
+			case ActorStates.leftSpeaking:
+				OnStateChange(ActorStates.leftIdle);
 				break;
 				
-			case actorStates.rightSpeaking:
-				//if(OnStateChange != null){
-				OnStateChange(actorStates.rightIdle);
-				//}
+			case ActorStates.rightSpeaking:
+				OnStateChange(ActorStates.rightIdle);
 				break;
 			}
 			
@@ -121,12 +113,12 @@ public class ActorStateController : MonoBehaviour {
 			if(hasEndedSpeaking){
 				
 				switch(currentState){
-				case actorStates.leftSpeaking:
-					OnStateChange(actorStates.leftIdle);
+				case ActorStates.leftSpeaking:
+					OnStateChange(ActorStates.leftIdle);
 					break;
 					
-				case actorStates.rightSpeaking: 
-					OnStateChange(actorStates.rightIdle);
+				case ActorStates.rightSpeaking: 
+					OnStateChange(ActorStates.rightIdle);
 					break;
 				}
 				
@@ -134,20 +126,20 @@ public class ActorStateController : MonoBehaviour {
 			else{
 				
 				switch(currentState){
-				case actorStates.leftIdle:
-					OnStateChange(actorStates.leftSpeaking);
+				case ActorStates.leftIdle:
+					OnStateChange(ActorStates.leftSpeaking);
 					break;
 					
-				case actorStates.leftWalking:
-					OnStateChange(actorStates.leftSpeaking);
+				case ActorStates.leftWalking:
+					OnStateChange(ActorStates.leftSpeaking);
 					break;
 					
-				case actorStates.rightIdle: 
-					OnStateChange(actorStates.rightSpeaking);
+				case ActorStates.rightIdle: 
+					OnStateChange(ActorStates.rightSpeaking);
 					break;
 					
-				case actorStates.rightWalking:
-					OnStateChange(actorStates.rightSpeaking);
+				case ActorStates.rightWalking:
+					OnStateChange(ActorStates.rightSpeaking);
 					break;
 				}
 				
@@ -157,72 +149,81 @@ public class ActorStateController : MonoBehaviour {
 
 	}
 
-	protected virtual void OnStateChange(actorStates newState){
+	protected virtual void OnStateChange(ActorStates newState){
+
 		if(newState == currentState){
 			return;
 		}
 		
 		switch(newState){
-			case actorStates.leftIdle:
-				actorAnimator.SetBool("isLeftWalking", false);
-				actorAnimator.SetBool("isRightWalking", false);
-				actorAnimator.SetBool("isSpeaking",false);
-				break;
-				
-			case actorStates.rightIdle:
-				actorAnimator.SetBool("isLeftWalking", false);
-				actorAnimator.SetBool("isRightWalking", false);
-				actorAnimator.SetBool("isSpeaking",false);
-				break;
-				
-			case actorStates.leftWalking:
-				actorAnimator.SetBool("isLeftWalking", true);
-				actorAnimator.SetBool("isRightWalking", false);
-				actorAnimator.SetBool("isSpeaking",false);
-				break;
-				
-			case actorStates.rightWalking:
-				actorAnimator.SetBool("isLeftWalking", false);
-				actorAnimator.SetBool("isRightWalking", true);
-				actorAnimator.SetBool("isSpeaking",false);
-				break;
-				
-			case actorStates.leftSpeaking:
-				actorAnimator.SetBool("isLeftWalking", false);
-				actorAnimator.SetBool("isRightWalking", false);
-	            actorAnimator.SetBool("isSpeaking",true);
-	            break;
-                
-            case actorStates.rightSpeaking:
-               	actorAnimator.SetBool("isLeftWalking", false);
-                actorAnimator.SetBool("isRightWalking", false);
-                actorAnimator.SetBool("isSpeaking",true);
-                break;
+		case ActorStates.leftIdle:
+			actorAnimator.SetBool("isLeftWalking", false);
+			actorAnimator.SetBool("isRightWalking", false);
+			actorAnimator.SetBool("isSpeaking",false);
+			break;
+			
+		case ActorStates.rightIdle:
+			actorAnimator.SetBool("isLeftWalking", false);
+			actorAnimator.SetBool("isRightWalking", false);
+			actorAnimator.SetBool("isSpeaking",false);
+			break;
+			
+		case ActorStates.leftWalking:
+			actorAnimator.SetBool("isLeftWalking", true);
+			actorAnimator.SetBool("isRightWalking", false);
+			actorAnimator.SetBool("isSpeaking",false);
+			break;
+			
+		case ActorStates.rightWalking:
+			actorAnimator.SetBool("isLeftWalking", false);
+			actorAnimator.SetBool("isRightWalking", true);
+			actorAnimator.SetBool("isSpeaking",false);
+			break;
+			
+		case ActorStates.leftSpeaking:
+			actorAnimator.SetBool("isLeftWalking", false);
+			actorAnimator.SetBool("isRightWalking", false);
+            actorAnimator.SetBool("isSpeaking",true);
+            break;
+        
+	    case ActorStates.rightSpeaking:
+	       	actorAnimator.SetBool("isLeftWalking", false);
+	        actorAnimator.SetBool("isRightWalking", false);
+	        actorAnimator.SetBool("isSpeaking",true);
+	        break;
 
-			case actorStates.rightUpperGrabbing:
-               	actorAnimator.SetBool("isLeftWalking", false);
-                actorAnimator.SetBool("isRightWalking", false);
-                actorAnimator.SetBool("isSpeaking",false);
-                break;
-
-			case actorStates.leftUpperGrabbing:
-               	actorAnimator.SetBool("isLeftWalking", false);
-                actorAnimator.SetBool("isRightWalking", false);
-                actorAnimator.SetBool("isSpeaking",false);
-                break;
+		default:
+			break;
         }
         
         previousState = currentState;
         currentState = newState;
 	}
 
-	protected IEnumerator WaitForAnimation(Animation animation){
-		/*
-		do{
-			yield return null;
-		}while(animation.isPlaying);
-		*/
-		yield return new WaitForSeconds(2.5f);
-	}
+}
 
+public class ActorStates{
+	public int Value {get; set;}
+	
+	public const int leftIdle = 0;
+	public const int rightIdle = 1;
+	public const int leftWalking = 2;
+	public const int rightWalking = 3;
+	public const int leftSpeaking = 4;
+	public const int rightSpeaking = 5;
+
+	public ActorStates(){}
+
+	public ActorStates(int value){
+		Value = value;
+	}
+	
+	public static implicit operator int(ActorStates type){
+		return type.Value;
+	}
+	
+	public static implicit operator ActorStates(int value){
+		return new ActorStates(value);
+	}
+	
 }

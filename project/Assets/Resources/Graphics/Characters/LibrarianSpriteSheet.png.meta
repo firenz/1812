@@ -1,0 +1,333 @@
+fileFormatVersion: 2
+guid: df1b7acb63598424a95cb0413f685a6b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LibrarianLeftIdle00
+    21300002: LibrarianLeftCoughing00
+    21300004: LibrarianLeftCoughing01
+    21300006: LibrarianLeftCoughing02
+    21300008: LibrarianLeftCoughing03
+    21300010: LibrarianLeftCoughing04
+    21300012: LibrarianLeftCoughing05
+    21300014: LibrarianLeftCoughing06
+    21300016: LibrarianLeftCoughing07
+    21300018: LibrarianRightIdle00
+    21300020: LibrarianRightCoughing00
+    21300022: LibrarianRightCoughing01
+    21300024: LibrarianRightCoughing02
+    21300026: LibrarianRightCoughing03
+    21300028: LibrarianRightCoughing04
+    21300030: LibrarianRightCoughing05
+    21300032: LibrarianRightCoughing06
+    21300034: LibrarianRightCoughing07
+    21300036: LibrarianLeftSpeaking00
+    21300038: LibrarianLeftSpeaking01
+    21300040: LibrarianLeftSpeaking02
+    21300042: LibrarianLeftSpeaking03
+    21300044: LibrarianRightSpeaking00
+    21300046: LibrarianRightSpeaking01
+    21300048: LibrarianRightSpeaking02
+    21300050: LibrarianRightSpeaking03
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 6
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: LibrarianLeftIdle00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing00
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing01
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing02
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing03
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing04
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing05
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing06
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftCoughing07
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 436
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightIdle00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing00
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing01
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing02
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing03
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing04
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing05
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing06
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightCoughing07
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 372
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftSpeaking00
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 308
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftSpeaking01
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 308
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftSpeaking02
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 308
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianLeftSpeaking03
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 308
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightSpeaking00
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 244
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightSpeaking01
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 244
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightSpeaking02
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 244
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LibrarianRightSpeaking03
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 244
+        width: 40
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

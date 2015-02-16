@@ -18,11 +18,11 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent (typeof(Player))]
-public class PlayerState : ActorStateController {
+public class PlayerState : MonoBehaviour {
 	private Player player;
 
 	/*
-	protected enum actorStates{
+	public enum playerStates{
 		leftIdle = 0,
 		rightIdle,
 		leftWalking,
@@ -32,177 +32,242 @@ public class PlayerState : ActorStateController {
 		leftUpperGrabbing,
 		rightUpperGrabbing,
 		leftBottomGrabbing,
-		rightBottomGrabbing
-		//leftUsingPhone, To be implemented
-		//rightUsingPhone To be implemented
+		rightBottomGrabbing,
+		leftUsingPhone, //To be implemented
+		rightUsingPhone //To be implemented
 	}
-	
-	protected actorStates currentState;
-	protected actorStates previousState;
 	*/
+
+	protected PlayerStates currentState;
+	protected PlayerStates previousState;
+
+	protected Animator playerAnimator = null;
+	protected float previousAnimatorSpeed;
+	protected Vector2 playerMoveDirection;
+	protected bool isDirectionToGoReached = true;
+	protected bool isSpeaking = false;
+	protected bool hasEndedSpeaking = true;
 	private bool isInteracting = false;
 	private bool isGrabbingUpperObject = false;
 	private bool isGrabbingBottomObject = false;
 	private bool hasEndedGrabbing = true;
+	private bool isUsingPhone = false;
+	public bool isFacingLeft = true;
+	public bool isFacingRight = false;
 	//private bool hasEndedManipulatingMechanism = true;
 	
-	protected override void Start(){
-		actor = this.GetComponent<Actor>();
-		actorAnimator = this.GetComponent<Animator>();
+	protected void Start(){
+		//actor = this.GetComponent<Actor>();
+		playerAnimator = this.GetComponent<Animator>();
 		player = this.GetComponent<Player>();
+		previousAnimatorSpeed = playerAnimator.speed;
+		currentState = PlayerStates.leftIdle;
+		previousState = currentState;
+		OnStateChange(PlayerStates.leftIdle);
 	}
 
-	protected override void ActionStatesHandler(){
+	protected void Update(){
+		playerMoveDirection = player.moveDirection;
+		isDirectionToGoReached = player.isDirectionToGoReached;
+		
+		if(!isDirectionToGoReached){
+			if(playerMoveDirection.x > 0f){
+				OnStateChange(PlayerStates.rightWalking);
+				currentState = PlayerStates.rightWalking;
+				player.isFacingRight = true;
+				player.isFacingLeft = false;
+			}
+			else if(playerMoveDirection.x < 0f){
+				OnStateChange(PlayerStates.leftWalking);
+				currentState = PlayerStates.leftWalking;
+				player.isFacingRight = false;
+				player.isFacingLeft = true;
+			}
+			
+		}
+		else if(isDirectionToGoReached){
+			this.ActionStatesHandler();
+		}
+	}
+
+	protected void ActionStatesHandler(){
 		isInteracting = player.isInteracting;
 		isSpeaking = player.isSpeaking;
 		hasEndedSpeaking = player.hasEndedSpeaking;
 		isGrabbingUpperObject = player.isGrabbingUpperObject;
 		isGrabbingBottomObject = player.isGrabbingBottomObject;
 		hasEndedGrabbing = player.hasEndedGrabbing;
-		//hasEndedManipulatingMechanism = player.hasEndedManipulatingMechanism;
+		isUsingPhone = player.isUsingPhone;
+		isFacingLeft = player.isFacingLeft;
+		isFacingRight = player.isFacingRight;
 
-		//if(!isSpeaking || !isGrabbingUpperObject || !isGrabbingBottomObject){
 		if(!isSpeaking && !isInteracting){
-			
-			switch(currentState){
-				case actorStates.leftWalking:
-					OnStateChange(actorStates.leftIdle);
+
+			if(isUsingPhone){
+				switch(currentState){
+				default:
 					break;
-					
-				case actorStates.rightWalking:
-					OnStateChange(actorStates.rightIdle);
-					break;
-					
-				case actorStates.leftIdle:
-					break;
-					
-				case actorStates.rightIdle:
-					break;
-					
-				case actorStates.leftSpeaking:
-					OnStateChange(actorStates.leftIdle);
-					break;
-					
-				case actorStates.rightSpeaking:
-					OnStateChange(actorStates.rightIdle);
+				case PlayerStates.leftIdle:
+					OnStateChange(PlayerStates.leftUsingPhone);
 					break;
 
-				case actorStates.leftUpperGrabbing:
-					OnStateChange(actorStates.leftIdle);
+				case PlayerStates.rightIdle:
+					OnStateChange(PlayerStates.rightUsingPhone);
 					break;
-
-				case actorStates.rightUpperGrabbing:
-					OnStateChange(actorStates.rightIdle);
-					break;
-
-				case actorStates.leftBottomGrabbing:
-					OnStateChange(actorStates.leftIdle);
-					break;
-
-				case actorStates.rightBottomGrabbing:
-					OnStateChange(actorStates.rightIdle);
-					break;
+				}
 			}
-			
-		}
-		else if(isSpeaking){
-			Debug.Log("isSpeaking");
+			else{
+				switch(currentState){
+				case PlayerStates.leftWalking:
+					OnStateChange(PlayerStates.leftIdle);
+					break;
+					
+				case PlayerStates.rightWalking:
+					OnStateChange(PlayerStates.rightIdle);
+					break;
+					
+				case PlayerStates.leftIdle:
+					break;
+					
+				case PlayerStates.rightIdle:
+					break;
+					
+				case PlayerStates.leftSpeaking:
+					OnStateChange(PlayerStates.leftIdle);
+					break;
+					
+				case PlayerStates.rightSpeaking:
+					OnStateChange(PlayerStates.rightIdle);
+					break;
+					
+				case PlayerStates.leftUpperGrabbing:
+					OnStateChange(PlayerStates.leftIdle);
+					break;
+					
+				case PlayerStates.rightUpperGrabbing:
+					OnStateChange(PlayerStates.rightIdle);
+					break;
+					
+				case PlayerStates.leftBottomGrabbing:
+					OnStateChange(PlayerStates.leftIdle);
+					break;
+					
+				case PlayerStates.rightBottomGrabbing:
+					OnStateChange(PlayerStates.rightIdle);
+					break;
+				case PlayerStates.leftUsingPhone:
+					OnStateChange(PlayerStates.leftIdle);
+					break;
+					
+				case PlayerStates.rightUsingPhone:
+					OnStateChange(PlayerStates.rightIdle);
+					break;
+				}
+
+
+				if(isFacingLeft && (currentState == PlayerStates.rightIdle)){
+					OnStateChange(PlayerStates.leftIdle);
+				}
+				else if(isFacingRight && (currentState == PlayerStates.leftIdle)){
+					OnStateChange(PlayerStates.rightIdle);
+				}
+
+			}
+            
+        }
+        else if(isSpeaking){
 			if(hasEndedSpeaking){
 				switch(currentState){
-				case actorStates.leftSpeaking:
-					OnStateChange(actorStates.leftIdle);
+				case PlayerStates.leftSpeaking:
+					OnStateChange(PlayerStates.leftIdle);
 					break;
 					
-				case actorStates.rightSpeaking: 
-					OnStateChange(actorStates.rightIdle);
+				case PlayerStates.rightSpeaking: 
+					OnStateChange(PlayerStates.rightIdle);
 					break;
 				}
 				
 			}
 			else{
 				switch(currentState){
-				case actorStates.leftIdle:
-					OnStateChange(actorStates.leftSpeaking);
+				case PlayerStates.leftIdle:
+					OnStateChange(PlayerStates.leftSpeaking);
 					break;
 					
-				case actorStates.leftWalking:
-					OnStateChange(actorStates.leftSpeaking);
+				case PlayerStates.leftWalking:
+					OnStateChange(PlayerStates.leftSpeaking);
 					break;
 					
-				case actorStates.rightIdle: 
-					OnStateChange(actorStates.rightSpeaking);
+				case PlayerStates.rightIdle: 
+					OnStateChange(PlayerStates.rightSpeaking);
 					break;
 					
-				case actorStates.rightWalking:
-					OnStateChange(actorStates.rightSpeaking);
+				case PlayerStates.rightWalking:
+					OnStateChange(PlayerStates.rightSpeaking);
 					break;
 					
-				case actorStates.leftUpperGrabbing:
-					OnStateChange(actorStates.leftSpeaking);
+				case PlayerStates.leftUpperGrabbing:
+					OnStateChange(PlayerStates.leftSpeaking);
 					break;
 					
-				case actorStates.rightUpperGrabbing:
-					OnStateChange(actorStates.rightSpeaking);
+				case PlayerStates.rightUpperGrabbing:
+					OnStateChange(PlayerStates.rightSpeaking);
 					break;
 					
-				case actorStates.leftBottomGrabbing:
-					OnStateChange(actorStates.leftSpeaking);
+				case PlayerStates.leftBottomGrabbing:
+					OnStateChange(PlayerStates.leftSpeaking);
 					break;
 					
-				case actorStates.rightBottomGrabbing:
-					OnStateChange(actorStates.rightSpeaking);
+				case PlayerStates.rightBottomGrabbing:
+					OnStateChange(PlayerStates.rightSpeaking);
 					break;
 
-				case actorStates.rightSpeaking:
+				case PlayerStates.rightSpeaking:
 					break;
 
-				case actorStates.leftSpeaking:
+				case PlayerStates.leftSpeaking:
 					break;
 				}
 			}
 
 			
 		}
-		if(isInteracting){
+		else if(isInteracting){
 			Debug.Log("isInteracting");
 			if(hasEndedGrabbing){
 				switch(currentState){
-				case actorStates.leftWalking:
-					OnStateChange(actorStates.leftIdle);
+				case PlayerStates.leftWalking:
+					OnStateChange(PlayerStates.leftIdle);
 					break;
 					
-				case actorStates.rightWalking:
-					OnStateChange(actorStates.rightIdle);
+				case PlayerStates.rightWalking:
+					OnStateChange(PlayerStates.rightIdle);
 					break;
 					
-				case actorStates.leftIdle:
+				case PlayerStates.leftSpeaking:
+					OnStateChange(PlayerStates.leftIdle);
 					break;
 					
-				case actorStates.rightIdle:
+				case PlayerStates.rightSpeaking:
+					OnStateChange(PlayerStates.rightIdle);
 					break;
 					
-				case actorStates.leftSpeaking:
-					OnStateChange(actorStates.leftIdle);
+				case PlayerStates.leftUpperGrabbing:
+					OnStateChange(PlayerStates.leftIdle);
 					break;
 					
-				case actorStates.rightSpeaking:
-					OnStateChange(actorStates.rightIdle);
+				case PlayerStates.rightUpperGrabbing:
+					OnStateChange(PlayerStates.rightIdle);
 					break;
 					
-				case actorStates.leftUpperGrabbing:
-					OnStateChange(actorStates.leftIdle);
+				case PlayerStates.leftBottomGrabbing:
+					OnStateChange(PlayerStates.leftIdle);
 					break;
 					
-				case actorStates.rightUpperGrabbing:
-					OnStateChange(actorStates.rightIdle);
+				case PlayerStates.rightBottomGrabbing:
+					OnStateChange(PlayerStates.rightIdle);
 					break;
-					
-				case actorStates.leftBottomGrabbing:
-					OnStateChange(actorStates.leftIdle);
-					break;
-					
-				case actorStates.rightBottomGrabbing:
-					OnStateChange(actorStates.rightIdle);
+				default:
 					break;
 				}
 			}
@@ -211,34 +276,31 @@ public class PlayerState : ActorStateController {
 				if(isGrabbingUpperObject){
 					Debug.Log("isGrabbingUpperObject");
 					switch(currentState){
-					case actorStates.leftIdle:
-						OnStateChange(actorStates.leftUpperGrabbing);
+					case PlayerStates.leftIdle:
+						OnStateChange(PlayerStates.leftUpperGrabbing);
 						break;
 						
-					case actorStates.leftWalking:
-						OnStateChange(actorStates.leftUpperGrabbing);
+					case PlayerStates.leftWalking:
+						OnStateChange(PlayerStates.leftUpperGrabbing);
 						break;
 						
-					case actorStates.rightIdle: 
-						OnStateChange(actorStates.rightUpperGrabbing);
+					case PlayerStates.rightIdle: 
+						OnStateChange(PlayerStates.rightUpperGrabbing);
 						break;
 						
-					case actorStates.rightWalking:
-						OnStateChange(actorStates.rightUpperGrabbing);
+					case PlayerStates.rightWalking:
+						OnStateChange(PlayerStates.rightUpperGrabbing);
 						break;
 						
-					case actorStates.leftSpeaking:
-						OnStateChange(actorStates.leftUpperGrabbing);
+					case PlayerStates.leftSpeaking:
+						OnStateChange(PlayerStates.leftUpperGrabbing);
 						break;
 						
-					case actorStates.rightSpeaking:
-						OnStateChange(actorStates.rightUpperGrabbing);
+					case PlayerStates.rightSpeaking:
+						OnStateChange(PlayerStates.rightUpperGrabbing);
 						break;
-						
-					case actorStates.leftUpperGrabbing:
-						break;
-						
-					case actorStates.rightUpperGrabbing:
+
+					default:
 						break;
 					}
 					//StartCoroutine(WaitForAnimation(this.animation));
@@ -246,37 +308,49 @@ public class PlayerState : ActorStateController {
 				else if(isGrabbingBottomObject){
 					Debug.Log("isGrabbingBottomObject");
 					switch(currentState){
-					case actorStates.leftIdle:
-						OnStateChange(actorStates.leftBottomGrabbing);
+					case PlayerStates.leftIdle:
+						OnStateChange(PlayerStates.leftBottomGrabbing);
+						break;
+					
+					case PlayerStates.rightIdle: 
+						OnStateChange(PlayerStates.rightBottomGrabbing);
+                        break;
+
+					case PlayerStates.leftWalking:
+						OnStateChange(PlayerStates.leftBottomGrabbing);
 						break;
 						
-					case actorStates.leftWalking:
-						OnStateChange(actorStates.leftBottomGrabbing);
+					case PlayerStates.rightWalking:
+						OnStateChange(PlayerStates.rightBottomGrabbing);
 						break;
 						
-					case actorStates.rightIdle: 
-						OnStateChange(actorStates.rightBottomGrabbing);
+					case PlayerStates.leftSpeaking:
+						OnStateChange(PlayerStates.leftBottomGrabbing);
 						break;
 						
-					case actorStates.rightWalking:
-						OnStateChange(actorStates.rightBottomGrabbing);
+					case PlayerStates.rightSpeaking:
+						OnStateChange(PlayerStates.rightBottomGrabbing);
 						break;
-						
-					case actorStates.leftSpeaking:
-						OnStateChange(actorStates.leftBottomGrabbing);
-						break;
-						
-					case actorStates.rightSpeaking:
-						OnStateChange(actorStates.rightBottomGrabbing);
-						break;
-						
-					case actorStates.leftBottomGrabbing:
-						break;
-						
-					case actorStates.rightBottomGrabbing:
+
+					default:
 						break;
 					}
 					//StartCoroutine(WaitForAnimation(this.animation));
+				}
+				else if(isUsingPhone){
+					Debug.Log("isUsingPhone");
+					switch(currentState){
+					default:
+                    	break;
+                    case PlayerStates.leftIdle:
+						OnStateChange(PlayerStates.leftUsingPhone);
+						break;
+					
+					case PlayerStates.rightWalking:
+						OnStateChange(PlayerStates.rightUsingPhone);
+                        break;
+					
+                    }
 				}
 			}
 
@@ -285,95 +359,183 @@ public class PlayerState : ActorStateController {
 		
 	}
 
-	protected override void OnStateChange(actorStates newState){
+	protected void OnStateChange(PlayerStates newState){
 		if(newState == currentState){
 			return;
 		}
 		
 		switch(newState){
-		case actorStates.leftIdle:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.leftIdle:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", true);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 			
-		case actorStates.rightIdle:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.rightIdle:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", true);
 			break;
 			
-		case actorStates.leftWalking:
-			actorAnimator.SetBool("isLeftWalking", true);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.leftWalking:
+			playerAnimator.SetBool("isLeftWalking", true);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 			
-		case actorStates.rightWalking:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", true);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.rightWalking:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", true);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 			
-		case actorStates.leftSpeaking:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",true);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.leftSpeaking:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",true);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 			
-		case actorStates.rightSpeaking:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",true);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.rightSpeaking:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",true);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 
-		case actorStates.rightUpperGrabbing:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", true);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.rightUpperGrabbing:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", true);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 			
-		case actorStates.leftUpperGrabbing:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", true);
-			actorAnimator.SetBool("isBottomGrabbing", false);
+		case PlayerStates.leftUpperGrabbing:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", true);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 
-		case actorStates.rightBottomGrabbing:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", true);
+		case PlayerStates.rightBottomGrabbing:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", true);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 
-		case actorStates.leftBottomGrabbing:
-			actorAnimator.SetBool("isLeftWalking", false);
-			actorAnimator.SetBool("isRightWalking", false);
-			actorAnimator.SetBool("isSpeaking",false);
-			actorAnimator.SetBool("isUpperGrabbing", false);
-			actorAnimator.SetBool("isBottomGrabbing", true);
+		case PlayerStates.leftBottomGrabbing:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", true);
+			playerAnimator.SetBool("isUsingPhone", false);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
+			break;
+
+		case PlayerStates.rightUsingPhone:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", true);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
+			break;
+
+		case PlayerStates.leftUsingPhone:
+			playerAnimator.SetBool("isLeftWalking", false);
+			playerAnimator.SetBool("isRightWalking", false);
+			playerAnimator.SetBool("isSpeaking",false);
+			playerAnimator.SetBool("isUpperGrabbing", false);
+			playerAnimator.SetBool("isBottomGrabbing", false);
+			playerAnimator.SetBool("isUsingPhone", true);
+			playerAnimator.SetBool("isFacingLeft", false);
+			playerAnimator.SetBool("isFacingRight", false);
 			break;
 		}
 		
 		previousState = currentState;
 		currentState = newState;
 	}
+
+
+	public void StopAnimation(float time){
+		previousAnimatorSpeed = playerAnimator.speed;
+		playerAnimator.speed = 0;
+		if(time != 0.0f){
+			StartCoroutine(WaitForStopAnimation(time));
+		}
+		playerAnimator.speed = previousAnimatorSpeed;
+	}
+
+	protected IEnumerator WaitForStopAnimation(float time){
+		yield return new WaitForSeconds(time);
+	}
+}
+
+public class PlayerStatesB : ActorStates{
+	public const int leftUpperGrabbing = 6;
+	public const int rightUpperGrabbing = 7;
+	public const int leftBottomGrabbing = 8;
+	public const int rightBottomGrabbing = 9;
+	public const int leftUsingPhone = 10;
+	public const int rightUsingPhone = 11;
+
+	public PlayerStatesB(){}
+
+	public PlayerStatesB(int value){
+		Value = value;
+	}
+
+	public static implicit operator int(PlayerStatesB type){
+		return type.Value;
+	}
 	
+	public static implicit operator PlayerStatesB(int value){
+		return new PlayerStatesB(value);
+	}
 }

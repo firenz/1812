@@ -1,0 +1,127 @@
+﻿/*	This file is part of 1812: La aventura.
+
+    1812: La aventura is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    1812: La aventura is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with 1812: La aventura.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class ItemInventory : MonoBehaviour {
+
+	protected List<string> descriptionText = null;
+	protected bool isItemSelected = false;
+	public bool isItemDestroyedAfterBeingUsed = false;
+	protected Vector3 originalPosition;
+	protected Vector3 mousePosition;
+	protected Vector3 currentPosition;
+	protected Vector3 mouseOffset;
+	protected List<string> nameOfInteractiveObjectsWhichItemInteracts;
+	protected Dictionary<string, List<string> > beforeUsedText = null;
+	protected Dictionary<string, List<string> > afterUsedText = null;
+
+
+	public delegate void UsedInInteractiveObject(ItemInventory itemInventory, InteractiveObject interactiveObject);
+	public static event UsedInInteractiveObject used;
+
+	// Use this for initialization
+	protected void Start () {
+		descriptionText = new List<string>();
+		nameOfInteractiveObjectsWhichItemInteracts = new List<string>();
+		beforeUsedText = new Dictionary<string, List<string> >();
+		afterUsedText = new Dictionary<string, List<string> >();
+		InitializeInformation();
+	}
+
+	protected virtual void InitializeInformation(){
+		//Write here the info for your item
+	}
+	
+	// Update is called once per frame
+	protected void Update () {
+		if(isItemSelected){
+			Screen.showCursor = false;
+			mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.0f);
+			this.transform.position = Camera.main.ScreenToWorldPoint(mousePosition) + mouseOffset;
+		}
+
+	}
+
+	public List<string> Description(){
+		return descriptionText;
+	}
+
+	public List<string> DialogueAfterUsingItemInventoryOnInteractiveObject(InteractiveObject interactiveObject){
+		List<string> _dialogueAfterUsingItem;
+		if(afterUsedText.TryGetValue(interactiveObject.gameObject.name, out _dialogueAfterUsingItem)){
+			return _dialogueAfterUsingItem;
+		}
+		else{
+			return null;
+		}
+	}
+	
+	public List<string> DialogueBeforeUsingItemInventoryOnInteractiveObject(InteractiveObject interactiveObject){
+		List<string> _dialogueBeforeUsingItem;
+		if(beforeUsedText.TryGetValue(interactiveObject.gameObject.name, out _dialogueBeforeUsingItem)){
+			return _dialogueBeforeUsingItem;
+		}
+		else{
+			return null;
+		}
+    }
+
+	protected void OnMouseOver(){
+		if(Input.GetMouseButtonDown(1)){
+
+			if(!isItemSelected){
+				Screen.showCursor = false;
+				isItemSelected = true;
+				originalPosition = this.transform.position;
+				mouseOffset = this.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.0f));
+			}
+			else{
+
+				Debug.Log("ItemInventory: Right click: check if hit Interactive Object");
+				Screen.showCursor = true;
+				isItemSelected = false;
+
+				this.transform.position = originalPosition;
+
+				Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				RaycastHit2D hit = Physics2D.Raycast(new Vector2(mousePosition.x,mousePosition.y), Vector2.zero, 0f);
+				if(hit.collider != null){
+					UsedOnCorrectInteractiveObject(hit.collider);
+				}
+
+			}
+		}
+	}
+
+	protected virtual void UsedOnCorrectInteractiveObject(Collider2D other){
+		//Write here what happens if item is in contact with an interactive object that reacts to it
+
+		foreach(string nameOfInteractiveObject in nameOfInteractiveObjectsWhichItemInteracts){
+			Debug.Log(nameOfInteractiveObject);
+			if(other.gameObject.name == nameOfInteractiveObject){
+
+				if(used != null){
+					used(this, other.gameObject.GetComponent<InteractiveObject>());
+				}
+			}
+		}
+
+	}
+
+}

@@ -8,6 +8,9 @@ TagManager:
   - WalkingPoint
   - InteractivePoint
   - NavigationLinks
+  - Obstacle
+  - ItemInventory
+  - NPC
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: Navigation
   User Layer 9: Player
-  User Layer 10: 
-  User Layer 11: 
-  User Layer 12: 
+  User Layer 10: InteractiveObjects
+  User Layer 11: ItemInventory
+  User Layer 12: NPCs
   User Layer 13: 
   User Layer 14: 
   User Layer 15: 
@@ -42,18 +45,6 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
-  - name: Default
-    userID: 0
-    uniqueID: 0
-    locked: 0
-  - name: Dialogs
-    userID: 6
-    uniqueID: 3818751215
-    locked: 0
-  - name: GUI
-    userID: 5
-    uniqueID: 324823067
-    locked: 0
   - name: BackgroundScenery
     userID: 1
     uniqueID: 1142741523
@@ -69,4 +60,16 @@ TagManager:
   - name: FrontlineScenery
     userID: 2
     uniqueID: 2306940677
+    locked: 0
+  - name: Dialogs
+    userID: 6
+    uniqueID: 3818751215
+    locked: 0
+  - name: Default
+    userID: 0
+    uniqueID: 0
+    locked: 0
+  - name: GUI
+    userID: 5
+    uniqueID: 324823067
     locked: 0

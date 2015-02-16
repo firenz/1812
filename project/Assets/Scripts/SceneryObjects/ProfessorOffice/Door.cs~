@@ -17,16 +17,41 @@
 using UnityEngine;
 using System.Collections;
 
-public class Door : InteractiveObject {
+public class Door : WarperElement {
 
 	protected override void InitializeInformation(){
 		//Write here the info for your interactive object
+		nameSceneDestination = "DemoScene_01";
 
-		definitionText.Add("Es una puerta");
+		groupID = "SCENE_PROFESSOROFFICE";
+		nameID = "OBJECT_DOOR";
+	}
 
-		interactionText.Add("Intentar abrir");
-		interactionText.Add("esta puerta es inutil");
-		interactionText.Add("no me puedo escapar");
-		interactionText.Add("de la programadora");
+	protected override IEnumerator WaitForLeftClickAction(){
+		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
+		if(_distanceBetweenActorAndInteractivePosition >= permisiveErrorBetweenPlayerPositionAndInteractivePosition){
+			Player.Instance.GoTo(interactivePosition);
+			
+			do{
+				yield return null;
+			}while(Player.Instance.IsWalking());
+			
+		}
+		
+		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.SetInteractionActive();
+
+			yield return new WaitForSeconds(0.1f);
+			Player.Instance.LookToTheRight();
+			Player.Instance.Speak(groupID, nameID, "INTERACTION");
+			
+			do{
+				yield return null;
+			}while(Player.Instance.IsSpeaking());
+			
+			Player.Instance.SetInteractionInactive();
+			
+			GameController.WarpToLevel(nameSceneDestination);
+		}
 	}
 }

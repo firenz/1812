@@ -1,131 +1,306 @@
-﻿/*	This file is part of 1812: La aventura.
-
-    1812: La aventura is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    1812: La aventura is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with 1812: La aventura.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Player : Actor {	
-	public bool isInteracting = false;
-	//public bool hasEndedManipulatingMechanism = true;
-	public bool isGrabbingUpperObject = false;
-	public bool isGrabbingBottomObject = false;
-	public bool hasEndedGrabbing = true;
+public sealed class Player : Actor {
+	public bool isWaiting = false;
+	public bool isUsingItemInventory = false;
+	private bool isGrabbingUpperItem = false;
+	private bool isGrabbingBottomItem = false;
+	private bool isTouchingItemAnimEventActivated = false;
+	private static float timeCounterUntilWaitingAnimation;
+	private const float maxTimeIdleUntilWaitingAnimation = 10f;
 
-	public void Action(InteractiveObject interactiveObject){
-		Debug.Log("Action");
-		interactiveObject.isInteractiveObjectMechanismActivated = true;
-		interactiveObject.Mechanism();
-	}
-
-	void GrabBottomObject(InteractiveObject interactiveObject){
-		isGrabbingBottomObject = true;
-		hasEndedGrabbing = false;
-		//To be implemented
+	private static Player instance;
+	
+	public static Player Instance{
+		get{
+			return instance;
+		}
 	}
 	
-	void GrabUpperObject(InteractiveObject interactiveObject){
-		isGrabbingUpperObject = true;
-		//To be implemented
+	private void OnDestroy() {
+		if (instance == this) {
+			instance = null;
+		}
 	}
 	
-	public void Describe(InteractiveObject interactiveObject){
-		Debug.Log("Describe");
-		StartCoroutine(WaitForDescribeCompleted(interactiveObject));
+	private void OnApplicationQuit(){
+		instance = null;
+	}
+	
+	private void Awake(){
+		if(instance == null){
+			instance = this;
+        }
+        else{
+            Destroy(this.gameObject);
+        }
+    }
+
+	protected override void InitializeAdditionalActorInformation(){
+		if(GameState.lastPlayerPosition != Vector2.zero){
+			this.transform.position = GameState.lastPlayerPosition;
+		}
+
+		originalPositionToGo = GameState.lastTargetedPositionByMouse;
+		currentPosition = this.transform.position;
 	}
 
-	public void Interact(InteractiveObject interactiveObject){
-		Debug.Log("Interact");
-		StartCoroutine(WaitForInteractionCompleted(interactiveObject));
+	protected override void AdditionalUpdateInformation(){
+		if(isIdle && !isInteracting && !CutScenesManager.IsPlaying() && !isWaiting){
+			if((Time.time - timeCounterUntilWaitingAnimation) > maxTimeIdleUntilWaitingAnimation){
+				isWaiting = true;
+				timeCounterUntilWaitingAnimation = Time.time;
+			}
+		}
+		else{
+			timeCounterUntilWaitingAnimation = Time.time;
+		}
 	}
 
-	private IEnumerator WaitForInteractionCompleted(InteractiveObject interactiveObject){
-		Debug.Log("WaitForInteractionCompleted");
-		yield return StartCoroutine(WaitForGoToDirectionCompleted(interactiveObject.position));
+	public override void ActionOnItemInventoryUsed(string nameItemInventory){}
+
+	public void GrabUpperItem(PickableElement pickableItem){
+		StartCoroutine(WaitForGrabbingUpperItemCompleted(pickableItem));
+	}
+
+	private IEnumerator WaitForGrabbingUpperItemCompleted(PickableElement pickableItem){
+		do{
+			yield return null;
+		}while(!isIdle);
+
+		isIdle = false;
+		isGrabbingUpperItem = true;
+		isPlayingAnimation = true;
+
+		do{
+			yield return null;
+		}while(!isTouchingItemAnimEventActivated);
 		
-		InteractiveObject.interactiveTypes typeInteractiveObject = interactiveObject.currentType;
+		List<string> _nameListGrabbedItems = pickableItem.NameListPickableObjects();
+		foreach(string itemName in _nameListGrabbedItems){
+			Inventory.Instance.AddItem(itemName);
+		}
 
-		switch(typeInteractiveObject){
-		case InteractiveObject.interactiveTypes.examinable:
-			Debug.Log("WaitForInteractionCompleted:examinable");
-			yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+		if(pickableItem.IsDestroyedAfterBeingPicked()){
+			pickableItem.SetInactive();
+		}
+
+		do{
+			yield return null;
+		}while(!isPlayingAnimation);
+
+		isGrabbingUpperItem = false;
+		isIdle = true;
+	}
+
+	public void GrabBottomItem(PickableElement pickableItem){
+		StartCoroutine(WaitForGrabbingBottomItemCompleted(pickableItem));
+	}
+	
+	private IEnumerator WaitForGrabbingBottomItemCompleted(PickableElement pickableItem){
+		do{
+			yield return null;
+		}while(isInConversation || !isIdle);
+		
+		isIdle = false;
+		isGrabbingBottomItem = true;
+		
+		do{
+			yield return null;
+		}while(!isTouchingItemAnimEventActivated);
+
+		List<string> _nameListGrabbedItems = pickableItem.NameListPickableObjects();
+		foreach(string itemName in _nameListGrabbedItems){
+			Inventory.Instance.AddItem(itemName);
+		}
+
+		if(pickableItem.IsDestroyedAfterBeingPicked()){
+			pickableItem.SetInactive();
+		}
+
+		do{
+			yield return null;
+		}while(!isPlayingAnimation);
+
+		isGrabbingBottomItem = false;
+		isIdle = true;
+	}
+
+	public void UpperInteraction(InteractiveElement element){
+		StartCoroutine(WaitForUpperInteractionCompleted(element));
+	}
+	
+	private IEnumerator WaitForUpperInteractionCompleted(InteractiveElement element){
+		do{
+			yield return null;
+		}while(!isIdle);
+		
+		isIdle = false;
+		isGrabbingUpperItem = true;
+		isPlayingAnimation = true;
+		
+		do{
+			yield return null;
+		}while(!isTouchingItemAnimEventActivated);
+
+		element.OnPlayerTouchingAction();
+		
+		do{
+			yield return null;
+		}while(!isPlayingAnimation);
+		
+		isGrabbingUpperItem = false;
+		isIdle = true;
+	}
+
+	public void BottomInteraction(InteractiveElement element){
+		StartCoroutine(WaitForBottomInteractionCompleted(element));
+	}
+	
+	private IEnumerator WaitForBottomInteractionCompleted(InteractiveElement element){
+		do{
+			yield return null;
+		}while(!isIdle);
+		
+		isIdle = false;
+		isGrabbingBottomItem = true;
+		isPlayingAnimation = true;
+		
+		do{
+			yield return null;
+		}while(!isTouchingItemAnimEventActivated);
+		
+		element.OnPlayerTouchingAction();
+		
+		do{
+			yield return null;
+		}while(!isPlayingAnimation);
+		
+		isGrabbingBottomItem = false;
+		isIdle = true;
+	}
+
+	public void PlayAnimation(string nameAnimation){
+		StartCoroutine(WaitPlayAnimation(nameAnimation));
+	}
+
+	private IEnumerator WaitPlayAnimation(string nameAnimation){
+		isIdle = false;
+		switch(nameAnimation){
+		case "UpperGrabbing":
+			isGrabbingUpperItem = true;
+
+			do{
+				yield return null;
+			}while(isPlayingAnimation);
+
+			isGrabbingUpperItem = false;
 			break;
-		case InteractiveObject.interactiveTypes.interactiveButNotPickable:
-			Debug.Log("WaitForInteractionCompleted:interactiveButNotPickable");
-			yield return StartCoroutine(WaitForActionCompleted(interactiveObject));
-			break;
-		case InteractiveObject.interactiveTypes.bottomPickable:
-			Debug.Log("WaitForInteractionCompleted:bottomPickable");
-			//this.GrabBottomObject(interactiveObject); To be implemented
-			break;
-		case InteractiveObject.interactiveTypes.upperPickable:
-			Debug.Log("WaitForInteractionCompleted:upperPickable");
-			//this.GrabUpperObject(interactiveObject); To be implemented
+		case "BottomGrabbing":
+			isGrabbingBottomItem = true;
+
+			do{
+				yield return null;
+			}while(isPlayingAnimation);
+
+            isGrabbingBottomItem = false;
+            break;
+		case "UsingPhone":
+	        isWaiting = true;
+
+			do{
+				yield return null;
+			}while(isPlayingAnimation);
+
+	        isWaiting = false;
+	        break;
+		default:
 			break;
 		}
-		isInteracting = false;
+		endOfAnimationEvent = false;
+		isIdle = true;
+	}
+    
+
+	public void StartOfAnimationEvent(){
+		isPlayingAnimation = true;
+		endOfAnimationEvent = false;
+		isTouchingItemAnimEventActivated = false;
 	}
 
-	private IEnumerator WaitForDescribeCompleted(InteractiveObject interactiveObject){
-		Debug.Log("WaitForDescribe");
-		yield return StartCoroutine(WaitForGoToDirectionCompleted(interactiveObject.position));
+	public void TouchingItemAnimEvent(){
+		isTouchingItemAnimEventActivated = true;
+	}
+	
+	public bool IsTouchingItem(){
+		return isTouchingItemAnimEventActivated;
+    }
 
-		yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Description()));
+	public void EndOfAnimationEvent(){
+		isPlayingAnimation = false;
+		endOfAnimationEvent = true;
+		isTouchingItemAnimEventActivated = false;
+	}
+	
+	public bool IsEndOfAnimationEvent(){
+		return endOfAnimationEvent;
+	}
+	
+	public void SetEndOfAnimationEventInactive(){
+		endOfAnimationEvent = true;
 	}
 
-	private IEnumerator WaitForGoToDirectionCompleted(Vector2 directionToGo){
-		Debug.Log("WaitForGoToDirection");
-		this.GoTo(directionToGo);
-		do{
-			yield return null;
-		}while(!isDirectionToGoReached);
+	public bool IsGrabbingUpperItem(){
+		return isGrabbingUpperItem;
 	}
 
-	private IEnumerator WaitForSpeakCompleted(List<string> conversation){
-		Debug.Log("WaitForSpeak");
-		this.Speak(conversation);
-		do{
-			yield return null;
-		}while(!hasEndedSpeaking);
+	public bool IsGrabbingBottomItem(){
+		return isGrabbingBottomItem;
 	}
 
-	private IEnumerator WaitForActivationObjectMechanismCompleted(InteractiveObject interactiveObject){
-		isGrabbingUpperObject = true; //For testing purposes, the name will change later to isManipulatingUpperObject
-		hasEndedGrabbing = false; //For testing purposes, the name will change later to hasEndedManipulatingUpperObject
-		yield return new WaitForSeconds(0.7f);
-		Debug.Log("WaitForActivationObjectMechanismCompleted");
-		isGrabbingUpperObject = false;
-		hasEndedGrabbing = true;
-		this.Action(interactiveObject);
-		do{
-			yield return null;
-		}while(interactiveObject.isInteractiveObjectMechanismActivated);
-		Debug.Log("WaitForActivationObjectMechanismCompleted:afterIsMechanismActivated");
-
+	public bool IsWaiting(){
+		return isWaiting;
 	}
 
-	private IEnumerator WaitForActionCompleted(InteractiveObject interactiveObject){
-		Debug.Log("WaitForActionCompleted");
-		yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+	public bool IsUsingItemInventory(){
+		return isUsingItemInventory;
+	}
+
+	public void SetInteractionActive(){
 		isInteracting = true;
-		Debug.Log("WaitForActionCompleted:afterExamination");
-		yield return StartCoroutine(WaitForActivationObjectMechanismCompleted(interactiveObject));
-		Debug.Log("WaitForActionCompleted:afterActivation");
+	}
+
+	public void SetInteractionInactive(){
 		isInteracting = false;
-		}
+	}
 
+	public void SetUsingInventoryActive(){
+		isUsingItemInventory = true;
+	}
 
+	public void SetUsingInventoryInactive(){
+		isUsingItemInventory = false;
+	}
+
+	public void SetWaitingInactive(){
+		isWaiting = false;
+	}
+
+	public void SetUpperInteractionActive(){
+		isGrabbingUpperItem = true;
+	}
+
+	public void SetUpperInteractionInactive(){
+		isGrabbingUpperItem = false;
+    }
+
+	public void SetBottomInteractionActive(){
+		isGrabbingBottomItem = true;
+	}
+	
+	public void SetBottomInteractionInactive(){
+		isGrabbingBottomItem = false;
+    }
 }
