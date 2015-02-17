@@ -48,12 +48,20 @@ public class MouseClickHandler : MonoBehaviour {
 					}
 					break;
 				case hitTypes.walkableFloor:
-					Vector2 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-					Player.Instance.GoTo(_mousePosition);
+					if(Player.Instance.IsUsingItemInventory()){
+						Player.Instance.SetUsingInventoryInactive();
+                    }
+					else{
+						Vector2 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+						Player.Instance.GoTo(_mousePosition);
+					}
 					break;
 				default:
-					break;
-				}
+					if(Player.Instance.IsUsingItemInventory()){
+						Player.Instance.SetUsingInventoryInactive();
+                    }
+                    break;
+                }
 			}
 			else if(Input.GetMouseButtonDown(1)){
 				Player.Instance.SetWaitingInactive();

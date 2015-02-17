@@ -50,11 +50,11 @@
      <Compile Include="Assets\Scripts\ActorAnimStateMachine.cs" />
      <Compile Include="Assets\Scripts\CutScenesManager.cs" />
      <Compile Include="Assets\Scripts\DisplayTextHandler.cs" />
-     <Compile Include="Assets\Scripts\FileManager.cs" />
+     <Compile Include="Assets\Scripts\FrameRateController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameFileManager.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
      <Compile Include="Assets\Scripts\InteractiveElement.cs" />
+     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\FailedTestInventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\LittleFlagsInventory.cs" />

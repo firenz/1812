@@ -82,6 +82,8 @@ public sealed class Librarian : Actor {
 
 			isInteracting = false;
 			Player.Instance.SetInteractionInactive();
+
+			yield return new WaitForSeconds(0.1f);
 		}
 	}	
 	
@@ -105,6 +107,8 @@ public sealed class Librarian : Actor {
 				do{
 					yield return null;
 				}while(Player.Instance.IsSpeaking());
+
+				yield return new WaitForSeconds(0.1f);
 			}
 			else{
 				Player.Instance.SetInteractionActive();
@@ -115,7 +119,9 @@ public sealed class Librarian : Actor {
 				do{
 					yield return null;
 				}while(Player.Instance.IsSpeaking());
-				
+
+				yield return new WaitForSeconds(0.1f);
+
 				this.Speak(groupID, nameID, "LIBRARIAN_CONVERSATION_01");
 				
 				do{
@@ -124,6 +130,8 @@ public sealed class Librarian : Actor {
 				
 				isInteracting = false;
 				Player.Instance.SetInteractionInactive();
+
+				yield return new WaitForSeconds(0.1f);
 			}
 		}
 	}

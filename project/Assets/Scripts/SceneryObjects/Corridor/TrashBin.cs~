@@ -25,7 +25,7 @@ public class TrashBin : InteractiveElement {
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
 			Player.Instance.SetInteractionActive();
-			if(timesTrashBinHasBeenInteracted > 2){
+			if(timesTrashBinHasBeenInteracted > 0){
 				Player.Instance.Speak(groupID, nameID, "INTERACTION_2");
 			}
 			else{

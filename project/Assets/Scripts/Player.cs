@@ -9,7 +9,7 @@ public sealed class Player : Actor {
 	private bool isGrabbingBottomItem = false;
 	private bool isTouchingItemAnimEventActivated = false;
 	private static float timeCounterUntilWaitingAnimation;
-	private const float maxTimeIdleUntilWaitingAnimation = 10f;
+	private const float maxTimeIdleUntilWaitingAnimation = 6f;
 
 	private static Player instance;
 	

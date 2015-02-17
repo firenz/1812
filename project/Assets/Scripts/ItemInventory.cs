@@ -88,11 +88,13 @@ public abstract class ItemInventory : InteractiveElement {
 					isSelectedByMouse = true;
 					originalPosition = this.transform.position;
 					mouseOffset = this.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+					this.renderer.sortingOrder = 2;
 				}
 				else{
 					Screen.showCursor = true; //Later when we have the custom mouse, this line is going to be deleted
 					isSelectedByMouse = false;
 					this.transform.position = originalPosition;
+					this.renderer.sortingOrder = 1;
 				}
 			}
 		}

@@ -44,7 +44,7 @@ public class DisplayTextHandler : MonoBehaviour {
 		hasEndedDisplayingText = false;
 
 		currentTextStyle = textStyle;
-		//currentTextStyle.fontSize = ScaleAllGUI.ScalateFontSize(textStyle.fontSize); To be fixed in the future
+		//currentTextStyle.fontSize = ScaleAllGUI.ScaleFontSize(textStyle.fontSize); //To be fixed in the future
 		List<string> _localizedAndFormatedDialogue = new List<string>();
 		_localizedAndFormatedDialogue = LocalizedTextManager.GetLocalizedText(groupID, nameID, stringID);
 		_localizedAndFormatedDialogue = ReestructureDialogInSmallerTextLines(_localizedAndFormatedDialogue);
@@ -95,6 +95,21 @@ public class DisplayTextHandler : MonoBehaviour {
 		return _reestructuredDialogue;
 	}
 
+	private Vector2 RelocateTextCenterIfNearBorderScreen(Rect rectangleOfDisplayingText){
+		float _halfRectangleWidth = rectangleOfDisplayingText.width * 0.5f;
+		Vector2 centerRectangle = positionDisplayingText;
+
+		if((positionDisplayingText.x - _halfRectangleWidth) < 0f){
+			centerRectangle.x = (_halfRectangleWidth + 5f);
+		}
+
+		if((positionDisplayingText.x + _halfRectangleWidth) > (Screen.width - 10f)){
+			centerRectangle.x = Screen.width - (_halfRectangleWidth + 20f);
+		}
+
+		return centerRectangle;
+	}
+
 	public bool HasEndedDisplayingText(){
 		return hasEndedDisplayingText;
 	}
@@ -108,7 +123,7 @@ public class DisplayTextHandler : MonoBehaviour {
 			}
 
 			rectangleOfDisplayingText = GUILayoutUtility.GetRect(new GUIContent(displayingText), currentTextStyle);
-			rectangleOfDisplayingText.center = positionDisplayingText;
+			rectangleOfDisplayingText.center = RelocateTextCenterIfNearBorderScreen(rectangleOfDisplayingText);
 			GUI.Label(new Rect(rectangleOfDisplayingText.x, rectangleOfDisplayingText.y, rectangleOfDisplayingText.width + Screen.width * 0.01f * 2f, rectangleOfDisplayingText.height + Screen.height * 0.01f), displayingText, currentTextStyle);
 		}
 	}

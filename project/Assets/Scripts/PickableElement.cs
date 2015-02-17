@@ -72,6 +72,8 @@ public abstract class PickableElement : InteractiveElement {
 			//...
 			
 			Player.Instance.SetInteractionInactive();
+
+			yield return new WaitForSeconds(0.1f);
 		}
 
 	}

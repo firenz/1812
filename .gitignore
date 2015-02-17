@@ -33,7 +33,7 @@ obj/
 *.user
 *.unityproj
 *.booproj
-
+*.cs~
 # ============ #
 # OS generated #
 # ============ #
@@ -50,4 +50,3 @@ documentacion/GDD/imagenes/Thumbs.db
 #    Others    #
 # ============ #
 project/Assets/Scripts/Backup/
-*.psd
