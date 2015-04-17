@@ -40,7 +40,7 @@ public class LibrarianAnimMachineState : ActorAnimStateMachine {
 				currentState = LibrarianStates.rightCoughing;
 			}
 		}
-		else if(librarian.IsIdle()){
+		else /*if(librarian.IsIdle())*/{
 			if(librarian.IsFacingLeft()){
 				OnAnimationStateChange(LibrarianStates.leftIdle);
 				currentState = LibrarianStates.leftIdle;

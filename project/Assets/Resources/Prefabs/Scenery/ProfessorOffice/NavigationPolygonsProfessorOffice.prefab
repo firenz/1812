@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 260.416718, y: 71.4962616, z: 0}
+  m_LocalPosition: {x: 260.416718, y: 71.4962616, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -217,7 +217,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: 28.1513367, y: -10.5443573}
       - {x: 54.1452332, y: -30.5397301}
@@ -231,8 +233,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: 31.5892029, y: -12.1310501}
       - {x: 54.1452332, y: -30.5397301}
@@ -246,8 +250,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -13.9221191, y: 21.0994568}
       - {x: 30.3059387, y: -10.3124695}
@@ -262,8 +268,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -125.533249, y: 17.8486404}
       - {x: -106.228043, y: 18.2224121}
@@ -277,8 +285,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -103.499985, y: 18.2098389}
       - {x: -18.094986, y: 21.4732208}
@@ -292,8 +302,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -128.784073, y: 19.293457}
       - {x: -126.094116, y: -13.2020798}
@@ -308,8 +320,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -139.258911, y: -15.3818588}
       - {x: -134.040512, y: -30.9009323}
@@ -323,8 +337,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 0
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Poly:
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -158.402557, y: 13.8754349}
       - {x: -166.187408, y: 5.94158173}
@@ -339,7 +355,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -8.770401, y: 15.7369308}
       - {x: 35.2337952, y: -15.6702042}
@@ -355,7 +373,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -128.784073, y: 19.293457}
       - {x: -123.895691, y: -5.18434906}
@@ -372,7 +392,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -128.516434, y: 19.4279633}
       - {x: -104.298355, y: 19.4524765}
@@ -387,7 +409,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -152.816742, y: 14.20401}
       - {x: -161.806381, y: 6.1606369}
@@ -402,7 +426,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Poly:
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
     m_Paths:
     - - {x: -139.47757, y: -13.6206779}
       - {x: -134.040512, y: -30.9009323}
@@ -419,4 +445,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

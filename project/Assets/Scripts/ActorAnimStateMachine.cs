@@ -41,7 +41,7 @@ public abstract class ActorAnimStateMachine : MonoBehaviour {
 				currentAnimationState = ActorStates.rightSpeaking;
 			}
 		}
-		else if(actor.IsIdle()){
+		else /*if(actor.IsIdle())*/{
 			if(actor.IsFacingLeft()){
 				OnAnimationStateChange(ActorStates.leftIdle);
 				currentAnimationState = ActorStates.leftIdle;
@@ -50,9 +50,6 @@ public abstract class ActorAnimStateMachine : MonoBehaviour {
 				OnAnimationStateChange(ActorStates.rightIdle);
 				currentAnimationState = ActorStates.rightIdle;
 			}
-		}
-		else{
-			//If we need to control more animation states, put them here
 		}
 	}
 

@@ -7,18 +7,18 @@ public abstract class PickableElement : InteractiveElement {
 	protected List<string> nameListGivableElements;
 	protected bool isDestroyedAfterBeingPicked = true;
 
-	public enum pickableTypes{
+	public enum positionTypes{
 		upper,
 		bottom
 	}
 
-	protected pickableTypes currentPickableType;
+	protected positionTypes currentPositionType;
 
 	protected override void InitializeInformation(){
 		nameListGivableElements = new List<string>();
 
 		if(isInactive){
-			this.gameObject.renderer.enabled = false;
+			this.gameObject.GetComponent<Renderer>().enabled = false;
 		}
 
 		InitializePickableInformation();
@@ -28,11 +28,11 @@ public abstract class PickableElement : InteractiveElement {
 
 	public override void LeftClickAction(){
 		if(!isInactive && !Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting()){
-			StartCoroutine(PickingObject());
+			StartCoroutine(ManipulatingObject());
 		}
 	}
 
-	protected virtual IEnumerator PickingObject(){
+	protected virtual IEnumerator ManipulatingObject(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
 		if(_distanceBetweenActorAndInteractivePosition >= permisiveErrorBetweenPlayerPositionAndInteractivePosition){
 			Player.Instance.GoTo(interactivePosition);
@@ -43,24 +43,32 @@ public abstract class PickableElement : InteractiveElement {
 		}
 
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.isDoingAction = true;
+
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			Player.Instance.SetInteractionActive();
+			//Player.Instance.SetInteractionActive();
+			yield return new WaitForSeconds(0.2f);
 
-			if(currentPickableType == pickableTypes.upper){
-				Player.Instance.SetUpperInteractionActive();
-				Player.Instance.GrabUpperItem(this);			
-				Player.Instance.SetUpperInteractionInactive();
+			/*
+			if(currentPositionType == positionTypes.upper){
+				//Player.Instance.SetUpperInteractionActive();
+				Player.Instance.UpperInteraction(this);			
+				//Player.Instance.SetUpperInteractionInactive();
 			}
-			else if(currentPickableType == pickableTypes.bottom){
-				Player.Instance.SetBottomInteractionActive();
-				Player.Instance.GrabBottomItem(this);			
-				Player.Instance.SetBottomInteractionInactive();
+			else if(currentPositionType == positionTypes.bottom){
+				//Player.Instance.SetBottomInteractionActive();
+				Player.Instance.BottomInteraction(this);			
+				//Player.Instance.SetBottomInteractionInactive();
 			}
+			*/
+			Debug.Log("Before Interaction");
+			Player.Instance.Manipulate(this);
+			Debug.Log("After Interaction");
 
 			yield return new WaitForSeconds(0.2f);
 
@@ -71,11 +79,18 @@ public abstract class PickableElement : InteractiveElement {
 			}while(Player.Instance.IsSpeaking());
 			//...
 			
-			Player.Instance.SetInteractionInactive();
+			//Player.Instance.SetInteractionInactive();
 
 			yield return new WaitForSeconds(0.1f);
+
+			Player.Instance.isDoingAction = false;
 		}
 
+	}
+
+	public virtual void OnPlayerTouchingAction(){
+		Player.Instance.GrabItem(nameListGivableElements);
+		SetInactive();
 	}
 
 	public List<string> NameListPickableObjects(){
@@ -90,6 +105,10 @@ public abstract class PickableElement : InteractiveElement {
 		_definitionText.Add("PICKED");
 		
 		return _definitionText;
+	}
+
+	public positionTypes PositionType(){
+		return currentPositionType;
 	}
 
 	public bool IsDestroyedAfterBeingPicked(){

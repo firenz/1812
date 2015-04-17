@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,8 +16,11 @@ public abstract class InteractiveElement : MonoBehaviour {
 	protected float spriteHeight = 0f;
 	protected bool isInactive = false;
 
+	protected Text DisplayNameText;
+
 	// Use this for initialization
 	protected void Start () {
+		DisplayNameText = GameObject.Find("NameInteractiveElementText").GetComponent<Text>();
 
 		spriteWidth = this.CalculateSpriteWidth();
 		spriteHeight = this.CalculateSpriteHeight();
@@ -61,6 +65,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 		}
 
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.isDoingAction = true;
 			Player.Instance.SetInteractionActive();
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 			
@@ -69,6 +74,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 			}while(Player.Instance.IsSpeaking());
 			
 			Player.Instance.SetInteractionInactive();
+			Player.Instance.isDoingAction = false;
 		}
 	}
 
@@ -89,6 +95,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.isDoingAction = true;
 			Player.Instance.SetInteractionActive();
 			Player.Instance.Speak(groupID, nameID, "DESCRIPTION");
 			
@@ -97,6 +104,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 			}while(Player.Instance.IsSpeaking());
 			
 			Player.Instance.SetInteractionInactive();
+			Player.Instance.isDoingAction = false;
 		}
 	}
 
@@ -112,10 +120,6 @@ public abstract class InteractiveElement : MonoBehaviour {
         }
     	*/
 	}
-
-	public virtual void OnPlayerTouchingAction(){}
-
-	protected virtual void OnMouseOver(){}//Change mousegraphic depending of the type of the element to be implemented
     
 	protected float CalculateSpriteWidth(){ //In case sprite width need to be recalculated
 		SpriteRenderer _thisSpriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -138,6 +142,9 @@ public abstract class InteractiveElement : MonoBehaviour {
 			return _thisSpriteRenderer.bounds.size.x;
 		}
 	}
+	public string GetName(){
+		return  LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
+	}
 
 	public Vector2 GetPosition(){
 		return interactivePosition;
@@ -153,17 +160,27 @@ public abstract class InteractiveElement : MonoBehaviour {
 
 	public void SetInactive(){
 		isInactive = true;
-		this.gameObject.renderer.enabled = false;
-		this.gameObject.collider2D.enabled = false;
+		this.gameObject.GetComponent<Renderer>().enabled = false;
+		this.gameObject.GetComponent<Collider2D>().enabled = false;
 	}
 
 	public void SetActive(){
 		isInactive = false;
-		this.gameObject.renderer.enabled = true;
-		this.gameObject.collider2D.enabled = true;
+		this.gameObject.GetComponent<Renderer>().enabled = true;
+		this.gameObject.GetComponent<Collider2D>().enabled = true;
 	}
 
 	public bool IsInactive(){
 		return isInactive;
     }
+
+	/*
+	protected virtual void OnMouseOver(){ //Change mousegraphic depending of the type of the element to be implemented
+		DisplayNameText.text = LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
+	}
+
+	protected virtual void OnMouseExit(){
+		DisplayNameText.text = "";
+	}
+	*/
 }

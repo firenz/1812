@@ -80,21 +80,27 @@ public abstract class ItemInventory : InteractiveElement {
 		return isSelectedByMouse;
 	}
 
-	protected override void OnMouseOver(){
+	protected virtual void OnMouseOver(){
+		//if(!isSelectedByMouse){
+		//	DisplayNameText.text = LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
+		//}
+
 		if(Input.GetMouseButtonDown(0)){
 			if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking()){
+				DisplayNameText.text = "";
 				if(!isSelectedByMouse){
-					Screen.showCursor = false; //Later when we have the custom mouse, this line is going to be deleted and replaced with another function
+					//DisplayNameText.text = "";
+					Cursor.visible = false; //Later when we have the custom mouse, this line is going to be deleted and replaced with another function
 					isSelectedByMouse = true;
 					originalPosition = this.transform.position;
 					mouseOffset = this.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-					this.renderer.sortingOrder = 2;
+					this.GetComponent<Renderer>().sortingOrder = 2;
 				}
 				else{
-					Screen.showCursor = true; //Later when we have the custom mouse, this line is going to be deleted
+					Cursor.visible = true; //Later when we have the custom mouse, this line is going to be deleted
 					isSelectedByMouse = false;
 					this.transform.position = originalPosition;
-					this.renderer.sortingOrder = 1;
+					this.GetComponent<Renderer>().sortingOrder = 1;
 				}
 			}
 		}

@@ -17,12 +17,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class Window : InteractiveElement {	
+public class Window : PickableElement {	
 	public bool isOpened;
 
-	protected override void InitializeInformation(){
+	protected override void InitializePickableInformation(){
 		groupID = "SCENE_PROFESSOROFFICE";
 		nameID = "OBJECT_WINDOW";
+
+		currentPositionType = positionTypes.upper;
 
 		isOpened = GameState.LevelProfessorOfficeData.isWindowOpened;
 
@@ -34,7 +36,7 @@ public class Window : InteractiveElement {
 		}
 	}
 
-	protected override IEnumerator WaitForLeftClickAction(){
+	protected override IEnumerator ManipulatingObject(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
 		if(_distanceBetweenActorAndInteractivePosition >= permisiveErrorBetweenPlayerPositionAndInteractivePosition){
 			Player.Instance.GoTo(interactivePosition);
@@ -45,7 +47,8 @@ public class Window : InteractiveElement {
 		}
 
         if(Player.Instance.LastTargetedPosition() == interactivePosition){
-            Player.Instance.SetInteractionActive();
+			Player.Instance.isDoingAction = true;
+
             if(isOpened){
                 Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED");
 			}
@@ -57,13 +60,23 @@ public class Window : InteractiveElement {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			Player.Instance.SetUpperInteractionActive();
+			//Player.Instance.SetUpperInteractionActive();
 
 			Player.Instance.UpperInteraction(this);
 
-            Player.Instance.SetInteractionInactive();
+            //Player.Instance.SetInteractionInactive();
+			Player.Instance.isDoingAction = false;
         }
     }
+
+	public override void OnPlayerTouchingAction(){
+		if(isOpened){
+			this.Close();
+		}
+		else{
+			this.Open();
+		}
+	}
     
     public override void ActionOnItemInventoryUsed(string nameItemInventory){
 		Debug.Log("ActionOnItemInventaryUsed: " + nameItemInventory);
@@ -86,6 +99,7 @@ public class Window : InteractiveElement {
 			}while(Player.Instance.IsWalking());
 		}
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			Player.Instance.isDoingAction = true;
 			Player.Instance.SetInteractionActive();
 			if(isOpened){
 				Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED_FAILEDTEST");
@@ -104,26 +118,18 @@ public class Window : InteractiveElement {
 				}while(Player.Instance.IsSpeaking());
 			}
 			Player.Instance.SetInteractionInactive();
-		}
-	}
-
-	public override void OnPlayerTouchingAction(){
-		if(isOpened){
-			this.Close();
-		}
-		else{
-			this.Open();
+			Player.Instance.isDoingAction = false;
 		}
 	}
 
 	private void Close(){
 		isOpened = false;
-		this.gameObject.renderer.enabled = true;
+		this.gameObject.GetComponent<Renderer>().enabled = true;
 	}
 
 	private void Open(){
 		isOpened = true;
-		this.gameObject.renderer.enabled = false;
+		this.gameObject.GetComponent<Renderer>().enabled = false;
 	}
 
 	public bool IsOpened(){

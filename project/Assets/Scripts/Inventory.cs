@@ -47,11 +47,11 @@ public class Inventory : PersistentSingleton<Inventory> {
 	}
 
 	public void AddItem(string nameItem){
-		Vector2 _originalItemPosition = this.transform.FindChild("OriginalItemPosition").transform.position;
+		Vector3 _originalItemPosition = this.transform.FindChild("OriginalItemPosition").transform.position;
 
 		if(itemsCount < maxItemsCapacity){
 			GameObject _itemToLoad = Resources.Load<GameObject>("Prefabs/Inventory/Items/" + nameItem);
-			_itemToLoad.transform.position = new Vector2(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y);
+			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, _originalItemPosition.z);
 			GameObject _newItemAdded = Instantiate(_itemToLoad) as GameObject;
 			_newItemAdded.name = nameItem;
 			_newItemAdded.transform.parent = this.transform;
@@ -106,24 +106,24 @@ public class Inventory : PersistentSingleton<Inventory> {
 	public void Open(){
 		isClosed = false;
 		isClicked = false;
-		this.transform.FindChild("ClosedInventory").renderer.enabled = false;
+		this.transform.FindChild("ClosedInventory").GetComponent<Renderer>().enabled = false;
 	}
 	
 	public void Close(){
 		isClosed = true;
 		isClicked = false;
-		transform.FindChild("ClosedInventory").renderer.enabled = true;
+		transform.FindChild("ClosedInventory").GetComponent<Renderer>().enabled = true;
 	}
 
 	public void Enable(){
 		isEnabled = true;
-		this.transform.position = new Vector2(0f, 0f);
+		this.transform.position = new Vector3(0f, 0f, -2f);
 		Close();
 	}
 
 	public void Disable(){
 		isEnabled = false;
-		this.transform.position = new Vector2(0f, -10f);
+		this.transform.position = new Vector3(0f, -10f, -2f);
 		Close();
 	}
 

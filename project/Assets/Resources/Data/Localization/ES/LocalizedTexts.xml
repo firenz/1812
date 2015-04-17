@@ -11,11 +11,13 @@
     </meta>
 	<group id = "INVENTORY">
 		<element id = "FAILEDTEST">
+            <string id = "NAME">Examen suspendido</string>
 			<string id = "DESCRIPTION">
 				Maldito seas por el 4,9...
 			</string>
 		</element>
 		<element id = "LITTLEFLAGS">
+            <string id = "NAME">Cosa censurada</string>
 			<string id = "DESCRIPTION">
 				Pues unas cosillas para el primer puzzle
 			</string>
@@ -32,6 +34,7 @@
 		<element id = "CUTSCENES">
 		</element>
         <element id = "OBJECT_SKULL">
+            <string id = "NAME">Calavera</string>
             <string id = "DESCRIPTION">
                 Aprobar o no aprobar, esa es la cuestión
             </string>
@@ -40,6 +43,7 @@
             </string>
         </element>
 		<element id = "OBJECT_LITTLEFLAGS">
+            <string id = "NAME">Cosa censurada</string>
 			<string id = "DESCRIPTION">
 				Me pregunto que será esto del suelo
 			</string>
@@ -51,6 +55,7 @@
 			</string>
 		</element>
 		<element id = "OBJECT_DOOR">
+            <string id = "NAME">Puerta</string>
 			<string id = "DESCRIPTION">
 				Es una puerta
 			</string>
@@ -60,6 +65,7 @@
 			</string>
         </element>
 		<element id = "OBJECT_WINDOW">
+            <string id = "NAME">Ventana</string>
 			<string id = "DESCRIPTION">
 				Es una ventana
 			</string>
@@ -82,6 +88,7 @@
 	</group>
     <group id = "SCENE_CORRIDOR">
         <element id = "OBJECT_DOOR">
+            <string id = "NAME">Puerta al despacho</string>
             <string id = "DESCRIPTION">
                 Es una puerta junto al letrero de A
             </string>
@@ -90,6 +97,7 @@
             </string>
         </element>
         <element id = "OBJECT_FAKEDOOR">
+            <string id = "NAME">Puerta de mentira</string>
             <string id = "DESCRIPTION">
                 Es una puerta de atrezzo
             </string>
@@ -98,6 +106,7 @@
             </string>
         </element>
         <element id = "OBJECT_TRASHBIN">
+            <string id = "NAME">Papelera</string>
             <string id = "DESCRIPTION">
                 Es una papelera con algo de basurilla
             </string>
@@ -111,6 +120,7 @@
             </string>
         </element>
         <element id = "OBJECT_PLANT">
+            <string id = "NAME">Planta</string>
             <string id = "DESCRIPTION">
                 Una planta mustia
             </string>
@@ -122,6 +132,7 @@
     </group>
     <group id = "NPC">
         <element id = "LIBRARIAN">
+            <string id = "NAME">Señora mayor</string>
             <string id = "DESCRIPTION">
                 Una señora mayor con un grave problema de se-me-caen-las-gafitis.
                 Eso y tos chunga.

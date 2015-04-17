@@ -22,14 +22,15 @@ public abstract class WarperElement : InteractiveElement {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.SetInteractionActive();
+			//Player.Instance.SetInteractionActive();
+			Debug.Log("Warp");
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 			
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 			
-			Player.Instance.SetInteractionInactive();
+			//Player.Instance.SetInteractionInactive();
 
 			GameController.WarpToLevel(nameSceneDestination);
 		}

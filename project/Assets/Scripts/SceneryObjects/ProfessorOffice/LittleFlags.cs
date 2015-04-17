@@ -24,12 +24,22 @@ public class LittleFlags : PickableElement {
 		groupID = "SCENE_PROFESSOROFFICE";
 		nameID = "OBJECT_LITTLEFLAGS";
 
+
+
 		nameListGivableElements.Add("LittleFlagsInventory");
 
-		currentPickableType = pickableTypes.bottom;
+		currentPositionType = positionTypes.bottom;
 
 		if(GameState.LevelProfessorOfficeData.isLittleFlagsPickedFromFloor){
 			SetInactive();
 		}
 	}
+
+
+	public override void OnPlayerTouchingAction(){
+		Debug.Log("Grab");
+		Player.Instance.GrabItem(nameListGivableElements);
+		SetInactive();
+	}
+
 }

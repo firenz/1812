@@ -11,19 +11,19 @@ public class SortingOrderLayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		previousSortingLayerName = this.gameObject.renderer.sortingLayerName;
-		previousSortingPosition = this.gameObject.renderer.sortingOrder;
+		previousSortingLayerName = this.gameObject.GetComponent<Renderer>().sortingLayerName;
+		previousSortingPosition = this.gameObject.GetComponent<Renderer>().sortingOrder;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Player.Instance.transform.position.y > changeAtPlayerPositionY){
-			this.gameObject.renderer.sortingLayerName = sortingLayerNameAfterChange;
-			this.gameObject.renderer.sortingOrder = sortingLayerPositionAfterChange;
+			this.gameObject.GetComponent<Renderer>().sortingLayerName = sortingLayerNameAfterChange;
+			this.gameObject.GetComponent<Renderer>().sortingOrder = sortingLayerPositionAfterChange;
 		}
 		else{
-			this.gameObject.renderer.sortingLayerName = previousSortingLayerName;
-			this.gameObject.renderer.sortingOrder = previousSortingPosition;
+			this.gameObject.GetComponent<Renderer>().sortingLayerName = previousSortingLayerName;
+			this.gameObject.GetComponent<Renderer>().sortingOrder = previousSortingPosition;
 		}
 	}
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public sealed class Player : Actor {
 	public bool isWaiting = false;
 	public bool isUsingItemInventory = false;
+	public bool isDoingAction = false;
 	private bool isGrabbingUpperItem = false;
 	private bool isGrabbingBottomItem = false;
 	private bool isTouchingItemAnimEventActivated = false;
@@ -48,7 +49,7 @@ public sealed class Player : Actor {
 	}
 
 	protected override void AdditionalUpdateInformation(){
-		if(isIdle && !isInteracting && !CutScenesManager.IsPlaying() && !isWaiting){
+		if(IsIdle() && !CutScenesManager.IsPlaying() && !isWaiting){
 			if((Time.time - timeCounterUntilWaitingAnimation) > maxTimeIdleUntilWaitingAnimation){
 				isWaiting = true;
 				timeCounterUntilWaitingAnimation = Time.time;
@@ -61,6 +62,7 @@ public sealed class Player : Actor {
 
 	public override void ActionOnItemInventoryUsed(string nameItemInventory){}
 
+	/*
 	public void GrabUpperItem(PickableElement pickableItem){
 		StartCoroutine(WaitForGrabbingUpperItemCompleted(pickableItem));
 	}
@@ -68,9 +70,8 @@ public sealed class Player : Actor {
 	private IEnumerator WaitForGrabbingUpperItemCompleted(PickableElement pickableItem){
 		do{
 			yield return null;
-		}while(!isIdle);
+		}while(!isSpeaking || !isWalking || !isInConversation || !isGrabbingBottomItem || !isGrabbingUpperItem);
 
-		isIdle = false;
 		isGrabbingUpperItem = true;
 		isPlayingAnimation = true;
 
@@ -92,7 +93,6 @@ public sealed class Player : Actor {
 		}while(!isPlayingAnimation);
 
 		isGrabbingUpperItem = false;
-		isIdle = true;
 	}
 
 	public void GrabBottomItem(PickableElement pickableItem){
@@ -102,9 +102,8 @@ public sealed class Player : Actor {
 	private IEnumerator WaitForGrabbingBottomItemCompleted(PickableElement pickableItem){
 		do{
 			yield return null;
-		}while(isInConversation || !isIdle);
-		
-		isIdle = false;
+		}while(!isSpeaking || !isWalking || !isInConversation || !isGrabbingBottomItem || !isGrabbingUpperItem);
+
 		isGrabbingBottomItem = true;
 		
 		do{
@@ -125,19 +124,46 @@ public sealed class Player : Actor {
 		}while(!isPlayingAnimation);
 
 		isGrabbingBottomItem = false;
-		isIdle = true;
+	}
+	*/
+
+	public void GrabItem(List<string> nameListGrabbedItems){
+		Debug.Log("Grabbed1");
+		foreach(string itemName in nameListGrabbedItems){
+			Inventory.Instance.AddItem(itemName);
+		}
+		Debug.Log("Grabbed2");
 	}
 
-	public void UpperInteraction(InteractiveElement element){
+	public void Manipulate(PickableElement element){
+		if(element.PositionType() == PickableElement.positionTypes.upper){
+			StartCoroutine(WaitForUpperInteractionCompleted(element));
+		}
+		else if(element.PositionType() == PickableElement.positionTypes.bottom){
+			StartCoroutine(WaitForBottomInteractionCompleted(element));
+		}
+	}
+
+	public IEnumerator Interaction(PickableElement element){
+		Debug.Log("Interaction");
+		if(element.PositionType() == PickableElement.positionTypes.bottom){
+			yield return WaitForBottomInteractionCompleted(element);
+		}
+		else{
+			yield return WaitForUpperInteractionCompleted(element);
+		}
+	}
+
+	public void UpperInteraction(PickableElement element){
 		StartCoroutine(WaitForUpperInteractionCompleted(element));
 	}
 	
-	private IEnumerator WaitForUpperInteractionCompleted(InteractiveElement element){
+	private IEnumerator WaitForUpperInteractionCompleted(PickableElement element){
 		do{
 			yield return null;
-		}while(!isIdle);
-		
-		isIdle = false;
+		}while(isSpeaking && isWalking && isInteracting && isInConversation);
+
+		isInteracting = true;
 		isGrabbingUpperItem = true;
 		isPlayingAnimation = true;
 		
@@ -152,19 +178,19 @@ public sealed class Player : Actor {
 		}while(!isPlayingAnimation);
 		
 		isGrabbingUpperItem = false;
-		isIdle = true;
+		isInteracting = false;
 	}
 
-	public void BottomInteraction(InteractiveElement element){
+	public void BottomInteraction(PickableElement element){
 		StartCoroutine(WaitForBottomInteractionCompleted(element));
 	}
 	
-	private IEnumerator WaitForBottomInteractionCompleted(InteractiveElement element){
+	private IEnumerator WaitForBottomInteractionCompleted(PickableElement element){
 		do{
 			yield return null;
-		}while(!isIdle);
-		
-		isIdle = false;
+		}while(isSpeaking && isWalking && isInteracting && isInConversation);
+
+		isInteracting = true;
 		isGrabbingBottomItem = true;
 		isPlayingAnimation = true;
 		
@@ -179,7 +205,7 @@ public sealed class Player : Actor {
 		}while(!isPlayingAnimation);
 		
 		isGrabbingBottomItem = false;
-		isIdle = true;
+		isInteracting = false;
 	}
 
 	public void PlayAnimation(string nameAnimation){
@@ -187,7 +213,6 @@ public sealed class Player : Actor {
 	}
 
 	private IEnumerator WaitPlayAnimation(string nameAnimation){
-		isIdle = false;
 		switch(nameAnimation){
 		case "UpperGrabbing":
 			isGrabbingUpperItem = true;
@@ -220,7 +245,6 @@ public sealed class Player : Actor {
 			break;
 		}
 		endOfAnimationEvent = false;
-		isIdle = true;
 	}
     
 
@@ -303,4 +327,13 @@ public sealed class Player : Actor {
 	public void SetBottomInteractionInactive(){
 		isGrabbingBottomItem = false;
     }
+
+	public override bool IsIdle(){
+		if(isWalking || isInteracting || isSpeaking || isGrabbingUpperItem || isGrabbingBottomItem || isInConversation){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 }

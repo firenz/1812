@@ -59,7 +59,7 @@ public sealed class PlayerAnimStateMachine : ActorAnimStateMachine {
 				currentState = PlayerStates.rightUsingPhone;
 			}
 		}
-		else if(Player.Instance.IsIdle()){
+		else /*if(Player.Instance.IsIdle())*/{
 			if(Player.Instance.IsFacingLeft()){
 				OnAnimationStateChange(PlayerStates.leftIdle);
 				currentState = PlayerStates.leftIdle;

@@ -35,16 +35,17 @@ public sealed class Librarian : Actor {
 		nameID = "LIBRARIAN";
 		timeCounterUntilCoughingAnimation = Time.time;
 
+		/*
 		if(!GameState.CutSceneData.isPlayedIntro){
 			SetInactive();
 		}
+		*/
 	}
 	
 	protected override void AdditionalUpdateInformation(){ //In case if needed to handle, for example, an idle animation depending on time
-		if(!isInactive && isIdle && !isInteracting && !CutScenesManager.IsPlaying() && !isCoughing){
+		if(IsIdle() && !CutScenesManager.IsPlaying() && !isCoughing){
 			if((Time.time - timeCounterUntilCoughingAnimation) > maxTimeIdleUntilCoughingAnimation){
 				isCoughing = true;
-				isIdle = false;
 				timeCounterUntilCoughingAnimation = Time.time;
 			}
 		}
@@ -108,30 +109,34 @@ public sealed class Librarian : Actor {
 					yield return null;
 				}while(Player.Instance.IsSpeaking());
 
-				yield return new WaitForSeconds(0.1f);
 			}
 			else{
-				Player.Instance.SetInteractionActive();
-				isInteracting = true;
-
+				Debug.Log("InConversation");
+				Player.Instance.isDoingAction = true;
+				isInConversation = true;
+				Player.Instance.isInConversation = true;
+				Debug.Log("Player speaking");
 				Player.Instance.Speak(groupID, nameID, "PLAYER_CONVERSATION_01");
+				//yield return Player.Instance.WaitForSpeakCompleted(groupID, nameID, "PLAYER_CONVERSATION_01");
 
 				do{
 					yield return null;
-				}while(Player.Instance.IsSpeaking());
+				}while(!Player.Instance.HasEndedSpeaking());
 
-				yield return new WaitForSeconds(0.1f);
+				yield return new WaitForSeconds(0.4f);
 
+				Debug.Log("Librarian speaking, player speaking: " + Player.Instance.isSpeaking.ToString());
 				this.Speak(groupID, nameID, "LIBRARIAN_CONVERSATION_01");
 				
 				do{
 					yield return null;
-				}while(isSpeaking);
-				
-				isInteracting = false;
-				Player.Instance.SetInteractionInactive();
+				}while(!HasEndedSpeaking());
 
-				yield return new WaitForSeconds(0.1f);
+				yield return new WaitForSeconds(0.2f);
+			
+				isInConversation = false;
+				Player.Instance.isInConversation = false;
+				Player.Instance.isDoingAction = false;
 			}
 		}
 	}
@@ -147,6 +152,14 @@ public sealed class Librarian : Actor {
 	
 	private void CoughingEventEnds(){
 		isCoughing = false;
-		isIdle = true;
+	}
+
+	public override bool IsIdle(){
+		if(isWalking || isInteracting || isSpeaking || isInConversation || isCoughing){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 }
