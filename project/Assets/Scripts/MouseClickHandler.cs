@@ -20,8 +20,11 @@ public class MouseClickHandler : MonoBehaviour {
 	
 	private void Start () {
 		lastTimeMouseWasClicked = Time.time;
-		DisplayNameText = GameObject.Find("NameInteractiveElementText").GetComponent<Text>();
-		DisplayNameText.GetComponent<Text>().text = "";
+		GameObject _nameInteractiveElementText = GameObject.Find("NameInteractiveElementText");
+		//_nameInteractiveElementText.GetComponent<Rect>().y = (10f / 100f)*(Screen.height * 0.5f);
+		DisplayNameText = _nameInteractiveElementText.GetComponent<Text>();
+		DisplayNameText.text = "";
+		
 	}
 
 	private void Update () {
