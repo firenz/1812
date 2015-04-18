@@ -1,0 +1,36 @@
+﻿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml;
+using System.Linq;
+
+public class XMLStringReader : MonoBehaviour {
+	//public string localizedStringsFile;
+	//string language;
+	//string group;
+	XmlDocument root;
+
+	void Start() {
+		//FileManager.Instance.Initialize();
+		root = new XmlDocument();
+		root.LoadXml(Application.dataPath + "/Data/Localization/LocalizedTexts.xml");
+		//root.Load(localizedStringsFile);
+		//language = root.SelectSingleNode("localizations/meta/language").InnerText;
+	}
+
+	public List<string> GetText(string groupId, string textId, string lang){
+		List<string> localizedText = new List<string>();
+		try{
+			string xmlPathToNode = "localizations/group[@id='" + groupId + "']/string[@id='" + textId + "']/text[@lang='" + lang + "']";
+			string rawText = root.SelectSingleNode(xmlPathToNode).InnerText;
+			string[] textLines = rawText.Split('\n');
+			localizedText = textLines.ToList();
+		} catch (NullReferenceException exception){
+			string error = "[This string has either not been implemented or needs to be translated.]";
+			localizedText.Add(error);
+		}
+		return localizedText;
+	}
+}

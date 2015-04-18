@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class ObstacleObject : MonoBehaviour {
+	private Player player;
+
+	void Awake(){
+		player = GameObject.Find("Player").GetComponent<Player>();
+	}
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+	/*
+	protected void OnTriggerEnter2D(Collider2D other){
+		Debug.Log("Trigger");
+		if(other.gameObject.tag == "Obstacle"){
+			Debug.Log("Obstacle");
+			player.directionToGo = player.currentPosition;
+			player.moveDirection = Vector2.zero;
+
+		}
+	}
+	*/
+}

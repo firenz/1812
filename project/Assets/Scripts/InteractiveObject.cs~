@@ -1,0 +1,159 @@
+/*	This file is part of 1812: La aventura.
+
+    1812: La aventura is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    1812: La aventura is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with 1812: La aventura.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class InteractiveObject : MonoBehaviour {
+	public Vector2 position;
+	public string groupID = "DEFAULT_SCENE";
+	public string nameID = "DEFAULT_OBJECT";
+
+	public enum interactiveTypes{
+		examinable = 0,
+		interactiveButNotPickableNotAnimated,
+		interactiveButNotPickableAnimated,
+		upperPickable,
+        bottomPickable,
+		sceneWarper
+    }
+
+	public interactiveTypes currentType = interactiveTypes.examinable;
+
+	protected List<string> definitionText = null;
+	protected List<string> interactionText = null;
+	public bool hasBeenPicked = false;
+	public bool isInteractiveObjectMechanismActivated = false; //For interactive object with mechanism class
+	protected List<string> ItemsWhichCanBeUsedOnThisInteractiveObject = null;
+
+	protected GivableObject givableObject = null;
+	public bool isGivableObjectActive = true; //For pickable object class
+
+	public int warpToSceneID; //For scene warper class
+
+	// Use this for initialization
+	protected void Start () {
+		position = this.transform.GetChild(0).position;
+		definitionText = new List<string>();
+		interactionText = new List<string>();
+		ItemsWhichCanBeUsedOnThisInteractiveObject = new List<string>();
+		InitializeInformation();
+	}
+
+	protected virtual void InitializeInformation(){
+		//Write here the info for your interactive object
+	}
+
+	public List<string> Description(){
+		return definitionText;
+	}
+
+	public List<string> Examination(){
+		return interactionText;
+	}
+
+	public GivableObject GiveItem(){
+		if(isGivableObjectActive){
+			this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+			isGivableObjectActive  = false;
+			hasBeenPicked = true;
+			return givableObject;
+		}
+		else{
+			return null;
+		}
+
+	}
+	
+	public virtual void Mechanism(){
+		// Interaction depends of object
+	}
+	
+	public void CorrectItemInventaryUsed(ItemInventory itemInventory){
+		Debug.Log("InteractiveObject:CorrectItemInventaryUsed");
+		//string _nameOfItemInventary = itemInventory.gameObject.name;
+		//if(ItemsWhichCanBeUsedOnThisInteractiveObject.Contains(_nameOfItemInventary)){
+			// If an inventary item which can be used in this object colliders with this object, then happens
+			// whatever is inside this function
+			SelectOnItemInventoryUsed(itemInventory);
+		//}
+	}
+
+	protected virtual void SelectOnItemInventoryUsed(ItemInventory itemInventory){
+		/*
+		switch(nameOfItemInventary){
+			case "name 1": DoSomething1();
+			break;
+            case "name 2": DoSomething2();
+                break;
+			...
+        }
+        */
+	}
+
+	/*
+	protected virtual void OnMouseOver(){
+		Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		if(!player.isInteracting && !player.isSpeaking){
+			if(Input.GetMouseButtonDown(0)){
+				player.GoToAndDescribe(this);
+			}else if(Input.GetMouseButtonDown(1)){
+				player.GoToAndExaminate(this);
+			}
+		}
+	}
+	*/
+
+	public virtual void LeftClickAction(){
+		Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		if(!player.isInteracting && !player.isSpeaking){
+			player.GoTo(position);
+			player.Speak(groupID, nameID, "DESCRIPTION");
+		}
+	}
+	
+	public virtual void RightClickAction(){
+		Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		if(!player.isInteracting && !player.isSpeaking){
+			player.GoTo(position);
+			player.Speak(groupID, nameID, "INTERACTION");
+		}
+	}
+
+}
+
+//For pickable object class
+public class GivableObject {
+	private string nameGivableObject = null; //For pickable object class
+	private List<string> textAfterPicking = null; //For pickable object class
+	
+	public GivableObject(string _name, List<string> _textAfterPicking){
+		nameGivableObject = _name;
+		textAfterPicking = _textAfterPicking;
+	}
+	
+	public string Name(){
+		return nameGivableObject;
+	}
+	
+	public List<string> DialogueAfterPicking(){
+		return textAfterPicking;
+	}
+}
+
+

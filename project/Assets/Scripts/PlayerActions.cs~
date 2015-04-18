@@ -1,0 +1,371 @@
+﻿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PlayerActions : Actor {	
+	public bool isInteracting = false;
+	public bool isDoingAnAction = false;
+	public bool isGrabbingUpperObject = false;
+	public bool isGrabbingBottomObject = false;
+	public bool hasEndedGrabbing = true;
+	public bool isUsingItemInventory = false;
+	protected bool isAnimationEnded = false;
+	protected bool isTouchingEventActivated = false;
+	
+	public delegate void AddItem(string itemInventory);
+	public static event AddItem addItemToInventory;
+	public delegate void RemoveItem(ItemInventory itemInventory);
+	public static event RemoveItem removeItemOfInventory;
+	
+	//public GameObject inventory;
+	//public GameObject gameController;
+	
+	void Awake(){
+		//DontDestroyOnLoad(this.gameObject);
+		//thisTransform.position = GameStateManager.Instance.playerPosition;
+	}
+	
+	private void OnEnable(){
+		//MouseTargetingController.playerGoTo += ;
+		ItemInventory.used += UseItem;
+	}
+	
+	private void Ondisable(){
+		ItemInventory.used -= UseItem;
+	}
+	
+	protected override void Start () {
+		actorTextScript = this.GetComponentInChildren<ActorTextController>();
+		thisTransform = this.transform;
+		if(GameStateManager.Instance.currentGameState.playerPosition != Vector2.zero){
+			thisTransform.position = GameStateManager.Instance.currentGameState.playerPosition;
+		}
+		currentPosition = thisTransform.position;
+		moveDirection = Vector2.zero;
+		directionToGo = this.transform.position;
+		//spriteWidth = this.calculateSpriteWidth();
+		
+	}
+	
+	public void InteractWithObject(InteractiveObject interactiveObject){
+		
+	}
+	
+	public void Action(InteractiveObject interactiveObject){
+		Debug.Log("Action");
+		interactiveObject.isInteractiveObjectMechanismActivated = true;
+		interactiveObject.Mechanism();
+	}
+	
+	public void GrabBottomObject(InteractiveObject interactiveObject){
+		StartCoroutine(WaitForGrabbingBottomObject(interactiveObject));
+		
+	}
+	
+	public void GrabUpperObject(InteractiveObject interactiveObject){
+		StartCoroutine(WaitForGrabbingUpperObject(interactiveObject));
+		
+	}
+	
+	public void Describe(InteractiveObject interactiveObject){
+		Debug.Log("Describe");
+		StartCoroutine(WaitForDescribeCompleted(interactiveObject));
+		/*
+		this.GoTo(interactiveObject.position);
+		Vector2 positionPlayerAfterGoing = thisTransform.position;
+		float errorPlayerDistanceBetweenObject = Vector2.Distance(positionPlayerAfterGoing, interactiveObject.position);
+		//Debug.Log("isGoingToDirectionChanged")
+		if(errorPlayerDistanceBetweenObject <= 1.2f){
+			this.Speak(interactiveObject.Description());    
+        }
+        */
+	}
+	
+	public void Interact(InteractiveObject interactiveObject){
+		Debug.Log("Interact");
+		StartCoroutine(WaitForInteractionCompleted(interactiveObject));
+	}
+	
+	public void DescribeItemInventory(ItemInventory item){
+		this.Speak(item.Description());
+	}
+	
+	private IEnumerator WaitForGrabbingBottomObject(InteractiveObject interactiveObject){
+		Debug.Log("Player:WaitForGrabbingBottomObject");
+		yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+		Debug.Log("Player:WaitForGrabbingBottomObject: Picking begins");
+		isInteracting = true;
+		isGrabbingBottomObject = true;
+		hasEndedGrabbing = false;
+		yield return StartCoroutine(WaitForTouchingEventAnimation());
+		Debug.Log("Player:WaitForGrabbingBottomObject: Animation touches ground");
+		GivableObject _givableObject = interactiveObject.GiveItem();
+		do{
+			yield return null;
+		}while(!interactiveObject.hasBeenPicked);
+		Debug.Log("Player:WaitForGrabbingBottomObject: Object picked name is " + _givableObject.Name().ToString());
+		//inventory.GetComponent<InventoryItemManager>().AddItem(_givableObject.Name());
+		addItemToInventory(_givableObject.Name());
+		yield return StartCoroutine(WaitForAnimationToEnd());
+		isGrabbingBottomObject = false;
+		hasEndedGrabbing = true;
+		isInteracting = false;
+		yield return StartCoroutine(WaitForSpeakCompleted(_givableObject.DialogueAfterPicking()));
+	}
+	
+	private IEnumerator WaitForGrabbingUpperObject(InteractiveObject interactiveObject){
+		Debug.Log("Player:WaitForGrabbingObject");
+		yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+		isInteracting = true;
+		isGrabbingUpperObject = true;
+		hasEndedGrabbing = false;
+		yield return StartCoroutine(WaitForTouchingEventAnimation());
+		GivableObject _givableObject = interactiveObject.GiveItem();
+		//inventory.GetComponent<InventoryItemManager>().AddItem(_givableObject.Name());
+		addItemToInventory(_givableObject.Name());
+		do{
+			yield return null;
+		}while(!interactiveObject.hasBeenPicked);
+		yield return StartCoroutine(WaitForAnimationToEnd());
+		isGrabbingUpperObject = false;
+		hasEndedGrabbing = true;
+		isInteracting = false;
+		yield return StartCoroutine(WaitForSpeakCompleted(_givableObject.DialogueAfterPicking()));
+	}
+	
+	private IEnumerator WaitForInteractionCompleted(InteractiveObject interactiveObject){
+		isDoingAnAction = true;
+		bool isActionAnimated;
+		Debug.Log("WaitForInteractionCompleted");
+		//yield return StartCoroutine(WaitForGoToDirectionCompleted(interactiveObject.position));
+		
+		this.GoTo(interactiveObject.position);
+		
+		Vector2 positionPlayerAfterGoing = thisTransform.position;
+		float errorPlayerDistanceBetweenObject = Vector2.Distance(positionPlayerAfterGoing, interactiveObject.position);
+		//if(errorPlayerDistanceBetweenObject <= 1.0f){
+		Debug.Log("isGoingToDirectionChanged: " + isGoingToDirectionChanged.ToString());
+		if(!isGoingToDirectionChanged){
+			InteractiveObject.interactiveTypes typeInteractiveObject = interactiveObject.currentType;
+			
+			switch(typeInteractiveObject){
+			case InteractiveObject.interactiveTypes.examinable:
+				Debug.Log("WaitForInteractionCompleted:examinable");
+				yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+				break;
+			case InteractiveObject.interactiveTypes.sceneWarper:
+				Debug.Log("WaitForInteractionCompleted:sceneWarper");
+				yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+				//gameController.GetComponent<SceneDataManager>().ChangeScene(1, 0);
+				break;
+			case InteractiveObject.interactiveTypes.interactiveButNotPickableNotAnimated:
+				Debug.Log("WaitForInteractionCompleted:interactiveButNotPickableAnimated");
+				isActionAnimated = false;
+				yield return StartCoroutine(WaitForActionCompleted(interactiveObject, isActionAnimated));
+				break;
+			case InteractiveObject.interactiveTypes.interactiveButNotPickableAnimated:
+				Debug.Log("WaitForInteractionCompleted:interactiveButNotPickableAnimated");
+				isActionAnimated = true;
+				yield return StartCoroutine(WaitForActionCompleted(interactiveObject, isActionAnimated));
+				break;
+			case InteractiveObject.interactiveTypes.bottomPickable:
+				Debug.Log("WaitForInteractionCompleted:bottomPickable");
+				yield return StartCoroutine(WaitForGrabbingBottomObject(interactiveObject)); //To be implemented
+				break;
+			case InteractiveObject.interactiveTypes.upperPickable:
+				Debug.Log("WaitForInteractionCompleted:upperPickable");
+				yield return StartCoroutine(WaitForGrabbingUpperObject(interactiveObject)); //To be implemented
+				break;
+			}
+			isDoingAnAction = false;
+			isGoingToDirectionChanged = false;
+			
+			if(interactiveObject.currentType == InteractiveObject.interactiveTypes.sceneWarper){
+				GameStateManager.Instance.ChangeScene(Application.loadedLevel, interactiveObject.warpToSceneID);
+			}
+		}
+	}
+	
+	private IEnumerator WaitForDescribeCompleted(InteractiveObject interactiveObject){
+		Debug.Log("WaitForDescribe");
+		yield return StartCoroutine(WaitForGoToDirectionCompleted(interactiveObject.position));
+		//Vector2 positionPlayerAfterGoing = thisTransform.position;
+		//float errorPlayerDistanceBetweenObject = Vector2.Distance(positionPlayerAfterGoing, interactiveObject.position);
+		//Debug.Log("errorPlayerDistanceBetweenObject: " + errorPlayerDistanceBetweenObject.ToString());
+		Debug.Log("isGoingToDirectionChanged: " + isGoingToDirectionChanged.ToString());
+		//if(errorPlayerDistanceBetweenObject <= 2f){
+		if(!isGoingToDirectionChanged){
+			yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Description()));
+			isGoingToDirectionChanged = false;
+		}
+		
+	}
+	
+	/*
+	private IEnumerator WaitForGoToDirectionCompleted(Vector2 directionToGo){
+		Debug.Log("WaitForGoToDirection");
+		this.GoTo(directionToGo);
+		do{
+			yield return null;
+		}while(!isDirectionToGoReached);
+	}
+	*/
+	
+	/*
+	private IEnumerator WaitForSpeakCompleted(List<string> conversation){
+		Debug.Log("WaitForSpeak");
+		this.Speak(conversation);
+		do{
+			yield return null;
+		}while(!hasEndedSpeaking);
+	}
+	*/
+	
+	private IEnumerator WaitForActivationObjectMechanismCompleted(InteractiveObject interactiveObject){
+		isInteracting = true;
+		isGrabbingUpperObject = true; //For testing purposes, the name will change later to isManipulatingUpperObject
+		hasEndedGrabbing = false; //For testing purposes, the name will change later to hasEndedManipulatingUpperObject
+		
+		yield return StartCoroutine(WaitForTouchingEventAnimation());
+		this.Action(interactiveObject);
+		do{
+			yield return null;
+		}while(interactiveObject.isInteractiveObjectMechanismActivated);
+		Debug.Log("WaitForActivationObjectMechanismCompleted:afterIsMechanismActivated");
+		yield return StartCoroutine(WaitForAnimationToEnd());
+		
+		Debug.Log("WaitForActivationObjectMechanismCompleted");
+		isGrabbingUpperObject = false;
+		hasEndedGrabbing = true;
+		isInteracting = false;
+	}
+	
+	private IEnumerator WaitForActivationObjectMechanismCompletedNotAnimated(InteractiveObject interactiveObject){
+		isInteracting = true;
+		this.Action(interactiveObject);
+		do{
+			yield return null;
+		}while(interactiveObject.isInteractiveObjectMechanismActivated);
+		isInteracting = false;
+	}
+	
+	private IEnumerator WaitForActionCompleted(InteractiveObject interactiveObject, bool isActionAnimated){
+		Debug.Log("WaitForActionCompleted");
+		yield return StartCoroutine(WaitForSpeakCompleted(interactiveObject.Examination()));
+		isInteracting = true;
+		Debug.Log("WaitForActionCompleted:afterExamination");
+		if(isActionAnimated){
+			yield return StartCoroutine(WaitForActivationObjectMechanismCompleted(interactiveObject));
+		}
+		else{
+			yield return StartCoroutine(WaitForActivationObjectMechanismCompletedNotAnimated(interactiveObject));
+		}
+		
+		//yield return StartCoroutine(WaitForActivationObjectMechanismCompleted(interactiveObject));
+		Debug.Log("WaitForActionCompleted:afterActivation");
+	}
+	
+	private IEnumerator WaitForTouchingEventAnimation(){
+		do{
+			yield return null;
+		}while(!isTouchingEventActivated);
+		isTouchingEventActivated = false;
+	}
+	
+	private IEnumerator WaitForAnimationToEnd(){
+		do{
+			yield return null;
+		}while(!isAnimationEnded);
+		isAnimationEnded = false;
+	}
+	
+	private void EndOfAnimation(){
+		isAnimationEnded = true;
+	}
+	
+	private void TouchingEventAnimation(){
+		isTouchingEventActivated = true;
+	}
+	
+	public void UseItem(ItemInventory itemInventory, InteractiveObject interactiveObject){
+		StartCoroutine(UseItemInInventoryOnInteractiveObject(itemInventory, interactiveObject));
+	}
+	
+	private IEnumerator UseItemInInventoryOnInteractiveObject(ItemInventory itemInventory, InteractiveObject interactiveObject){
+		
+		//yield return StartCoroutine(WaitForGoToDirectionCompleted(interactiveObject.position));
+		
+		this.GoTo(interactiveObject.position);
+		
+		Vector2 positionPlayerAfterGoing = thisTransform.position;
+		float errorPlayerDistanceBetweenObject = Vector2.Distance(positionPlayerAfterGoing, interactiveObject.position);
+		
+		if(errorPlayerDistanceBetweenObject >= 1.0f){
+			isGrabbingUpperObject = true;
+			hasEndedGrabbing = false;
+			List<string> _dialogueBeforeUsingItem = itemInventory.DialogueBeforeUsingItemInventoryOnInteractiveObject(interactiveObject);
+			
+			if(_dialogueBeforeUsingItem != null){
+				yield return StartCoroutine(WaitForSpeakCompleted(_dialogueBeforeUsingItem));
+			}
+			yield return WaitForTouchingEventAnimation();
+			interactiveObject.CorrectItemInventaryUsed(itemInventory);
+			yield return WaitForAnimationToEnd();
+			
+			List<string> _dialogueAfterUsingItem = itemInventory.DialogueAfterUsingItemInventoryOnInteractiveObject(interactiveObject);
+			if(_dialogueAfterUsingItem != null){
+				yield return StartCoroutine(WaitForSpeakCompleted(_dialogueAfterUsingItem));
+			}
+			
+			if(itemInventory.isItemDestroyedAfterBeingUsed){
+				Debug.Log("Player:UseItemInInventoryOnInteractiveObject: Remove Item Inventory");
+				//inventory.GetComponent<InventoryItemManager>().RemoveItem(itemInventory);
+				removeItemOfInventory(itemInventory);
+			}
+			isGrabbingUpperObject = false;
+			hasEndedGrabbing = true;
+			isUsingItemInventory = false;
+		}
+		
+	}
+	
+}
+
+/*
+public class ActionQueueManager{
+	Queue actionsQueue;
+
+	public ActionQueueManager(){
+		actionsQueue = new Queue();
+	}
+
+	public bool IsEmpty{
+		get{
+			if(actionsQueue.Count == 0){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	}
+
+	public bool Contains(Action function){
+		if(actionsQueue.Contains(action)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public Action Pop(){
+		return actionsQueue.Dequeue() as Action;
+	}
+
+	public void Push(Action function){
+		actionsQueue.Enqueue(function);
+	}
+}
+*/

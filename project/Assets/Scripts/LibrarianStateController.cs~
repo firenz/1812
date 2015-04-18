@@ -1,0 +1,254 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class LibrarianStateController : ActorStateController {
+	private Librarian librarian;
+
+	private LibrarianStates currentState;
+	private LibrarianStates previousState;
+
+	private Animator librarianAnimator = null;
+	private Vector2 moveDirection;
+	private bool isCoughing = false;
+	private bool isInteracting = false;
+	
+	protected override void Start () {
+		librarian = this.GetComponent<Librarian>();
+		librarianAnimator = this.GetComponent<Animator>();
+
+		currentState = LibrarianStates.leftIdle;
+	}
+
+	protected override void LateUpdate(){
+		moveDirection = librarian.moveDirection;
+		isDirectionToGoReached = librarian.isDirectionToGoReached;
+		
+		if(!isDirectionToGoReached){
+			if(moveDirection.x > 0f){
+				OnStateChange(LibrarianStates.rightWalking);
+				currentState = LibrarianStates.rightWalking;
+			}
+			else if(moveDirection.x < 0f){
+				OnStateChange(LibrarianStates.leftWalking);
+				currentState = LibrarianStates.leftWalking;
+			}
+		}
+		else if(isDirectionToGoReached){
+			this.ActionStatesHandler();
+		}
+	}
+
+	protected override void ActionStatesHandler(){
+		isSpeaking = librarian.isSpeaking;
+		hasEndedSpeaking = librarian.hasEndedSpeaking;
+		isCoughing = librarian.isCoughing;
+		isInteracting = librarian.isInteracting;
+
+
+
+		if(!isSpeaking && !isCoughing && !isInteracting){
+			switch(currentState){
+			case LibrarianStates.leftWalking:
+				OnStateChange(LibrarianStates.leftIdle);
+				break;
+				
+			case LibrarianStates.rightWalking:
+				OnStateChange(LibrarianStates.rightIdle);
+				break;
+				
+			case LibrarianStates.leftSpeaking:
+				OnStateChange(LibrarianStates.leftIdle);
+				break;
+				
+			case LibrarianStates.rightSpeaking:
+				OnStateChange(LibrarianStates.rightIdle);
+				break;
+
+			case LibrarianStates.leftCoughing:
+				OnStateChange(LibrarianStates.leftIdle);
+				break;
+
+			case LibrarianStates.rightCoughing:
+				OnStateChange(LibrarianStates.rightIdle);
+				break;
+
+			default:
+				break;
+			}
+		}
+		else if(isSpeaking){
+			if(hasEndedSpeaking){
+				switch(currentState){
+				case LibrarianStates.leftSpeaking:
+					OnStateChange(LibrarianStates.leftIdle);
+					break;
+					
+				case LibrarianStates.rightSpeaking: 
+					OnStateChange(LibrarianStates.rightIdle);
+					break;
+				
+				default:
+					break;
+				}
+			}
+			else{
+				switch(currentState){
+				case LibrarianStates.leftIdle:
+					OnStateChange(LibrarianStates.leftSpeaking);
+					break;
+					
+				case LibrarianStates.leftWalking:
+					OnStateChange(LibrarianStates.leftSpeaking);
+					break;
+
+				case LibrarianStates.leftCoughing:
+					OnStateChange(LibrarianStates.leftSpeaking);
+					break;
+
+				case LibrarianStates.rightIdle: 
+					OnStateChange(LibrarianStates.rightSpeaking);
+					break;
+				/*	
+				case LibrarianStates.rightWalking:
+					OnStateChange(LibrarianStates.rightSpeaking);
+					break;
+
+				case LibrarianStates.rightCoughing:
+					OnStateChange(LibrarianStates.rightSpeaking);
+					break;
+				*/
+				default:
+					break;
+				}
+			}
+		}
+		else if(isCoughing){
+			switch(currentState){
+			case LibrarianStates.leftIdle:
+				OnStateChange(LibrarianStates.leftCoughing);
+				break;
+
+			case LibrarianStates.rightIdle:
+				OnStateChange(LibrarianStates.rightCoughing);
+				break;
+
+			case LibrarianStates.leftSpeaking:
+				OnStateChange(LibrarianStates.leftCoughing);
+				break;
+
+			case LibrarianStates.rightSpeaking:
+				OnStateChange(LibrarianStates.rightCoughing);
+				break;
+
+			default:
+				break;
+			}
+		}
+	}
+
+	protected void OnStateChange(LibrarianStates newState){
+
+		if(newState == currentState){
+			return;
+		}
+		
+		switch(newState){
+		case LibrarianStates.leftIdle:
+			librarianAnimator.SetBool("isLeftIdle", true);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+			
+		case LibrarianStates.rightIdle:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", true);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+			
+		case LibrarianStates.leftWalking:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", true);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+			
+		case LibrarianStates.rightWalking:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", true);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+			
+		case LibrarianStates.leftSpeaking:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", true);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+			
+		case LibrarianStates.rightSpeaking:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", true);
+			librarianAnimator.SetBool("isCoughing", false);
+			break;
+
+		case LibrarianStates.leftCoughing:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", true);
+			break;
+
+		case LibrarianStates.rightCoughing:
+			librarianAnimator.SetBool("isLeftIdle", false);
+			librarianAnimator.SetBool("isRightIdle", false);
+			librarianAnimator.SetBool("isLeftWalking", false);
+			librarianAnimator.SetBool("isRightWalking", false);
+			librarianAnimator.SetBool("isSpeaking", false);
+			librarianAnimator.SetBool("isCoughing", true);
+			break;
+
+		default:
+			break;
+		}
+		
+		previousState = currentState;
+		currentState = newState;
+	}
+}
+
+public class LibrarianStates : ActorStates{
+	public const int leftCoughing = 6;
+	public const int rightCoughing = 7;
+	
+	public LibrarianStates(){}
+	
+	public LibrarianStates(int value){
+		Value = value;
+	}
+	
+	public static implicit operator int(LibrarianStates type){
+		return type.Value;
+	}
+	
+	public static implicit operator LibrarianStates(int value){
+		return new LibrarianStates(value);
+	}
+}

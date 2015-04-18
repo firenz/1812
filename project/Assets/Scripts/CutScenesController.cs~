@@ -1,0 +1,135 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class CutScenesController : MonoBehaviour {
+	/*
+	private static CutScenesController instance;
+	
+	public static CutScenesController Instance{
+		get{
+			if(instance == null){
+				instance = new GameObject("CutScenesController").AddComponent<CutScenesController>();
+				DontDestroyOnLoad(instance.gameObject);
+			}
+			return instance;
+		}
+	}
+	*/
+
+
+	private string currentPlayableLevel;
+	public static bool firstTimeInCorridor { get; set;}
+	public static bool firstTimeInProfessorOffice { get; private set;}
+	public static bool tutorial1InProfessorOffice { get; private set;}
+	public static bool tutorial2InProfessorOffice { get; private set;}
+	public static bool firstTimeWindowIsOpenedInProfessorOffice { get; private set;}
+	public static bool isPlayingCutscene { get; private set;}
+	private Player player;
+
+	public delegate void EnableButton();
+	public static event EnableButton enableButton;
+	public delegate void DisableButton();
+	public static event DisableButton disableButton;
+
+	void OnEnable(){
+
+	}
+
+	void OnDisable(){
+
+	}
+
+	void OnApplicationQuit(){
+		//instance = null;
+	}
+
+	/*
+	void Awake () {
+		if(instance != null){
+			Destroy(this.gameObject);
+		}
+	}
+	*/
+
+	// Use this for initialization
+	void Start () {
+		Initialize();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if(!isPlayingCutscene){
+			switch(GameStateManager.Instance.currentGameState.GetLevel()){
+				case "DemoScene_00":
+					break;
+				case "DemoScene_01":
+					if(!firstTimeInCorridor){
+						//StartCoroutine(EnteringCorridorForTheFirstTime());
+
+					}
+					else{
+					enableButton();
+				}
+					break;
+			}
+		}
+	}
+
+	private IEnumerator EnteringCorridorForTheFirstTime(){
+		disableButton();
+		firstTimeInCorridor = true;
+		isPlayingCutscene = true;
+		player = GameObject.Find("Player").GetComponent<Player>();
+		player.GoTo(new Vector2(41.6329f,64.3537f));
+
+		do{
+			yield return null;
+		}while(!player.isDirectionToGoReached);
+
+		List<string> playerTexts = new List<string>();
+		playerTexts.Add("INVENTORY");
+		playerTexts.Add("FAILEDTEST");
+		playerTexts.Add("DESCRIPTION");
+		player.Speak(playerTexts);
+        
+        do{
+            yield return null;
+        }while(!player.hasEndedSpeaking);
+		Debug.Log("Ends Cutscene");
+		isPlayingCutscene = false;
+		enableButton();
+	}
+
+	public void Initialize(){
+		currentPlayableLevel = GameStateManager.Instance.currentGameState.GetLevel();
+		firstTimeInCorridor = GameStateManager.Instance.currentGameState.cutScenesInfo.firstTimeInCorridor;
+		firstTimeInProfessorOffice = false;
+		tutorial1InProfessorOffice = false;
+		tutorial2InProfessorOffice = false;
+		firstTimeWindowIsOpenedInProfessorOffice = false;
+		isPlayingCutscene = false;
+	}
+
+	/*
+	private IEnumerator CorridorScene(){
+		firstTimeInCorridor = true;
+		isPlayingCutscene = true;
+		player = GameObject.Find("Player").GetComponent<Player>();
+		player.GoTo(new Vector2(41.6329f,64.3537f));
+		List<string> playerTexts = new List<string>();
+		playerTexts.Add("INVENTORY");
+		playerTexts.Add("FAILEDTEST");
+		playerTexts.Add("DESCRIPTION");
+		player.Speak(playerTexts);
+		isPlayingCutscene = false;
+	}
+	*/
+	
+}
+
+/*
+public class CutSceneData {
+
+}
+*/
