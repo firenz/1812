@@ -39,19 +39,20 @@ public class Door : WarperElement {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.SetInteractionActive();
 
 			yield return new WaitForSeconds(0.1f);
 			Player.Instance.LookToTheRight();
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
-			
+
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 			
-			Player.Instance.SetInteractionInactive();
-			
 			GameController.WarpToLevel(nameSceneDestination);
 		}
+	}
+
+	public override void ChangeCursorOnMouseOver(){
+		CustomCursorController.Instance.ChangeCursorOverWarpElement(0f);
 	}
 }

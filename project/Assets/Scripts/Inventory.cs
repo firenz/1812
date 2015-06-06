@@ -14,18 +14,16 @@ public class Inventory : PersistentSingleton<Inventory> {
 	private GameObject[] items = null;
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		items = new GameObject[maxItemsCapacity];
 
 		for(int i = 0; i < items.Length; i++){
 			items[i] = null;
 		}
-
-		AddItem("FailedTestInventory");
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		if(isClicked){
 			if(isClosed){
 				if(this.transform.position.y < openedInventoryHeight){
@@ -51,7 +49,7 @@ public class Inventory : PersistentSingleton<Inventory> {
 
 		if(itemsCount < maxItemsCapacity){
 			GameObject _itemToLoad = Resources.Load<GameObject>("Prefabs/Inventory/Items/" + nameItem);
-			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, _originalItemPosition.z);
+			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, -2f);
 			GameObject _newItemAdded = Instantiate(_itemToLoad) as GameObject;
 			_newItemAdded.name = nameItem;
 			_newItemAdded.transform.parent = this.transform;
@@ -76,6 +74,14 @@ public class Inventory : PersistentSingleton<Inventory> {
 			}
 			items[maxItemsCapacity - 1] = null;
 			itemsCount--;
+		}
+	}
+
+	public void UpdateAllItems(){
+		for(int i = 0; i < items.Length; i++){
+			if(items[i] != null){
+				items[i].GetComponent<ItemInventory>().UpdateInfo();
+			}
 		}
 	}
 
@@ -135,11 +141,19 @@ public class Inventory : PersistentSingleton<Inventory> {
 		return isEnabled;
 	}
 
-	private void OnMouseDown() {
+	public void OnMouseDown() {
 		if(Input.GetMouseButtonDown(0)){
 			if(!Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting() && !Player.Instance.IsUsingItemInventory()){
 				isClicked = true;
 			}
+		}
+	}
+
+	public void ClearAllItems(){
+		itemsCount = 0;
+		for(int i = 0; i < items.Length; i++){
+			Destroy(items[i]);
+			items[i] = null;
 		}
 	}
 }

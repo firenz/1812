@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(DisplayTextHandler))]
+[RequireComponent(typeof(DisplayUIText))]
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Actor : InteractiveElement {
 	public const float permisiveErrorDistanceBetweenActorAndDesiredPosition = 1.5f;
@@ -26,12 +26,14 @@ public abstract class Actor : InteractiveElement {
 	public bool isActorActive = true;
 	
 	protected DisplayTextHandler displayText;
+	protected DisplayUIText displayUIText;
 
 	protected override void InitializeInformation(){
 		currentPosition = this.transform.position;
 		originalPositionToGo = currentPosition;
 		currentPositionToGo = originalPositionToGo;
 		displayText = this.gameObject.GetComponent<DisplayTextHandler>();
+		displayUIText = this.gameObject.GetComponent<DisplayUIText>();
 
 		InitializeAdditionalActorInformation();
 	}
@@ -165,10 +167,12 @@ public abstract class Actor : InteractiveElement {
 		isSpeaking = true;
 
 		Vector2 _talkingPosition = this.transform.FindChild("dialogText").transform.position;
-		displayText.DisplayText(groupID, nameID, stringID, _talkingPosition);
+
+		displayUIText.DisplayText(groupID, nameID, stringID, _talkingPosition);
+
 		do{
 			yield return null;
-		}while(!displayText.HasEndedDisplayingText()); //To be changed
+		}while(!displayUIText.HasEndedDisplayingText()); 
 
 		isSpeaking = false;
 	}
@@ -186,7 +190,7 @@ public abstract class Actor : InteractiveElement {
 	}
 
 	public bool HasEndedSpeaking(){
-		return displayText.HasEndedDisplayingText();
+		return displayUIText.HasEndedDisplayingText();
 	}
 
 	public bool IsWalking(){

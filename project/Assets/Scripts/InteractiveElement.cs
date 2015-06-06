@@ -20,8 +20,12 @@ public abstract class InteractiveElement : MonoBehaviour {
 
 	// Use this for initialization
 	protected void Start () {
-		DisplayNameText = GameObject.Find("NameInteractiveElementText").GetComponent<Text>();
-
+		try{
+			DisplayNameText = GameObject.Find("NameInteractiveElementText").GetComponent<Text>();
+		}
+		catch(NullReferenceException){
+			DisplayNameText =  null;
+		}
 		spriteWidth = this.CalculateSpriteWidth();
 		spriteHeight = this.CalculateSpriteHeight();
 
@@ -30,7 +34,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 			_position = this.transform.FindChild("WalkingPoint").gameObject;
 			interactivePosition = _position.transform.position;
 		}
-		catch(NullReferenceException exception){
+		catch(NullReferenceException){
 			interactivePosition = Vector2.zero;
 		}
         
@@ -49,7 +53,7 @@ public abstract class InteractiveElement : MonoBehaviour {
 	}
 
 	public virtual void LeftClickAction(){
-		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking()){
+		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
 			StartCoroutine(WaitForLeftClickAction());
 		}
 	}
@@ -66,20 +70,19 @@ public abstract class InteractiveElement : MonoBehaviour {
 
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
 			Player.Instance.isDoingAction = true;
-			Player.Instance.SetInteractionActive();
+
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 			
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
-			
-			Player.Instance.SetInteractionInactive();
+
 			Player.Instance.isDoingAction = false;
 		}
 	}
 
 	public virtual void RightClickAction(){
-		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking()){
+		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
 			StartCoroutine(WaitForRightClickAction());
 		}
 	}
@@ -96,14 +99,13 @@ public abstract class InteractiveElement : MonoBehaviour {
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
 			Player.Instance.isDoingAction = true;
-			Player.Instance.SetInteractionActive();
+
 			Player.Instance.Speak(groupID, nameID, "DESCRIPTION");
 			
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
-			
-			Player.Instance.SetInteractionInactive();
+
 			Player.Instance.isDoingAction = false;
 		}
 	}
@@ -119,6 +121,10 @@ public abstract class InteractiveElement : MonoBehaviour {
 			...
         }
     	*/
+	}
+
+	public virtual void ChangeCursorOnMouseOver(){
+		CustomCursorController.Instance.ChangeCursorOverInteractiveElement();
 	}
     
 	protected float CalculateSpriteWidth(){ //In case sprite width need to be recalculated
@@ -173,14 +179,5 @@ public abstract class InteractiveElement : MonoBehaviour {
 	public bool IsInactive(){
 		return isInactive;
     }
-
-	/*
-	protected virtual void OnMouseOver(){ //Change mousegraphic depending of the type of the element to be implemented
-		DisplayNameText.text = LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
-	}
-
-	protected virtual void OnMouseExit(){
-		DisplayNameText.text = "";
-	}
-	*/
+	
 }

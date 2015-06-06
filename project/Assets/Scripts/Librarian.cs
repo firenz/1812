@@ -115,24 +115,39 @@ public sealed class Librarian : Actor {
 				Player.Instance.isDoingAction = true;
 				isInConversation = true;
 				Player.Instance.isInConversation = true;
+
 				Debug.Log("Player speaking");
 				Player.Instance.Speak(groupID, nameID, "PLAYER_CONVERSATION_01");
-				//yield return Player.Instance.WaitForSpeakCompleted(groupID, nameID, "PLAYER_CONVERSATION_01");
 
+				yield return null;
 				do{
 					yield return null;
-				}while(!Player.Instance.HasEndedSpeaking());
+				}while(Player.Instance.IsSpeaking());
 
-				yield return new WaitForSeconds(0.4f);
+				Debug.Log("Player ends speaking");
+				yield return null;
 
-				Debug.Log("Librarian speaking, player speaking: " + Player.Instance.isSpeaking.ToString());
 				this.Speak(groupID, nameID, "LIBRARIAN_CONVERSATION_01");
-				
+
+				yield return null;
 				do{
 					yield return null;
-				}while(!HasEndedSpeaking());
+				}while(this.IsSpeaking());
 
-				yield return new WaitForSeconds(0.2f);
+				MultipleChoiceManager.Instance.CreateMultipleSelection("LIBRARIAN_CONVERSATION_CHOICE");
+				yield return null;
+				do{
+					yield return null;
+				}while(!MultipleChoiceManager.Instance.IsSelectionEnded());
+
+				string _selectedDialog = "RESULT_CHOICE_" + MultipleChoiceManager.Instance.GetSelectionResult();
+
+				this.Speak(groupID, nameID, _selectedDialog);
+				yield return null;
+				do{
+					yield return null;
+				}while(this.IsSpeaking());
+
 			
 				isInConversation = false;
 				Player.Instance.isInConversation = false;
@@ -147,7 +162,7 @@ public sealed class Librarian : Actor {
 
 	private void CoughingEventAnimation(){
 		Vector2 textPosition = this.transform.FindChild("dialogText").transform.position;
-		displayText.DisplayText(groupID, nameID, "COUGH", textPosition, false);
+		displayUIText.DisplayText(groupID, nameID, "COUGH", textPosition, false);
 	}
 	
 	private void CoughingEventEnds(){

@@ -22,5 +22,4 @@ public class LittleFlagsInventory : ItemInventory {
 	protected override void InitializeItemInformation(){
 		nameID = "LITTLEFLAGS";
 	}
-
 }

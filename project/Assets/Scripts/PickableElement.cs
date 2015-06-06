@@ -27,7 +27,7 @@ public abstract class PickableElement : InteractiveElement {
 	protected abstract void InitializePickableInformation(); //Here the information about the pickable object
 
 	public override void LeftClickAction(){
-		if(!isInactive && !Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting()){
+		if(!isInactive && !Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting() && !Player.Instance.IsInConversation()){
 			StartCoroutine(ManipulatingObject());
 		}
 	}
@@ -51,24 +51,9 @@ public abstract class PickableElement : InteractiveElement {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			//Player.Instance.SetInteractionActive();
 			yield return new WaitForSeconds(0.2f);
 
-			/*
-			if(currentPositionType == positionTypes.upper){
-				//Player.Instance.SetUpperInteractionActive();
-				Player.Instance.UpperInteraction(this);			
-				//Player.Instance.SetUpperInteractionInactive();
-			}
-			else if(currentPositionType == positionTypes.bottom){
-				//Player.Instance.SetBottomInteractionActive();
-				Player.Instance.BottomInteraction(this);			
-				//Player.Instance.SetBottomInteractionInactive();
-			}
-			*/
-			Debug.Log("Before Interaction");
 			Player.Instance.Manipulate(this);
-			Debug.Log("After Interaction");
 
 			yield return new WaitForSeconds(0.2f);
 
@@ -78,8 +63,6 @@ public abstract class PickableElement : InteractiveElement {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 			//...
-			
-			//Player.Instance.SetInteractionInactive();
 
 			yield return new WaitForSeconds(0.1f);
 

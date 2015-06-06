@@ -16,6 +16,9 @@ public sealed class Player : Actor {
 	
 	public static Player Instance{
 		get{
+			if(instance == null){
+				Debug.Log("Player Instance null");
+			}
 			return instance;
 		}
 	}
@@ -33,11 +36,11 @@ public sealed class Player : Actor {
 	private void Awake(){
 		if(instance == null){
 			instance = this;
-        }
-        else{
-            Destroy(this.gameObject);
-        }
-    }
+		}
+		else{
+			Destroy(this.gameObject);
+		}
+	}
 
 	protected override void InitializeAdditionalActorInformation(){
 		if(GameState.lastPlayerPosition != Vector2.zero){
@@ -128,11 +131,9 @@ public sealed class Player : Actor {
 	*/
 
 	public void GrabItem(List<string> nameListGrabbedItems){
-		Debug.Log("Grabbed1");
 		foreach(string itemName in nameListGrabbedItems){
 			Inventory.Instance.AddItem(itemName);
 		}
-		Debug.Log("Grabbed2");
 	}
 
 	public void Manipulate(PickableElement element){
@@ -145,7 +146,6 @@ public sealed class Player : Actor {
 	}
 
 	public IEnumerator Interaction(PickableElement element){
-		Debug.Log("Interaction");
 		if(element.PositionType() == PickableElement.positionTypes.bottom){
 			yield return WaitForBottomInteractionCompleted(element);
 		}
@@ -246,7 +246,8 @@ public sealed class Player : Actor {
 		}
 		endOfAnimationEvent = false;
 	}
-    
+
+	public override void ChangeCursorOnMouseOver(){}
 
 	public void StartOfAnimationEvent(){
 		isPlayingAnimation = true;

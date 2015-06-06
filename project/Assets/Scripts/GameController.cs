@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameController : PersistentSingleton<GameController> {
-
 	private static bool isGamePaused = false;
 
 	//To be implemented
@@ -20,6 +19,7 @@ public class GameController : PersistentSingleton<GameController> {
 	protected override void InitializeOnAwake (){
 		Application.targetFrameRate = 60;
 		QualitySettings.vSyncCount = 1;
+
 		//this.gameObject.AddComponent<ExtraScriptIfNeeded>();
 		//...
 		
@@ -27,21 +27,52 @@ public class GameController : PersistentSingleton<GameController> {
 	}
 
 	private void InitialGameState(){
+		FileManager.InitializeDataPath();
 		GameState.InitializeState();
+		SettingsFileManager.Instance.LoadSettingsFile();
+		GameState.ChangeScreenSettings(GameState.SystemData.ScreenSettings.width, GameState.SystemData.ScreenSettings.height, GameState.SystemData.ScreenSettings.fullscreen);
+		//AudioManager.ChangeMusicVolume(GameState.SystemData.AudioVolumeSettings.music); // to be implemented
+		//AudioManager.ChangeSFXVolume(GameState.SystemData.AudioVolumeSettings.sfx); // to be implemented
 		LocalizedTextManager.Initialize();
 		//...
-	}
-
+	}	
 
 	public static void WarpToLevel(string destinationLevel){
 		GameState.SaveGameState();
 		Application.LoadLevel(destinationLevel);
 		GameState.LoadGameState(destinationLevel);
+		//Inventory.Instance.UpdateAllItems();
 	}
 
-	public static void WarpToLevelFromMenu(string destinationLevel){
-		Application.LoadLevel(destinationLevel);
-    }
+	public static string UnitySceneNameToSceneNameID(string unitySceneName){
+		string _sceneNameID = "";
+		
+		switch(unitySceneName){
+		case "DemoScene_00":
+			_sceneNameID = "PROFESSOR_OFFICE";
+			break;
+		case "DemoScene_01":
+			_sceneNameID = "CORRIDOR";
+			break;
+		}
+		
+		return _sceneNameID;
+	}
+	
+	public static string SceneNameIDToUnitySceneName(string sceneNameID){
+		string _unitySceneName = "";
+		
+		switch(sceneNameID){
+		case "CORRIDOR":
+                _unitySceneName = "DemoScene_01";
+                break;
+            case "PROFESSOR_OFFICE":
+                _unitySceneName = "DemoScene_00";
+                break;
+        }
+        
+        return _unitySceneName;
+	}
 
 	public static void PauseEverything(){
 		isGamePaused = true;

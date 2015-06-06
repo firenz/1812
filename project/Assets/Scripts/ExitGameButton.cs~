@@ -1,0 +1,89 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+public class ExitGameButton : UIGenericButton {
+	private string nameBtn;
+	private bool isExitMenuActive = false;
+	private ReturnToButton returnTo;
+
+	private void OnEnable(){
+		ModalWindowHandler.onInitialized += DisableButton;
+	}
+
+	private void OnDisable(){
+		ModalWindowHandler.onDisable -= EnableButton;
+	}
+
+	private void EnableButton(){
+		this.GetComponent<Button>().interactable = true;
+	}
+
+	private void DisableButton(){
+		this.GetComponent<Button>().interactable = false;
+	}
+
+	private void OnCurrentLanguageChange(){
+		nameBtn = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "EXIT_GAME", "NAME")[0];
+		this.transform.FindChild("Text").GetComponent<Text>().text = nameBtn;
+	}
+
+	private void Start(){
+		nameBtn = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "EXIT_GAME", "NAME")[0];
+		this.transform.FindChild("Text").GetComponent<Text>().text = nameBtn;
+	}
+
+
+	public override void OnMouseOver(){
+		if(!isExitMenuActive){
+			CustomCursorController.Instance.isOverUIButton = true;
+			isMouseOver = true;
+		}
+	}
+	
+	public override void OnMouseExit(){
+		CustomCursorController.Instance.isOverUIButton = false;
+		CustomCursorController.Instance.ChangeCursorToDefault();
+		isMouseOver = false;
+	}
+
+	public void ExitGameOnClick(){
+		StartCoroutine(WaitForExitGameOnClick());
+	}
+
+	private IEnumerator WaitForExitGameOnClick(){
+		this.GetComponent<Button>().interactable = false;
+		isExitMenuActive = true;
+
+		ModalWindowHandler.Instance.Initialize("CLOSE_GAME");
+		do{
+			yield return null;
+		}while(!ModalWindowHandler.Instance.IsSelectionEnded() );
+
+		isExitMenuActive = false;
+		this.GetComponent<Button>().interactable = true;
+
+		if(ModalWindowHandler.Instance.IsYesClicked()){
+			ModalWindowHandler.Instance.Disable();
+
+			Application.Quit();
+		}
+		else{
+			ModalWindowHandler.Instance.Disable();
+		}
+	}
+
+	public bool IsActive(){
+		return isExitMenuActive;
+	}
+
+	public void SetActive(bool active){
+		isExitMenuActive = active;
+
+		if(!isExitMenuActive){
+			ModalWindowHandler.Instance.Disable();
+			this.GetComponent<Button>().interactable = true;
+		}
+	}
+}

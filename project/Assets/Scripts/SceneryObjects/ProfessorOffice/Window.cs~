@@ -60,11 +60,8 @@ public class Window : PickableElement {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			//Player.Instance.SetUpperInteractionActive();
-
 			Player.Instance.UpperInteraction(this);
 
-            //Player.Instance.SetInteractionInactive();
 			Player.Instance.isDoingAction = false;
         }
     }
@@ -79,7 +76,6 @@ public class Window : PickableElement {
 	}
     
     public override void ActionOnItemInventoryUsed(string nameItemInventory){
-		Debug.Log("ActionOnItemInventaryUsed: " + nameItemInventory);
 		switch(nameItemInventory){
 		case "FailedTestInventory":
 			StartCoroutine(FailedTestOnWindow());

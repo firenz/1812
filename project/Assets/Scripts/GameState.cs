@@ -43,8 +43,11 @@ public static class GameState{
 			public static int height;
 			public static bool fullscreen;
 		}
-		
-		//Here struct for AudioSettings...
+
+		public struct AudioVolumeSettings{
+			public static int music;
+			public static int sfx;
+		}
 		
 		public static string currentLanguage;
 		public static ScreenSettings screenSettings;
@@ -73,10 +76,11 @@ public static class GameState{
 	
 	public static void InitializeState(){
 		lastPlayableLevel = "DemoScene_01";
-		
-		SystemData.ScreenSettings.width = 640;
-		SystemData.ScreenSettings.height = 480;
-		SystemData.ScreenSettings.fullscreen = false;
+		SystemData.ScreenSettings.width = Screen.width;
+		SystemData.ScreenSettings.height = Screen.height;
+		SystemData.ScreenSettings.fullscreen = Screen.fullScreen;
+		SystemData.AudioVolumeSettings.music = 75;
+		SystemData.AudioVolumeSettings.sfx = 75;
 		SystemData.currentLanguage = "ES";
 		
 		CutSceneData.isPlayedIntro = false;
@@ -90,7 +94,6 @@ public static class GameState{
 	}
 
 	public static void SaveGameState(){
-
 		switch(Application.loadedLevelName){
 		case "DemoScene_00" :
 			LevelProfessorOfficeData.playerPosition = Player.Instance.transform.position;
@@ -118,32 +121,42 @@ public static class GameState{
 		case "DemoScene_00" :
 			lastPlayableLevel = levelToLoad;
 			Inventory.Instance.Enable();
+			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
 			break;
 		case "DemoScene_01" :
 			lastPlayableLevel = levelToLoad;
-
+			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
 			if(CutSceneData.isPlayedIntro){
 				Inventory.Instance.Enable();
 			}
 			else{
 				Inventory.Instance.Disable();
-			}
 
-			/* To be implemented
-			if(!GameState.CutSceneData.isPlayedIntro){
-				disableGameGUI();
 			}
-			else{
-				enableGameGUI();
-			}
-			*/
-			
 			break;
 			
 			//More to come...
 			
 		default:
+			CustomCursorController.Instance.ChangeInteractiveCursorToDefault();
+			Inventory.Instance.Disable();
 			break;
 		}
 	}
+
+	public static void ChangeCurrentLanguage(string newLanguage){
+		SystemData.currentLanguage = newLanguage;
+		LocalizedTextManager.ChangeCurrentLanguage(newLanguage);
+		//FileManager function to save new settings here (only for standalone version)
+		SettingsFileManager.Instance.SaveSettingsFile();
+	}
+
+	public static void ChangeScreenSettings(int newScreenWidth, int newScreenHeight, bool newFullscreen){
+		SystemData.ScreenSettings.width = newScreenWidth;
+		SystemData.ScreenSettings.height = newScreenHeight;
+		SystemData.ScreenSettings.fullscreen = newFullscreen;
+		//FileManager function to save new settings here (only for standalone version)
+		SettingsFileManager.Instance.SaveSettingsFile();
+	}
+	
 }

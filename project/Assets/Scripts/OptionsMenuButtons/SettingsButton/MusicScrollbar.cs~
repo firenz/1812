@@ -1,0 +1,30 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class MusicScrollbar : UIGenericButton {
+	private int currentMusicVolume;
+	private Slider musicSlider;
+	private int currentSFXVolume;
+
+	// Use this for initialization
+	private void Start () {
+		currentMusicVolume = GameState.SystemData.AudioVolumeSettings.musicVolume;
+		musicSlider = this.GetComponent<Slider>();
+		currentSFXVolume = GameState.SystemData.AudioVolumeSettings.SFXVolume;
+
+		int _sliderValue = currentMusicVolume/25; //Volume goes 25 to 25
+
+		musicSlider.value = _sliderValue;
+
+	}
+
+	public void OnVolumeChange(){
+		int _newSliderValue = musicSlider.value;
+		
+		currentMusicVolume = _newSliderValue * 25;
+
+		//AudioManager.ChangeMusicVolume(currentMusicVolume) to be implemented
+	}
+
+}

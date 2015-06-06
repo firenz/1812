@@ -1,0 +1,13 @@
+<GameFile>
+  <LastSessionData lastPlayableLevel="DemoScene_00" lastTimePlayed="04/06/2015 20:39" />
+  <CutScenesData isPlayedIntro="True" />
+  <LevelCorridorData timesTrashBinWasExaminated="0">
+    <playerPosition X="42.81957" Y="64.15697" />
+  </LevelCorridorData>
+  <LevelProfessorOfficeData isWindowOpened="False" isLittleFlagsPickedFromFloor="False">
+    <playerPosition X="197.3725" Y="73.87845" />
+  </LevelProfessorOfficeData>
+  <Inventory>
+    <item Name="FailedTestInventory" />
+  </Inventory>
+</GameFile>
