@@ -37,6 +37,10 @@
             <string id = "NOTHING_OF_INTEREST">
                 Nope. Nothing of interest here
             </string>
+            <string id = "FULL_INVENTORY">
+                Can't pick this item
+                My pocket is full
+            </string>
         </element>
     </group>
 	<group id = "SCENE_PROFESSOROFFICE">

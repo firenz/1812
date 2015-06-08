@@ -32,7 +32,12 @@ public class LittleFlags : PickableElement {
 	}
 	
 	public override void OnPlayerTouchingAction(){
-		Player.Instance.GrabItem(nameListGivableElements);
-		SetInactive();
+		if(Inventory.Instance.IsInventoryFull()){
+			Player.Instance.Speak("GUI", "DEFAULT", "FULL_INVENTORY");
+		}
+		else{
+			Player.Instance.GrabItem(nameListGivableElements);
+			SetInactive();
+		}
 	}
 }
