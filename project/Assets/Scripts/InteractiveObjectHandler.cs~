@@ -1,0 +1,63 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class InteractiveObjectHandler : MonoBehaviour {
+	public TargetController targetScript;
+	public Vector2 walkingPointToReachInteractiveObject;
+
+	public struct descriptionsInteractiveObject{
+		string[] definition; //En un futuro sera un objeto de la clase Localization
+		string[] interacting;
+	}
+
+	public enum interactiveTypes{
+		description = 0,
+		interactiveButNotPickable,
+		upperPickable,
+		bottomPickable,
+	}
+
+	public interactiveTypes currentInteractiveType = 0;
+	public bool isBeingUsedByPlayer = false;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if(targetScript.isTargetReached){
+			switch(currentInteractiveType){
+			case interactiveTypes.description:
+				break;
+			}
+		}
+	}
+
+	void giveDescription(){
+
+	}
+
+	void doAction(){
+
+	}
+
+	/*
+	void OnMouseOver(){
+		switch(currentInteractiveType){
+			case interactiveTypes.description:
+			break;
+
+			case interactiveTypes.interactiveButNotPickable:
+			break;
+
+			case interactiveTypes.upperPickable:
+			break;
+
+			case interactiveTypes.bottomPickable:
+			break;
+		}
+	}
+	*/
+}

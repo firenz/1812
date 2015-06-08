@@ -1,0 +1,65 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class JournalButton : UIGenericButton {
+	private string nameBtn;
+	private bool isJournalMenuActive = false;
+	private ReturnToButton returnTo;
+	private GameObject journalMenu;
+	
+	private void OnEnable(){
+		ModalWindowHandler.onInitialized += DisableButton;
+		ModalWindowHandler.onDisable += EnableButton;
+	}
+	
+	private void OnDisable(){
+		ModalWindowHandler.onInitialized -= DisableButton;
+		ModalWindowHandler.onDisable -= EnableButton;
+	}
+	
+	private void EnableButton(){
+		this.GetComponent<Button>().interactable = true;
+	}
+	
+	private void DisableButton(){
+		this.GetComponent<Button>().interactable = false;
+	}
+
+	private void OnCurrentLanguageChange(){
+		nameBtn = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "JOURNAL", "NAME")[0];
+		this.transform.FindChild("Text").GetComponent<Text>().text = nameBtn;
+	}
+	
+	private void Start(){
+		journalMenu = this.transform.parent.parent.Find("JournalMenu").gameObject;
+		journalMenu.transform.SetAsFirstSibling();
+		nameBtn = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "JOURNAL", "NAME")[0];
+		this.transform.FindChild("Text").GetComponent<Text>().text = nameBtn;
+	}
+	
+	public void JournalMenuOnClick(){
+		this.GetComponent<Button>().interactable = false;
+		isJournalMenuActive = true;
+		journalMenu.transform.SetAsLastSibling();
+	}
+	
+	public bool IsActive(){
+		return isJournalMenuActive;
+	}
+	
+	public void SetActive(bool active){
+		isJournalMenuActive = active;
+
+		if(!isJournalMenuActive){
+			this.GetComponent<Button>().interactable = true;
+			journalMenu.transform.SetAsFirstSibling();
+			journalMenu.transform.FindChild("JournalPanel/Scrollbar").GetComponent<Scrollbar>().value = 1f;
+			journalMenu.transform.FindChild("JournalPanel").GetComponent<JournalEntriesManager>().DisableJournalEntryDescription();
+		}
+		else{
+			this.GetComponent<Button>().interactable = false;
+			journalMenu.transform.SetAsLastSibling();
+		}
+	}
+}

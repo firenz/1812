@@ -1,0 +1,148 @@
+﻿/*	This file is part of 1812: La aventura.
+
+    1812: La aventura is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    1812: La aventura is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with 1812: La aventura.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class ActorTextController : MonoBehaviour {
+	private TextLocalization localizationScript; //To be fixed in future
+	public GUIStyle textStyle;
+	public float secondsDisplayingText = 1.5f;
+	private Actor actor;
+	private string displayingText;
+	private Vector2 positionGUI;
+	private Rect labelRect;
+
+	private int lineLength = 20;
+	//private int numberOfLines = 1;
+	//private int maxWordsPerLine = 3; //For future usage
+	//private int maxLinesPerDialog = 2; //For future usage
+
+
+	// Use this for initialization
+	void Start () {
+		//TextLocalization.Initialize();
+		localizationScript = GameObject.Find("GameController").GetComponent<TextLocalization>();
+		actor = this.GetComponentInParent<Actor>();
+		displayingText = "";
+		textStyle.fontSize = ScaleAllGUI.ScalateFontSize(textStyle.fontSize);
+	}
+
+	protected IEnumerator WaitForDialogueToBeEnded(List<string> textCodes){
+		actor.hasEndedSpeaking = false;
+		//textStyle.fontSize = ScaleAllGUI.ScalateFontSize(textStyle.fontSize);
+		List<string> localizedAndFormatedConversation = new List<string>();
+		localizedAndFormatedConversation = localizationScript.GetLocalizedText(textCodes[0], textCodes[1], textCodes[2]);
+		Debug.Log(textCodes.ToString());
+		localizedAndFormatedConversation = ReestructureDialogInSmallerStrings(localizedAndFormatedConversation);
+		foreach(string lineDialogue in localizedAndFormatedConversation){
+			displayingText = lineDialogue;
+			positionGUI = Camera.main.WorldToScreenPoint(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z));
+			positionGUI.y = Screen.height - positionGUI.y;
+			yield return new WaitForSeconds(secondsDisplayingText);
+		}
+		displayingText = "";
+		actor.hasEndedSpeaking = true;
+		actor.isSpeaking = false;
+	}
+
+	public void UpdateTextDialogue(List<string> textCodes){
+		StartCoroutine(WaitForDialogueToBeEnded(textCodes));
+	}
+
+	/*
+	protected IEnumerator WaitForDialogueToBeEnded(List<string> conversation){
+		actor.hasEndedSpeaking = false;
+		textStyle.fontSize = ScaleAllGUI.ScalateFontSize(textStyle.fontSize);
+		localizedAndFormatedConversation = TextLocalization.GetLocalizedText()
+		localizedAndFormatedConversation = ReestructureDialogInSmallerStrings(localizedAndFormatedConversation);
+		foreach(string lineDialogue in localizedAndFormatedConversation){
+			displayingText = lineDialogue;
+			positionGUI = Camera.main.WorldToScreenPoint(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z));
+			positionGUI.y = Screen.height - positionGUI.y;
+			yield return new WaitForSeconds(secondsDisplayingText);
+		}
+		displayingText = "";
+		actor.hasEndedSpeaking = true;
+		actor.isSpeaking = false;
+	}
+
+	public void UpdateTextDialogue(List<string> conversation){
+		StartCoroutine(WaitForDialogueToBeEnded(conversation));
+	}
+	*/
+
+	void OnGUI(){
+		if(displayingText != ""){
+			labelRect = GUILayoutUtility.GetRect(new GUIContent(displayingText), textStyle);
+			labelRect.center = positionGUI;
+			GUI.Label(new Rect(labelRect.x, labelRect.y, labelRect.width + Screen.width * 0.01f * 2f, labelRect.height + Screen.height * 0.01f), displayingText, textStyle);
+
+		}
+	}
+
+	List<string> ReestructureDialogInSmallerStrings(List<string> conversation){
+		List<string> reestructuredConversation = new List<string>();
+		foreach(string dialog in conversation){
+			//GUIText dialogBox;
+			string[] words = dialog.Split(" "[0]);
+			string resultedLine = "";
+			string word = "";
+			for(int index = 0; index < words.Length; index++){
+				word = words[index].Trim();
+				if(index == 0){
+					/*
+					if(resultedLine != ""){
+						resultedLine = words[0];
+					}
+					else{
+						resultedLine += words[0];
+					}
+					*/
+					resultedLine += words[0];
+					//dialogBox.text = resultedLine;
+				}
+				if(index > 0){
+					resultedLine += " " + word;
+					//dialogBox.text = resultedLine;
+				}
+				if(resultedLine.Length > lineLength){
+					resultedLine = resultedLine.Substring(0, resultedLine.Length - (word.Length));
+					reestructuredConversation.Add(resultedLine);
+					resultedLine = word;
+					//resultedLine += "\n" + word;
+					//numberOfLines += 1;
+				}
+			}
+			/*
+			//Rect textSize = dialogBox.GetScreenRect();
+			//if(textSize.width > lineLength){
+			if(resultedLine.Length > lineLength){
+				resultedLine = resultedLine.Substring(0, resultedLine.Length - (word.Length));
+				reestructuredConversation.Add(resultedLine);
+				resultedLine = word + " ";
+				//resultedLine += "\n" + word;
+				//numberOfLines += 1;
+			}
+			*/
+			Debug.Log(resultedLine.ToString());
+			reestructuredConversation.Add(resultedLine);
+		}
+
+		return reestructuredConversation;
+	}
+}

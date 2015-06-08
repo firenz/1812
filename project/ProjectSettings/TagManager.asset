@@ -15,6 +15,7 @@ TagManager:
   - MultipleChoiceSystem
   - MultipleChoiceElement
   - GameSlots
+  - Inventory
   layers:
   - Default
   - TransparentFX

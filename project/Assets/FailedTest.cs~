@@ -1,0 +1,14 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class FailedTest : ItemInventory {
+	public delegate void ItemInventoryUsedInInteractiveObject(InteractiveObject interactiveObject);
+	public static event ItemInventoryUsedInInteractiveObject ItemUsed;
+
+	protected void InitializeInformation(){
+		descriptionText.Add("Es un examen");
+		nameOfInteractiveObjectsWhichItemInteracts.Add("Window");
+	}
+
+}

@@ -1,0 +1,26 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class SettingsLanguageChangedEventListener : MonoBehaviour {
+
+	private void OnEnable(){
+		LocalizedTextManager.currentLanguageChanged += ChangeLanguageInSettings;
+	}
+
+	private void OnDisable(){
+		LocalizedTextManager.currentLanguageChanged -= ChangeLanguageInSettings;
+	}
+
+	public void ChangeLanguageInSettings(){
+		this.transform.FindChild("GraphicSettings/GraphicSettingsLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "GRAPHIC_SETTINGS_LABEL")[0];
+		this.transform.FindChild("GraphicSettings/FullscreenToggle/Label").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "FULLSCREEN_TOGGLE")[0];
+		this.transform.FindChild("GraphicSettings/CurrentResolutionButton/Text").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "CHANGE_RESOLUTION_BUTTON")[0];
+		this.transform.FindChild("AudioSettings/MusicSettings/MusicLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "MUSIC_LABEL")[0];
+		this.transform.FindChild("AudioSettings/AudioSettingsLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "AUDIO_SETTINGS_LABEL")[0];
+		this.transform.FindChild("AudioSettings/MusicSettings/MusicLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "MUSIC_LABEL")[0];
+		this.transform.FindChild("AudioSettings/SFXSettings/SFXLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "SFX_LABEL")[0];
+		this.transform.FindChild("LanguageSettings/LanguageSettingsLabel").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "LANGUAGE_SETTINGS_LABEL")[0];
+		this.transform.FindChild("LanguageSettings/ChangeLanguageButton/Text").GetComponent<Text>().text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "CHANGE_LANGUAGE_BUTTON")[0];
+	}
+}
