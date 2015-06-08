@@ -6,25 +6,23 @@ using System.Collections.Generic;
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Actor : InteractiveElement {
 	public const float permisiveErrorDistanceBetweenActorAndDesiredPosition = 1.5f;
-
-	protected Vector2 currentPosition;
-	protected Vector2 originalPositionToGo;
-	protected Vector2 currentPositionToGo;
-	protected Vector2 moveDirection = Vector2.zero;
-	protected float movementSpeed = 1f; //Just in case we want an Actor walking faster
-
-	protected bool inCutScene = false; //Maybe not needed in the near future using something like CutScenes.isPlaying();
 	public bool isInteracting = false;
 	public bool isWalking = false;
 	public bool isSpeaking = false;
 	public bool isInConversation = false;
 	public bool isFacingLeft = true;
 	public bool isFacingRight = false;
+	public bool isActorActive = true;
+
+	protected Vector2 currentPosition;
+	protected Vector2 originalPositionToGo;
+	protected Vector2 currentPositionToGo;
+	protected Vector2 moveDirection = Vector2.zero;
+	protected float movementSpeed = 1f; //Just in case we want an Actor walking faster
 	//protected bool isIdle = true;
 	protected bool isPlayingAnimation = false;
 	protected bool endOfAnimationEvent = false;
-	public bool isActorActive = true;
-	
+	protected bool inCutScene = false; //Maybe not needed in the near future using something like CutScenes.isPlaying();
 	protected DisplayTextHandler displayText;
 	protected DisplayUIText displayUIText;
 
@@ -100,22 +98,6 @@ public abstract class Actor : InteractiveElement {
 			
 			currentPositionToGo = newPosition;
 			originalPositionToGo = newPosition;
-
-			/* To be fixed or removed
-			if(isNewPositionRelativeToActorWidth){
-				//if(currentPositionToGo.x > (currentPosition.x + spriteWidth)){
-				if(currentPositionToGo.x > currentPosition.x){
-					currentPositionToGo.x -= spriteWidth;
-				}
-			}
-			
-			if((currentPositionToGo.x + spriteWidth) > (Screen.width * 0.5f)){
-				currentPositionToGo.x -= spriteWidth;
-			}
-			
-			
-			LookAtPosition(currentPositionToGo);
-			*/
 
 			if(currentPositionToGo.x < 0f){
 				currentPositionToGo.x = 10f;

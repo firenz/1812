@@ -75,9 +75,10 @@ public class Window : PickableElement {
 		}
 	}
     
-    public override void ActionOnItemInventoryUsed(string nameItemInventory){
-		switch(nameItemInventory){
+    public override void ActionOnItemInventoryUsed(GameObject itemInventory){
+		switch(itemInventory.name){
 		case "FailedTestInventory":
+			itemInventory.GetComponent<ItemInventory>().Unselect();
 			StartCoroutine(FailedTestOnWindow());
 			break;
 		default:

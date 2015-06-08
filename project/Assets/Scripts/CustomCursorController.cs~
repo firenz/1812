@@ -69,4 +69,12 @@ public class CustomCursorController : PersistentSingleton<CustomCursorController
 		currentCursorSprite = defaultCursorSprite;
 	}
 
+	public void HideCursor(){
+		interactionCursor.GetComponent<SpriteRenderer>().color = Color.clear;
+	}
+
+	public void UnhideCursor(){
+		interactionCursor.GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
 }

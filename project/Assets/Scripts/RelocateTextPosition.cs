@@ -16,7 +16,7 @@ public class RelocateTextPosition : MonoBehaviour {
 	private float width;
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		thisText = this.GetComponent<Text>();
 		thisRectTransform = this.GetComponent<RectTransform>();
 		thisTransform = this.transform;
@@ -28,14 +28,16 @@ public class RelocateTextPosition : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		if(thisText.text != ""){
-			parentRectTransform.transform.position = dialogTextTransform.position;
+
 			Relocate();
 		}
 	}
 
-	private void Relocate(){
+	public void Relocate(){
+		parentRectTransform.transform.position = dialogTextTransform.position;
+
 		width = thisRectTransform.rect.width + 20;
 		float _positionX = parentRectTransform.anchoredPosition.x;
 		float _textBeginPositionValue = _positionX - (width * 0.5f);
@@ -55,7 +57,7 @@ public class RelocateTextPosition : MonoBehaviour {
 			parentRectTransform.anchoredPosition = new Vector2(_newPositionX , parentRectTransform.anchoredPosition.y);
 		}
 		else{
-			Debug.Log("position + width: " + _textEndPositionValue);
+			//Debug.Log("position + width: " + _textEndPositionValue);
 		}
 	}
 }

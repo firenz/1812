@@ -4,14 +4,16 @@ using System.Collections.Generic;
 
 public sealed class Player : Actor {
 	public bool isWaiting = false;
-	public bool isUsingItemInventory = false;
 	public bool isDoingAction = false;
+	public bool isUsingItemInventory = false;
+
 	private bool isGrabbingUpperItem = false;
 	private bool isGrabbingBottomItem = false;
 	private bool isTouchingItemAnimEventActivated = false;
 	private static float timeCounterUntilWaitingAnimation;
 	private const float maxTimeIdleUntilWaitingAnimation = 6f;
-
+		
+	//Initializing Singleton because Player can't inherit Actor and Singleton<T> at the same time
 	private static Player instance;
 	
 	public static Player Instance{
@@ -63,7 +65,7 @@ public sealed class Player : Actor {
 		}
 	}
 
-	public override void ActionOnItemInventoryUsed(string nameItemInventory){}
+	public override void ActionOnItemInventoryUsed(GameObject itemInventory){}
 
 	/*
 	public void GrabUpperItem(PickableElement pickableItem){

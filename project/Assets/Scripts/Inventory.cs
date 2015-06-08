@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Inventory : PersistentSingleton<Inventory> {
 	public bool isEnabled = true;
 
+	private bool isActivated = false;
 	private bool isClosed = true;
-	private bool isClicked = false;
 	private const float speedInOpeningInventory = 1.5f;
 	private const float openedInventoryHeight = 30f;
 	private const int maxItemsCapacity = 7;
@@ -25,7 +25,7 @@ public class Inventory : PersistentSingleton<Inventory> {
 	
 	// Update is called once per frame
 	private void Update () {
-		if(isClicked){
+		if(isActivated){
 			if(isClosed){
 				if(this.transform.position.y < openedInventoryHeight){
 					this.transform.position = new Vector2(0.0f , this.transform.position.y + speedInOpeningInventory);
@@ -51,7 +51,6 @@ public class Inventory : PersistentSingleton<Inventory> {
 		if(itemsCount < maxItemsCapacity){
 			GameObject _itemToLoad = Resources.Load<GameObject>("Prefabs/Inventory/Items/" + nameItem);
 			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, -2f);
-			Debug.Log("z pos: " + _itemToLoad.transform.position.z);
 			GameObject _newItemAdded = Instantiate(_itemToLoad) as GameObject;
 			_newItemAdded.name = nameItem;
 			_newItemAdded.transform.parent = this.transform;
@@ -122,13 +121,13 @@ public class Inventory : PersistentSingleton<Inventory> {
 
 	public void Open(){
 		isClosed = false;
-		isClicked = false;
+		isActivated = false;
 		this.transform.FindChild("ClosedInventory").GetComponent<Renderer>().enabled = false;
 	}
 	
 	public void Close(){
 		isClosed = true;
-		isClicked = false;
+		isActivated = false;
 		transform.FindChild("ClosedInventory").GetComponent<Renderer>().enabled = true;
 	}
 
@@ -152,12 +151,8 @@ public class Inventory : PersistentSingleton<Inventory> {
 		return isEnabled;
 	}
 
-	public void OnMouseDown() {
-		if(Input.GetMouseButtonDown(0)){
-			if(!Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting() && !Player.Instance.IsUsingItemInventory()){
-				isClicked = true;
-			}
-		}
+	public void Activate(){
+		isActivated = true;
 	}
 
 	public void DeleteAllItems(){

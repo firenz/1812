@@ -6,16 +6,13 @@ using System.Collections.Generic;
 
 public abstract class InteractiveElement : MonoBehaviour {
 	public const float permisiveErrorBetweenPlayerPositionAndInteractivePosition = 5f;
+	public string nameID = "DEFAULT";
 
 	protected string groupID = "DEFAULT";
-	protected string nameID = "DEFAULT";
-
 	protected Vector2 interactivePosition;
-
 	protected float spriteWidth = 0f;
 	protected float spriteHeight = 0f;
 	protected bool isInactive = false;
-
 	protected Text DisplayNameText;
 
 	// Use this for initialization
@@ -111,9 +108,9 @@ public abstract class InteractiveElement : MonoBehaviour {
 	}
 
 
-	public virtual void ActionOnItemInventoryUsed(string nameItemInventory){
+	public virtual void ActionOnItemInventoryUsed(GameObject itemInventory){
 		/* How to use it:
-		switch(nameOfItemInventary){
+		switch(itemInventory.name){
 			case "name 1": DoSomething1....
 			break;
             case "name 2": DoSomething2....

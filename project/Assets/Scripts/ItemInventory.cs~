@@ -13,7 +13,6 @@ public abstract class ItemInventory : InteractiveElement {
 		//Write here the info for your interactive element
 		groupID = "INVENTORY";
 		this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -2f);
-		Debug.Log("z pos");
 		originalPosition = this.transform.position;
 		//...
 		InitializeItemInformation();
@@ -52,32 +51,69 @@ public abstract class ItemInventory : InteractiveElement {
 		}
 	}
 
-	public bool IsCurrentlyUsed(){
-		return isSelectedByMouse;
-	}
-
+	/*
 	protected virtual void OnMouseOver(){
 		if(Input.GetMouseButtonDown(0)){
 			if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking()){
 				DisplayNameText.text = "";
 				if(!isSelectedByMouse){
-					Cursor.visible = false; //Later when we have the custom mouse, this line is going to be deleted and replaced with another function
+					//Player.Instance.SetUsingInventoryActive();
+					Debug.Log("selected: " + this.gameObject.name);
+					CustomCursorController.Instance.HideCursor();
 					isSelectedByMouse = true;
 					originalPosition = this.transform.position;
 					mouseOffset = this.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
 					this.GetComponent<Renderer>().sortingOrder = 2;
-					this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -2f);
+					this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -4f);
 				}
 				else{
-					Cursor.visible = true; //Later when we have the custom mouse, this line is going to be deleted
+					Debug.Log("unselected: " + this.gameObject.name);
+					CustomCursorController.Instance.UnhideCursor();
 					isSelectedByMouse = false;
 					this.transform.position = originalPosition;
 					this.GetComponent<Renderer>().sortingOrder = 1;
+					//Player.Instance.SetUsingInventoryInactive();
 				}
 			}
 		}
 	}
+	*/
+
+	public void Select(){
+		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.isUsingItemInventory){
+			try{
+				DisplayNameText.text = "";
+			}
+			catch(NullReferenceException){
+				DisplayNameText = null;
+			}
+
+			if(!isSelectedByMouse){
+				Player.Instance.isUsingItemInventory = true;
+				Debug.Log("selected: " + this.gameObject.name);
+				CustomCursorController.Instance.HideCursor();
+				isSelectedByMouse = true;
+				originalPosition = this.transform.position;
+				mouseOffset = this.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+				this.GetComponent<Renderer>().sortingOrder = 2;
+				this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -4f);
+			}
+		}
+	}
+
+	public void Unselect(){
+		Debug.Log("unselected: " + this.gameObject.name);
+		CustomCursorController.Instance.UnhideCursor();
+		isSelectedByMouse = false;
+		this.transform.position = originalPosition;
+		this.GetComponent<Renderer>().sortingOrder = 1;
+		Player.Instance.isUsingItemInventory = false;
+	}
 
 	public override void ChangeCursorOnMouseOver(){}
+
+	public bool IsCurrentlyUsed(){
+		return isSelectedByMouse;
+	}
 
 }

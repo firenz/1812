@@ -121,6 +121,9 @@ public static class GameState{
 		case "DemoScene_00" :
 			lastPlayableLevel = levelToLoad;
 			Inventory.Instance.Enable();
+			//Inventory.Instance.Close();
+			//Inventory.Instance.Open();
+			Inventory.Instance.Activate();
 			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
 			break;
 		case "DemoScene_01" :
@@ -128,10 +131,10 @@ public static class GameState{
 			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
 			if(CutSceneData.isPlayedIntro){
 				Inventory.Instance.Enable();
+				Inventory.Instance.Activate();
 			}
 			else{
 				Inventory.Instance.Disable();
-
 			}
 			break;
 			
