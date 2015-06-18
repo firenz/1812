@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public sealed class Player : Actor {
-	public bool isWaiting = false;
-	public bool isDoingAction = false;
-	public bool isUsingItemInventory = false;
+	public bool isWaiting { get; private set;}
+	public bool isDoingAction { get; private set;}
+	public bool isUsingItemInventory { get; private set;}
+	public bool isGrabbingUpperItem { get; private set;}
+	public bool isGrabbingBottomItem { get; private set;}
+	public bool isTouchingItemAnimEventActivated { get; private set;}
 
-	private bool isGrabbingUpperItem = false;
-	private bool isGrabbingBottomItem = false;
-	private bool isTouchingItemAnimEventActivated = false;
-	private static float timeCounterUntilWaitingAnimation;
+	[SerializeField]
 	private const float maxTimeIdleUntilWaitingAnimation = 6f;
+	private float timeCounterUntilWaitingAnimation;
 		
 	//Initializing Singleton because Player can't inherit Actor and Singleton<T> at the same time
 	private static Player instance;
@@ -44,6 +45,42 @@ public sealed class Player : Actor {
 		}
 	}
 
+	private void OnEnable(){
+		InteractiveElement.beginPlayerAction += SetActionActive;
+		InteractiveElement.endPlayerAction += SetActionInactive;
+		Actor.beginPlayerConversation += SetConversationActive;
+		Actor.endPlayerConversation += SetConversationInactive;
+		ItemInventory.beginUsingItem += SetUsingInventoryActive;
+		ItemInventory.endUsingItem += SetUsingInventoryInactive;
+	}
+
+	private void OnDisable(){
+		InteractiveElement.beginPlayerAction -= SetActionActive;
+		InteractiveElement.endPlayerAction -= SetActionInactive;
+		Actor.beginPlayerConversation -= SetConversationActive;
+		Actor.endPlayerConversation -= SetConversationInactive;
+		ItemInventory.beginUsingItem -= SetUsingInventoryActive;
+		ItemInventory.endUsingItem -= SetUsingInventoryInactive;
+	}
+
+	protected override void Start (){
+		base.Start ();
+
+		isWaiting = false;
+		isDoingAction = false;
+		isUsingItemInventory = false;
+		isGrabbingUpperItem = false;
+		isGrabbingBottomItem = false;
+		isTouchingItemAnimEventActivated = false;
+
+		if(GameState.lastPlayerPosition != Vector2.zero){
+			this.transform.position = GameState.lastPlayerPosition;
+		}
+		
+		originalPositionToGo = GameState.lastTargetedPositionByMouse;
+		currentPosition = this.transform.position;
+	}
+
 	protected override void InitializeAdditionalActorInformation(){
 		if(GameState.lastPlayerPosition != Vector2.zero){
 			this.transform.position = GameState.lastPlayerPosition;
@@ -51,6 +88,21 @@ public sealed class Player : Actor {
 
 		originalPositionToGo = GameState.lastTargetedPositionByMouse;
 		currentPosition = this.transform.position;
+	}
+
+	protected override void Update () {
+		base.Update();
+
+		//if(IsIdle() && !CutScenesManager.IsPlaying() && !isWaiting){
+		if(!isDoingAction && !CutScenesManager.IsPlaying() && !isWaiting){
+			if((Time.time - timeCounterUntilWaitingAnimation) > maxTimeIdleUntilWaitingAnimation){
+				isWaiting = true;
+				timeCounterUntilWaitingAnimation = Time.time;
+			}
+		}
+		else{
+			timeCounterUntilWaitingAnimation = Time.time;
+		}
 	}
 
 	protected override void AdditionalUpdateInformation(){
@@ -139,22 +191,24 @@ public sealed class Player : Actor {
 	}
 
 	public void Manipulate(PickableElement element){
-		if(element.PositionType() == PickableElement.positionTypes.upper){
+		if(element.currentPickablePosition == PickableElement.PickableFrom.up){
 			StartCoroutine(WaitForUpperInteractionCompleted(element));
 		}
-		else if(element.PositionType() == PickableElement.positionTypes.bottom){
+		else{
 			StartCoroutine(WaitForBottomInteractionCompleted(element));
 		}
 	}
 
+	/*
 	public IEnumerator Interaction(PickableElement element){
-		if(element.PositionType() == PickableElement.positionTypes.bottom){
+		if(element.currentPickablePosition == PickableElement.PickableFrom.down){
 			yield return WaitForBottomInteractionCompleted(element);
 		}
 		else{
 			yield return WaitForUpperInteractionCompleted(element);
 		}
 	}
+	*/
 
 	public void UpperInteraction(PickableElement element){
 		StartCoroutine(WaitForUpperInteractionCompleted(element));
@@ -303,14 +357,6 @@ public sealed class Player : Actor {
 		isInteracting = false;
 	}
 
-	public void SetUsingInventoryActive(){
-		isUsingItemInventory = true;
-	}
-
-	public void SetUsingInventoryInactive(){
-		isUsingItemInventory = false;
-	}
-
 	public void SetWaitingInactive(){
 		isWaiting = false;
 	}
@@ -329,6 +375,30 @@ public sealed class Player : Actor {
 	
 	public void SetBottomInteractionInactive(){
 		isGrabbingBottomItem = false;
+    }
+
+	public void SetActionActive(){
+		isDoingAction = true;
+	}
+
+	public void SetActionInactive(){
+		isDoingAction = false;
+	}
+
+	public void SetConversationActive(){
+		isInConversation = true;
+	}
+
+	public void SetConversationInactive(){
+		isInConversation = false;
+	}
+
+	public void SetUsingInventoryActive(){
+		isUsingItemInventory = true;
+	}
+	
+	public void SetUsingInventoryInactive(){
+		isUsingItemInventory = false;
     }
 
 	public override bool IsIdle(){

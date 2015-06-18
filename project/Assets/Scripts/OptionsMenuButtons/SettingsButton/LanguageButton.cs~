@@ -15,7 +15,8 @@ public class LanguageButton : UIGenericButton {
 		this.transform.FindChild("Text").GetComponent<Text>().text = languageName;
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		LocalizedTextManager.ChangeCurrentLanguage(languageID);
 		disableLanguagePanel();
 	}

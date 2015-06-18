@@ -34,7 +34,7 @@ public class InGameMenuButton : UIGenericButton {
 	protected override void Update(){
 		base.Update();
 
-		if(Player.Instance.isDoingAction || Player.Instance.isSpeaking || !MultipleChoiceManager.Instance.IsSelectionEnded() || CutScenesManager.IsPlaying()){
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
 			ingameMenuButton.image.sprite = menuDisabled;
 			ingameMenuButton.spriteState = buttonStatesDisabled;
 			isInGameMenuButtonElegible = false;
@@ -46,9 +46,10 @@ public class InGameMenuButton : UIGenericButton {
 		}
 	}
 
-	public void OnMouseClick(){
+	public override void OnClick(){
+		base.OnClick ();
 		if(isInGameMenuButtonElegible){
 			GameController.WarpToLevel("DemoScene_02");
 		}
-	}
+	}	
 }

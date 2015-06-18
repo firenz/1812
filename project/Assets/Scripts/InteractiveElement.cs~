@@ -4,41 +4,52 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class InteractiveElement : MonoBehaviour {
-	public const float permisiveErrorBetweenPlayerPositionAndInteractivePosition = 5f;
-	public string nameID = "DEFAULT";
+public class InteractiveElement : MonoBehaviour {
+	public Vector2 interactivePosition { get; protected set;}
+	public bool isInactive { get; protected set;}
+	public float spriteWidth { get; protected set;}
+	public float spriteHeight { get; protected set;}
+	public string displayName { get; protected set;}
 
-	protected string groupID = "DEFAULT";
-	protected Vector2 interactivePosition;
-	protected float spriteWidth = 0f;
-	protected float spriteHeight = 0f;
-	protected bool isInactive = false;
-	protected Text DisplayNameText;
+	[SerializeField]
+	protected string groupID = "GUI";
+	[SerializeField]
+	protected string nameID = "DEFAULT";
+	[SerializeField]
+	protected const float permisiveErrorBetweenPlayerPositionAndInteractivePosition = 5f;
+	protected SpriteRenderer thisSpriteRenderer = null;
+
+	public delegate void BeginPlayerAction();
+	public static event BeginPlayerAction beginPlayerAction;
+	public delegate void EndPlayerAction();
+	public static event EndPlayerAction endPlayerAction;
 
 	// Use this for initialization
-	protected void Start () {
-		try{
-			DisplayNameText = GameObject.Find("NameInteractiveElementText").GetComponent<Text>();
-		}
-		catch(NullReferenceException){
-			DisplayNameText =  null;
-		}
-		spriteWidth = this.CalculateSpriteWidth();
-		spriteHeight = this.CalculateSpriteHeight();
+	protected virtual void Start () {
+		isInactive = false;
+		displayName = LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
 
 		try{
-			GameObject _position;
-			_position = this.transform.FindChild("WalkingPoint").gameObject;
-			interactivePosition = _position.transform.position;
+			interactivePosition = this.transform.FindChild("WalkingPoint").position;
 		}
 		catch(NullReferenceException){
 			interactivePosition = Vector2.zero;
+        }
+
+		thisSpriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+		if(thisSpriteRenderer != null){
+			spriteWidth = this.CalculateSpriteWidth();
+			spriteHeight = this.CalculateSpriteHeight();
 		}
-        
-        InitializeInformation();
+		else{
+			spriteWidth = 0f;
+            spriteHeight = 0f;
+        }
+
+        //InitializeInformation();
 	}
 
-	protected abstract void InitializeInformation(); //Write here the info for your interactive element
+	protected virtual void InitializeInformation(){} //Write here the info for your interactive element
 
 	public List<string> Description(){
 		List<string> _definitionText = new List<string>();
@@ -50,7 +61,8 @@ public abstract class InteractiveElement : MonoBehaviour {
 	}
 
 	public virtual void LeftClickAction(){
-		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
+		//if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
 			StartCoroutine(WaitForLeftClickAction());
 		}
 	}
@@ -66,7 +78,8 @@ public abstract class InteractiveElement : MonoBehaviour {
 		}
 
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.isDoingAction = true;
+			//Player.Instance.isDoingAction = true;
+			BeginAction();
 
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 			
@@ -74,12 +87,14 @@ public abstract class InteractiveElement : MonoBehaviour {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			Player.Instance.isDoingAction = false;
+			EndAction();
+			//Player.Instance.isDoingAction = false;
 		}
 	}
 
 	public virtual void RightClickAction(){
-		if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
+		//if(!Player.Instance.IsInteracting() && !Player.Instance.IsSpeaking() && !Player.Instance.IsInConversation()){
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
 			StartCoroutine(WaitForRightClickAction());
 		}
 	}
@@ -95,7 +110,8 @@ public abstract class InteractiveElement : MonoBehaviour {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.isDoingAction = true;
+			//Player.Instance.isDoingAction = true;
+			BeginAction();
 
 			Player.Instance.Speak(groupID, nameID, "DESCRIPTION");
 			
@@ -103,19 +119,26 @@ public abstract class InteractiveElement : MonoBehaviour {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			Player.Instance.isDoingAction = false;
+			EndAction();
+			//Player.Instance.isDoingAction = false;
 		}
 	}
 
 
 	public virtual void ActionOnItemInventoryUsed(GameObject itemInventory){
 		/* How to use it:
-		switch(itemInventory.name){
-			case "name 1": DoSomething1....
-			break;
-            case "name 2": DoSomething2....
-                break;
-			...
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
+			switch(itemInventory.name){
+				case "name 1": 
+					itemInventory.GetComponent<ItemInventory>().Unselect();
+					DoSomething1....
+					break;
+	            case "name 2": 
+					itemInventory.GetComponent<ItemInventory>().Unselect();
+					DoSomething2....
+	                break;
+				...
+	        }
         }
     	*/
 	}
@@ -145,9 +168,38 @@ public abstract class InteractiveElement : MonoBehaviour {
 			return _thisSpriteRenderer.bounds.size.x;
 		}
 	}
-	public string GetName(){
-		return  LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
+
+	public void SetInactive(){
+		isInactive = true;
+		this.gameObject.GetComponent<Collider2D>().enabled = false;
+		if(thisSpriteRenderer != null){
+			this.gameObject.GetComponent<Renderer>().enabled = false;
+		}
 	}
+
+	public void SetActive(){
+		isInactive = false;
+		this.gameObject.GetComponent<Collider2D>().enabled = true;
+		if(thisSpriteRenderer != null){
+			this.gameObject.GetComponent<Renderer>().enabled = true;
+		}
+	}
+
+	protected void BeginAction(){
+		beginPlayerAction();
+	}
+
+	protected void EndAction(){
+		endPlayerAction();
+	}
+
+	/*
+	public string GetName(){
+		//Debug.Log( "GetName: Element values " + groupID + " " + nameID);
+		//return  LocalizedTextManager.GetLocalizedText(groupID, nameID, "NAME")[0];
+		return displayName;
+	}
+
 
 	public Vector2 GetPosition(){
 		return interactivePosition;
@@ -161,20 +213,9 @@ public abstract class InteractiveElement : MonoBehaviour {
 		return spriteHeight;
 	}
 
-	public void SetInactive(){
-		isInactive = true;
-		this.gameObject.GetComponent<Renderer>().enabled = false;
-		this.gameObject.GetComponent<Collider2D>().enabled = false;
-	}
-
-	public void SetActive(){
-		isInactive = false;
-		this.gameObject.GetComponent<Renderer>().enabled = true;
-		this.gameObject.GetComponent<Collider2D>().enabled = true;
-	}
-
 	public bool IsInactive(){
 		return isInactive;
     }
-	
+    */
+
 }

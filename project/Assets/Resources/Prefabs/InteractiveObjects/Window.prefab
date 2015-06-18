@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c3f78e4b4e5494e957df88ed04962d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOpened: 0
+  groupID: SCENE_PROFESSOROFFICE
+  nameID: OBJECT_WINDOW
+  nameListGivableElements: []
 --- !u!212 &21208046
 SpriteRenderer:
   m_ObjectHideFlags: 1

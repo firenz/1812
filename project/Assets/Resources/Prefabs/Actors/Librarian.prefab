@@ -198,8 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a03c33aa0b3f74aa69d82ef1e5bd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCharactersPerDisplayingTextLine: 20
-  secondsDisplayingText: 1.5
 --- !u!114 &11416516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,8 +255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5697aa1728e836141b12fb396e44f429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightScreenMargin: 20
-  leftScreenMargin: 20
 --- !u!114 &11449638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -336,6 +332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287a356391f90b64f8c3f7e657d574fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: NPC
+  nameID: LIBRARIAN
   isInteracting: 0
   isWalking: 0
   isSpeaking: 0
@@ -343,6 +341,7 @@ MonoBehaviour:
   isFacingLeft: 1
   isFacingRight: 0
   isActorActive: 1
+  movementSpeed: 1
 --- !u!114 &11469808
 MonoBehaviour:
   m_ObjectHideFlags: 1

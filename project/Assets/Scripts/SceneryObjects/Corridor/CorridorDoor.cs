@@ -2,13 +2,21 @@
 using System.Collections;
 
 public class CorridorDoor : WarperElement {
+	/*
+	protected override void Start (){
+		base.Start ();
+
+		groupID = "SCENE_CORRIDOR";
+		nameID = "OBJECT_DOOR";
+		destinationScene = "DemoScene_00";
+	}
 	
 	protected override void InitializeInformation(){
 		groupID = "SCENE_CORRIDOR";
 		nameID = "OBJECT_DOOR";
-
-		nameSceneDestination = "DemoScene_00";
+		destinationScene = "DemoScene_00";
 	}
+	*/
 
 	protected override IEnumerator WaitForLeftClickAction(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
@@ -22,6 +30,8 @@ public class CorridorDoor : WarperElement {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			BeginAction();
+
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 
 			do{
@@ -32,7 +42,9 @@ public class CorridorDoor : WarperElement {
 				GameState.CutSceneData.isPlayedIntro = true;
 				Inventory.Instance.AddItem("FailedTestInventory");
 			}
-			GameController.WarpToLevel(nameSceneDestination);
+			GameController.WarpToLevel(destinationScene);
+
+			EndAction();
 		}
 	}
 

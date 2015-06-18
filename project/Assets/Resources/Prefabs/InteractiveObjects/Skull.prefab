@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421186}
-  - 114: {fileID: 11465482}
   - 60: {fileID: 6086360}
   - 212: {fileID: 21218206}
+  - 114: {fileID: 11476798}
   m_Layer: 10
   m_Name: Skull
   m_TagString: InteractivePoint
@@ -72,15 +72,15 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -4.34866714, y: 4.78146362}
-      - {x: 2.26883316, y: 5.92172241}
-      - {x: 6.43733215, y: -.65574646}
-      - {x: 5.5684166, y: -4.84938049}
-      - {x: 2.41424942, y: -6.19309998}
-      - {x: .497842789, y: -5.10113144}
-      - {x: -5.97053146, y: -4.29780579}
-      - {x: -7.29534912, y: .641189575}
---- !u!114 &11465482
+    - - {x: -5.2533989, y: 6.08828735}
+      - {x: 3.27408218, y: 6.92698669}
+      - {x: 7.8446846, y: .450042725}
+      - {x: 7.07629776, y: -5.65357971}
+      - {x: 3.01739883, y: -7.60044861}
+      - {x: -1.31162262, y: -6.10638428}
+      - {x: -7.47841644, y: -5.70516968}
+      - {x: -9.20533371, y: 1.04328918}
+--- !u!114 &11476798
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,9 +88,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 165020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c54db73db580ff4eba9a94d082427b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7960df3f504859a43a5703446b9c7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: SCENE_PROFESSOROFFICE
+  nameID: OBJECT_SKULL
 --- !u!212 &21218206
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -86,6 +86,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39272f6e28efa2e429f02abfc40b70bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: SCENE_CORRIDOR
+  nameID: OBJECT_DOOR
+  destinationScene: DemoScene_00
+  arrowDirection: 1
 --- !u!212 &21241930
 SpriteRenderer:
   m_ObjectHideFlags: 1

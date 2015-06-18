@@ -2,7 +2,7 @@
 using System.Collections;
 
 public static class ScaleAllGUI {
-
+	/*
 	public static float originalWidth = 640.0f;
 	public static float originalHeight = 480.0f;
 	private static Vector3 scale = new Vector3(0, 0, 0);
@@ -27,5 +27,5 @@ public static class ScaleAllGUI {
 		Rect newRect = new Rect(currentRect.position.x, currentRect.position.y, currentRect.width * scale.x, currentRect.height * scale.y);
 		return newRect;
 	}
-
+	*/
 }

@@ -34,7 +34,8 @@ public class SaveButton : UIGenericButton {
 		}
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		gameSlotsManager.Save();
 	}
 

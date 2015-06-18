@@ -4,38 +4,64 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class DisplayUIText : MonoBehaviour {
-	public int maxCharactersPerDisplayingTextLine = 20;
-	public float secondsDisplayingText = 1.5f;
+	public const int maxCharactersDialogueLine = 20;
+	public const float secondsDisplayingText = 1.5f;
+	public bool hasEndedDisplayingText{ get; private set;}
 
 	private float secondsTimerStarted;
-	private bool hasEndedDisplayingText = true;
 	private bool skipDisplayingTextLine = false;
 	private bool ableToSkip = true;
-	private Color defaultColor;
-	private Vector2 positionDisplayingText;
-	private RectTransform panelRectTransform;
 	private Transform dialogText;
 	private GameObject actorDialoguePanel = null;
+	private Canvas canvas;
+	private RectTransform panelRectTransform;
 	private Text actorDialogueText = null;
 	private string displayingText = "";
+	private Color defaultDialoguePanelColor;
+	private Color defaultTextColor;
+	private RelocateTextPosition relocateTextScript;
+	//private Vector2 positionDisplayingText;
 
 	// Use this for initialization
-	void Start () {
-		Canvas _canvas = this.transform.FindChild("Canvas").GetComponent<Canvas>();
-		_canvas.worldCamera = Camera.main;
-		actorDialoguePanel = _canvas.transform.FindChild("Panel").gameObject;
-		actorDialogueText = actorDialoguePanel.transform.FindChild("ActorUIText").GetComponent<Text>();
-		Vector2 _initialDialogPosition = this.transform.FindChild("dialogText").transform.position;
-		dialogText = this.transform.FindChild("dialogText");
+	private void Start () {
+		canvas = this.transform.FindChild("Canvas").GetComponent<Canvas>();
+		actorDialoguePanel = canvas.transform.FindChild("Panel").gameObject;
 		panelRectTransform = actorDialoguePanel.GetComponent<RectTransform>();
+		actorDialogueText = actorDialoguePanel.transform.FindChild("ActorUIText").GetComponent<Text>();
+		dialogText = this.transform.FindChild("dialogText");
+		defaultDialoguePanelColor = actorDialoguePanel.GetComponent<Image>().color;
+		defaultTextColor = actorDialogueText.color;
+		relocateTextScript = actorDialogueText.gameObject.GetComponent<RelocateTextPosition>();
 
+		canvas.worldCamera = Camera.main;
+		Vector2 _initialDialogPosition = dialogText.position;
 		panelRectTransform.anchoredPosition = Camera.main.WorldToScreenPoint(_initialDialogPosition);
-		defaultColor = actorDialogueText.color;
+		actorDialoguePanel.GetComponent<Image>().color = Color.clear;
 		actorDialogueText.text = "";
 	}
-	
+
+	private void Update(){
+		if(displayingText == ""){
+			actorDialogueText.text = "";
+			actorDialoguePanel.GetComponent<Image>().color = Color.clear;
+		}
+		else{
+			actorDialoguePanel.GetComponent<Image>().color = defaultDialoguePanelColor;
+
+			if(actorDialogueText.text != displayingText){
+				actorDialogueText.text = displayingText;
+				//relocateTextScript.Relocate(displayingText);
+			}
+			
+			if(Input.GetMouseButtonDown(0) && ableToSkip){
+				skipDisplayingTextLine = true;
+			}
+		}
+	}
+
+	/*
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		if(displayingText != ""){
 			if(!actorDialoguePanel.gameObject.activeSelf){
 				actorDialoguePanel.SetActive(true);
@@ -58,13 +84,14 @@ public class DisplayUIText : MonoBehaviour {
 			}
 		}
 	}
+	*/
 
 	public void DisplayText(string groupID, string nameID, string stringID, Vector2 position, Color textColor, bool skipTextByClick = true){
 		StartCoroutine(WaitForDisplayTextToFinish(groupID, nameID, stringID, position, textColor, skipTextByClick));
 	}
 
 	public void DisplayText(string groupID, string nameID, string stringID, Vector2 position, bool skipTextByClick = true){
-		StartCoroutine(WaitForDisplayTextToFinish(groupID, nameID, stringID, position, defaultColor, skipTextByClick));
+		StartCoroutine(WaitForDisplayTextToFinish(groupID, nameID, stringID, position, defaultTextColor, skipTextByClick));
 	}
 	
 	public void DisplayText(List<string> dialogueData, Vector2 position, Color textColor, bool skipTextByClick = true){
@@ -72,11 +99,11 @@ public class DisplayUIText : MonoBehaviour {
 	}
 
 	public void DisplayText(List<string> dialogueData, Vector2 position, bool skipTextByClick = true){
-		StartCoroutine(WaitForDisplayTextToFinish(dialogueData[0], dialogueData[1], dialogueData[2], position, defaultColor, skipTextByClick));
+		StartCoroutine(WaitForDisplayTextToFinish(dialogueData[0], dialogueData[1], dialogueData[2], position, defaultTextColor, skipTextByClick));
 	}
 
 	private IEnumerator WaitForDisplayTextToFinish(string groupID, string nameID, string stringID, Vector2 position, Color textColor, bool skipTextByClick){
-		positionDisplayingText = Camera.main.WorldToScreenPoint(new Vector2(position.x, position.y));
+		//positionDisplayingText = Camera.main.WorldToScreenPoint(new Vector2(position.x, position.y));
 		//positionDisplayingText = RelocateTextCenterIfNearBorderScreen(positionDisplayingText);
 		ableToSkip = skipTextByClick;
 		actorDialogueText.color = textColor;
@@ -120,7 +147,7 @@ public class DisplayUIText : MonoBehaviour {
 					_resultedLine += " " + _word;
 				}
 				
-				if(_resultedLine.Length > maxCharactersPerDisplayingTextLine){
+				if(_resultedLine.Length > maxCharactersDialogueLine){
 					_resultedLine = _resultedLine.Substring(0, _resultedLine.Length - (_word.Length));
 					_reestructuredDialogue.Add(_resultedLine);
 					_resultedLine = _word;

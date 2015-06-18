@@ -36,7 +36,8 @@ public class ReturnToMainMenuButton : UIGenericButton {
 		}
 	}
 	
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		disableAll();	
 		DisableButton();
 	}

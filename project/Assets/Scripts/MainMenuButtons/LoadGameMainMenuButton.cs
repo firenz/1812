@@ -39,7 +39,8 @@ public class LoadGameMainMenuButton : UIGenericButton {
 		}
 	}
 	
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		loadMenu.transform.SetAsLastSibling();
 		/*
 		if(loadMenu.transform.FindChild("LoadGamePanel/SlotsPanel").GetComponent<SavesGameSlotsManager>().SlotsCount() > 0){

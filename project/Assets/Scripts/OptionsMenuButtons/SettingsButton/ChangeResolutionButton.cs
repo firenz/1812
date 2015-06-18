@@ -15,7 +15,9 @@ public class ChangeResolutionButton : UIGenericButton {
 		this.transform.FindChild("Text").GetComponent<Text>().text = _changeResolution;
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
+
 		Screen.SetResolution(changeScreenWidth, changeScreenHeight, Screen.fullScreen);
 
 		//To be implemented Modal Window with countdown asking if the resolution chosen is correct

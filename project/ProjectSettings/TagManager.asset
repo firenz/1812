@@ -16,6 +16,8 @@ TagManager:
   - MultipleChoiceElement
   - GameSlots
   - Inventory
+  - Music
+  - SFX
   layers:
   - Default
   - TransparentFX

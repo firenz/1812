@@ -34,7 +34,9 @@ public class FullscreenToggle : UIGenericButton {
 		fullscreenToggleText.text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "FULLSCREEN_TOGGLE")[0];
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
+
 		if(!currentFullscreen){
 			currentFullscreen = true;
 			toggle.isOn = true;

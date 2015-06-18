@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 60: {fileID: 6009916}
+  - 114: {fileID: 11495616}
   m_Layer: 0
   m_Name: LittleFlags_v1
   m_TagString: InteractivePoint
@@ -76,7 +76,7 @@ PolygonCollider2D:
       - {x: .0646514893, y: -1.23157501}
       - {x: 20.4631805, y: -1.05563354}
       - {x: 20.2872314, y: 8.23158264}
---- !u!114 &11400000
+--- !u!114 &11495616
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,9 +84,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f1317e0071abf4ab174beba4704047, type: 3}
+  m_Script: {fileID: 11500000, guid: d64e7327eab797e4397da8152ab5cf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: SCENE_PROFESSOROFFICE
+  nameID: OBJECT_LITTLEFLAGS
+  nameListGivableElements:
+  - LittleFlagsInventory
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

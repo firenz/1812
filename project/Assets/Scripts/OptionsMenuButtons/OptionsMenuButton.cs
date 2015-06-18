@@ -68,8 +68,6 @@ public abstract class OptionsMenuButton : UIGenericButton {
 		buttonText.text = buttonName;
 	}
 
-	public abstract void OnClick();
-
 	public virtual void EnableMenus(){
 		DisableButton();
 		MenuActivated();

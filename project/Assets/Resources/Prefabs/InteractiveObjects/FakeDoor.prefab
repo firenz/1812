@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450990}
   - 60: {fileID: 6050992}
-  - 114: {fileID: 11450992}
+  - 114: {fileID: 11484686}
   m_Layer: 0
   m_Name: FakeDoor
   m_TagString: InteractivePoint
@@ -75,7 +75,7 @@ PolygonCollider2D:
       - {x: 54.3943863, y: -.546951294}
       - {x: -1.54811859, y: -.412750244}
       - {x: -2.32478333, y: 76.1883698}
---- !u!114 &11450992
+--- !u!114 &11484686
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,9 +83,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 150990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c3500539c963042a46f2fb12eaea4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7960df3f504859a43a5703446b9c7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactivePosition: {x: 0, y: 0}
+  isInactive: 0
+  spriteWidth: 0
+  spriteHeight: 0
+  groupID: SCENE_CORRIDOR
+  nameID: OBJECT_FAKEDOOR
 --- !u!212 &21250992
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -29,7 +29,15 @@ public sealed class Librarian : Actor {
 			Destroy(this.gameObject);
 		}
 	}
-	
+
+	protected override void Start (){
+		base.Start ();
+
+		//groupID = "NPC";
+		//nameID = "LIBRARIAN";
+		timeCounterUntilCoughingAnimation = Time.time;
+	}
+
 	protected override void InitializeAdditionalActorInformation(){
 		groupID = "NPC";
 		nameID = "LIBRARIAN";
@@ -41,7 +49,22 @@ public sealed class Librarian : Actor {
 		}
 		*/
 	}
-	
+
+	protected override void Update (){
+		base.Update ();
+
+		if(IsIdle() && !CutScenesManager.IsPlaying() && !isCoughing){
+			if((Time.time - timeCounterUntilCoughingAnimation) > maxTimeIdleUntilCoughingAnimation){
+				isCoughing = true;
+				timeCounterUntilCoughingAnimation = Time.time;
+			}
+		}
+		else{
+			timeCounterUntilCoughingAnimation = Time.time;
+		}
+	}
+
+	/*
 	protected override void AdditionalUpdateInformation(){ //In case if needed to handle, for example, an idle animation depending on time
 		if(IsIdle() && !CutScenesManager.IsPlaying() && !isCoughing){
 			if((Time.time - timeCounterUntilCoughingAnimation) > maxTimeIdleUntilCoughingAnimation){
@@ -53,6 +76,7 @@ public sealed class Librarian : Actor {
 			timeCounterUntilCoughingAnimation = Time.time;
 		}
 	}
+	*/
 
 	protected override IEnumerator WaitForRightClickAction(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
@@ -65,8 +89,9 @@ public sealed class Librarian : Actor {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.SetInteractionActive();
-			isInteracting = true;
+			//Player.Instance.SetInteractionActive();
+			//isInteracting = true;
+			BeginAction();
 
 			if(Player.Instance.transform.position.x < (interactivePosition.x + spriteWidth * 0.5f)){
 				Player.Instance.LookToTheRight();
@@ -81,8 +106,9 @@ public sealed class Librarian : Actor {
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
 
-			isInteracting = false;
-			Player.Instance.SetInteractionInactive();
+			EndAction();
+			//isInteracting = false;
+			//Player.Instance.SetInteractionInactive();
 
 			yield return new WaitForSeconds(0.1f);
 		}
@@ -99,6 +125,8 @@ public sealed class Librarian : Actor {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
+			BeginAction();
+
 			Player.Instance.LookToTheRight();
 			yield return new WaitForSeconds(0.2f);
 			
@@ -112,9 +140,10 @@ public sealed class Librarian : Actor {
 			}
 			else{
 				Debug.Log("InConversation");
-				Player.Instance.isDoingAction = true;
-				isInConversation = true;
-				Player.Instance.isInConversation = true;
+				//Player.Instance.isDoingAction = true;
+				//Player.Instance.isInConversation = true;
+				//isInConversation = true;
+
 
 				Debug.Log("Player speaking");
 				Player.Instance.Speak(groupID, nameID, "PLAYER_CONVERSATION_01");
@@ -148,11 +177,13 @@ public sealed class Librarian : Actor {
 					yield return null;
 				}while(this.IsSpeaking());
 
-			
-				isInConversation = false;
-				Player.Instance.isInConversation = false;
-				Player.Instance.isDoingAction = false;
+				EndConversation();
+				//isInConversation = false;
+				//Player.Instance.isInConversation = false;
+				//Player.Instance.isDoingAction = false;
 			}
+
+			EndAction();
 		}
 	}
 

@@ -20,6 +20,8 @@ public static class GameState{
 				return Vector2.zero;
 			}
 		}
+
+		private set {}
 	}
 
 	public static Vector2 lastTargetedPositionByMouse{
@@ -35,6 +37,8 @@ public static class GameState{
 				return Vector2.zero;
 			}
 		}
+
+		private set {}
 	}
 
 	public static class SystemData{
@@ -99,12 +103,12 @@ public static class GameState{
 			LevelProfessorOfficeData.playerPosition = Player.Instance.transform.position;
 			LevelProfessorOfficeData.lastTargetedPositionByMouse = Player.Instance.LastTargetedPosition();
 			LevelProfessorOfficeData.isWindowOpened = GameObject.Find("Window").GetComponent<Window>().isOpened;
-			LevelProfessorOfficeData.isLittleFlagsPickedFromFloor = GameObject.Find("LittleFlags").GetComponent<LittleFlags>().IsInactive();
+			LevelProfessorOfficeData.isLittleFlagsPickedFromFloor = GameObject.Find("LittleFlags").GetComponent<LittleFlags>().isInactive;
 			break;
 		case "DemoScene_01" :
 			LevelCorridorData.playerPosition = Player.Instance.transform.position;
 			LevelCorridorData.lastTargetedPositionByMouse = Player.Instance.LastTargetedPosition();
-			LevelCorridorData.timesTrashBinWasExaminated = GameObject.Find("TrashBin").GetComponent<TrashBin>().TimesInteracted();
+			LevelCorridorData.timesTrashBinWasExaminated = GameObject.Find("TrashBin").GetComponent<TrashBin>().timesInteracted;
 			break;
 			
 			//More to come...
@@ -120,20 +124,18 @@ public static class GameState{
 		switch(levelToLoad){
 		case "DemoScene_00" :
 			lastPlayableLevel = levelToLoad;
-			Inventory.Instance.Enable();
-			//Inventory.Instance.Close();
-			//Inventory.Instance.Open();
-			Inventory.Instance.Activate();
 			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
+
+			if(Inventory.Instance.IsClosed()){
+				Inventory.Instance.Enable();
+				Inventory.Instance.Activate();
+			}
 			break;
 		case "DemoScene_01" :
 			lastPlayableLevel = levelToLoad;
 			CustomCursorController.Instance.ChangeDefaultCursorToInteractive();
-			if(CutSceneData.isPlayedIntro){
-				Inventory.Instance.Enable();
-				Inventory.Instance.Activate();
-			}
-			else{
+
+			if(!CutSceneData.isPlayedIntro){
 				Inventory.Instance.Disable();
 			}
 			break;
@@ -150,7 +152,6 @@ public static class GameState{
 	public static void ChangeCurrentLanguage(string newLanguage){
 		SystemData.currentLanguage = newLanguage;
 		LocalizedTextManager.ChangeCurrentLanguage(newLanguage);
-		//FileManager function to save new settings here (only for standalone version)
 		SettingsFileManager.Instance.SaveSettingsFile();
 	}
 
@@ -158,7 +159,6 @@ public static class GameState{
 		SystemData.ScreenSettings.width = newScreenWidth;
 		SystemData.ScreenSettings.height = newScreenHeight;
 		SystemData.ScreenSettings.fullscreen = newFullscreen;
-		//FileManager function to save new settings here (only for standalone version)
 		SettingsFileManager.Instance.SaveSettingsFile();
 	}
 	

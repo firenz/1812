@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11431924}
   m_Layer: 11
   m_Name: FailedTestInventory
   m_TagString: ItemInventory
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22, y: -30, z: -2}
+  m_LocalPosition: {x: 22, y: -30, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ BoxCollider2D:
   m_Offset: {x: 18, y: 10}
   serializedVersion: 2
   m_Size: {x: 36, y: 20}
---- !u!114 &11400000
+--- !u!114 &11431924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,9 +51,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de49341a541e014fb8a7c3b0817dd11, type: 3}
+  m_Script: {fileID: 11500000, guid: 74164ced7b6530645bc666c05d9474d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: INVENTORY
+  nameID: FAILEDTEST
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

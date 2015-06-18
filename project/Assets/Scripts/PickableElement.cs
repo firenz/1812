@@ -3,17 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public abstract class PickableElement : InteractiveElement {
-	protected List<string> nameListGivableElements;
-	protected bool isDestroyedAfterBeingPicked = true;
+public class PickableElement : InteractiveElement {
+	public bool isDestroyedAfterBeingPicked {get; protected set;}
 
-	public enum positionTypes{
-		upper,
-		bottom
+	public enum PickableFrom{
+		down,
+		up
+	}
+	
+	public PickableFrom currentPickablePosition {get; protected set;}
+
+	[SerializeField]
+	protected List<string> nameListGivableElements;
+
+	protected override void Start(){
+		base.Start();
+
+		isDestroyedAfterBeingPicked = true;
+		
+		if(isInactive){
+			this.gameObject.GetComponent<Renderer>().enabled = false;
+		}
+
 	}
 
-	protected positionTypes currentPositionType;
-
+	/*
 	protected override void InitializeInformation(){
 		nameListGivableElements = new List<string>();
 
@@ -23,11 +37,13 @@ public abstract class PickableElement : InteractiveElement {
 
 		InitializePickableInformation();
 	}
+	*/
 
-	protected abstract void InitializePickableInformation(); //Here the information about the pickable object
+	protected virtual void InitializePickableInformation(){} //Here the information about the pickable object
 
 	public override void LeftClickAction(){
-		if(!isInactive && !Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting() && !Player.Instance.IsInConversation()){
+		//if(!isInactive && !Player.Instance.IsSpeaking() && !Player.Instance.IsInteracting() && !Player.Instance.IsInConversation()){
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
 			StartCoroutine(ManipulatingObject());
 		}
 	}
@@ -43,7 +59,8 @@ public abstract class PickableElement : InteractiveElement {
 		}
 
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.isDoingAction = true;
+			//Player.Instance.isDoingAction = true;
+			BeginAction();
 
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
 
@@ -57,7 +74,7 @@ public abstract class PickableElement : InteractiveElement {
 
 			yield return new WaitForSeconds(0.2f);
 
-			Player.Instance.Speak(this.GrabbedObjectsDescription());
+			Player.Instance.Speak(groupID, nameID, "PICKED");
 
 			do{
 				yield return null;
@@ -66,20 +83,29 @@ public abstract class PickableElement : InteractiveElement {
 
 			yield return new WaitForSeconds(0.1f);
 
-			Player.Instance.isDoingAction = false;
+			EndAction();
+			//Player.Instance.isDoingAction = false;
 		}
 
 	}
-
+	
 	public virtual void OnPlayerTouchingAction(){
-		Player.Instance.GrabItem(nameListGivableElements);
-		SetInactive();
+		if(Inventory.Instance.IsInventoryFull()){
+			Player.Instance.Speak("GUI", "DEFAULT", "FULL_INVENTORY");
+		}
+		else{
+			Player.Instance.GrabItem(nameListGivableElements);
+			if(isDestroyedAfterBeingPicked){
+				SetInactive();
+			}
+		}
 	}
 
 	public List<string> NameListPickableObjects(){
 		return nameListGivableElements;
 	}
 
+	/*
 	public List<string> GrabbedObjectsDescription(){
 		List<string> _definitionText = new List<string>();
 		
@@ -89,13 +115,14 @@ public abstract class PickableElement : InteractiveElement {
 		
 		return _definitionText;
 	}
-
-	public positionTypes PositionType(){
-		return currentPositionType;
+	
+	public PickableFrom PositionType(){
+		return currentPickablePosition;
 	}
 
 	public bool IsDestroyedAfterBeingPicked(){
 		return isDestroyedAfterBeingPicked;
 	}
+	*/
 	
 }

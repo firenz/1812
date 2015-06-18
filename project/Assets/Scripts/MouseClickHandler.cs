@@ -6,13 +6,15 @@ using System.Collections.Generic;
 
 [RequireComponent (typeof (Player))]
 public class MouseClickHandler : MonoBehaviour {
+	public float lastTimeMouseWasClicked{ get; private set;} //For handling waiting animation states
+
 	private const float delayBetweenMouseClicks = 0.5f;
-	private float lastTimeMouseWasClicked; //For handling waiting animation states
+	private GameObject lastItemInventoryClicked;
 	private string useText;
 	private string withText;
-	private GameObject lastItemInventoryClicked;
 	private string lastItemInventoryName= "";
 	private string lastInventoryItemDisplayName = "";
+
 	protected Text DisplayNameText;
 
 	private enum hitTypes{
@@ -50,11 +52,12 @@ public class MouseClickHandler : MonoBehaviour {
 			case "NavigationPolygon":
 				if(Player.Instance.IsUsingItemInventory()){
 					DisplayNameText.text = useText + " " + lastInventoryItemDisplayName + " " + withText;
-					CustomCursorController.Instance.ChangeCursorToDefault();
 				}
+				CustomCursorController.Instance.ChangeCursorToDefault();
 				break;
 			case "NPC": case "InteractivePoint": case "ItemInventory":
-				string _nameInteractiveElement = _firstGameObjectHit.GetComponent<InteractiveElement>().GetName();
+				string _nameInteractiveElement = _firstGameObjectHit.GetComponent<InteractiveElement>().displayName;
+
 				if(Player.Instance.IsUsingItemInventory()){
 					DisplayNameText.text = useText + " " + lastInventoryItemDisplayName + " " + withText + " " + _nameInteractiveElement;
 				}
@@ -65,7 +68,7 @@ public class MouseClickHandler : MonoBehaviour {
 				break;
 			default:
 				if(!CustomCursorController.Instance.isOverUIButton){
-					if(Player.Instance.IsUsingItemInventory()){
+					if(Player.Instance.isUsingItemInventory){
 						DisplayNameText.text = useText + " " + lastInventoryItemDisplayName + " " + withText;
 					}
 					CustomCursorController.Instance.ChangeCursorToDefault();
@@ -120,7 +123,7 @@ public class MouseClickHandler : MonoBehaviour {
 							else{
 								lastItemInventoryClicked = _firstGameObjectHit;
 								lastItemInventoryName = _firstGameObjectHit.name;
-								lastInventoryItemDisplayName = _firstGameObjectHit.GetComponent<InteractiveElement>().GetName();
+								lastInventoryItemDisplayName = _firstGameObjectHit.GetComponent<InteractiveElement>().displayName;
 								lastItemInventoryClicked.GetComponent<ItemInventory>().Select();
 							}
 							break;
@@ -149,7 +152,7 @@ public class MouseClickHandler : MonoBehaviour {
 					
 					if(_firstGameObjectHit != null){
 						if(Player.Instance.isUsingItemInventory){
-							lastItemInventoryClicked.GetComponent<ItemInventory>().Unselect();
+							lastItemInventoryClicked.GetComponent<ItemInventory>().Deselect();
 						}
 						else{
 							switch(_tagFirstGO){
@@ -164,7 +167,7 @@ public class MouseClickHandler : MonoBehaviour {
 					}
 					else{
 						if(Player.Instance.isUsingItemInventory){
-							lastItemInventoryClicked.GetComponent<ItemInventory>().Unselect();
+							lastItemInventoryClicked.GetComponent<ItemInventory>().Deselect();
 						}
 					}
 				}
@@ -172,7 +175,6 @@ public class MouseClickHandler : MonoBehaviour {
 		}
 
 	}
-
 
 	private GameObject FirstObjectOnMouseOver(){
 		GameObject _firstGameObject = null;
@@ -198,8 +200,5 @@ public class MouseClickHandler : MonoBehaviour {
 
 		return _firstGameObject;
 	}
-
-	public float GetLastTimeMouseWasClicked(){
-		return lastTimeMouseWasClicked;
-	}
+	
 }

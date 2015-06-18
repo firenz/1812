@@ -19,13 +19,22 @@ using System.Collections;
 
 public class Door : WarperElement {
 
-	protected override void InitializeInformation(){
-		//Write here the info for your interactive object
-		nameSceneDestination = "DemoScene_01";
+	protected override void Start (){
+		base.Start ();
 
 		groupID = "SCENE_PROFESSOROFFICE";
 		nameID = "OBJECT_DOOR";
+		destinationScene = "DemoScene_01";
 	}
+
+	/*
+	protected override void InitializeInformation(){
+		//Write here the info for your interactive object
+		groupID = "SCENE_PROFESSOROFFICE";
+		nameID = "OBJECT_DOOR";
+		destinationScene = "DemoScene_01";
+	}
+	*/
 
 	protected override IEnumerator WaitForLeftClickAction(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
@@ -39,7 +48,7 @@ public class Door : WarperElement {
 		}
 		
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-
+			BeginAction();
 			yield return new WaitForSeconds(0.1f);
 			Player.Instance.LookToTheRight();
 			Player.Instance.Speak(groupID, nameID, "INTERACTION");
@@ -47,12 +56,9 @@ public class Door : WarperElement {
 			do{
 				yield return null;
 			}while(Player.Instance.IsSpeaking());
-			
-			GameController.WarpToLevel(nameSceneDestination);
+			EndAction();
+			GameController.WarpToLevel(destinationScene);
 		}
 	}
-
-	public override void ChangeCursorOnMouseOver(){
-		CustomCursorController.Instance.ChangeCursorOverWarpElement(0f);
-	}
+	
 }

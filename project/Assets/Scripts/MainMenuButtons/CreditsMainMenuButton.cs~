@@ -37,7 +37,8 @@ public class CreditsMainMenuButton : UIGenericButton {
 		}
 	}
 	
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		creditsMenu.transform.SetAsLastSibling();
 	}
 	

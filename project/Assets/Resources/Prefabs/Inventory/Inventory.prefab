@@ -26,7 +26,7 @@ GameObject:
   - 212: {fileID: 21200000}
   m_Layer: 0
   m_Name: OpenedInventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - 212: {fileID: 21200002}
   m_Layer: 0
   m_Name: ClosedInventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - 114: {fileID: 11428702}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: GUI
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22, y: -20, z: -2}
+  m_LocalPosition: {x: 22, y: -20, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf6c81ddff5fcd4ea008967f7b1b2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

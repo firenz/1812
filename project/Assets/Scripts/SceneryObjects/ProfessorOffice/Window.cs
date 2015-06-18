@@ -18,8 +18,29 @@ using UnityEngine;
 using System.Collections;
 
 public class Window : PickableElement {	
-	public bool isOpened;
+	public bool isOpened {get; private set;}
 
+	protected override void Start (){
+		base.Start ();
+
+		isOpened = GameState.LevelProfessorOfficeData.isWindowOpened;
+		
+		if(isOpened){
+			this.Open();
+		}
+		else{
+			this.Close();
+		}
+
+		/*
+		groupID = "SCENE_PROFESSOROFFICE";
+		nameID = "OBJECT_WINDOW";
+		
+		currentPositionType = positionTypes.upper;
+		*/
+	}
+
+	/*
 	protected override void InitializePickableInformation(){
 		groupID = "SCENE_PROFESSOROFFICE";
 		nameID = "OBJECT_WINDOW";
@@ -35,6 +56,7 @@ public class Window : PickableElement {
 			this.Close();
 		}
 	}
+	*/
 
 	protected override IEnumerator ManipulatingObject(){
 		float _distanceBetweenActorAndInteractivePosition = Mathf.Abs(Vector2.Distance(Player.Instance.CurrentPosition(), interactivePosition));
@@ -47,7 +69,8 @@ public class Window : PickableElement {
 		}
 
         if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.isDoingAction = true;
+			//Player.Instance.isDoingAction = true;
+			BeginAction();
 
             if(isOpened){
                 Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED");
@@ -62,7 +85,8 @@ public class Window : PickableElement {
 
 			Player.Instance.UpperInteraction(this);
 
-			Player.Instance.isDoingAction = false;
+			EndAction();
+			//Player.Instance.isDoingAction = false;
         }
     }
 
@@ -76,13 +100,15 @@ public class Window : PickableElement {
 	}
     
     public override void ActionOnItemInventoryUsed(GameObject itemInventory){
-		switch(itemInventory.name){
-		case "FailedTestInventory":
-			itemInventory.GetComponent<ItemInventory>().Unselect();
-			StartCoroutine(FailedTestOnWindow());
-			break;
-		default:
-			break;
+		if(!Player.Instance.isDoingAction && !CutScenesManager.IsPlaying()){
+			switch(itemInventory.name){
+			case "FailedTestInventory":
+				itemInventory.GetComponent<ItemInventory>().Deselect();
+				StartCoroutine(FailedTestOnWindow());
+                    break;
+                default:
+                    break;
+			}
 		}
 	}
 	
@@ -93,11 +119,13 @@ public class Window : PickableElement {
 			
 			do{
 				yield return null;
-			}while(Player.Instance.IsWalking());
+			}while(Player.Instance.isWalking);
 		}
 		if(Player.Instance.LastTargetedPosition() == interactivePosition){
-			Player.Instance.isDoingAction = true;
-			Player.Instance.SetInteractionActive();
+			//Player.Instance.isDoingAction = true;
+			//Player.Instance.SetInteractionActive();
+			BeginAction();
+
 			if(isOpened){
 				Player.Instance.Speak(groupID, nameID, "INTERACTION_OPENED_FAILEDTEST");
 
@@ -114,8 +142,10 @@ public class Window : PickableElement {
 					yield return null;
 				}while(Player.Instance.IsSpeaking());
 			}
-			Player.Instance.SetInteractionInactive();
-			Player.Instance.isDoingAction = false;
+
+			EndAction();
+			//Player.Instance.SetInteractionInactive();
+			//Player.Instance.isDoingAction = false;
 		}
 	}
 
@@ -129,7 +159,9 @@ public class Window : PickableElement {
 		this.gameObject.GetComponent<Renderer>().enabled = false;
 	}
 
+	/*
 	public bool IsOpened(){
 		return isOpened;
 	}
+	*/
 }

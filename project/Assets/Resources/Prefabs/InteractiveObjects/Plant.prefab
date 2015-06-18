@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482730}
   - 60: {fileID: 6082730}
-  - 114: {fileID: 11482730}
+  - 114: {fileID: 11454290}
   m_Layer: 0
   m_Name: Plant
   m_TagString: InteractivePoint
@@ -116,7 +116,7 @@ PolygonCollider2D:
       - {x: 17.1721344, y: .264793396}
       - {x: 5.2585144, y: .225021362}
       - {x: 3.42440796, y: 3.42932129}
---- !u!114 &11482730
+--- !u!114 &11454290
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -124,9 +124,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 182730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c158ebf2106370d47a91ce545242c8db, type: 3}
+  m_Script: {fileID: 11500000, guid: 7960df3f504859a43a5703446b9c7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactivePosition: {x: 0, y: 0}
+  isInactive: 0
+  spriteWidth: 0
+  spriteHeight: 0
+  groupID: SCENE_CORRIDOR
+  nameID: OBJECT_PLANT
 --- !u!212 &21282730
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class CustomCursorController : PersistentSingleton<CustomCursorController> {
+	public bool isOverUIButton;
+	public bool isCursorHidden;
+
 	private GameObject interactionCursor;
 	private Sprite currentCursorSprite;
 	private Sprite defaultCursorSprite;
@@ -9,9 +12,10 @@ public class CustomCursorController : PersistentSingleton<CustomCursorController
 	private Sprite overInteractiveElementCursorSprite;
 	private Sprite overUIButtonCursorSprite;
 	private Sprite exitRoomCursorSprite;
-	public bool isOverUIButton = false;
 
 	protected override void InitializeOnAwake (){
+		isOverUIButton = false;
+		isCursorHidden = false;
 		Cursor.visible = false;
 		interactionCursor = this.transform.FindChild("Cursor").gameObject;
 		defaultCursorSprite = interactionCursor.GetComponent<SpriteRenderer>().sprite;
@@ -70,10 +74,12 @@ public class CustomCursorController : PersistentSingleton<CustomCursorController
 	}
 
 	public void HideCursor(){
+		isCursorHidden = true;
 		interactionCursor.GetComponent<SpriteRenderer>().color = Color.clear;
 	}
 
 	public void UnhideCursor(){
+		isCursorHidden = false;
 		interactionCursor.GetComponent<SpriteRenderer>().color = Color.white;
 	}
 

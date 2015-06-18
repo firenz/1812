@@ -174,8 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a03c33aa0b3f74aa69d82ef1e5bd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCharactersPerDisplayingTextLine: 20
-  secondsDisplayingText: 1.5
 --- !u!114 &11410192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,8 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5697aa1728e836141b12fb396e44f429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightScreenMargin: 20
-  leftScreenMargin: 20
 --- !u!114 &11418960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a501ee8dcb82eaf40984af972827cdb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: GUI
+  nameID: DEFAULT
   isInteracting: 0
   isWalking: 0
   isSpeaking: 0
@@ -220,9 +218,10 @@ MonoBehaviour:
   isFacingLeft: 1
   isFacingRight: 0
   isActorActive: 1
+  movementSpeed: 1
   isWaiting: 0
-  isUsingItemInventory: 0
   isDoingAction: 0
+  isUsingItemInventory: 0
 --- !u!114 &11445910
 MonoBehaviour:
   m_ObjectHideFlags: 1

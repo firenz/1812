@@ -5,26 +5,52 @@ using System.Collections.Generic;
 [RequireComponent(typeof(DisplayUIText))]
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Actor : InteractiveElement {
-	public const float permisiveErrorDistanceBetweenActorAndDesiredPosition = 1.5f;
-	public bool isInteracting = false;
-	public bool isWalking = false;
-	public bool isSpeaking = false;
-	public bool isInConversation = false;
-	public bool isFacingLeft = true;
-	public bool isFacingRight = false;
-	public bool isActorActive = true;
+	public bool isInteracting { get; protected set;}
+	public bool isWalking { get; protected set;}
+	public bool isSpeaking { get; protected set;}
+	public bool isInConversation { get; protected set;}
+	public bool isFacingLeft { get; protected set;}
+	public bool isFacingRight { get; protected set;}
+	public bool isActorActive { get; protected set;}
+
+	[SerializeField]
+	protected float movementSpeed = 1f; //Just in case we want an Actor walking faster
+	[SerializeField]
+	protected const float permisiveErrorDistanceBetweenActorAndDesiredPosition = 1.5f;
 
 	protected Vector2 currentPosition;
 	protected Vector2 originalPositionToGo;
 	protected Vector2 currentPositionToGo;
 	protected Vector2 moveDirection = Vector2.zero;
-	protected float movementSpeed = 1f; //Just in case we want an Actor walking faster
+
 	//protected bool isIdle = true;
 	protected bool isPlayingAnimation = false;
 	protected bool endOfAnimationEvent = false;
 	protected bool inCutScene = false; //Maybe not needed in the near future using something like CutScenes.isPlaying();
 	protected DisplayTextHandler displayText;
 	protected DisplayUIText displayUIText;
+
+	public delegate void BeginPlayerConversation();
+	public static event BeginPlayerConversation beginPlayerConversation;
+	public delegate void EndPlayerConversation();
+	public static event EndPlayerConversation endPlayerConversation;
+
+	protected override void Start (){
+		base.Start ();
+
+		isInteracting = false;
+		isWalking = false;
+		isSpeaking = false;
+		isInConversation = false;
+		isFacingLeft = true;
+		isFacingRight = false;
+        isActorActive = true;
+		currentPosition = this.transform.position;
+		originalPositionToGo = currentPosition;
+		currentPositionToGo = originalPositionToGo;
+		displayText = this.gameObject.GetComponent<DisplayTextHandler>();
+		displayUIText = this.gameObject.GetComponent<DisplayUIText>();
+	}
 
 	protected override void InitializeInformation(){
 		currentPosition = this.transform.position;
@@ -40,7 +66,7 @@ public abstract class Actor : InteractiveElement {
 																	//groupID = "NPC";
 																	//...
 	
-	protected void Update () {
+	protected virtual void Update () {
 		if(moveDirection != Vector2.zero){
 			float _distanceBetweenActorAndNewPosition = Mathf.Abs(Vector2.Distance(currentPosition, currentPositionToGo));
 			if(_distanceBetweenActorAndNewPosition > permisiveErrorDistanceBetweenActorAndDesiredPosition){
@@ -53,7 +79,7 @@ public abstract class Actor : InteractiveElement {
 			}
 		}
 
-		AdditionalUpdateInformation();
+		//AdditionalUpdateInformation();
 	}
 
 	protected virtual void AdditionalUpdateInformation(){} //In case if needed to handle, for example, an idle animation depending on time
@@ -87,7 +113,7 @@ public abstract class Actor : InteractiveElement {
 		if(originalPositionToGo != newPosition){
 			do{
 				yield return null;
-			}while(isSpeaking && isInteracting &&isInConversation); //Maybe in future this would be changed to while(AnotherActionIsPlaying());
+			}while(isSpeaking && isInteracting && isInConversation); //Maybe in future this would be changed to while(AnotherActionIsPlaying());
 			
 			//Reset moveDirection just in case it was already walking
 			moveDirection = Vector2.zero;
@@ -157,6 +183,18 @@ public abstract class Actor : InteractiveElement {
 		}while(!displayUIText.HasEndedDisplayingText()); 
 
 		isSpeaking = false;
+	}
+
+	protected void BeginConversation(){
+		isInConversation = true;
+		BeginAction();
+		beginPlayerConversation();
+	}
+
+	protected void EndConversation(){
+		isInConversation = false;
+		endPlayerConversation();
+		EndAction();
 	}
 	
 	public Vector2 CurrentPosition(){

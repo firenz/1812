@@ -30,7 +30,8 @@ public class ExitGameMainMenuButton : UIGenericButton {
 		}
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		StartCoroutine(WaitForExitGame());
 	}
 

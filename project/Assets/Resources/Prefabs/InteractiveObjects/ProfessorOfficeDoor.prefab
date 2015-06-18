@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463564}
   - 60: {fileID: 6000916}
-  - 114: {fileID: 11403882}
+  - 114: {fileID: 11465148}
   m_Layer: 10
   m_Name: ProfessorOfficeDoor
   m_TagString: InteractivePoint
@@ -75,7 +75,7 @@ PolygonCollider2D:
       - {x: 31.3719788, y: -10.5586624}
       - {x: -1.58554077, y: 14.3220367}
       - {x: .0600280762, y: 90.6535797}
---- !u!114 &11403882
+--- !u!114 &11465148
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,9 +83,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 112328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e99dd17d3b2de44188124c656082161, type: 3}
+  m_Script: {fileID: 11500000, guid: 30ff01e1129fa02499a525459d476c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupID: SCENE_PROFESSOROFFICE
+  nameID: OBJECT_DOOR
+  destinationScene: DemoScene_01
+  arrowDirection: 0
 --- !u!212 &21215556
 SpriteRenderer:
   m_ObjectHideFlags: 1

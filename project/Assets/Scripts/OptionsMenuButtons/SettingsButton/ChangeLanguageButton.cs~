@@ -23,7 +23,8 @@ public class ChangeLanguageButton : UIGenericButton {
 		buttonText.text = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "SETTINGS", "CHANGE_LANGUAGE_BUTTON")[0];
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		languagesPanel.transform.SetAsLastSibling();
 	}
 

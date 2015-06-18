@@ -14,12 +14,13 @@ public class NewGameMainMenuButton : UIGenericButton {
 	}
 
 	// Use this for initialization
-	private void Awake () {
+	private void Start () {
 		newMainMenuBtnText = this.transform.FindChild("Text").GetComponent<Text>(); 	
 		newMainMenuBtnText.text = LocalizedTextManager.GetLocalizedText("MAIN_MENU", "NEW_GAME", "NAME")[0];
 	}
 
-	public void OnClick() {
+	public override void OnClick() {
+		base.OnClick();
 		GameController.WarpToLevel("DemoScene_01");
 	}
 

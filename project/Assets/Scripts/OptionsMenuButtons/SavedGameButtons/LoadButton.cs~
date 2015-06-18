@@ -34,7 +34,8 @@ public class LoadButton : UIGenericButton {
 		}
 	}
 	
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		gameSlotsManager.Load();
 	}
 	

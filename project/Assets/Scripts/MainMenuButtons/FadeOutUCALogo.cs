@@ -15,6 +15,7 @@ public class FadeOutUCALogo : MonoBehaviour {
 	}
 
 	private IEnumerator WaitForFadeOut(float waitUntilFadeOutTime, float fadeOuttime){
+		CustomCursorController.Instance.HideCursor();
 		yield return new WaitForSeconds(waitUntilFadeOutTime);
 
 		float _alphaIconUCA = iconUCA.color.a;
@@ -31,5 +32,11 @@ public class FadeOutUCALogo : MonoBehaviour {
 		}
 
 		this.transform.SetAsFirstSibling();
+		CustomCursorController.Instance.UnhideCursor();
+
+		yield return new WaitForSeconds(0.2f);
+
+		//Start Menu Music
+		AudioManager.PlayMusic("Tranquility", true);
 	}
 }

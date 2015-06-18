@@ -17,6 +17,15 @@ public class UIGenericButton : MonoBehaviour {
 		CustomCursorController.Instance.isOverUIButton = true;
 		isMouseOver = true;
 	}
+	
+	public virtual void OnClick(){
+		if(!CustomCursorController.Instance.isCursorHidden){
+			AudioManager.PlaySFX("BlipSelect");
+			ActionOnClick();
+		}
+	}
+
+	public void ActionOnClick(){}
 
 	public virtual void OnMouseExit(){
 		CustomCursorController.Instance.isOverUIButton = false;

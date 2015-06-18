@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Inventory : PersistentSingleton<Inventory> {
-	public bool isEnabled = true;
-
-	private bool isActivated = false;
-	private bool isClosed = true;
+	public bool isEnabled{get; private set;}
+	public bool isActivated{get; private set;}
+	public bool isClosed{get; private set;}
+	
 	private const float speedInOpeningInventory = 1.5f;
 	private const float openedInventoryHeight = 30f;
 	private const int maxItemsCapacity = 7;
@@ -16,6 +17,10 @@ public class Inventory : PersistentSingleton<Inventory> {
 
 	// Use this for initialization
 	private void Start () {
+		isEnabled = false;
+		isActivated = false;
+		isClosed = true;
+
 		items = new GameObject[maxItemsCapacity];
 
 		for(int i = 0; i < items.Length; i++){
@@ -50,7 +55,7 @@ public class Inventory : PersistentSingleton<Inventory> {
 
 		if(itemsCount < maxItemsCapacity){
 			GameObject _itemToLoad = Resources.Load<GameObject>("Prefabs/Inventory/Items/" + nameItem);
-			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, -2f);
+			_itemToLoad.transform.position = new Vector3(_originalItemPosition.x + itemsCount * widthBetweenItems, _originalItemPosition.y, _originalItemPosition.z);
 			GameObject _newItemAdded = Instantiate(_itemToLoad) as GameObject;
 			_newItemAdded.name = nameItem;
 			_newItemAdded.transform.parent = this.transform;
@@ -86,6 +91,7 @@ public class Inventory : PersistentSingleton<Inventory> {
 			}
 		}
 	}
+
 
 	public void UpdateAllItems(){
 		for(int i = 0; i < items.Length; i++){

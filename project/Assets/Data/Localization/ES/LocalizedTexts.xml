@@ -34,6 +34,9 @@
 	</group>
     <group id = "GUI">
         <element id = "DEFAULT">
+        	<string id="NAME">Nombre por defecto</string> 
+        	<string id="DESCRIPTION">Descripcion por defecto</string> 
+        	<string id ="INTERACTION">Interaccion por defecto</string>
             <string id = "NOTHING_OF_INTEREST">
                 Ahí no hay nada que me interese
             </string>

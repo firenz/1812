@@ -1,7 +1,7 @@
 <SettingsFile>
   <SystemSettings>
-    <Screen Width="661" Height="496" FullScreen="False" />
+    <Screen Width="800" Height="600" FullScreen="False" />
     <Language currentLanguage="ES" />
-    <SoundSettings musicVolume="0" SFXVolume="0" />
+    <SoundSettings musicVolume="25" SFXVolume="50" />
   </SystemSettings>
 </SettingsFile>

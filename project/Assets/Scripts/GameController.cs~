@@ -31,11 +31,10 @@ public class GameController : PersistentSingleton<GameController> {
 		GameState.InitializeState();
 		SettingsFileManager.Instance.LoadSettingsFile();
 		GameState.ChangeScreenSettings(GameState.SystemData.ScreenSettings.width, GameState.SystemData.ScreenSettings.height, GameState.SystemData.ScreenSettings.fullscreen);
-		//AudioManager.ChangeMusicVolume(GameState.SystemData.AudioVolumeSettings.music); // to be implemented
-		//AudioManager.ChangeSFXVolume(GameState.SystemData.AudioVolumeSettings.sfx); // to be implemented
 		LocalizedTextManager.Initialize();
 		//...
 	}	
+	
 
 	public static void WarpToLevel(string destinationLevel){
 		GameState.SaveGameState();

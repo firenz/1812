@@ -20,6 +20,31 @@ using System.Collections.Generic;
 
 public class LittleFlags : PickableElement {
 
+	protected override void Start (){
+		base.Start ();
+
+		groupID = "SCENE_PROFESSOROFFICE";
+		nameID = "OBJECT_LITTLEFLAGS";
+		nameListGivableElements.Add("LittleFlagsInventory");
+		//currentPickablePosition = PickableFrom.down;
+
+		if(GameState.LevelProfessorOfficeData.isLittleFlagsPickedFromFloor){
+			SetInactive();
+		}
+	}
+
+	public override void OnPlayerTouchingAction (){
+		if(Inventory.Instance.IsInventoryFull()){
+			Player.Instance.Speak("GUI", "DEFAULT", "FULL_INVENTORY");
+		}
+		else{
+			Player.Instance.GrabItem(nameListGivableElements);
+            SetInactive();
+			GameState.LevelProfessorOfficeData.isLittleFlagsPickedFromFloor = true;
+        }
+	}
+
+	/*
 	protected override void InitializePickableInformation(){
 		groupID = "SCENE_PROFESSOROFFICE";
 		nameID = "OBJECT_LITTLEFLAGS";
@@ -40,4 +65,6 @@ public class LittleFlags : PickableElement {
 			SetInactive();
 		}
 	}
+	*/
+	
 }

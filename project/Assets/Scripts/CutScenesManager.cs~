@@ -4,19 +4,7 @@ using System.Collections;
 public class CutScenesManager : MonoBehaviour {
 	private static bool isPlaying = false;
 
-	//To be implemented
-	//public delegate void EnableGameGUI();
-	//public static event EnableGameGUI enableGameGUI;
-	//public delegate void DisableGameGUI();
-	//public static event DisableGameGUI disableGameGUI;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		if(!isPlaying){
 			switch(Application.loadedLevelName){
 			case "DemoScene_01":

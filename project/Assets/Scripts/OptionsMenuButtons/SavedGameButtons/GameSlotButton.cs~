@@ -92,7 +92,8 @@ public class GameSlotButton : UIGenericButton {
 		isSlotEmpty = false;
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		unSelectAllGameSlots();
 		Selected();
 		onSavedGameSlotClick(numberSlot);

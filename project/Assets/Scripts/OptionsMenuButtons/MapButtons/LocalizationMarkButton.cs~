@@ -26,7 +26,7 @@ public class LocalizationMarkButton : UIGenericButton {
 	// Use this for initialization
 	private void Start() {
 		localizationName = LocalizedTextManager.GetLocalizedText("OPTIONS_MENU", "MAPS", localizationID)[0];
-		localizationText = this.transform.FindChild("Text").GetComponent<Text>();
+		localizationText = this.transform.parent.FindChild("Text").GetComponent<Text>();
 		localizationText.text = localizationName;
 		Color _newColor = localizationText.color;
 		_newColor.a = 0f;
@@ -35,10 +35,10 @@ public class LocalizationMarkButton : UIGenericButton {
 
 	protected override void Update(){
 		if(isMouseOver){
-			//if(this.GetComponent<Button>().interactable){
+			if(this.GetComponent<Button>().interactable){
 			CustomCursorController.Instance.ChangeCursorOverUIButton();
 			localizationText.gameObject.SetActive(true);
-			//}
+			}
 		}
 	}
 
@@ -52,7 +52,8 @@ public class LocalizationMarkButton : UIGenericButton {
 		StartCoroutine(DisableText());
 	}
 
-	public void OnClick(){
+	public override void OnClick(){
+		base.OnClick();
 		StartCoroutine(WaitForNewLocalization());
 	}
 
