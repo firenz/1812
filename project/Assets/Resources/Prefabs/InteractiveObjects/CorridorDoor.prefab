@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.7786789, y: 74.7525787, z: 1}
+  m_LocalPosition: {x: 58.7999992, y: 109.800003, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 441930}
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.85424042, y: -10.398819, z: 0}
+  m_LocalPosition: {x: -.100000001, y: -46.4000015, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 441928}
@@ -71,10 +71,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 54.3983231, y: 76.4901581}
-      - {x: 54.3943863, y: -.546951294}
-      - {x: -1.54811859, y: -.412750244}
-      - {x: -2.32478333, y: 76.1883698}
+    - - {x: 28.3069344, y: 40.459198}
+      - {x: 27.3711815, y: -35.6460724}
+      - {x: -27.0182877, y: -36.1330948}
+      - {x: -27.1737175, y: 40.7786407}
 --- !u!114 &11441930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,8 +88,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groupID: SCENE_CORRIDOR
   nameID: OBJECT_DOOR
-  destinationScene: DemoScene_00
-  arrowDirection: 1
+  minDistance: 1.5
+  destinationScene: ProfessorOffice
+  arrowDirection: 0
 --- !u!212 &21241930
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,7 +24,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OpenedInventory
   m_TagString: Inventory
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 212: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ClosedInventory
   m_TagString: Inventory
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11428702}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Inventory
   m_TagString: Inventory
   m_Icon: {fileID: 0}

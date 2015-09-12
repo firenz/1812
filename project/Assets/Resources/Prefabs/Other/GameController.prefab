@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 443490}
   - 114: {fileID: 11439766}
-  - 114: {fileID: 11487914}
   - 114: {fileID: 11479830}
   - 114: {fileID: 11463156}
+  - 114: {fileID: 11487914}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController

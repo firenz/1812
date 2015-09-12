@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463564}
   - 60: {fileID: 6000916}
-  - 114: {fileID: 11465148}
+  - 114: {fileID: 11444546}
   m_Layer: 10
   m_Name: ProfessorOfficeDoor
   m_TagString: InteractivePoint
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 266.37204, y: 68.6443024, z: 1}
+  m_LocalPosition: {x: 281.399994, y: 108.599998, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 495420}
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.79999995, y: 0, z: 0}
+  m_LocalPosition: {x: -30.8000031, y: -36, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 463564}
@@ -71,11 +71,11 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 32.3009644, y: 78.7606049}
-      - {x: 31.3719788, y: -10.5586624}
-      - {x: -1.58554077, y: 14.3220367}
-      - {x: .0600280762, y: 90.6535797}
---- !u!114 &11465148
+    - - {x: 17.7987671, y: 38.1544266}
+      - {x: 17.957489, y: -51.889946}
+      - {x: -17.9005127, y: -27.3718109}
+      - {x: -17.3426208, y: 51.8601608}
+--- !u!114 &11444546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,13 +83,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 112328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30ff01e1129fa02499a525459d476c1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e99dd17d3b2de44188124c656082161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: SCENE_PROFESSOROFFICE
   nameID: OBJECT_DOOR
-  destinationScene: DemoScene_01
-  arrowDirection: 0
+  minDistance: 1.5
+  destinationScene: Corridor
+  arrowDirection: 1
 --- !u!212 &21215556
 SpriteRenderer:
   m_ObjectHideFlags: 1

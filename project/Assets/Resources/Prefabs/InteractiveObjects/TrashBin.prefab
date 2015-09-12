@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.5386963, y: -4.50868225, z: 20.0957031}
+  m_LocalPosition: {x: 42.5, y: -20.5, z: 20.1000004}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 471406}
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.2657242, y: 69.9914551, z: 1}
+  m_LocalPosition: {x: 76.4000015, y: 86.3000031, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 471404}
@@ -71,19 +71,13 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.73033905, y: 14.5458755}
-      - {x: -1.36920929, y: 15.1306229}
-      - {x: -1.60405731, y: 18.4687958}
-      - {x: -.664756775, y: 19.9854736}
-      - {x: 3.95928955, y: 21.0158539}
-      - {x: 14.4942398, y: 20.8083649}
-      - {x: 19.7346497, y: 19.3012695}
-      - {x: 19.8612518, y: 15.0616455}
-      - {x: 19.4754105, y: 13.3325272}
-      - {x: 16.4511261, y: 2.8152771}
-      - {x: 14.7716217, y: .784240723}
-      - {x: 2.98732758, y: .823097229}
-      - {x: 1.07044983, y: 4.07841492}
+    - - {x: 19.9094696, y: -15.6948929}
+      - {x: 15.8614502, y: 1.45327759}
+      - {x: 18.7982712, y: 5.36451721}
+      - {x: 33.1418076, y: 5.91703796}
+      - {x: 39.2699356, y: 4.64412689}
+      - {x: 39.9966354, y: -1.23556519}
+      - {x: 35.0258255, y: -15.9254837}
 --- !u!114 &11471404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736831e6a81e1474bb32af1712b1ad40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timesTrashBinHasBeenInteracted: 0
+  groupID: SCENE_CORRIDOR
+  nameID: OBJECT_TRASHBIN
+  minDistance: 1.5
 --- !u!212 &21271404
 SpriteRenderer:
   m_ObjectHideFlags: 1

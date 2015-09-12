@@ -1,0 +1,746 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<locatedtexts>
+    <meta>
+        <GameName>1812: La aventura</GameName>
+        <Author>Alicia Guardeño</Author>
+        <Traslation>Alicia Guardeño</Traslation>
+        <Language>Español</Language>
+        <LanguageID>ES</LanguageID>
+        <Version>version 0.2</Version>
+        <Web>1812laaventura.wordpress.com</Web>
+        <License>GPL v3</License>
+    </meta>
+    <group id = "LIST_PLAYABLE_SCENES">
+        <element id = "PROFESSOR_OFFICE">
+            <string id = "NAME">Despacho del profesor</string>
+        </element>
+        <element id = "CORRIDOR">
+            <string id = "NAME">Pasillo</string>
+        </element>
+    </group>
+	<group id = "INVENTORY">
+		<element id = "FAILEDTEST">
+            <string id = "NAME">Examen suspendido</string>
+			<string id = "DESCRIPTION">
+				Maldito seas por el 4,9...
+			</string>
+		</element>
+		<element id = "LITTLEFLAGS">
+            <string id = "NAME">Banderitas caídas</string>
+			<string id = "DESCRIPTION">
+				Son unas chinchetas que tienen pegadas unas banderitas pegadas con cinta adhesiva que se han caído del mapa por culpa del viento
+                Lo asombroso es que el fiso haya aguantado y la chincheta no
+			</string>
+		</element>
+	</group>
+    <group id = "GUI">
+        <element id = "DEFAULT">
+        	<string id="NAME">Nombre por defecto</string> 
+        	<string id="DESCRIPTION">Descripcion por defecto</string> 
+        	<string id ="INTERACTION">Interaccion por defecto</string>
+            <string id = "NOTHING_OF_INTEREST">
+                Ahí no hay nada que me interese
+            </string>
+            <string id = "FULL_INVENTORY">
+                No puedo cogerlo
+                Tengo el bolsillo lleno
+            </string>
+            <string id = "USE_IN_DISPLAYNAME">
+                Usar
+            </string>
+            <string id = "WITH_IN_DISPLAYNAME">
+                con
+            </string>
+        </element>
+    </group>
+    <group id = "SCENE_CORRIDOR">
+        <element id = "OBJECT_DOOR">
+            <string id = "NAME">Puerta al despacho</string>
+            <string id = "DESCRIPTION">
+                Es una puerta junto al letrero de A
+            </string>
+            <string id = "INTERACTION">
+                Probemos el teletransporte mediante puertas
+            </string>
+        </element>
+        <element id = "OBJECT_FAKEDOOR">
+            <string id = "NAME">Puerta de mentira</string>
+            <string id = "DESCRIPTION">
+                Es una puerta de atrezzo
+            </string>
+            <string id = "INTERACTION">
+                No puedo abrirla,
+                ¡está pintada en la pared!
+            </string>
+        </element>
+        <element id = "OBJECT_TRASHBIN">
+            <string id = "NAME">Papelera</string>
+            <string id = "DESCRIPTION">
+                Es una papelera con algo de basurilla
+            </string>
+            <string id = "INTERACTION_1">
+                Veo muchos pañuelos con mocos y lágrimas ahí dentro...
+            </string>
+            <string id = "INTERACTION_2">
+                ¡Anda!
+                Mirando un poco más
+                Veo que también hay trocitos de exámenes rotos
+                ...
+                ...No sé para qué volví a mirar
+            </string>
+        </element>
+        <element id = "OBJECT_PLANT">
+            <string id = "NAME">Planta</string>
+            <string id = "DESCRIPTION">
+                Una planta mustia
+            </string>
+            <string id = "INTERACTION">
+                La planta debe de haberse contagiado de la tristeza de los alumnos
+                Eso o que los encargados de regarla no pasan tan a menudo como deberían
+            </string>
+        </element>
+        <element id = "OBJECT_SHADOW">
+            <string id = "NAME">Hacia los servicios</string>
+            <string id = "DESCRIPTION">
+                Es un servicio normal y corriente
+                No creo que haga falta una descripción más detallada de un servicio aunque esto sea una "miniaventura", ¿no?
+            </string>
+            <string id = "INTERACTION">
+                Bueno, mientras no pille al profesor cagando no creo que vaya mal la cosa
+                ¡Allé voy!
+            </string>
+        </element>
+    </group>
+	<group id = "SCENE_PROFESSOROFFICE">
+        <element id = "OBJECT_SKULL">
+            <string id = "NAME">Calavera</string>
+            <string id = "DESCRIPTION">
+                Aprobar o no aprobar
+                Esa es la cuestión
+            </string>
+            <string id = "INTERACTION">
+                Aprobar o no aprobar
+                Esa es la cuestión
+            </string>
+        </element>
+        <element id = "OBJECT_MAP">
+            <string id = "NAME">Mapa</string>
+            <string id = "DESCRIPTION">
+                Es un mapa de Cádiz con chinchetas que tienen pegadas banderitas
+                Supongo que lo usará para enseñar a los alumnos que se pasen por su despacho
+            </string>
+            <string id = "INTERACTION_1">
+                Uff, como no arregle el mapa pronto me va a caer una buena...
+                Al menos en el mapa se ven los agujeros donde estaban las banderas caídas, 
+                lo cual facilita la cosa
+                Y a las malas puedo ojear los libros de la estantería para buscar pistas...
+            </string>
+            <string id = "INTERACTION_2">
+                Bueno, bueno, esto está perfecto
+                Casi ni se nota que los agujeros del mapa están más grandes que antes
+            </string>
+            <string id = "INTERACTION_LITTLEFLAGS">
+                Vale, con esto ya en el inventario ya podemos ponernos manos a la obra para arreglarlo...
+                Por suerte en el mapa se ven los agujeros de donde estaban las banderas caídas 
+                Así solo hay que colocar las banderitas que faltan encima de los agujeros
+                Y nada más
+            </string>
+            <string id = "INTERACTION_MAPPUZZLE_FINISHED">
+            </string>
+        </element>
+		<element id = "OBJECT_LITTLEFLAGS">
+            <string id = "NAME">Chinchetas con banderitas</string>
+			<string id = "DESCRIPTION">
+				Son unas chinchetas con unas banderitas pegadas encima con cinta adhesiva
+                Lo asombroso es que la cinta adhesiva haya aguantado las banderitas con el viento y no los pinchos en el tablón no
+			</string>
+			<string id = "INTERACTION">
+				Las cogemos
+                Las colocamos en el tablón 
+                Y aquí no ha pasado nada
+			</string>
+			<string id = "PICKED">
+				Bueno una vez dentro del bolsillo de la sudadera
+                Solo falta cogerlo del inventario
+                Y darle al mapa con ellos
+                ¿No creo que sea muy difícil, no?
+			</string>
+		</element>
+		<element id = "OBJECT_DOOR">
+            <string id = "NAME">Puerta</string>
+			<string id = "DESCRIPTION">
+				Es una puerta
+			</string>
+			<string id = "INTERACTION">
+				¡Magia de la programación!
+                ¡Ven a mí y sácame de este sitio!
+			</string>
+        </element>
+		<element id = "OBJECT_WINDOW">
+            <string id = "NAME">Ventana</string>
+			<string id = "DESCRIPTION">
+				Es una ventana
+			</string>
+			<string id = "INTERACTION_CLOSED">
+				Voy a abrirla
+			</string>
+			<string id = "INTERACTION_OPENED">
+				Voy a cerrarla
+			</string>
+            <string id = "INTERACTION_CLOSED_FAILEDTEST">
+				Ya me gustaría poder tirarlo por la ventana
+                Pero entonces sí que no aprobaría nunca
+			</string>
+			<string id = "INTERACTION_OPENED_FAILEDTEST">
+				...
+				Se me ha ido el examen volando por la ventana...
+				Mierda...
+				¿Ahora cómo continuaré el juego?
+                ¡Lo he roto!
+			</string>
+		</element>
+        <element id = "OBJECT_BOOK_1">
+            <string id = "NAME">Libro sobre Baterías Españolas</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                BATERÍAS ESPAÑOLAS
+            </string>
+            <string id = "INTERACTION">
+                BATERIAS ESPAÑOLAS
+                Se colocaron 3 baterías para defender entre la fortificación Española del Castillo de Puntales y la ciudad de Cádiz. 
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_2">
+            <string id = "NAME">Libro sobre Fortificaciones Españolas</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                FORTIFICACIONES ESPAÑOLAS
+            </string>
+            <string id = "INTERACTION">
+                FORTIFICACIONES ESPAÑOLAS
+                La última defensa de la ciudad de Cádiz eran sus fortificaciones, entre las cuales destacaban
+                el Baluarte de Puerta Tierra al sur,
+                el Baluarte de Santa Elena al este,
+                el del Fuerte de Santa Catalina al norte
+                y el de ......... al oeste.
+                Vaya este último nombre está emborronado
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_3">
+            <string id = "NAME">Libro sobre el Puente de Zuazo</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                PUENTE DE ZUAZO
+            </string>
+            <string id = "INTERACTION">
+                PUENTE DE ZUAZO
+                Puente que cruzaba el canal Sancti Petri,
+                situado entre las Marismas y Caños
+                Era la única conexión terrestre que tenían los franceses 
+				para atravesar San Fernando y llegar a Cádiz.
+                Fue dinamitado con el objetivo de evitar que pasaran por él 
+				las tropas francesas.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_4">
+            <string id = "NAME">Libro sobre Batallones Franceses</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                BATALLONES FRANCESES
+            </string>
+            <string id = "INTERACTION">
+                BATALLONES FRANCESES
+                Durante el tiempo del asedio, batallones del ejército 
+				francés fueron arremetiendo contra San Fernando para debilitarlos
+                La más destacables fueron una al norte-noroeste de Chiclana,
+                situado junto a varias baterias y campamentos franceses, 
+                y otras dos al sur-sureste de Puerto Real.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_5">
+            <string id = "NAME">Libro sobre Fortificaciones Francesas</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                FORTIFICACIONES FRANCESAS
+            </string>
+            <string id = "INTERACTION">
+                FORTIFICACIONES FRANCESAS
+                Los franceses dominaban el castillo de Santa Catalina, 
+				que empleaban como fortificación para guardar el acceso a la Bahía.
+                Además, empleaban los castillos de Matagorda y San Luis, 
+				situados en el extremo oeste de La Cabezuela,
+                que era la lengua de tierra más próxima a la ciudad de Cádiz 
+				que fuera invadida por los franceses, 
+                para asediar la ciudad y el paso de los barcos por la Bahía.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_6">
+            <string id = "NAME">Libro sobre Campamentos Franceses</string>
+            <string id = "DESCRIPTION">
+                Un libro que se titula
+                CAMPAMENTOS FRANCESES
+            </string>
+            <string id = "INTERACTION">
+                CAMPAMENTOS FRANCESES
+                Para poder asediar durante varios años a Cádiz, los franceses 
+				no tuvieron más remedio que asentar campamentos en los poblados próximos.
+                Dos de los principales estaban situados al este de Puerto Real, 
+				junto a las 3 baterías francesas.
+                Además de otro tercer campamento junto al Castillo de Matagorda.
+            </string>
+        </element>
+	</group>
+    <group id = "SCENE_MAP_PUZZLE">
+        <element id = "RETURN_TO_BUTTON">
+            <string id = "NAME">Volver al despacho</string>
+        </element>
+        <element id = "MAP_INFO">
+            <string id = "BAY">Bahía</string>
+            <string id = "MARSHLAND">Río y marismas</string>
+            <string id = "BRIDGE">Puente del frente</string>
+            <string id = "SPANISH_FORTIFICATION">Fortificación esp.</string>
+            <string id = "SPANISH_BATTERY">Batería esp.</string>
+            <string id = "FRENCH_FORTIFICATION">Fortificación fr.</string>
+            <string id = "FRENCH_BATTERY">Batería fr.</string>
+            <string id = "FRENCH_ADVANCE">Batallón fr.</string>
+            <string id = "FRENCH_CAMP">Campamento fr.</string>
+        </element>
+    </group>
+    <group id = "NPC">
+        <element id = "LIBRARIAN">
+            <string id = "NAME">Señora mayor</string>
+            <string id = "DESCRIPTION">
+                Una señora mayor con un grave problema de se-me-caen-las-gafitis.
+                Eso y tos chunga.
+            </string>
+            <string id = "NPC_IS_BUSY">
+                Espera hombre, que esta tosiendo.
+            </string>
+            <string id = "COUGH">
+                *cof* *cof*
+            </string>
+            <string id = "PLAYER_CONVERSATION_CHOICE_NOT_FINISH">
+                Bueno, por dónde ibamos...
+            </string>
+            <string id = "PLAYER_CONVERSATION_FAILEDTEST_LOST">
+                Señora,
+                Por algún casual no habrá visto un examen
+                cayendóse por la ventana,
+                ¿no?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_FAILEDTEST_LOST">
+                ...¿Sabes lo improbable que es que eso ocurra, no?
+                ...
+                ...
+                ...
+                Bueno, sí me encontre un penoso examen suspendido con un 4,9
+                Aquí tienes
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_0">
+                Ah bueno 
+                Entonces no te importaría
+                Ayudarme a organizar
+                Una pila de periódicos históricos MUY grande
+                ¿Verdad?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_1">
+                ¿Te crees que soy tonta, jovenzuelo?
+                ¡Tú tienes pies!
+                ¡Y Los fantasmas de esta facultad no tienen pies!
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_1">
+                Bueno yo...
+                yo...
+                ...
+                Vale, lo admito.
+                Soy un alumno que se ha acercado al despacho a ver si estaba el profesor 
+				Y va a ser que no lo encuentro...
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_1">
+                Si es que no puede ser...
+                Estos alumnos de hoy en día...
+                ....
+                Anda mira a ver en el servicio de hombres, 
+				que con los problemas de próstata que tiene seguro que anda allí
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_2">
+                ....
+                ....¿Entonces...
+                ...no se trata de ningún misterio dónde está?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_2">
+                No
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_3">
+                ....
+                ....¿Entonces...
+                ¿Ni siquiera de ninguna conspiración pequeñita?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_3">
+                No
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_4">
+                ....
+                Pero....
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_4">
+                ¿Te crees que porque cada vez alguien desaparezca unos cuantos minutos de su despacho,
+                hay una conspiración mundial detrás de ello?
+                Si fuera así habría más conspiraciones que lentejas en este mundo
+                Y la gente se aburriría de las conspiraciones
+                Al igual que de las lentejas
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_5">
+                ....
+                ¿Sabes dónde están los servicios?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_5">
+                A la izquierda
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_6">
+                Gracias
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_6">
+                La OTRA izquierda
+            </string>
+            <string id = "PLAYER_DEFAULT_CONVERSATION">
+                Perdone señora...
+                ¿Me puede recordar donde están los baños para hombres?
+            </string>
+            <string id = "LIBRARIAN_DEFAULT_CONVERSATION">
+                HACIA
+                LA
+                IZQUIERDA
+                Mira si hasta el juego te ha puesto una sombrita negra
+				Para que veas que le puedes el ratón por encima y clickar
+                Ay, si es que estos jugadores de hoy en día...
+                Ya ni saben mover y buscar con el ratón por el escenario como antes. 
+            </string>
+        </element>
+    </group>
+    <group id = "MAIN_MENU">
+        <element id = "NEW_GAME">
+            <string id = "NAME">Nueva partida</string>
+        </element>
+        <element id = "LOAD_GAME">
+            <string id = "NAME">Cargar partida</string>
+            <string id = "LOAD">Cargar</string>
+            <string id = "DELETE">Borrar</string>
+        </element>
+        <element id = "EXIT_GAME">
+            <string id = "NAME">Salir del juego</string>
+        </element>
+        <element id = "CREDITS">
+            <string id = "NAME">Créditos</string>
+            <string id = "LEAD_LABEL">Concepto original y líder</string>
+            <string id = "PROGRAMMER_LABEL">Programación</string>
+            <string id = "GAME_DESIGN_LABEL">Diseño</string>
+            <string id = "SCRIPT_LABEL">Guión</string>
+            <string id = "GRAPHICS_LABEL">Gráficos</string>
+            <string id = "MUSIC_LABEL">Música y efectos de sonido</string>
+            <string id = "MANY_THANKS">...y muchas gracias a</string>
+        </element>
+    </group>
+    <group id = "OPTIONS_MENU">
+        <element id = "MODAL_WINDOW">
+            <string id = "YES_BUTTON">Sí</string>
+            <string id = "NO_BUTTON">No</string>
+            <string id = "CLOSE_GAME">¿Salir del juego?</string>
+            <string id = "OVERWRITE_GAME">¿Sobreescribir la partida?</string>
+            <string id = "SAVE_GAME">¿Guardar la partida?</string>
+            <string id = "LOAD_GAME">¿Cargar la partida?</string>
+            <string id = "DELETE_GAME">¿Borrar la partida?</string>
+            <string id = "WARP_LEVEL">¿Ir a esta dirección?</string>
+        </element>
+        <element id = "EXIT_GAME">
+            <string id = "NAME">Salir</string>
+        </element>
+        <element id = "SETTINGS">
+            <string id = "NAME">Ajustes</string>
+            <string id = "GRAPHIC_SETTINGS_LABEL">Ajustes gráficos</string>
+            <string id = "FULLSCREEN_TOGGLE">Pantalla completa</string>
+            <string id = "CHANGE_RESOLUTION_BUTTON">Cambiar Resolución</string>
+            <string id = "AUDIO_SETTINGS_LABEL">Ajustes de sonido</string>
+            <string id = "MUSIC_LABEL">Música</string>
+            <string id = "SFX_LABEL">SFX</string>
+            <string id = "LANGUAGE_SETTINGS_LABEL">Ajustes de lenguaje</string>
+            <string id = "CHANGE_LANGUAGE_BUTTON">Cambiar lenguaje</string>
+            <string id = "LANGUAGE_PANEL_LABEL">Idiomas</string>
+            <string id = "RETURN_SETTINGS_BUTTON">Volver atrás</string>
+        </element>
+        <element id = "MAPS">
+            <string id = "NAME">Mapa</string>
+            <string id = "PROFESSOR_OFFICE_LOCATION">Despacho del profesor</string>
+            <string id = "CORRIDOR_LOCATION">Pasillo</string>
+        </element>
+        <element id = "GADIPEDIA">
+            <string id = "NAME">Gadipedia</string>
+            <string id = "SYNOPSIS_LABEL">Buscador de artículos relacionados con la historia, hechos y anécdotas del Cádiz de 1812</string>
+            <string id = "INPUT_FIELD">Introducir texto aquí</string>
+            <string id = "SEARCH_BUTTON">Buscar</string>
+            <string id = "SEARCHING_LABEL">Buscando...</string>
+            <string id = "RESULTS_LABEL">Resultados</string>
+            <string id = "NO_RESULTS_LABEL">No hay ningún resultado para esos términos de búsqueda</string>
+            <string id = "RETURN_TO_BUTTON">Volver atrás</string>
+        </element>
+        <element id = "JOURNAL">
+            <string id = "NAME">Notas</string>
+            <string id = "ENTRY_1">¡Hola!</string>
+            <string id = "ENTRY_2">He vuelto a suspender...</string>
+            <string id = "ENTRY_3">Ay la que has liado pollito</string>
+            <string id = "ENTRY_1_DESC">
+                ¡Hola!
+                Soy la típica entrada genérica que te ponemos en los programas de texto :D
+                 
+                Por ejemplo, para quitar esta entrada, ¡sólo tienes que hacer click sobre ella otra vez!
+            </string>
+            <string id = "ENTRY_2_DESC">
+                He vuelto a suspender, ¡por un puñetero 0,1!
+                 
+                ¡¡Imposible!! ¡Si esta vez había estudiado más de la media!
+                 
+                ¡Más de la media hora, por supuesto!
+            </string>
+            <string id = "ENTRY_3_DESC">
+                Maldita sea, ¡si es que es la Ley de Murphy!
+                
+                Se han caído las marcas del mapa del despacho del profesor, como me pille me mata. Y el problema es que no me acuerdo de donde estaban colocadas...
+                
+                Quizás tendría que mirar los libros de la estantería, lo mismo en ellos hay información sobre cómo volver a colocarlas en su sitio.
+            </string>
+        </element>
+        <element id = "SAVED_GAMES">
+            <string id = "NAME">Partidas</string>
+            <string id = "GAME_SLOTS_LABEL">Slots de juego</string>
+            <string id = "EMPTY_SLOT">Slot vacío</string>
+            <string id = "LAST_PLACE">Lugar</string>
+            <string id = "LAST_TIME">Tiempo</string>
+            <string id = "SAVE_GAME">Guardar</string>
+            <string id = "LOAD_GAME">Cargar</string>
+            <string id = "DELETE_GAME">Borrar</string>
+        </element>
+        <element id = "RETURN_TO">
+            <string id = "RETURN_MENU">Volver al menú</string>
+            <string id = "RETURN_GAME">Volver al juego</string>
+        </element>
+    </group>
+    <group id = "CUTSCENES">
+        <element id = "CUTSCENE_1">
+            <string id = "PLAYER_DIALOGUE_1">
+                ...
+                ¡¿Pero será posible?!
+                ¡Suspenderme!
+                ¡OTRA VEZ!
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                Y esta vez con un 4,9...
+                Pero si yo había estudiado esta vez
+                ¡De verdad de la buena!
+            </string>
+            <string id = "PLAYER_DIALOGUE_3">
+                En fin...
+                Habrá que intentarlo...
+                ¡A POR EL MALDITO 0,1!
+                Al despachoooorl....
+            </string>
+            <string id = "PLAYER_DIALOGUE_4">
+                .....¿orl?
+                ...
+                ¿Hola?
+                ¿Hay alguien?
+                Anda, la puerta parece abierta...
+            </string>
+        </element>
+        <element id = "CUTSCENE_2">
+            <string id = "PLAYER_DIALOGUE_1">
+                Vaya, pero si aquí no hay nadie
+                ¿Y la puerta abierta?
+                Si es que no puede ser...
+                ...En verdad ahora sería el momento para usar el ordenador y cambiarme la nota
+                Pero me da pereza con este calor
+                Bah, paso
+                Bueno a esperar...
+                ...
+                ...
+                ...
+                Al menos si me toca esperar abriré la ventana que hace un calor horrible
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                ¡MIERDA!
+                Las marcas del mapa se han caido
+                Como llegue el profesor y lo vea entonces seguro que no aprobaré ni esta ni ninguna otra asignatura
+            </string>
+            <string id = "PLAYER_DIALOGUE_3">
+                Uff, menos mal, algunas todavía estan en su sitio
+                Sólo tendré que coger las del suelo y colocarlas en su sitio
+            </string>
+        </element>
+        <element id = "CUTSCENE_3">
+            <string id = "PLAYER_DIALOGUE_1">
+                ¡AL FIN!
+                No lograste ser un rival digno para mi intelecto, mapa de las narices                
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                Bueno, si el profesor no está.
+                Mejor me piro de aquí no sea que la vaya a liar más y no apruebe de verdad
+            </string>
+        </element>
+        <element id = "CUTSCENE_4">
+            <string id = "LIBRARIAN_DIALOGUE_1">
+                ¿Eh?
+                ¿Tú quién eres?
+                ¿Qué haces aquí?
+            </string>
+            <string id = "PLAYER_DIALOGUE_1">
+                ¡Ups!
+                Pues, pues, pues...
+            </string>
+        </element>
+        <element id = "CUTSCENE_ENDING">
+            <string id = "THE_END">FIN</string>
+        </element>
+    </group>
+    <group id = "CHOICES">
+        <element id = "LIBRARIAN_CONVERSATION_CHOICE_1">
+            <string id = "CHOICE_0">Soy el ayudante del profesor, he venido a asegurarme que nadie se cuele en su despacho en su ausencia.</string>
+            <string id = "CHOICE_1">Solo soy el fantasma de uno de esos alumnos que se acabó perdiendo en la facultad y nunca llegó a encontrar la salida.</string>
+            <string id = "CHOICE_2">Espere un momento, que aún no se me ha ocurrido ninguna excusa que decirle.</string>
+        </element>
+    </group>
+    <group id = "GADIPEDIA_ARTICLES">
+        <element id = "KEYWORDS">
+            <string id = "CRISTOBAL">cristobal</string>
+            <string id = "ROJAS">rojas</string>
+            <string id = "OFENSIVE">ofensivo</string>
+            <string id = "STRONGHOLD">fuerte</string>
+            <string id = "MATAGORDA">matagorda</string>
+            <string id = "LUIS">luis</string>
+            <string id = "SANCTI">sancti</string>
+            <string id = "PETRI">petri</string>
+            <string id = "FRONT">frente</string>
+            <string id = "DEFENSIVE">defensivo</string>
+            <string id = "BRIDGE">puente</string>
+            <string id = "ZUAZO">zuazo</string>
+            <string id = "ZUAZO">suazo</string>
+            <string id = "COMBAT">combate</string>
+            <string id = "COMBAT">combates</string>
+            <string id = "BATTLE">batalla</string>
+            <string id = "BATTLE">batallas</string>
+            <string id = "ASSAULT">asalto</string>
+            <string id = "ASSAULT">asaltos</string>
+            <string id = "BATTERY">bateria</string>
+            <string id = "BATTERY">baterias</string>
+            <string id = "SAINT">san</string>
+            <string id = "FERDINAND">fernando</string>
+            <string id = "SEBASTIAN">sebastian</string>
+            <string id = "CATALINA">catalina</string>
+            <string id = "CANDELARIA">candelaria</string>
+            <string id = "ISLAND">isla</string>
+            <string id = "ISLET">islote</string>
+            <string id = "COVE">cala</string>
+            <string id = "COVE">caleta</string>
+            <string id = "LION">leon</string>
+            <string id = "CADIZ">cadiz</string>
+            <string id = "FRONT">frente</string>
+            <string id = "SIEGE">asedio</string>
+            <string id = "SIEGE">sitio</string>
+            <string id = "SIEGE">asediar</string>
+            <string id = "CASTLE">castillo</string>
+            <string id = "BASTION">baluarte</string>
+            <string id = "DEFENSE">defensa</string>
+            <string id = "DEFENSE">defensas</string>
+            <string id = "BAY">bahia</string>
+            <string id = "ARTILLERY">artilleria</string>
+            <string id = "LIGHTHOUSE">faro</string>
+            <string id = "SACKING">saqueo</string>
+            <string id = "SACKING">saquear</string>
+            <string id = "ENGLISH">anglosajon</string>
+            <string id = "ENGLISH">anglosajones</string>
+            <string id = "DUTCH">holandes</string>
+            <string id = "DUTCH">holandeses</string>
+            <string id = "FRENCH">frances</string>
+            <string id = "FRENCH">franceses</string>
+            <string id = "PRISON">prision</string>
+            <string id = "FORTIFICATION">fortificacion</string>
+            <string id = "FORTIFICATION">fortificaciones</string>
+            <string id = "CHAPEL">capilla</string>
+        </element>
+        <element id = "ARTICLE_TEMPLATE">
+            <string id = "NAME"></string>
+            <string id = "BRIEF"></string>
+            <string id = "CONTENT"></string>
+        </element>
+        <element id = "ARTICLE_ZUAZO_BRIDGE">
+            <string id = "NAME">Puente de Zuazo</string>
+            <string id = "BRIEF">Puente histórico que une la Isla de León con el resto de la península.</string>
+            <string id = "CONTENT">
+                El puente Zuazo (o puente Suazo) es un puente situado en San Fernando (antiguamente conocida como Isla de León), que une a dicha ciudad (situada en una isla) con el resto de la península, salvando el paso por el Caño de Sancti Petri.
+
+                En la Guerra de la Independencia, el puente de Zuazo jugó un papel crucial para impedir el asalto de ejército francés, que puso sitio a la Isla de León con un ejército de unos 20,000 hombres durante dos años y medio. En el puente se concentraron las baterías más numerosas defendiendo el último rincón peninsular no conquistado por las tropas napoleónicas. Hasta incluso en 1812, hubo que destruir el arco central del puente de Zuazo para evitar definitivamente el paso a los franceses, que terminaron retirándose ante la imposibilidad de cruzar el caño.
+            </string>
+        </element>
+        <element id = "ARTICLE_SAINT_SEBASTIAN_CASTLE">
+            <string id = "NAME">Castillo de San Sebastián</string>
+            <string id = "BRIEF">Castillo situado en un islote en las afueras de Cádiz que sirve como defensa, faro y vigía de la bahía.</string>
+            <string id = "CONTENT">
+                Era un baluarte situado a las afueras de la ciudad de Cádiz, en uno de los extremos de la playa de La Caleta sobre un pequeño islote, al que solo se accede cuando la marea está baja. Desde él se podían divisar los navíos que se aproximaban a la Bahía por ese lado de la ciudad.
+
+                En el año 1457 una nave veneciana se refugió en la isla a causa de una epidemia de peste, reconstruyeron la torre y levantaron una ermita a la advocación de San Sebastián. 
+
+                Tras el saqueo angloholandés de 1596 el lugar se destinó al castillo, reconstruyéndose la torre en 1613 y dotándola de artillería y haciendo a su vez los servicios de faro para los navegantes. 
+
+                En el año 1706 se inician las obras del actual castillo para defender el flanco norte de la ciudad. 
+
+                En el año 1739 el castillo con 17 cañones que controlaban la entrada a la Caleta y el canalizo sur hacia la bahía.
+            </string>
+        </element>
+        <element id = "ARTICLE_SAINT_CATALINA_CASTLE">
+            <string id = "NAME">Castillo de Santa Catalina</string>
+            <string id = "BRIEF">Principal fuerte defensivo de la ciudad.</string>
+            <string id = "CONTENT">
+                El castillo de Santa Catalina es una fortificación de Cádiz situada en el extremo más septentrional de la Playa de la Caleta de Santa Catalina, que se adentra en el mar gracias a unas escolleras. 
+
+                Fue construido en abril de 1598 siguiendo los planos del ingeniero Cristobal de Rojas. Su obra se debe al desgraciado suceso que acaeció dos años antes en Cádiz, en el que las tropas angloholandesas asolaron la ciudad de Cádiz debido a la pobreza de sus defensas. Felipe II tomó la decisión de reforzar la plaza de Cádiz y de ahí nació el proyecto elaborado por Cristóbal de Rojas de 1598.
+
+                Durante el reinado de Carlos II se construyó la capilla y la sacristía en 1693. Dicha capilla fue dedicada a Santa Catalina de Alejandría y a la Purísima Concepción.
+
+                Carlos III en 1769 lo convirtió en prisión militar para personalidades destacadas.
+            </string>
+        </element>
+        <element id = "ARTICLE_CANDELARIA_BASTION">
+            <string id = "NAME">Baluarte de la Candelaria</string>
+            <string id = "BRIEF">Construcción de 1672 de planta rectangular sobre una elevada punta de tierra. Sus cañones controlan la entrada y salida a la Bahía.</string>
+            <string id = "CONTENT">
+                El Baluarte de la Candelaria es una fortificación que formaba parte del frente marítimo de la Bahía de Cádiz y defendía la entrada al puerto y el frente noroeste de la ciudad.
+
+                Fue construido en 1672 por iniciativa del gobernador Diego Caballero de Illescas, aprovechando una elevada punta de tierra, para salvaguardar la entrada natural al puerto de Cádiz. Protegido por un resistente muro que hace de rompeolas, con sus cañones se dominaba el canal de acceso al puerto.
+
+                Ha servido cuartel, maestranza de ingenieros y palomar del servicio colombófilo del Ejército.
+            </string>
+        </element>
+		<element id = "ARTICLE_BAY_OFFENSIVE_FRONT">
+            <string id = "NAME">Frente ofensivo de la bahia</string>
+            <string id = "BRIEF">Frente defensivo compuesto por los castillos de Matagorda y San Luis.</string>
+            <string id = "CONTENT">
+				El 30 de Mayo de 1597 Felipe II ordenó que se contruyera un fuerte en la parte más estrecha de la Bahía ya que, hasta ese momento, la Bahía estaba desguarnecida. El castillo de Matagorda sería capaz de cubrir con sus fuegos cruzados la entrada y salida de los navíos. El ingeniero Rojas llegó en 1607 con el propósito de levantarlos, pero murió antes de terminarlo. Juan Hurtado asumió la dirección de la obra cuando Cádiz se sintió amenazada por la flota holandesa. Hasta el 22 de Abril de 1810, el fuerte de Matagorda continuó en manos aliadas. 
+
+				El fuerte de San Luis estaba situado a orillas del caño del Trocadero. Aunque existiese con anterioridad, la reconstrucción del mismo se debió a un grupo de soldados franceses que estaban en Cádiz en 1706, a causa de la Alianza entre España y Francia durante la Guerra de Sucesión.  Se logró con su ubicación impedir que si algún barco había logrado entrar en el saco de la bahía continuara en su avance. La dificultad de este fuerte era lo bajo de sus lienzos o muralla y que al ser rectos y no curvos no resistía la fuerza del mar. La plaza de armas, las habitaciones y los almacenes eran tan bajos que en las grandes mareas quedaban anegados. El fuerte se convertía en una isla en la pleamar. 
+
+				Antes de que los franceses llegaran en 1810, los fuertes fueron destruidos intentando evitar que lo usaran para disparar a Cádiz. 
+			</string>
+        </element>
+		<element id = "ARTICLE_SANCTI_PETRI_DEFENSIVE_FRONT">
+            <string id = "NAME">Frente defensivo de Sancti Petri</string>
+            <string id = "BRIEF">Castillo de gran antiguedad y muy reforzado a lo largo de los siglos que sirvió como importante punto defensivo. </string>
+            <string id = "CONTENT">
+				El castillo de Sancti Petri fue construido sobre el islote de igual nombre y frente a la desembocadura del Caño también homónimo. 
+	
+				Ya de época fenicia (alrededor del año 1100 a.C.) hay referencias de que se levantaba en el Islote de Sancti Petri un gran templo dedicado al culto de Melkart. Y sobre sus restos se levantaría el templo romano de Hércules. Ya durante la época romana persistió el esplendor de este templo, aunque comenzó su decadencia en el siglo IV, perdiendo su pasada grandeza por completo durante el dominio visigodo. A partir de ese momento comenzó a sufrir ataques y destrucciones, la acción del mar, la explotación de canteras de piedra ostionera y sucesivas ocupaciones que provocaron prácticamente la desaparición del santuario.
+	
+				Durante el siglo XIII se usa como faro con una pequeña fortificación. Durante los siguientes 5 siglos se va reforzando la fortaleza, conviertiendose en castillo y añadiendo recintos, frentes abaluartados, torres, muros... La fortaleza alcanza su estructura definitiva entre el siglo XVIII y el XIX.
+	
+				Esta estructura es la que presenta el castillo durante el asedio de las tropas napoleónicas a las Islas Gaditanas de 1810-1812, sirviendo como baluarte defensivo y contra los ataques de piratas, poco antes de ser duramente bombardeado por las tropas francesas durante la Guerra de la Independencia. Entonces disponía de veintiocho piezas de artillería por lo que, apoyado desde tierra firme por las baterías apostadas en la cercana Punta del Boquerón, constituía un bastión casi irreductible.
+			</string>
+        </element>
+    </group>
+</locatedtexts>

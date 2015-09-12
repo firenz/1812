@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 421186}
   - 60: {fileID: 6086360}
   - 212: {fileID: 21218206}
-  - 114: {fileID: 11476798}
+  - 114: {fileID: 11471852}
   m_Layer: 10
   m_Name: Skull
   m_TagString: InteractivePoint
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.9828186, y: -72.4311447, z: 0}
+  m_LocalPosition: {x: 37, y: -72.4000015, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 421186}
@@ -80,7 +80,7 @@ PolygonCollider2D:
       - {x: -1.31162262, y: -6.10638428}
       - {x: -7.47841644, y: -5.70516968}
       - {x: -9.20533371, y: 1.04328918}
---- !u!114 &11476798
+--- !u!114 &11471852
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,11 +88,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 165020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7960df3f504859a43a5703446b9c7406, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dc3bbc08ec5e984e8eaee4ee00674a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: SCENE_PROFESSOROFFICE
   nameID: OBJECT_SKULL
+  minDistance: 1.5
 --- !u!212 &21218206
 SpriteRenderer:
   m_ObjectHideFlags: 1

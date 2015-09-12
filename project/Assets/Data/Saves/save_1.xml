@@ -1,0 +1,14 @@
+<GameFile>
+  <LastSessionData lastPlayableLevel="Corridor" lastTimePlayed="26/08/2015 00:37" />
+  <CutScenesData isPlayedIntroCorridorPart="True" isPlayedIntroProfessorOfficePart="True" isPlayedCutsceneAfterPickedFlagsFromFloor="False" isPlayedCutsceneAfterMapPuzzleIsSolved="True" isPlayedCutsceneLibrarianMetAfterPuzzleIsSolved="True" />
+  <LevelCorridorData timesTrashBinWasExaminated="0" isDialogueChoiceMadeWithLibrarianFinished="False" isShadowToWCFinishedAppearing="False">
+    <playerPosition X="59.83804" Y="63.29247" />
+  </LevelCorridorData>
+  <LevelProfessorOfficeData isWindowOpened="False" isLittleFlagsFellIntoFloor="True" isLittleFlagsPickedFromFloor="True">
+    <playerPosition X="229.1627" Y="71.27391" />
+  </LevelProfessorOfficeData>
+  <LevelMapPuzzleData isMapPuzzleSolved="True" />
+  <Inventory>
+    <item Name="FailedTestInventory" />
+  </Inventory>
+</GameFile>

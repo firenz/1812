@@ -1,12 +1,13 @@
 <GameFile>
-  <LastSessionData lastPlayableLevel="DemoScene_00" lastTimePlayed="04/06/2015 20:39" />
-  <CutScenesData isPlayedIntro="True" />
-  <LevelCorridorData timesTrashBinWasExaminated="0">
-    <playerPosition X="42.81957" Y="64.15697" />
+  <LastSessionData lastPlayableLevel="ProfessorOffice" lastTimePlayed="27/08/2015 18:09" />
+  <CutScenesData isPlayedIntroCorridorPart="True" isPlayedIntroProfessorOfficePart="True" isPlayedCutsceneAfterPickedFlagsFromFloor="False" isPlayedCutsceneAfterMapPuzzleIsSolved="False" isPlayedCutsceneLibrarianMetAfterPuzzleIsSolved="False" />
+  <LevelCorridorData timesTrashBinWasExaminated="0" isDialogueChoiceMadeWithLibrarianFinished="False">
+    <playerPosition X="59.83804" Y="63.29247" />
   </LevelCorridorData>
-  <LevelProfessorOfficeData isWindowOpened="False" isLittleFlagsPickedFromFloor="False">
-    <playerPosition X="197.3725" Y="73.87845" />
+  <LevelProfessorOfficeData isWindowOpened="False" isLittleFlagsFellIntoFloor="True" isLittleFlagsPickedFromFloor="False">
+    <playerPosition X="163.7832" Y="78.48508" />
   </LevelProfessorOfficeData>
+  <LevelMapPuzzleData isMapPuzzleSolved="False" />
   <Inventory>
     <item Name="FailedTestInventory" />
   </Inventory>

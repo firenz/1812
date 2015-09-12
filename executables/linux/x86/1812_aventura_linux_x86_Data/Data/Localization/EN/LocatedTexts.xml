@@ -1,0 +1,746 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<locatedtexts>
+    <meta>
+        <GameName>1812: The adventure</GameName>
+        <Author>Alicia Guardeño</Author>
+        <Traslation>Alicia Guardeño</Traslation>
+        <Language>English</Language>
+        <LanguageID>EN</LanguageID>
+        <Version>version 0.1</Version>
+        <Web>1812laaventura.wordpress.com</Web>
+        <License>GPL v3</License>
+    </meta>
+    <group id = "LIST_PLAYABLE_SCENES">
+        <element id = "PROFESSOR_OFFICE">
+            <string id = "NAME">Professor's office</string>
+        </element>
+        <element id = "CORRIDOR">
+            <string id = "NAME">Corridor</string>
+        </element>
+    </group>
+	<group id = "INVENTORY">
+		<element id = "FAILEDTEST">
+            <string id = "NAME">Failed test</string>
+			<string id = "DESCRIPTION">
+				Bloody 4.9-...
+			</string>
+		</element>
+		<element id = "LITTLEFLAGS">
+            <string id = "NAME">Weird thingies</string>
+			<string id = "DESCRIPTION">
+				On account of the wind, some tacks with little flags attached on them using tape have fallen
+				It's amazing that the tape has resisted but not the tacks
+			</string>
+		</element>
+	</group>
+    <group id = "GUI">
+        <element id = "DEFAULT">
+        	<string id="NAME">Default name</string> 
+        	<string id="DESCRIPTION">Default description</string> 
+        	<string id ="INTERACTION">Default interaction</string>
+            <string id = "NOTHING_OF_INTEREST">
+                Nope. Nothing of interest here
+            </string>
+            <string id = "FULL_INVENTORY">
+                Can't pick this item
+                My pocket is full
+            </string>
+            <string id = "USE_IN_DISPLAYNAME">
+                Use
+            </string>
+            <string id = "WITH_IN_DISPLAYNAME">
+                with
+            </string>
+        </element>
+    </group>
+	<group id = "SCENE_CORRIDOR">
+        <element id = "OBJECT_DOOR">
+            <string id = "NAME">Office's door</string>
+            <string id = "DESCRIPTION">
+                Just a door with an 'A' sign
+            </string>
+            <string id = "INTERACTION">
+                Let's try warping through doors				
+            </string>
+        </element>
+        <element id = "OBJECT_FAKEDOOR">
+            <string id = "NAME">Fake door</string>
+            <string id = "DESCRIPTION">
+                It's just part of the props
+            </string>
+            <string id = "INTERACTION">
+                Can't open it, 
+				it's been painted directly on the wall!
+            </string>
+        </element>
+        <element id = "OBJECT_TRASHBIN">
+            <string id = "NAME">Paper bin</string>
+            <string id = "DESCRIPTION">
+                Just a paper bin with some trash inside
+            </string>
+            <string id = "INTERACTION_1">
+                I see lots of Kleenex filled with tears of broken dreams...
+            </string>
+            <string id = "INTERACTION_2">                
+				Hey!
+				There seems to be some torn to pieces exams 
+				on the bottom of it
+                ...
+                ...I don't even know why did I checked it again
+            </string>
+        </element>
+        <element id = "OBJECT_PLANT">
+            <string id = "NAME">Plant</string>
+            <string id = "DESCRIPTION">
+                A withered plant
+            </string>
+            <string id = "INTERACTION">
+                The plant has surely empathized with all the students who came here, sharing their sorrow
+				That, or its watering responsible has been slacking off lately
+            </string>
+        </element>
+		<element id = "OBJECT_SHADOW">
+            <string id = "NAME">To restroom</string>
+            <string id = "DESCRIPTION">
+                A plain and normal restroom
+				I don't think it's needed a more detailed description of what a restroom is, right?                
+            </string>
+            <string id = "INTERACTION">                
+                Well, as long as I don't catch professor dropping a load...
+				Allons-y!
+            </string>
+        </element>
+    </group>
+	<group id = "SCENE_PROFESSOROFFICE">		
+        <element id = "OBJECT_SKULL">
+            <string id = "NAME">Skull</string>
+            <string id = "DESCRIPTION">
+                To pass or not to pass, 
+				that is the question
+            </string>
+            <string id = "INTERACTION">
+                To pass or not to pass, 
+				that is the question
+            </string>
+        </element>
+		<element id = "OBJECT_MAP">
+            <string id = "NAME">Map</string>
+            <string id = "DESCRIPTION">
+				It's a map of Cadiz with tacks
+				that have little flags attached on them.
+				I guess it's used to teach 
+				the students that come to his office
+            </string>
+            <string id = "INTERACTION_1">				
+				Oh man... I should fix this map soon or else...
+				At least the map still has the holes that the tacks left on it,
+				which will ease my task.
+				In the worst case I can always glance at the books of the shelf to check tips...
+            </string>
+            <string id = "INTERACTION_2">                
+				Well, almost perfect
+				No one could notice that the holes now are slightly bigger
+            </string>
+            <string id = "INTERACTION_LITTLEFLAGS">
+				Alright, with this in my inventory
+				we can now start fixing it...
+				Luckily, the map still has the holes that the tacks left on it,
+				so we just have to put the right ones on the holes 
+				and that's it
+            </string>
+            <string id = "INTERACTION_MAPPUZZLE_FINISHED">
+            </string>
+        </element>
+		<element id = "OBJECT_LITTLEFLAGS">
+            <string id = "NAME">Tacks with flags</string>
+			<string id = "DESCRIPTION">
+				They are some tacks with little flags attached on them using tape 
+				It's amazing that the tape has resisted the wind
+				but not the tacks
+			</string>
+			<string id = "INTERACTION">
+				We get it, 
+				we put in on the board again
+				and like nothing happened
+			</string>
+			<string id = "PICKED">
+				Okay, once it's in my sweater's pocket
+				I just need to pick it from my inventory
+				and click the map with them
+				Not too difficult, right?
+			</string>
+		</element>
+		<element id = "OBJECT_DOOR">
+            <string id = "NAME">Door</string>
+			<string id = "DESCRIPTION">
+				It's a door
+			</string>
+			<string id = "INTERACTION">
+				H4CK3R M4G1C!
+				Please help me getting out of here!
+			</string>
+        </element>
+		<element id = "OBJECT_WINDOW">
+            <string id = "NAME">Window</string>
+			<string id = "DESCRIPTION">
+				It's just a window
+			</string>
+			<string id = "INTERACTION_CLOSED">
+				I'm gonna open it
+			</string>
+			<string id = "INTERACTION_OPENED">
+				I'm gonna close it
+			</string>
+            <string id = "INTERACTION_CLOSED_FAILEDTEST">
+				As much as I'd love to get rid of it, 
+				I'll surely never pass without it				
+			</string>
+			<string id = "INTERACTION_OPENED_FAILEDTEST">
+				...
+				My test just flew out through the window...
+				Fuck...
+				How should I continue now the game? 
+				I've just broken it!
+			</string>
+		</element>
+		<element id = "OBJECT_BOOK_1">
+            <string id = "NAME">Book about Spanish batteries</string>
+            <string id = "DESCRIPTION">
+                The title of the book is
+                SPANISH BATTERIES
+            </string>
+            <string id = "INTERACTION">
+                SPANISH BATTERIES
+				Three batteries were placed between the Spanish fort of Puntales' castle and the city of Cadiz as a defence.                
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_2">
+            <string id = "NAME">Book about Spanish forts</string>
+            <string id = "DESCRIPTION">
+                The title of the book is
+                SPANISH FORTS
+            </string>
+            <string id = "INTERACTION">
+                SPANISH FORTS
+				Last-line defences of the city were its forts, from which the most famous were 
+                the Puerta Tierra's bastion, at south;
+				the San Elena's bastion, at east;
+				the San Catalina's stronghold, at north;
+				and ....................., at west;
+				This last one is smudged
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_3">
+            <string id = "NAME">Book about Zuazo's bridge</string>
+            <string id = "DESCRIPTION">
+                The title of the book is
+                ZUAZO'S BRIDGE
+            </string>
+            <string id = "INTERACTION">
+				ZUAZO'S BRIDGE
+				Bridge across Sancti Petri's channel,
+				placed between Marismas and Caños,
+				that was the only way to enter San Fernando by land.
+				It was blown up with the purpose
+				of preventing French troops
+				from using it.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_4">
+            <string id = "NAME">Book about French battalions</string>
+            <string id = "DESCRIPTION">
+                The title of the book is
+                FRENCH BATTALIONS
+            </string>
+            <string id = "INTERACTION">
+                FRENCH BATTALIONS
+				During the siege, French battalions 
+				continuously attacked San Fernando
+				in order to weaken them.
+                The most noteworthy were
+				the one placed north-west of Chiclana
+				next to several French encampments and batteries,
+				and another two placed south-east of Puerto Real.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_5">
+            <string id = "NAME">Book about French Forts</string>
+            <string id = "DESCRIPTION">
+				The title of the book is
+                FRENCH FORTS
+            </string>
+            <string id = "INTERACTION">
+                FRENCH FORTS
+				The French held San Catalina's castle,
+				which was used as a stronghold to guard the access to the bay.
+				Besides, they used Matagorda and San Luis' castles,
+				which were placed in the closest spit of land of Cadiz
+				(western part of La Cabezuela) conquered by French troops,
+				to siege the city and watch the ship's path to the bay.
+            </string>
+        </element>
+        <element id = "OBJECT_BOOK_6">
+            <string id = "NAME">Book about French encampments</string>
+            <string id = "DESCRIPTION">
+				The title of the book is
+                FRENCH ENCAMPMENTS
+            </string>
+            <string id = "INTERACTION">
+				FRENCH ENCAMPMENTS  
+				In order to maintain the siege during years
+				French were forced to place several encampments in the nearby villages.
+				Two of the main ones were placed east of Puerto Real,
+				along with 3 French batteries;
+				A third encampment was placed next to Matagorda's castle.
+            </string>
+        </element>
+	</group>    
+	<group id = "SCENE_MAP_PUZZLE">
+        <element id = "RETURN_TO_BUTTON">
+            <string id = "NAME">Go back to the office</string>
+        </element>
+        <element id = "MAP_INFO">
+            <string id = "BAY">Bay</string>
+            <string id = "MARSHLAND">River and marshlands</string>
+            <string id = "BRIDGE">Front's bridge</string>
+            <string id = "SPANISH_FORTIFICATION">Spanish fort</string>
+            <string id = "SPANISH_BATTERY">Spanish Battery</string>
+            <string id = "FRENCH_FORTIFICATION">French fort</string>
+            <string id = "FRENCH_BATTERY">French battery</string>
+            <string id = "FRENCH_ADVANCE">French battalion</string>
+            <string id = "FRENCH_CAMP">French encampment</string>
+        </element>
+    </group>
+    <group id = "NPC">
+        <element id = "LIBRARIAN">
+            <string id = "NAME">Old woman</string>
+            <string id = "DESCRIPTION">
+				Old woman with severe symptoms of falling-glasses
+				That, and hard coughs
+            </string>
+            <string id = "NPC_IS_BUSY">
+				Couldn't you just wait a bit? She's heavily coughing at the moment                
+            </string>
+            <string id = "COUGH">
+                *cough* *cough*
+            </string>
+			<string id = "PLAYER_CONVERSATION_CHOICE_NOT_FINISH">
+                Ok, where were we?
+            </string>
+            <string id = "PLAYER_CONVERSATION_FAILEDTEST_LOST">
+                Miss,
+                Haven't you by any chance seen a test
+				falling out from a window, 
+				right?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_FAILEDTEST_LOST">
+                ...Do you even fathom how terribly improbable is that?
+                ...
+                ...
+                ...
+                Well yes, I found a test miserably failed with a 4.9
+				Here you go
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_0">
+                Oh well,
+				wouldn't you mind
+				helping me to organize
+				a BIG pile of newspapers,
+				right?
+            </string>
+			<string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_1">
+                Do you take me for a fool, boy?
+				You have feet!
+				And ghosts of this school
+				have none!
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_1">
+                Well I...
+				I...
+                ...
+                Alright, I admit it.
+				I'm a student who just checked if the professor was in his office,
+				but turns out he's not there...
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_1">
+                What are we gonna do.
+				Students nowadays are just...
+                ...
+				Why don't you check male restroom?
+				He's bound to be there, having prostate problems as he has
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_2">
+                ....
+                ....So...
+                ...it's no mystery where he is?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_2">
+                No
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_3">
+                ....
+                ....Really...
+                There's not even a slight conspiracy about it?
+            </string>
+			<string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_3">
+                Nope
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_4">
+                ....
+                Still....
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_4">
+				Listen, people going missing for just 10 minutes is no basis 
+				for thinking there is a worldwide conspiracy. 
+				Conspiracy derives from two or more people planning to do a 
+				particular thing which usually is secret and illegal,
+				not from failing finding someone within the last hour.
+				I mean, if went 'round saying lentil farmers have a scheme
+				on old people just because a weak bladder clerk was missing,
+				they'd put me away!
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_5">
+                ....
+                Do you know where the restrooms are?
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_5">
+                Go left
+            </string>
+            <string id = "PLAYER_CONVERSATION_RESULT_CHOICE_FINAL_6">
+                Thanks
+            </string>
+            <string id = "LIBRARIAN_CONVERSATION_RESULT_CHOICE_FINAL_6">
+                The OTHER left
+            </string>
+            <string id = "PLAYER_DEFAULT_CONVERSATION">
+                Sorry miss...
+                Could you please remind me where the male restrooms are?
+			</string>
+            <string id = "LIBRARIAN_DEFAULT_CONVERSATION">
+				GO.
+				LEFT.
+				Look, you the game even put it a slight shadow
+				so you could click over it.
+				My, my... nowadays gamers...
+				They don't even know how to search the stage as back then.
+            </string>
+        </element>
+    </group>    
+    <group id = "MAIN_MENU">
+	    <element id = "NEW_GAME">
+            <string id = "NAME">New game</string>
+        </element>		
+        <element id = "LOAD_GAME">
+            <string id = "NAME">Load game</string>
+            <string id = "LOAD">Load</string>
+            <string id = "DELETE">Delete</string>
+        </element>
+        <element id = "EXIT_GAME">
+            <string id = "NAME">Quit the game</string>
+        </element>
+        <element id = "CREDITS">
+            <string id = "NAME">Credits</string>
+            <string id = "LEAD_LABEL">Lead leader and original concept</string>
+            <string id = "PROGRAMMER_LABEL">Programming</string>
+            <string id = "GAME_DESIGN_LABEL">Design</string>
+            <string id = "SCRIPT_LABEL">Script</string>
+            <string id = "GRAPHICS_LABEL">Graphics</string>
+            <string id = "MUSIC_LABEL">Music and SFX</string>
+            <string id = "MANY_THANKS">...and many thanks to...</string>
+        </element>
+    </group>  
+    <group id = "OPTIONS_MENU">
+        <element id = "MODAL_WINDOW">
+            <string id = "YES_BUTTON">Yes</string>
+            <string id = "NO_BUTTON">No</string>
+            <string id = "CLOSE_GAME">Quit the game?</string>
+            <string id = "OVERWRITE_GAME">Overwrite this game?</string>
+            <string id = "SAVE_GAME">Save game?</string>
+            <string id = "LOAD_GAME">Load the game?</string>
+            <string id = "DELETE_GAME">Delete game?</string>
+            <string id = "WARP_LEVEL">Go to this destination?</string>
+        </element>
+        <element id = "EXIT_GAME">
+            <string id = "NAME">Exit</string>
+        </element>
+        <element id = "SETTINGS">
+            <string id = "NAME">Settings</string>
+            <string id = "GRAPHIC_SETTINGS_LABEL">Graphic settings</string>
+            <string id = "FULLSCREEN_TOGGLE">Toggle full screen</string>
+            <string id = "CHANGE_RESOLUTION_BUTTON">Change resolution</string>
+            <string id = "AUDIO_SETTINGS_LABEL">Audio settings</string>
+            <string id = "MUSIC_LABEL">Music</string>
+            <string id = "SFX_LABEL">SFX</string>
+            <string id = "LANGUAGE_SETTINGS_LABEL">Language settings</string>
+            <string id = "CHANGE_LANGUAGE_BUTTON">Change language</string>			
+            <string id = "LANGUAGE_PANEL_LABEL">Language</string>
+            <string id = "RETURN_SETTINGS_BUTTON">Go back</string>
+        </element>
+        <element id = "MAPS">
+            <string id = "NAME">Map</string>
+            <string id = "PROFESSOR_OFFICE_LOCATION">Professor Office</string>
+            <string id = "CORRIDOR_LOCATION">Corridor</string>
+        </element>
+        <element id = "GADIPEDIA">
+            <string id = "NAME">Gadipedia</string>
+            <string id = "SYNOPSIS_LABEL">Search engine of articles related 1812 Cadiz's history, lore and facts</string>
+            <string id = "INPUT_FIELD">Insert text here</string>
+            <string id = "SEARCH_BUTTON">Search</string>
+            <string id = "SEARCHING_LABEL">Searching...</string>
+            <string id = "RESULTS_LABEL">Results</string>
+            <string id = "NO_RESULTS_LABEL">No result for your search query</string>
+            <string id = "RETURN_TO_BUTTON">Go back</string>
+        </element>
+        <element id = "JOURNAL">
+            <string id = "NAME">Notes</string>
+            <string id = "ENTRY_1">"Hello!"</string>
+            <string id = "ENTRY_2">"I've failed again..."</string>
+			<string id = "ENTRY_3">"Just my luck"</string>
+            <string id = "ENTRY_1_DESC">
+				Hello!
+				I'm the classic and generic entry we put in text processors :D
+				
+				For instance, to remove this entry, just click it again!
+			</string>
+			<string id = "ENTRY_2_DESC">
+				I've failed again, and just by a misserable 0.01!
+				
+				Inconceivable! I've studied for this test more than usual!
+				
+				More than half an hour indeed!
+			</string>
+			<string id = "ENTRY_3_DESC">
+				Goddammit! Murphy's law at its best!
+				
+				All map's tacks have fallen. I'll be in big trouble if I get caught in this situation. 
+				And I don't remember the right place of each one...
+				
+				Maybe I could check the books of the shelf,
+				they might have some useful information that will help me placing the flags...
+			</string>            
+        </element>
+        <element id = "SAVED_GAMES">
+            <string id = "NAME">S. Games</string>
+            <string id = "GAME_SLOTS_LABEL">Game slots</string>
+            <string id = "EMPTY_SLOT">Empty slot</string>
+            <string id = "LAST_PLACE">Place</string>
+            <string id = "LAST_TIME">Time</string>
+            <string id = "SAVE_GAME">Save</string>
+            <string id = "LOAD_GAME">Load</string>
+            <string id = "DELETE_GAME">Delete</string>
+        </element>
+        <element id = "RETURN_TO">
+            <string id = "RETURN_MENU">Exit to main menu</string>
+            <string id = "RETURN_GAME">Resume game</string>
+        </element>
+    </group>
+	<group id = "CUTSCENES">
+        <element id = "CUTSCENE_1">
+            <string id = "PLAYER_DIALOGUE_1">
+                ...
+                How could this happen?!
+                I failed the test!
+                AGAIN!
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                And this time with a 4.9...
+                And this time I actually studied
+                I swear!
+            </string>
+            <string id = "PLAYER_DIALOGUE_3">
+                Well...
+                We'll have to try it...
+                LET' GET THIS BLOODY 0.1!
+                Next stop: professor's office....
+            </string>
+            <string id = "PLAYER_DIALOGUE_4">
+                .....uh?
+                ...
+                Hello?
+                Someone there?
+                Oh, the door looks open...
+            </string>
+        </element>
+        <element id = "CUTSCENE_2">
+            <string id = "PLAYER_DIALOGUE_1">
+                It seems nobody's here.
+                And he didn't close the door?
+                Some people are just asking for it...
+				...In fact, now I could use his computer and
+				change my test result...
+				But with all this heat, I don't really feel like it...
+				Meh, whatever.
+				I'll wait...
+                ...
+                ...
+                ...
+				If I have to wait, I'd rather open the window. 
+				It's too hot in here.
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                SHIT!
+                The map's tacks have fallen off.
+				If professor comes here and sees this, he'll never let me pass the test!			                
+            </string>
+            <string id = "PLAYER_DIALOGUE_3">
+				Thank god most of them are still in place.
+				I'll just have to pick the ones that have fallen and place them back.
+            </string>
+        </element>
+        <element id = "CUTSCENE_3">
+            <string id = "PLAYER_DIALOGUE_1">
+                FINALLY!
+				You are no match for me, pathetic map.
+            </string>
+            <string id = "PLAYER_DIALOGUE_2">
+                Well, professor hasn't arrived yet.
+				Better leave now before messing up something else. I really want to past this test, you know?
+            </string>
+        </element>
+        <element id = "CUTSCENE_4">
+            <string id = "LIBRARIAN_DIALOGUE_1">
+                Uh?
+                Who are you?
+                What are you doing here?
+            </string>
+            <string id = "PLAYER_DIALOGUE_1">
+                Oops!
+                Well, you see, the thing is...
+            </string>
+        </element>
+        <element id = "CUTSCENE_ENDING">
+            <string id = "THE_END">FIN</string>
+        </element>
+    </group>
+	<group id = "CHOICES">
+        <element id = "LIBRARIAN_CONVERSATION_CHOICE_1">
+            <string id = "CHOICE_0">I'm professor's helper, I came here to make sure nobody sneaks in his office.</string>
+            <string id = "CHOICE_1">I'm just the ghost of one of those students who got lost in the school and never made it out.</string>
+            <string id = "CHOICE_2">Hold it one second, I'm still making up something to say.</string>
+        </element>
+    </group>
+    <group id = "GADIPEDIA_ARTICLES">
+        <element id = "KEYWORDS">
+            <string id = "CRISTOBAL">cristobal</string>
+            <string id = "ROJAS">rojas</string>
+            <string id = "OFENSIVE">ofensive</string>
+            <string id = "STRONGHOLD">stronghold</string>
+            <string id = "MATAGORDA">matagorda</string>
+            <string id = "LUIS">luis</string>
+            <string id = "SANCTI">sancti</string>
+            <string id = "PETRI">petri</string>
+            <string id = "FRONT">front</string>
+            <string id = "DEFENSIVE">defensive</string>
+            <string id = "BRIDGE">bridge</string>
+            <string id = "ZUAZO">zuazo</string>
+            <string id = "COMBAT">combat</string>
+            <string id = "BATTLE">battle</string>
+            <string id = "ASSAULT">assault</string>
+            <string id = "BATTERY">battery</string>
+            <string id = "SAINT">saint</string>
+            <string id = "FERDINAND">ferdinand</string>
+            <string id = "SEBASTIAN">sebastian</string>
+            <string id = "CATALINA">catalina</string>
+            <string id = "CANDELARIA">candelaria</string>
+            <string id = "ISLAND">island</string>
+            <string id = "ISLET">islet</string>
+            <string id = "COVE">cove</string>
+            <string id = "LION">lion</string>
+            <string id = "CADIZ">cadiz</string>
+            <string id = "FRONT">front</string>
+            <string id = "SIEGE">siege</string>
+            <string id = "CASTLE">castle</string>
+            <string id = "BASTION">bastion</string>
+            <string id = "DEFENCE">defence</string>
+            <string id = "BAY">bay</string>
+            <string id = "ARTILLERY">artillery</string>
+            <string id = "LIGHTHOUSE">lighthouse</string>
+            <string id = "SACKING">sacking</string>
+            <string id = "ENGLISH">english</string>
+            <string id = "DUTCH">dutch</string>
+            <string id = "FRENCH">french</string>
+            <string id = "PRISON">prison</string>
+            <string id = "FORTIFICATION">fortification</string>
+            <string id = "CHAPEL">chapel</string>
+        </element>
+		<element id = "ARTICLE_TEMPLATE">
+            <string id = "NAME"></string>
+            <string id = "BRIEF"></string>
+            <string id = "CONTENT"></string>
+        </element>		
+        <element id = "ARTICLE_ZUAZO_BRIDGE">
+            <string id = "NAME">Zuazo's bridge</string>
+            <string id = "BRIEF">Historic bridge that connected Isla de Leon with the rest of the peninsula.</string>
+            <string id = "CONTENT">                
+				Zuazo's bridge (or Suazo's bridge) is the bridge than connected San Fernando (back then called Isla de Leon) with the rest of the peninsula, excepting Caño de Sancti Petri's pass.
+                
+				During the War of Independence, Zuazo's bridge was a key structure to prevent the advance of French's army, which sieged Isla de Leon using 20,000 men during 2 yeas and a half. The bridge had the most numerous batteries which defended the last unconquered place of the peninsula. In 1812 it blown up to definitively prevent French advance, which eventually retreated due the inability of crossing the bridge.
+            </string>
+        </element>
+        <element id = "ARTICLE_SAINT_SEBASTIAN_CASTLE">
+            <string id = "NAME">San Sebastian castle</string>
+            <string id = "BRIEF">Castle placed on an islet in the outskirts of Cadiz which was used as defence, lighthouse and watchtower of the bay.</string>
+            <string id = "CONTENT">                
+				Bastion placed in the outskirts of Cadiz City, at the far side of La Caleta beach, on a small islet which could only be accessed during low tides. From there all ships entering the bay could be watched.
+
+				In 1457, a Venetian ship affected by the plague sought shelter in the islet and rebuilt the tower along with a shrine to San Sebastian.
+
+				Afterwards the Anglo-Dutch ransacking in 1596, it was decided to use the islet as a castle, fully rebuilding the tower in 1613 and providing it artillery while being also used as a lighthouse.
+                
+				In 1706, a construction of the castle to defend the north side of the city was begun.
+
+                In 1739, the castle had 17 cannons that controlled entrance of La Caleta and the south bay access.
+            </string>
+        </element>
+        <element id = "ARTICLE_SAINT_CATALINA_CASTLE">
+            <string id = "NAME">Castle of San Catalina</string>
+            <string id = "BRIEF">Main defensive front of the city.</string>
+            <string id = "CONTENT">
+				San Catalina's castle is one of Cadiz's stronghold placed on the northernmost end of La Caleta beach, which is offshore thanks to its breakwaters.
+				
+				It was constructed in April 1598 by the engineer Cristobal de Rojas, because of the tragic ransacking two years ago by the Anglo-Dutch troops. This was possible due the poor defences that the city had back then, so Felipe II ordered to reinforce Cadiz, and thus Cristobal de Rojas' project initiated.
+				
+                A chapel and a sacristy was build during Carlos II reign in 1693. That chapel was consecrated to San Catalina de Alejandria and to the Immaculate Conception.
+
+				Charles III transformed it in a military prison for distinguished personalities in 1769.                
+            </string>
+        </element>
+        <element id = "ARTICLE_CANDELARIA_BASTION">
+            <string id = "NAME">Candelaria bastion</string>
+            <string id = "BRIEF">Rectangular construction of 1672 on an elevated point. Its cannons controlled bay's entrances and exists of ships.</string>
+            <string id = "CONTENT">
+				Candelaria bastion was a stronghold that was part of the maritime defence front of Cadiz's bay and watched the north-eastern front of the city.
+				
+				It was constructed in 1672 at the initiative of governor Diego Caballero de Illescas to watch the natural entrance of Cadiz's dock, take advance of its elevated point position. It was protected by a hard wall which served as breakwater, and with it cannons dominated natural channel's access to the docks.
+				
+				It served as barracks, armourers and army's dovecote.
+            </string>
+		</element>
+		<element id = "ARTICLE_BAY_OFFENSIVE_FRONT">
+            <string id = "NAME">Bay's offensive front</string>
+            <string id = "BRIEF">Offensive front compounded by the castles of Matagorda and San Luis.</string>
+            <string id = "CONTENT">
+				In May of 1597, Felipe II ordered to build a stronghold in the narrow part of the bay as, until then, the bay was completely unguarded Matagorda's castle would be able to cross-fire bay's entrances and exists of ships. Until April of 1810, Matagorda's stronghold remained in Spanish possession.
+				
+				San Luis' stronghold was placed at the shores of Trocadero. Despite its previous existence, it was rebuilt thanks to some French soldiers in 1706, thanks to Spain and France's alliance during the War of the Spanish Succession. Its emplacement would allow it to hinder the advance of ships that somehow managed to enter the bay. The bad thing about it was its low and straight wall, which eventually couldn't withstand the might of the sea. The central square, rooms and storages ended up flooded during high tides because of its lowness, which also turned the stronghold in an island.
+				
+				Engineer Cristobal de Rojas started this project during 1607, but died before finish them. Juan Hurtado resumed his work when Cadiz was	threatened by the Dutch fleet.
+				
+				Before the arrival of French troops in 1810, both strongholds were destroyed in order to prevent being used to attack Cadiz.
+			</string>
+        </element>
+		<element id = "ARTICLE_SANCTI_PETRI_DEFENSIVE_FRONT">
+            <string id = "NAME">Sancti Petri's defensive front</string>
+            <string id = "BRIEF">Ancient and reinforced castle built along centuries as a key defensive structure.</string>
+            <string id = "CONTENT">
+				Sancti Petri's castle was built over an islet of the same name in front of el Caño's mouth.
+				
+				Historical references state that around 1100 b.c. a great temple was built on Sancti Petri's islet to worship Melkart. Later, a Roman temple to Hercules was build on its remains, which lasted until 4th century as it completely lost its greatness during Visigoth domain. From that moment it began disappearing due the attacks, its consecutive occupations, the motion of the sea and the working of quarries.
+	
+				During 13th century was used as a lighthouse and a small stronghold. During the five next centuries, the stronghold is converted into a castle and several facilities were built, as walls, towers, armoured forts... The structure reaches its final form sometime in-between 18th and 19th century.
+	
+				This final shape was the one shown during the Napoleonic siege of Cadiz's islands during 1810 and 1812 as a defensive bastion and against pirates incursions. It was heavily bombarded by French troops during the War of Independence. It had 28 artillery pieces, making it (supported by the nearby land batteries of Punta de Boqueron) an almost insurmountable bastion.
+			</string>
+        </element>	
+    </group>
+</locatedtexts>

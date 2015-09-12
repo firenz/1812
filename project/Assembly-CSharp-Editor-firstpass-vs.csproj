@@ -47,21 +47,31 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\Editor\Doxygen\DoxygenWindow.cs" />
-     <None Include="Assets\Data\Localization\EN\LocalizedTexts.xml" />
-     <None Include="Assets\Data\Saves\save_0.xml" />
+     <None Include="Assets\Data\Localization\EN\LocatedTexts.xml" />
      <None Include="Assets\Data\settings.xml" />
-     <None Include="Assets\Data\Saves\save_5.xml" />
-     <None Include="Assets\Resources\Data\Localization\ES\LocalizedTexts.xml" />
-     <None Include="Assets\Resources\Data\Saves\save_0.xml" />
-     <None Include="Assets\Resources\Data\Localization\EN\LocalizedTexts.xml" />
+     <None Include="Assets\Data\Localization\ES\LocatedTexts.xml" />
+     <None Include="Assets\Data\Saves\save_0.xml" />
+     <None Include="Assets\Data\Saves\save_1.xml" />
+     <None Include="Assets\Data\Saves\save_2.xml" />
      <None Include="Assets\Plugins\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
      <None Include="Assets\Plugins\Editor\Doxygen\ReadMe.txt" />
-     <None Include="Assets\Data\Localization\ES\LocalizedTexts.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data">
+ <HintPath>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Plugins/Mono.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient">
+ <HintPath>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Plugins/Mono.Data.SqliteClient.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

@@ -33,6 +33,8 @@ obj/
 *.user
 *.unityproj
 *.booproj
+*.cs~
+*.xml~
 
 # ============ #
 # OS generated #

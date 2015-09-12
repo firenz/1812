@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125.542702, y: 74.7525787, z: 1}
+  m_LocalPosition: {x: 125.5, y: 118.800003, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450992}
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.8750687, y: -10.2864914, z: 0}
+  m_LocalPosition: {x: 28.8999996, y: -57.2999992, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 450990}
@@ -71,10 +71,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 54.3983231, y: 76.4901581}
-      - {x: 54.3943863, y: -.546951294}
-      - {x: -1.54811859, y: -.412750244}
-      - {x: -2.32478333, y: 76.1883698}
+    - - {x: 53.8457794, y: 33.2099152}
+      - {x: 55.5012512, y: -45.0984039}
+      - {x: -1.54811859, y: -44.9641953}
+      - {x: -1.0355835, y: 33.2150726}
 --- !u!114 &11484686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,12 +86,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7960df3f504859a43a5703446b9c7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactivePosition: {x: 0, y: 0}
-  isInactive: 0
-  spriteWidth: 0
-  spriteHeight: 0
   groupID: SCENE_CORRIDOR
   nameID: OBJECT_FAKEDOOR
+  minDistance: 1.5
 --- !u!212 &21250992
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,10 +8,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestScenes/DemoScene.unity
   - enabled: 1
-    path: Assets/Scenes/GUI/MainMenu.unity
+    path: Assets/Scenes/Menus/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/TestScenes/DemoScene_01.unity
+    path: Assets/Scenes/Levels/Corridor.unity
   - enabled: 1
-    path: Assets/Scenes/TestScenes/DemoScene_00.unity
+    path: Assets/Scenes/Levels/ProfessorOffice.unity
   - enabled: 1
-    path: Assets/Scenes/TestScenes/DemoScene_02.unity
+    path: Assets/Scenes/Menus/OptionsMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/MapPuzzle.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Ending.unity
