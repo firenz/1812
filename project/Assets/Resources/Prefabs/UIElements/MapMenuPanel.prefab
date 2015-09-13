@@ -310,7 +310,7 @@ MonoBehaviour:
   localizedTextElementID: MAPS
   localizedTextStringID: CORRIDOR_LOCATION
   sfxOnClick: BlipSelect
-  warpSceneName: DemoScene_01
+  warpSceneName: Corridor
 --- !u!114 &11401022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,7 +624,7 @@ MonoBehaviour:
   localizedTextElementID: MAPS
   localizedTextStringID: PROFESSOR_OFFICE_LOCATION
   sfxOnClick: BlipSelect
-  warpSceneName: DemoScene_00
+  warpSceneName: ProfessorOffice
 --- !u!114 &11446538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .972549081, g: .988235354, b: .972549081, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11404630}
   m_HandleRect: {fileID: 22450988}
   m_Direction: 2
-  m_Value: .570962787
+  m_Value: .570962727
   m_Size: .275288343
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .972549081, g: .988235354, b: .972549081, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0

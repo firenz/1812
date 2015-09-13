@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .147058845, g: .147058845, b: .147058845, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .784313738, g: .784313738, b: .784313738, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .147058845, g: .147058845, b: .147058845, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .972549081, g: .988235354, b: .972549081, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: .552941203, b: .964705884, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -1722,7 +1722,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Enter text her
+  m_Text: Enter text here...
 --- !u!114 &11484616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .470588207, g: .470588207, b: .470588207, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab6f6c0c2428e1d40a6c8ffe9fe15065, type: 3}
+    m_Font: {fileID: 12800000, guid: bd2f3d9367ffde947b8fdb0c07deed6b, type: 3}
     m_FontSize: 9
     m_FontStyle: 0
     m_BestFit: 0

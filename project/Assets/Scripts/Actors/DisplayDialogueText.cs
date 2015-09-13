@@ -22,8 +22,8 @@ public class DisplayDialogueText : MonoBehaviour {
 		_canvas.worldCamera = Camera.main;
 		GameObject _actorDialoguePanel = _canvas.transform.FindChild("Panel").gameObject;
 		actorDialoguePanelImage = _actorDialoguePanel.GetComponent<Image>();
-		actorDialoguePanelImage.color = Color.clear;
 		defaultDialoguePanelColor = actorDialoguePanelImage.color;
+		actorDialoguePanelImage.color = Color.clear;
 		actorDialogueText = _actorDialoguePanel.transform.FindChild("ActorUIText").GetComponent<Text>();
 		actorDialogueText.text = "";
 		defaultTextColor = actorDialogueText.color;

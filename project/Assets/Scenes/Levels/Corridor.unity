@@ -166,7 +166,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 253c2dd44a324f348b940505c14b9550, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 22359692, guid: 253c2dd44a324f348b940505c14b9550, type: 2}
       propertyPath: m_Camera
@@ -198,7 +198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22445606, guid: 253c2dd44a324f348b940505c14b9550, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 25.5
+      value: 25.5737705
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253c2dd44a324f348b940505c14b9550, type: 2}
@@ -519,7 +519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469806, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 22359584, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_Camera
@@ -527,7 +527,7 @@ Prefab:
       objectReference: {fileID: 43423623}
     - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 81.5
+      value: 82.9508209
       objectReference: {fileID: 0}
     - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_SizeDelta.y
@@ -551,63 +551,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22462346, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 61.5
+      value: 62.9508209
       objectReference: {fileID: 0}
     - target: {fileID: 22462346, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 25.5
+      value: 25.5737705
       objectReference: {fileID: 0}
-    - target: {fileID: 469804, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 22462346, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22462346, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22452306, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11443566, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &686571416 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 192528, guid: 0ef06e61be839134b99d470c3db6b15d, type: 2}
-  m_PrefabInternal: {fileID: 686571415}
---- !u!114 &686571417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 686571416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5697aa1728e836141b12fb396e44f429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &729994314
 GameObject:
   m_ObjectHideFlags: 0
