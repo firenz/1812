@@ -1,0 +1,7 @@
+<map id="InteractiveElement.Start" name="InteractiveElement.Start">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="216,5,457,32"/>
+<area shape="rect" id="node4" href="$class_interactive_element.html#a4f3a2fcad48c6927ab3d162a7bed4831" title="InteractiveElement.Calculate\lSpriteWidth" alt="" coords="242,57,431,98"/>
+<area shape="rect" id="node5" href="$class_interactive_element.html#a330ae7f96a34043e4d4fab2ca6e329b9" title="InteractiveElement.Calculate\lSpriteHeight" alt="" coords="242,122,431,163"/>
+<area shape="rect" id="node6" href="$class_interactive_element.html#ae85bffaa680490e0b33cf82e78d24342" title="InteractiveElement.Initialize\lInformation" alt="" coords="245,187,428,229"/>
+<area shape="rect" id="node3" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="505,5,693,32"/>
+</map>

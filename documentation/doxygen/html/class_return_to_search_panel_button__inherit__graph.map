@@ -1,0 +1,3 @@
+<map id="ReturnToSearchPanelButton" name="ReturnToSearchPanelButton">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html" title="{UIGenericButton\n|# localizedTextGroupID\l# localizedTextElementID\l# localizedTextStringID\l# sfxOnClick\l# thisButton\l# buttonText\l|+ OnClick()\l+ OnMouseOver()\l+ OnMouseExit()\l+ EnableButton()\l+ DisableButton()\l# OnEnable()\l# OnDisable()\l# Start()\l# WaitForSFXAndExecuteClick\lAction()\l# ActionOnClick()\l# ChangeButtonTextLanguage()\l}" alt="" coords="5,131,211,443"/>
+</map>

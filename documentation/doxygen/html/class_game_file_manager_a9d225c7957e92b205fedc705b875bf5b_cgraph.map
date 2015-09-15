@@ -1,0 +1,5 @@
+<map id="GameFileManager.DeleteGameFile" name="GameFileManager.DeleteGameFile">
+<area shape="rect" id="node2" href="$class_file_manager.html#ab19e8cc2d9232dc1caa59e449743a073" title="FileManager.CheckDirectory" alt="" coords="279,5,465,32"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#a922bcc29e71bb55fbfbd911b3208cf2a" title="FileManager.CheckFile" alt="" coords="295,56,449,83"/>
+<area shape="rect" id="node4" href="$class_file_manager.html#afe85e69e75312b62ff786b260e62a433" title="FileManager.DeleteFile" alt="" coords="295,107,449,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GameSlotButton.Start" name="GameSlotButton.Start">
+<area shape="rect" id="node2" href="$class_game_slot_button.html#a7746872bf0f4c1f3d9a488bccfc181e0" title="GameSlotButton.Initialize" alt="" coords="204,5,375,32"/>
+<area shape="rect" id="node3" href="$class_game_slot_button.html#aaf4c8b5c3dd2cd216529acceb5e8c0e3" title="GameSlotButton.ClearSlot" alt="" coords="423,5,597,32"/>
+</map>

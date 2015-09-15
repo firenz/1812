@@ -1,0 +1,5 @@
+<map id="Player.Update" name="Player.Update">
+<area shape="rect" id="node2" href="$class_player.html#ac32bf3de9cc041af382ac405e27460ce" title="Player.AdditionalUpdateInformation" alt="" coords="157,31,384,57"/>
+<area shape="rect" id="node3" href="$class_player.html#af28754d2f8b159a5d7bd2cfe42a74853" title="Player.IsIdle" alt="" coords="482,5,577,32"/>
+<area shape="rect" id="node4" href="$class_cut_scenes_manager.html#aba449ad310f0656faef5bab1fb4abbb5" title="CutScenesManager.IsPlaying" alt="" coords="432,56,627,83"/>
+</map>

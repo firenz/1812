@@ -1,0 +1,4 @@
+<map id="MenuButton.DisableMenu" name="MenuButton.DisableMenu">
+<area shape="rect" id="node2" href="$class_menu_button.html#a34af62f50cf73082fd13a4dd348ced9e" title="MenuButton.OnEnable" alt="" coords="225,5,379,32"/>
+<area shape="rect" id="node3" href="$class_menu_button.html#a649874854388a9ddd5a1eeae3f57122e" title="MenuButton.OnDisable" alt="" coords="224,56,380,83"/>
+</map>

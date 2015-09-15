@@ -1,0 +1,8 @@
+<map id="PlaySFX" name="PlaySFX">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#a3d5c6f40659aa6c4e6bf168bfc8bea05" title="UIGenericButton.OnClick" alt="" coords="149,5,317,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_slider.html#a5a53170d2156f4486e610af116ca2aa7" title="UIGenericSlider.OnValueChange" alt="" coords="128,56,339,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_toggle.html#a3d5c6f40659aa6c4e6bf168bfc8bea05" title="UIGenericToggle.OnClick" alt="" coords="149,107,318,133"/>
+<area shape="rect" id="node5" href="$class_corridor_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="151,158,316,199"/>
+<area shape="rect" id="node6" href="$class_shadow_to_w_c.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="ShadowToWC.WaitForLeftClick\lAction" alt="" coords="131,223,335,265"/>
+<area shape="rect" id="node7" href="$class_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Door.WaitForLeftClickAction" alt="" coords="140,289,327,316"/>
+</map>

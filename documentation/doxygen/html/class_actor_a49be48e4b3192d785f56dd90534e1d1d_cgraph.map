@@ -1,0 +1,7 @@
+<map id="GoTo" name="GoTo">
+<area shape="rect" id="node2" href="$class_actor.html#aaaf47d816f43b140d7f799f41355747d" title="WaitForGoToCompleted" alt="" coords="108,31,269,57"/>
+<area shape="rect" id="node3" href="$class_actor.html#a51e004b2f1ecda6989dc7e84a17ebd5a" title="WaitUntilTargetedPosition\lIsReached" alt="" coords="317,23,489,65"/>
+<area shape="rect" id="node4" href="$class_actor.html#a9a0b10240dd35c06b9e43c3d3b55084e" title="CalculateMoveDirection" alt="" coords="537,31,696,57"/>
+<area shape="rect" id="node5" href="$class_actor.html#a9af60eda61e70ca4adb8a2af37b9f727" title="LookToTheRight" alt="" coords="744,5,861,32"/>
+<area shape="rect" id="node6" href="$class_actor.html#a6fbb8cf1f2dee7e93239366d4444d5ee" title="LookToTheLeft" alt="" coords="748,56,857,83"/>
+</map>

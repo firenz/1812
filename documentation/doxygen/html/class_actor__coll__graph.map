@@ -1,0 +1,4 @@
+<map id="Actor" name="Actor">
+<area shape="rect" id="node2" href="$class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="5,132,213,561"/>
+<area shape="rect" id="node4" href="$class_display_dialogue_text.html" title="{DisplayDialogueText\n|+ secondsDisplayingText\l+ hasEndedDisplayingText\l|+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ HasEndedDisplayingText()\l}" alt="" coords="238,271,426,422"/>
+</map>

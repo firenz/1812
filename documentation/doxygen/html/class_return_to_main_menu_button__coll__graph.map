@@ -1,0 +1,4 @@
+<map id="ReturnToMainMenuButton" name="ReturnToMainMenuButton">
+<area shape="rect" id="node2" href="$class_return_to_button.html" title="{ReturnToButton\n|+ isAnyMenuActive\l# returnToGameDisplayingText\l# returnToMenuDisplayingText\l|+ ResetUIPositions()\l# OnEnable()\l# OnDisable()\l# Start()\l# ActionOnClick()\l# ChangeToScene()\l# ReturnToMenuModeActivated()\l# ReturnToGameModeActivated()\l# ChangeButtonTextLanguage()\l}" alt="" coords="5,492,221,716"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html" title="{UIGenericButton\n|# localizedTextGroupID\l# localizedTextElementID\l# localizedTextStringID\l# sfxOnClick\l# thisButton\l|+ OnClick()\l+ OnMouseOver()\l+ OnMouseExit()\l+ EnableButton()\l+ DisableButton()\l# OnEnable()\l# OnDisable()\l# Start()\l# WaitForSFXAndExecuteClick\lAction()\l# ActionOnClick()\l# ChangeButtonTextLanguage()\l}" alt="" coords="11,145,216,443"/>
+</map>

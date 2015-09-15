@@ -1,0 +1,4 @@
+<map id="Actor.WaitUntilTargetedPositionIsReached" name="Actor.WaitUntilTargetedPositionIsReached">
+<area shape="rect" id="node2" href="$class_actor.html#a11228be6a6b5b957de4cdde577b4c869" title="Actor.WaitForGoToCompleted" alt="" coords="260,13,456,39"/>
+<area shape="rect" id="node3" href="$class_actor.html#a78fe00432bbb1af1c4a674d058f45087" title="Actor.GoTo" alt="" coords="504,13,593,39"/>
+</map>

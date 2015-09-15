@@ -1,0 +1,15 @@
+<map id="SettingsFileManager.Initialize" name="SettingsFileManager.Initialize">
+<area shape="rect" id="node2" href="$class_file_manager.html#ab19e8cc2d9232dc1caa59e449743a073" title="FileManager.CheckDirectory" alt="" coords="739,67,925,93"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#abe24ad9d61c770ea39b4d2c99b76d153" title="FileManager.CreateDirectory" alt="" coords="495,67,682,93"/>
+<area shape="rect" id="node4" href="$class_file_manager.html#a922bcc29e71bb55fbfbd911b3208cf2a" title="FileManager.CheckFile" alt="" coords="755,295,909,321"/>
+<area shape="rect" id="node5" href="$class_game_state.html#afabc69b06c6774daaa5982e8c475f544" title="GameState.InitializeSettings\lState" alt="" coords="251,422,439,463"/>
+<area shape="rect" id="node6" href="$class_settings_file_manager.html#a22d0514e6a163ab71aba60b9aaa8eac5" title="SettingsFileManager.Save\lSettingsFile" alt="" coords="257,179,432,221"/>
+<area shape="rect" id="node10" href="$class_settings_file_manager.html#aeed1ed3a11be3d6a8167d9b3b5b763f1" title="SettingsFileManager.Load\lSettingsFile" alt="" coords="258,114,431,155"/>
+<area shape="rect" id="node11" href="$class_located_text_manager.html#a6eb85665188f363b3bb6d3c7eb957d85" title="LocatedTextManager.Initialize\lLanguageSettings" alt="" coords="247,487,443,529"/>
+<area shape="rect" id="node7" href="$class_file_manager.html#ad64a8116434b04335e840429b0fd7f8b" title="FileManager.CreateXMLFile" alt="" coords="497,117,680,144"/>
+<area shape="rect" id="node9" href="$class_file_manager.html#a859e0f6ac41d3c293833c25ed3714f1a" title="FileManager.UpdateFile" alt="" coords="509,269,668,296"/>
+<area shape="rect" id="node8" href="$class_file_manager.html#ab86dd5a9c20a309a180259f4dd206d00" title="FileManager.EncryptData" alt="" coords="747,117,917,144"/>
+<area shape="rect" id="node12" href="$class_x_m_l_file_reader.html#af7a65f89b42bc565d0d405fb848f85b7" title="XMLFileReader.CloseXMLFile" alt="" coords="491,520,687,547"/>
+<area shape="rect" id="node13" href="$class_located_text_manager.html#abf32f125503d6301dcbc70be43ed33dd" title="LocatedTextManager.Initialize" alt="" coords="491,469,687,496"/>
+<area shape="rect" id="node14" href="$class_x_m_l_file_reader.html#a2e0da58f685c131abd6dcce3b6c57423" title="XMLFileReader.OpenXMLFile" alt="" coords="735,469,929,496"/>
+</map>

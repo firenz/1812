@@ -1,0 +1,6 @@
+<map id="ActionOnClick" name="ActionOnClick">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#a590bbee2a2ce35dcbbfe3b6e34571323" title="LocatedTextManager.Change\lCurrentLanguage" alt="" coords="159,23,351,65"/>
+<area shape="rect" id="node3" href="$class_x_m_l_file_reader.html#a9030d85f00a7ce17a5882a0cd0696e7c" title="XMLFileReader.CloseXMLFile" alt="" coords="399,5,595,32"/>
+<area shape="rect" id="node4" href="$class_located_text_manager.html#a3b4e25ab4bd05797f543b6f7551fee48" title="LocatedTextManager.Initialize" alt="" coords="399,56,595,83"/>
+<area shape="rect" id="node5" href="$class_x_m_l_file_reader.html#a7bfe4a92e924f30d92c432bcb3c220ab" title="XMLFileReader.OpenXMLFile" alt="" coords="643,56,837,83"/>
+</map>

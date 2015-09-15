@@ -1,0 +1,4 @@
+<map id="Actor.CalculateMoveDirection" name="Actor.CalculateMoveDirection">
+<area shape="rect" id="node2" href="$class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="248,5,400,32"/>
+<area shape="rect" id="node3" href="$class_actor.html#a6e8fc1ce9421af80db947bd623de92a2" title="Actor.LookToTheLeft" alt="" coords="252,56,396,83"/>
+</map>

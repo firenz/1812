@@ -1,0 +1,8 @@
+<map id="InteractiveElement.SetInactive" name="InteractiveElement.SetInactive">
+<area shape="rect" id="node2" href="$class_librarian.html#ae1de42b222f1105ff7ba86c48132b284" title="Librarian.InitializeAdditional\lActorInformation" alt="" coords="275,5,455,47"/>
+<area shape="rect" id="node3" href="$class_pickable_element.html#a65ea228447b74e6b12c25e3392bc9d1d" title="PickableElement.Initialize\lInformation" alt="" coords="279,71,451,112"/>
+<area shape="rect" id="node4" href="$class_pickable_element.html#a8a34358cb02d147b72d3e0de8eeb8a9a" title="PickableElement.OnPlayer\lTouchingAction" alt="" coords="276,136,455,177"/>
+<area shape="rect" id="node5" href="$class_shadow_to_w_c.html#a6ec0852f1598c18787464a3662744b84" title="ShadowToWC.InitializeInformation" alt="" coords="255,202,476,229"/>
+<area shape="rect" id="node6" href="$class_little_flags.html#acd3eb61ebed3dcede7a0302ac98db83e" title="LittleFlags.InitializePickable\lInformation" alt="" coords="273,253,457,295"/>
+<area shape="rect" id="node7" href="$class_little_flags.html#a04a6097dd597627a47377f4a2a65e86c" title="LittleFlags.OnPlayerTouching\lAction" alt="" coords="269,319,462,360"/>
+</map>

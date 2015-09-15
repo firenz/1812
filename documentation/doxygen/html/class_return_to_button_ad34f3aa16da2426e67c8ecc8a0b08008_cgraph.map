@@ -1,0 +1,9 @@
+<map id="OnEnable" name="OnEnable">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a1953db39b4a00d1b3472601c0f3aebee" title="ChangeButtonTextLanguage" alt="" coords="140,5,327,32"/>
+<area shape="rect" id="node5" href="$class_return_to_button.html#a6a16ee68d1e511e7d08c2a01d4047627" title="ReturnToMenuModeActivated" alt="" coords="136,56,331,83"/>
+<area shape="rect" id="node6" href="$class_return_to_button.html#ad3bb66f6d225c00943cbd35fde631003" title="ReturnToGameModeActivated" alt="" coords="135,107,332,133"/>
+<area shape="rect" id="node7" href="$class_u_i_generic_button.html#af83cbc3b28b3ebe9fd92ec543289f379" title="UIGenericButton.DisableButton" alt="" coords="132,157,335,184"/>
+<area shape="rect" id="node8" href="$class_u_i_generic_button.html#a5e28f698a8d43453a1ba09ab13422a2b" title="UIGenericButton.EnableButton" alt="" coords="133,208,333,235"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#a761b0743c6c81890d660bbaf3f5e0cff" title="LocatedTextManager.GetLocatedText" alt="" coords="383,5,624,32"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#aaae7ca3cd0d77719c67a00704107ba5a" title="XMLFileReader.GetNodeInfo" alt="" coords="672,5,860,32"/>
+</map>

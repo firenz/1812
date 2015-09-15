@@ -1,0 +1,5 @@
+<map id="Actor.WaitUntilTargetedPositionIsReached" name="Actor.WaitUntilTargetedPositionIsReached">
+<area shape="rect" id="node2" href="$class_actor.html#a358e09b03944493e89555369133dcfce" title="Actor.CalculateMoveDirection" alt="" coords="260,31,455,57"/>
+<area shape="rect" id="node3" href="$class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="503,5,655,32"/>
+<area shape="rect" id="node4" href="$class_actor.html#a6e8fc1ce9421af80db947bd623de92a2" title="Actor.LookToTheLeft" alt="" coords="507,56,651,83"/>
+</map>

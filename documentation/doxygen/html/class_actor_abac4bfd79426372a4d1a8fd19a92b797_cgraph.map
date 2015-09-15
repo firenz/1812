@@ -1,0 +1,4 @@
+<map id="WaitForSpeakCompleted" name="WaitForSpeakCompleted">
+<area shape="rect" id="node2" href="$class_display_dialogue_text.html#ae4d726e74dbbdf4437887b8f2c95a04f" title="DisplayDialogueText.DisplayText" alt="" coords="220,5,435,32"/>
+<area shape="rect" id="node3" href="$class_display_dialogue_text.html#aca2b23a8f8d430135da549ea37fd4481" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="225,57,430,98"/>
+</map>

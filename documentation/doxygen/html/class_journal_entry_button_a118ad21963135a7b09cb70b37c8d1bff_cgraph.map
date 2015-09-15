@@ -1,0 +1,5 @@
+<map id="JournalEntryButton.Initialize" name="JournalEntryButton.Initialize">
+<area shape="rect" id="node2" href="$class_journal_entry_button.html#a0c8b83bf407042524eda3ed79edb1202" title="JournalEntryButton.Start" alt="" coords="277,5,442,32"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="239,56,480,83"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="528,56,716,83"/>
+</map>

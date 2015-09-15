@@ -1,0 +1,5 @@
+<map id="GameState.ChangeScreenSettings" name="GameState.ChangeScreenSettings">
+<area shape="rect" id="node2" href="$class_change_resolution_button.html#ad00f61935fba75e7ac58403f3d07ed58" title="ChangeResolutionButton.Action\lOnClick" alt="" coords="279,5,485,47"/>
+<area shape="rect" id="node3" href="$class_fullscreen_toggle.html#a05b5a792258d3acaca26d1e394575e00" title="FullscreenToggle.SetOn" alt="" coords="301,71,463,98"/>
+<area shape="rect" id="node4" href="$class_fullscreen_toggle.html#a1d08181cc06b39e33ad76376dc8ad1c7" title="FullscreenToggle.SetOff" alt="" coords="301,122,463,149"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="GameSlotButton.UnSelected" name="GameSlotButton.UnSelected">
+<area shape="rect" id="node2" href="$class_game_slot_button.html#a7230a12fd914b1b75436e0847f6adb37" title="GameSlotButton.OnEnable" alt="" coords="245,5,423,32"/>
+<area shape="rect" id="node3" href="$class_game_slot_button.html#ad46fc5c44cab1a113fe100fdeacc259d" title="GameSlotButton.OnDisable" alt="" coords="243,56,425,83"/>
+</map>

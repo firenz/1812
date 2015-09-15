@@ -1,0 +1,6 @@
+<map id="GameSlotButton.Initialize" name="GameSlotButton.Initialize">
+<area shape="rect" id="node2" href="$class_game_slot_button.html#afe3132761f3a265ea297ba51b1adf0ce" title="GameSlotButton.Start" alt="" coords="269,5,420,32"/>
+<area shape="rect" id="node3" href="$class_game_controller.html#a261bfe43ba9d4804a198a79d11641b6b" title="GameController.UnityScene\lNameToSceneNameID" alt="" coords="253,57,436,98"/>
+<area shape="rect" id="node4" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="224,123,465,149"/>
+<area shape="rect" id="node5" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="513,123,701,149"/>
+</map>

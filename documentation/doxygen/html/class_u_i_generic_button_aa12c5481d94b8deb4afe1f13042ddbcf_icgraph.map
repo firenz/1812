@@ -1,0 +1,10 @@
+<map id="UIGenericButton.ChangeButtonTextLanguage" name="UIGenericButton.ChangeButtonTextLanguage">
+<area shape="rect" id="node2" href="$class_menu_button.html#a34af62f50cf73082fd13a4dd348ced9e" title="MenuButton.OnEnable" alt="" coords="272,5,425,32"/>
+<area shape="rect" id="node3" href="$class_menu_button.html#a649874854388a9ddd5a1eeae3f57122e" title="MenuButton.OnDisable" alt="" coords="271,56,427,83"/>
+<area shape="rect" id="node4" href="$class_no_button.html#a8081f511a1471a9c74b321ef30149f55" title="NoButton.OnEnable" alt="" coords="280,107,417,133"/>
+<area shape="rect" id="node5" href="$class_no_button.html#a497c6539f6cd58f013ab7e296012a003" title="NoButton.OnDisable" alt="" coords="279,157,419,184"/>
+<area shape="rect" id="node6" href="$class_yes_button.html#a05e755db0f3b6b04121c2e75eea54a62" title="YesButton.OnEnable" alt="" coords="277,208,421,235"/>
+<area shape="rect" id="node7" href="$class_yes_button.html#a85165570ce3d790397c845f19073aba4" title="YesButton.OnDisable" alt="" coords="275,259,422,285"/>
+<area shape="rect" id="node8" href="$class_u_i_generic_button.html#a5c342719685b8f8a89ca36bc5fd79790" title="UIGenericButton.OnEnable" alt="" coords="259,309,438,336"/>
+<area shape="rect" id="node9" href="$class_u_i_generic_button.html#a6dc1982a29b1929caec910c3f902a444" title="UIGenericButton.OnDisable" alt="" coords="257,360,440,387"/>
+</map>

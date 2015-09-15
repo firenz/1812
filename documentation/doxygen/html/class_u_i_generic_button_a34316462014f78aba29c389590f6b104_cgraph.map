@@ -1,0 +1,7 @@
+<map id="OnEnable" name="OnEnable">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#af83cbc3b28b3ebe9fd92ec543289f379" title="DisableButton" alt="" coords="174,5,277,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a5e28f698a8d43453a1ba09ab13422a2b" title="EnableButton" alt="" coords="175,56,275,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_button.html#aa916792b38bd3586b31f2a5bd462828f" title="ChangeButtonTextLanguage" alt="" coords="132,107,319,133"/>
+<area shape="rect" id="node5" href="$class_located_text_manager.html#a761b0743c6c81890d660bbaf3f5e0cff" title="LocatedTextManager.GetLocatedText" alt="" coords="367,107,608,133"/>
+<area shape="rect" id="node6" href="$class_x_m_l_file_reader.html#aaae7ca3cd0d77719c67a00704107ba5a" title="XMLFileReader.GetNodeInfo" alt="" coords="656,107,844,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ExitGameButton.ActionOnClick" name="ExitGameButton.ActionOnClick">
+<area shape="rect" id="node2" href="$class_menu_button.html#a3bbae201bbb7081419b9fd2d6bd0a053" title="MenuButton.EnableMenu" alt="" coords="259,5,427,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a4c0feec8bbfe3918501c2e04d59aa268" title="UIGenericButton.DisableButton" alt="" coords="475,5,677,32"/>
+</map>

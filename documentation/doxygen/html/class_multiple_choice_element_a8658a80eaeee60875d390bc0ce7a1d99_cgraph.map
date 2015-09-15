@@ -1,0 +1,5 @@
+<map id="MultipleChoiceElement.Initialize" name="MultipleChoiceElement.Initialize">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#acdec271c5031015e1b1ecc4aec96ed7b" title="LocatedTextManager.GetLocated\lTextFormatted" alt="" coords="260,5,475,47"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="523,13,764,39"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="812,13,1000,39"/>
+</map>

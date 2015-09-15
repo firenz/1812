@@ -1,0 +1,5 @@
+<map id="ReturnToButton.ReturnToGameModeActivated" name="ReturnToButton.ReturnToGameModeActivated">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a10ef483ea002011d54a1f7caaf2bca21" title="ReturnToButton.OnEnable" alt="" coords="271,5,446,32"/>
+<area shape="rect" id="node3" href="$class_return_to_button.html#a948f2697b8022a95d975df82329c3a5b" title="ReturnToButton.OnDisable" alt="" coords="270,56,447,83"/>
+<area shape="rect" id="node4" href="$class_return_to_button.html#ab5483d44c1a1e5fc15880a2c0fbf7e7b" title="ReturnToButton.ActionOnClick" alt="" coords="259,107,459,133"/>
+</map>

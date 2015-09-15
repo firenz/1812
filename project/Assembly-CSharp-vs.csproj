@@ -151,8 +151,8 @@
      <None Include="Assets\Data\Saves\save_0.xml" />
      <None Include="Assets\Data\Saves\save_1.xml" />
      <None Include="Assets\Data\Saves\save_2.xml" />
-     <None Include="Assets\Plugins\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
-     <None Include="Assets\Plugins\Editor\Doxygen\ReadMe.txt" />
+     <None Include="Assets\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
+     <None Include="Assets\Editor\Doxygen\ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

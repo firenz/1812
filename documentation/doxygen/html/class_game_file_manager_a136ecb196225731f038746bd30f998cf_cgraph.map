@@ -1,0 +1,7 @@
+<map id="GetLastTimePlayed" name="GetLastTimePlayed">
+<area shape="rect" id="node2" href="$class_file_manager.html#a93efee5f423a796f48851fb48d6d057e" title="FileManager.ReadFile" alt="" coords="201,56,349,83"/>
+<area shape="rect" id="node5" href="$class_file_manager.html#a6dcf4ede2edbc599090ddbdd0ae726c7" title="FileManager.DecryptData" alt="" coords="191,107,360,133"/>
+<area shape="rect" id="node6" href="$class_file_manager.html#a9b23fd6c74e95e0690f1ddae8a91ecc0" title="FileManager.CreateFile" alt="" coords="197,5,353,32"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#a9ff9a3157e5bea061f90b3c355f83169" title="FileManager.CheckDirectory" alt="" coords="408,5,595,32"/>
+<area shape="rect" id="node4" href="$class_file_manager.html#ae37330c1acc88a26b044ca69d953b0df" title="FileManager.CheckFile" alt="" coords="424,56,579,83"/>
+</map>

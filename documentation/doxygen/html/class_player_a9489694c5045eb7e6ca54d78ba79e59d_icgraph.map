@@ -1,0 +1,4 @@
+<map id="Player.GrabItem" name="Player.GrabItem">
+<area shape="rect" id="node2" href="$class_pickable_element.html#a8a34358cb02d147b72d3e0de8eeb8a9a" title="PickableElement.OnPlayer\lTouchingAction" alt="" coords="178,5,357,47"/>
+<area shape="rect" id="node3" href="$class_little_flags.html#a04a6097dd597627a47377f4a2a65e86c" title="LittleFlags.OnPlayerTouching\lAction" alt="" coords="171,71,364,112"/>
+</map>

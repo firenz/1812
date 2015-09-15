@@ -1,0 +1,4 @@
+<map id="GameFileManager" name="GameFileManager">
+<area shape="rect" id="node2" href="$class_singleton.html" title="{Singleton\&lt; GameFileManager \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="5,331,212,467"/>
+<area shape="rect" id="node3" href="$class_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase y ..." alt="" coords="35,132,182,268"/>
+</map>

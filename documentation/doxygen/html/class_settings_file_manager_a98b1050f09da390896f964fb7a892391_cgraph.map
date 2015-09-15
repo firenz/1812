@@ -1,0 +1,15 @@
+<map id="Initialize" name="Initialize">
+<area shape="rect" id="node2" href="$class_file_manager.html#a9ff9a3157e5bea061f90b3c355f83169" title="FileManager.CheckDirectory" alt="" coords="616,73,803,99"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#a1f712ed0c4ad569d891219c3cf95c285" title="FileManager.CreateDirectory" alt="" coords="373,73,559,99"/>
+<area shape="rect" id="node4" href="$class_file_manager.html#ae37330c1acc88a26b044ca69d953b0df" title="FileManager.CheckFile" alt="" coords="632,301,787,327"/>
+<area shape="rect" id="node5" href="$class_game_state.html#a8f9df7d34c348ef065d01f55be65cfa9" title="GameState.InitializeSettings\lState" alt="" coords="128,428,316,469"/>
+<area shape="rect" id="node6" href="$class_settings_file_manager.html#ac18c999c10323fc97d4bdbc4f9e05cb1" title="SaveSettingsFile" alt="" coords="161,174,283,201"/>
+<area shape="rect" id="node10" href="$class_settings_file_manager.html#ab91c52c03e70c56483d739909114311d" title="LoadSettingsFile" alt="" coords="163,123,281,150"/>
+<area shape="rect" id="node11" href="$class_located_text_manager.html#abb2a8a0dd7f483f364da0acd9e6e61e1" title="LocatedTextManager.Initialize\lLanguageSettings" alt="" coords="124,493,320,535"/>
+<area shape="rect" id="node7" href="$class_file_manager.html#ab2384290cd79651bffa8bdf3c34b3649" title="FileManager.CreateXMLFile" alt="" coords="375,123,557,150"/>
+<area shape="rect" id="node9" href="$class_file_manager.html#a50fa0bc0e32c6e6e51553028907b166d" title="FileManager.UpdateFile" alt="" coords="387,275,545,302"/>
+<area shape="rect" id="node8" href="$class_file_manager.html#a0ab3693ec4b63dd7fcb96ab003da90c0" title="FileManager.EncryptData" alt="" coords="625,123,794,150"/>
+<area shape="rect" id="node12" href="$class_x_m_l_file_reader.html#a9030d85f00a7ce17a5882a0cd0696e7c" title="XMLFileReader.CloseXMLFile" alt="" coords="368,526,564,553"/>
+<area shape="rect" id="node13" href="$class_located_text_manager.html#a3b4e25ab4bd05797f543b6f7551fee48" title="LocatedTextManager.Initialize" alt="" coords="368,475,564,502"/>
+<area shape="rect" id="node14" href="$class_x_m_l_file_reader.html#a7bfe4a92e924f30d92c432bcb3c220ab" title="XMLFileReader.OpenXMLFile" alt="" coords="612,475,807,502"/>
+</map>

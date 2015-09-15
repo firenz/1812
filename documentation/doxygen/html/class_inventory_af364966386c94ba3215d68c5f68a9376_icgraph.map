@@ -1,0 +1,4 @@
+<map id="Inventory.Close" name="Inventory.Close">
+<area shape="rect" id="node2" href="$class_inventory.html#aa3722dd2f8021de0b57639b1dbc9f285" title="Inventory.Enable" alt="" coords="168,5,288,32"/>
+<area shape="rect" id="node3" href="$class_inventory.html#a325147da265dae7e687ab9f8c76dbc3b" title="Inventory.Disable" alt="" coords="167,56,289,83"/>
+</map>

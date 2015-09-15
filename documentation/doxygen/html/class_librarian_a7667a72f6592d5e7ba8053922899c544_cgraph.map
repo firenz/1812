@@ -1,0 +1,12 @@
+<map id="Librarian.WaitForLeftClickAction" name="Librarian.WaitForLeftClickAction">
+<area shape="rect" id="node2" href="$class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="260,5,355,32"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="455,95,623,137"/>
+<area shape="rect" id="node4" href="$class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="231,107,383,133"/>
+<area shape="rect" id="node5" href="$class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="260,208,355,235"/>
+<area shape="rect" id="node9" href="$class_actor.html#a6380ea33ed8249b9e65af45ad883e302" title="Actor.BeginConversation" alt="" coords="224,157,391,184"/>
+<area shape="rect" id="node10" href="$class_actor.html#acfa4849ad82633d6ae239f69252f9a97" title="Actor.EndConversation" alt="" coords="229,259,385,285"/>
+<area shape="rect" id="node11" href="$class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="442,284,637,311"/>
+<area shape="rect" id="node6" href="$class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="439,208,640,235"/>
+<area shape="rect" id="node7" href="$class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="688,179,903,205"/>
+<area shape="rect" id="node8" href="$class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="693,230,898,271"/>
+</map>

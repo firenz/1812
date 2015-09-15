@@ -1,0 +1,6 @@
+<map id="ReturnToButton.ChangeButtonTextLanguage" name="ReturnToButton.ChangeButtonTextLanguage">
+<area shape="rect" id="node2" href="$class_return_to_main_menu_button.html#af4aecc7c761e3ccf8d0b7ed793977e8c" title="ReturnToMainMenuButton.On\lEnable" alt="" coords="252,5,447,47"/>
+<area shape="rect" id="node3" href="$class_return_to_main_menu_button.html#a798e91546335c813ad6a7bf77e2671c8" title="ReturnToMainMenuButton.On\lDisable" alt="" coords="252,71,447,112"/>
+<area shape="rect" id="node4" href="$class_return_to_button.html#a10ef483ea002011d54a1f7caaf2bca21" title="ReturnToButton.OnEnable" alt="" coords="262,137,437,163"/>
+<area shape="rect" id="node5" href="$class_return_to_button.html#a948f2697b8022a95d975df82329c3a5b" title="ReturnToButton.OnDisable" alt="" coords="261,187,438,214"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Initialize" name="Initialize">
+<area shape="rect" id="node2" href="$class_journal_entry_button.html#a80cd06517a8ead35b2f5cd8a9145c7ca" title="Start" alt="" coords="219,5,270,32"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#a761b0743c6c81890d660bbaf3f5e0cff" title="LocatedTextManager.GetLocatedText" alt="" coords="124,56,365,83"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#aaae7ca3cd0d77719c67a00704107ba5a" title="XMLFileReader.GetNodeInfo" alt="" coords="413,56,601,83"/>
+</map>

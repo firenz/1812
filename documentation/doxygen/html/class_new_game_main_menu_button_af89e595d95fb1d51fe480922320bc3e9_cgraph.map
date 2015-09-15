@@ -1,0 +1,5 @@
+<map id="ActionOnClick" name="ActionOnClick">
+<area shape="rect" id="node2" href="$class_game_state.html#a458a4f3237a6af419e5378ea7fbf74fc" title="GameState.InitializeGame\lState" alt="" coords="167,5,342,47"/>
+<area shape="rect" id="node3" href="$class_game_controller.html#a5680f0cf5be7f546c7acdcd922ce978d" title="GameController.WarpToLevel" alt="" coords="159,71,351,98"/>
+<area shape="rect" id="node4" href="$class_game_state.html#a05de6bc1667b608bb7f6ed6e6da315a5" title="GameState.SaveGameState" alt="" coords="399,71,587,98"/>
+</map>

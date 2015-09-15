@@ -1,0 +1,9 @@
+<map id="AudioManager.IsPlayingSFX" name="AudioManager.IsPlayingSFX">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a9c4d76a785a6a9b8f01965d1a2588545" title="ReturnToButton.ChangeToScene" alt="" coords="244,5,457,32"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_button.html#a6c5222acaedfd5727150a4ed068a7165" title="UIGenericButton.WaitForSFXAnd\lExecuteClickAction" alt="" coords="243,57,459,98"/>
+<area shape="rect" id="node6" href="$class_corridor_door.html#ac5e7e42c04d38914af865f2198900677" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="268,122,433,163"/>
+<area shape="rect" id="node7" href="$class_shadow_to_w_c.html#a98a1ea236127ea43e319c933af67b197" title="ShadowToWC.WaitForLeftClick\lAction" alt="" coords="249,187,453,229"/>
+<area shape="rect" id="node8" href="$class_door.html#ad4c5e848b4981ea9254fc492f6f02733" title="Door.WaitForLeftClickAction" alt="" coords="257,253,444,280"/>
+<area shape="rect" id="node3" href="$class_return_to_button.html#ab5483d44c1a1e5fc15880a2c0fbf7e7b" title="ReturnToButton.ActionOnClick" alt="" coords="507,5,707,32"/>
+<area shape="rect" id="node5" href="$class_u_i_generic_button.html#a154ea9c1a358f2a6fb192ed962707335" title="UIGenericButton.OnClick" alt="" coords="523,64,691,91"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ReturnToButton.ActionOnClick" name="ReturnToButton.ActionOnClick">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a6e9007b9e8761d6103cf5eb9226a1bb6" title="ReturnToButton.ReturnToGame\lModeActivated" alt="" coords="257,5,463,47"/>
+<area shape="rect" id="node3" href="$class_return_to_button.html#a9c4d76a785a6a9b8f01965d1a2588545" title="ReturnToButton.ChangeToScene" alt="" coords="253,71,467,98"/>
+<area shape="rect" id="node4" href="$class_audio_manager.html#a253066621b93ae908d8aebc63521192e" title="AudioManager.IsPlayingSFX" alt="" coords="516,46,705,73"/>
+<area shape="rect" id="node5" href="$class_game_controller.html#a701eeee606bed7c711fc9f09ba524a0e" title="GameController.WarpToLevel" alt="" coords="515,97,707,123"/>
+<area shape="rect" id="node6" href="$class_game_state.html#a55ddf009140dc48a4d540f00430231b3" title="GameState.SaveGameState" alt="" coords="755,97,943,123"/>
+</map>

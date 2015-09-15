@@ -1,0 +1,13 @@
+<map id="CheckFile" name="CheckFile">
+<area shape="rect" id="node2" href="$class_file_manager.html#a9b23fd6c74e95e0690f1ddae8a91ecc0" title="CreateFile" alt="" coords="205,70,287,97"/>
+<area shape="rect" id="node5" href="$class_file_manager.html#a93efee5f423a796f48851fb48d6d057e" title="ReadFile" alt="" coords="209,19,283,46"/>
+<area shape="rect" id="node6" href="$class_file_manager.html#a50fa0bc0e32c6e6e51553028907b166d" title="UpdateFile" alt="" coords="204,171,288,198"/>
+<area shape="rect" id="node7" href="$class_game_file_manager.html#ab0051cd2129f931a057460ea3ce4ac5a" title="GameFileManager.SaveGameFile" alt="" coords="407,142,625,169"/>
+<area shape="rect" id="node8" href="$class_settings_file_manager.html#ac18c999c10323fc97d4bdbc4f9e05cb1" title="SettingsFileManager.Save\lSettingsFile" alt="" coords="429,207,603,248"/>
+<area shape="rect" id="node9" href="$class_settings_file_manager.html#a98b1050f09da390896f964fb7a892391" title="SettingsFileManager.Initialize" alt="" coords="673,273,867,299"/>
+<area shape="rect" id="node10" href="$class_game_file_manager.html#ad056a4e2175780b88722bd190acce283" title="GameFileManager.LoadGameFile" alt="" coords="138,374,354,401"/>
+<area shape="rect" id="node11" href="$class_game_file_manager.html#a5eeeb9b5a46664e391b8abbdf8bcee61" title="GameFileManager.DeleteGameFile" alt="" coords="133,425,359,451"/>
+<area shape="rect" id="node12" href="$class_settings_file_manager.html#ab91c52c03e70c56483d739909114311d" title="SettingsFileManager.Load\lSettingsFile" alt="" coords="429,324,603,365"/>
+<area shape="rect" id="node3" href="$class_game_file_manager.html#a55db2cd4a7d05840cf9a8c21c7d5cdcc" title="GameFileManager.GetLastPlayed\lLevel" alt="" coords="407,5,625,47"/>
+<area shape="rect" id="node4" href="$class_game_file_manager.html#a136ecb196225731f038746bd30f998cf" title="GameFileManager.GetLastTime\lPlayed" alt="" coords="413,71,619,112"/>
+</map>

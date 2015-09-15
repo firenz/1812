@@ -1,0 +1,3 @@
+<map id="LibrarianStates" name="LibrarianStates">
+<area shape="rect" id="node2" href="$class_actor_states.html" title="{ActorStates\n|+ leftIdle\l+ rightIdle\l+ leftWalking\l+ rightWalking\l+ leftSpeaking\l+ rightSpeaking\l+ Value\l|+ ActorStates()\l+ ActorStates()\l+ operator int()\l+ operator ActorStates()\l}" alt="" coords="14,5,177,215"/>
+</map>

@@ -35,6 +35,7 @@ obj/
 *.booproj
 *.cs~
 *.xml~
+*.meta
 
 # ============ #
 # OS generated #

@@ -1,0 +1,5 @@
+<map id="UIGenericToggle.OnClick" name="UIGenericToggle.OnClick">
+<area shape="rect" id="node2" href="$class_audio_manager.html#a45c8809c63fc702dab2bf00396bacbe2" title="AudioManager.PlaySFX" alt="" coords="223,5,384,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_toggle.html#a073e013aa7320769470623a7bd89e30e" title="UIGenericToggle.SetOn" alt="" coords="223,56,383,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_toggle.html#a6f60fd51feddc5869148227252f50684" title="UIGenericToggle.SetOff" alt="" coords="223,107,384,133"/>
+</map>

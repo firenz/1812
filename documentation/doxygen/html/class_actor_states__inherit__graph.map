@@ -1,0 +1,4 @@
+<map id="ActorStates" name="ActorStates">
+<area shape="rect" id="node2" href="$class_librarian_states.html" title="{LibrarianStates\n|+ leftCoughing\l+ rightCoughing\l|+ LibrarianStates()\l+ LibrarianStates()\l+ operator int()\l+ operator LibrarianStates()\l}" alt="" coords="5,292,185,428"/>
+<area shape="rect" id="node3" href="$class_player_states.html" title="{PlayerStates\n|+ leftUpperGrabbing\l+ rightUpperGrabbing\l+ leftBottomGrabbing\l+ rightBottomGrabbing\l+ leftUsingPhone\l+ rightUsingPhone\l|+ PlayerStates()\l+ PlayerStates()\l+ operator int()\l+ operator PlayerStates()\l}" alt="" coords="210,263,378,457"/>
+</map>

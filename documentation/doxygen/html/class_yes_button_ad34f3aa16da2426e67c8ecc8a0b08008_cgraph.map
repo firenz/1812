@@ -1,0 +1,5 @@
+<map id="OnEnable" name="OnEnable">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#aa916792b38bd3586b31f2a5bd462828f" title="UIGenericButton.ChangeButton\lTextLanguage" alt="" coords="132,5,336,47"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#a761b0743c6c81890d660bbaf3f5e0cff" title="LocatedTextManager.GetLocatedText" alt="" coords="384,13,625,39"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#aaae7ca3cd0d77719c67a00704107ba5a" title="XMLFileReader.GetNodeInfo" alt="" coords="673,13,861,39"/>
+</map>

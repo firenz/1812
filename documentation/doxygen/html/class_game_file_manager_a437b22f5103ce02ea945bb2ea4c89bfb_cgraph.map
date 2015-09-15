@@ -1,0 +1,8 @@
+<map id="GameFileManager.SaveGameFile" name="GameFileManager.SaveGameFile">
+<area shape="rect" id="node2" href="$class_file_manager.html#ab19e8cc2d9232dc1caa59e449743a073" title="FileManager.CheckDirectory" alt="" coords="507,56,693,83"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#abe24ad9d61c770ea39b4d2c99b76d153" title="FileManager.CreateDirectory" alt="" coords="272,5,459,32"/>
+<area shape="rect" id="node4" href="$class_file_manager.html#a922bcc29e71bb55fbfbd911b3208cf2a" title="FileManager.CheckFile" alt="" coords="523,183,677,209"/>
+<area shape="rect" id="node5" href="$class_file_manager.html#ad64a8116434b04335e840429b0fd7f8b" title="FileManager.CreateXMLFile" alt="" coords="274,107,457,133"/>
+<area shape="rect" id="node7" href="$class_file_manager.html#a859e0f6ac41d3c293833c25ed3714f1a" title="FileManager.UpdateFile" alt="" coords="286,157,445,184"/>
+<area shape="rect" id="node6" href="$class_file_manager.html#ab86dd5a9c20a309a180259f4dd206d00" title="FileManager.EncryptData" alt="" coords="515,107,685,133"/>
+</map>

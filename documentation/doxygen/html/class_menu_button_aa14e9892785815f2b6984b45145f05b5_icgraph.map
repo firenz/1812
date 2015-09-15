@@ -1,0 +1,4 @@
+<map id="EnableMenu" name="EnableMenu">
+<area shape="rect" id="node2" href="$class_menu_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ActionOnClick" alt="" coords="198,5,303,32"/>
+<area shape="rect" id="node3" href="$class_exit_game_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ExitGameButton.ActionOnClick" alt="" coords="148,56,353,83"/>
+</map>

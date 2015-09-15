@@ -1,0 +1,5 @@
+<map id="ReturnToButton.ChangeToScene" name="ReturnToButton.ChangeToScene">
+<area shape="rect" id="node2" href="$class_audio_manager.html#a253066621b93ae908d8aebc63521192e" title="AudioManager.IsPlayingSFX" alt="" coords="268,5,457,32"/>
+<area shape="rect" id="node3" href="$class_game_controller.html#a701eeee606bed7c711fc9f09ba524a0e" title="GameController.WarpToLevel" alt="" coords="267,56,459,83"/>
+<area shape="rect" id="node4" href="$class_game_state.html#a55ddf009140dc48a4d540f00430231b3" title="GameState.SaveGameState" alt="" coords="507,56,695,83"/>
+</map>

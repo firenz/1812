@@ -1,0 +1,8 @@
+<map id="XMLFileReader.OpenXMLFile" name="XMLFileReader.OpenXMLFile">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#abf32f125503d6301dcbc70be43ed33dd" title="LocatedTextManager.Initialize" alt="" coords="248,46,444,73"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#a6eb85665188f363b3bb6d3c7eb957d85" title="LocatedTextManager.Initialize\lLanguageSettings" alt="" coords="492,5,688,47"/>
+<area shape="rect" id="node5" href="$class_located_text_manager.html#a5eb12d2ec9a393504462008814f3a4b5" title="LocatedTextManager.Change\lCurrentLanguage" alt="" coords="494,71,686,112"/>
+<area shape="rect" id="node4" href="$class_settings_file_manager.html#ae8fff6d7fe22a6922b81cb1928cb3a8a" title="SettingsFileManager.Initialize" alt="" coords="757,13,950,39"/>
+<area shape="rect" id="node6" href="$class_change_current_language_button.html#a4de461afffd0cd5ed560c0516f2e6343" title="ChangeCurrentLanguageButton.\lActionOnClick" alt="" coords="750,67,957,108"/>
+<area shape="rect" id="node7" href="$class_game_state.html#ad16434ef96da3a4d533c38a957f3f3b8" title="GameState.ChangeCurrentLanguage" alt="" coords="736,133,971,159"/>
+</map>

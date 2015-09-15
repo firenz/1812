@@ -1,0 +1,8 @@
+<map id="MenuButton.OnDisable" name="MenuButton.OnDisable">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#aa12c5481d94b8deb4afe1f13042ddbcf" title="UIGenericButton.ChangeButton\lTextLanguage" alt="" coords="209,5,413,47"/>
+<area shape="rect" id="node5" href="$class_u_i_generic_button.html#a4c0feec8bbfe3918501c2e04d59aa268" title="UIGenericButton.DisableButton" alt="" coords="210,71,413,98"/>
+<area shape="rect" id="node6" href="$class_menu_button.html#a43abddc46d2ae74b6d7a8dabd0bbc1f5" title="MenuButton.DisableMenu" alt="" coords="226,122,397,149"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="461,13,703,39"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="751,13,939,39"/>
+<area shape="rect" id="node7" href="$class_u_i_generic_button.html#a3f022b8d5f1f10e6802f3d94a63fd06f" title="UIGenericButton.EnableButton" alt="" coords="482,122,682,149"/>
+</map>

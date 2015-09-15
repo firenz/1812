@@ -1,0 +1,4 @@
+<map id="UIGenericButton.WaitForSFXAndExecuteClickAction" name="UIGenericButton.WaitForSFXAndExecuteClickAction">
+<area shape="rect" id="node2" href="$class_audio_manager.html#a253066621b93ae908d8aebc63521192e" title="AudioManager.IsPlayingSFX" alt="" coords="269,5,459,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a70ee2d9a56607678246de8dd6aecd503" title="UIGenericButton.ActionOn\lClick" alt="" coords="276,57,452,98"/>
+</map>

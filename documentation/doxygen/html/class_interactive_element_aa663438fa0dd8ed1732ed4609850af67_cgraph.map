@@ -1,0 +1,12 @@
+<map id="WaitForRightClickAction" name="WaitForRightClickAction">
+<area shape="rect" id="node2" href="$class_player.html#ab61135a77cb9162887478b967a7780be" title="Player.GoTo" alt="" coords="241,5,336,32"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a94b51fbb9c1a3d7be18296ddc25f8380" title="BeginAction" alt="" coords="243,56,335,83"/>
+<area shape="rect" id="node4" href="$class_actor.html#ae7182506583a87f06e9297f7c147e0b6" title="Actor.LookAtPosition" alt="" coords="216,107,361,133"/>
+<area shape="rect" id="node7" href="$class_actor.html#a34dfcf029edb599a0f6d7d0ea7cd98be" title="Actor.Speak" alt="" coords="241,157,336,184"/>
+<area shape="rect" id="node11" href="$class_interactive_element.html#a2b6fce4de43443891c44f3741271e509" title="EndAction" alt="" coords="247,208,330,235"/>
+<area shape="rect" id="node5" href="$class_actor.html#a9af60eda61e70ca4adb8a2af37b9f727" title="Actor.LookToTheRight" alt="" coords="434,56,586,83"/>
+<area shape="rect" id="node6" href="$class_actor.html#a6fbb8cf1f2dee7e93239366d4444d5ee" title="Actor.LookToTheLeft" alt="" coords="438,107,582,133"/>
+<area shape="rect" id="node8" href="$class_actor.html#abac4bfd79426372a4d1a8fd19a92b797" title="Actor.WaitForSpeakCompleted" alt="" coords="409,157,611,184"/>
+<area shape="rect" id="node9" href="$class_display_dialogue_text.html#ae4d726e74dbbdf4437887b8f2c95a04f" title="DisplayDialogueText.DisplayText" alt="" coords="659,128,873,155"/>
+<area shape="rect" id="node10" href="$class_display_dialogue_text.html#aca2b23a8f8d430135da549ea37fd4481" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="663,179,869,221"/>
+</map>

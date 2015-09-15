@@ -1,0 +1,15 @@
+<map id="UIGenericButton.EnableButton" name="UIGenericButton.EnableButton">
+<area shape="rect" id="node2" href="$class_main_menu_button.html#aaac09533df83f9d3ae762c08a4c2b8d1" title="MainMenuButton.OnEnable" alt="" coords="260,5,441,32"/>
+<area shape="rect" id="node3" href="$class_main_menu_button.html#a55f20b3572ff5721ffca3a12c09fd526" title="MainMenuButton.OnDisable" alt="" coords="259,56,443,83"/>
+<area shape="rect" id="node4" href="$class_return_to_main_menu_button.html#af4aecc7c761e3ccf8d0b7ed793977e8c" title="ReturnToMainMenuButton.On\lEnable" alt="" coords="253,107,448,149"/>
+<area shape="rect" id="node5" href="$class_return_to_main_menu_button.html#a798e91546335c813ad6a7bf77e2671c8" title="ReturnToMainMenuButton.On\lDisable" alt="" coords="253,173,448,214"/>
+<area shape="rect" id="node6" href="$class_menu_button.html#a43abddc46d2ae74b6d7a8dabd0bbc1f5" title="MenuButton.DisableMenu" alt="" coords="265,239,436,265"/>
+<area shape="rect" id="node9" href="$class_search_button.html#adbe45ce7fdb6f49b9417fad3c1542216" title="SearchButton.OnEnable" alt="" coords="269,289,432,316"/>
+<area shape="rect" id="node10" href="$class_search_button.html#a31591fbaa82ad6422d89ded66b47dec5" title="SearchButton.OnDisable" alt="" coords="268,340,433,367"/>
+<area shape="rect" id="node11" href="$class_return_to_button.html#a10ef483ea002011d54a1f7caaf2bca21" title="ReturnToButton.OnEnable" alt="" coords="263,391,438,417"/>
+<area shape="rect" id="node12" href="$class_return_to_button.html#a948f2697b8022a95d975df82329c3a5b" title="ReturnToButton.OnDisable" alt="" coords="262,441,439,468"/>
+<area shape="rect" id="node13" href="$class_u_i_generic_button.html#a5c342719685b8f8a89ca36bc5fd79790" title="UIGenericButton.OnEnable" alt="" coords="261,492,440,519"/>
+<area shape="rect" id="node14" href="$class_u_i_generic_button.html#a6dc1982a29b1929caec910c3f902a444" title="UIGenericButton.OnDisable" alt="" coords="259,543,442,569"/>
+<area shape="rect" id="node7" href="$class_menu_button.html#a34af62f50cf73082fd13a4dd348ced9e" title="MenuButton.OnEnable" alt="" coords="497,213,651,240"/>
+<area shape="rect" id="node8" href="$class_menu_button.html#a649874854388a9ddd5a1eeae3f57122e" title="MenuButton.OnDisable" alt="" coords="496,264,652,291"/>
+</map>

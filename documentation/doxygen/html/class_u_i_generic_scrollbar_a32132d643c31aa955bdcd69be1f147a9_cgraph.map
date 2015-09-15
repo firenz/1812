@@ -1,0 +1,5 @@
+<map id="UIGenericScrollbar.OnEnable" name="UIGenericScrollbar.OnEnable">
+<area shape="rect" id="node2" href="$class_u_i_generic_scrollbar.html#a7edceb66d45c7e5fe23c965262c699ff" title="UIGenericScrollbar.Disable" alt="" coords="245,5,424,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_scrollbar.html#a95d4eb21e51e86dbc8e4fed8f81a1f86" title="UIGenericScrollbar.Enable" alt="" coords="247,56,422,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_scrollbar.html#a393d206e62b820e97191a5723c546926" title="UIGenericScrollbar.Reset\lPosition" alt="" coords="250,107,419,149"/>
+</map>

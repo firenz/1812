@@ -1,0 +1,4 @@
+<map id="ItemInventory.Select" name="ItemInventory.Select">
+<area shape="rect" id="node2" href="$class_cut_scenes_manager.html#aba449ad310f0656faef5bab1fb4abbb5" title="CutScenesManager.IsPlaying" alt="" coords="198,5,393,32"/>
+<area shape="rect" id="node3" href="$class_item_inventory.html#aa936ea8cce808b71f2887a2d739efaa9" title="ItemInventory.BeginUsingItem" alt="" coords="196,56,395,83"/>
+</map>

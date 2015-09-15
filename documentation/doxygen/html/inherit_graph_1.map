@@ -1,0 +1,5 @@
+<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
+<area shape="rect" id="node1" href="$class_actor_states.html" title="ActorStates" alt="" coords="5,31,96,57"/>
+<area shape="rect" id="node2" href="$class_librarian_states.html" title="LibrarianStates" alt="" coords="144,5,253,32"/>
+<area shape="rect" id="node3" href="$class_player_states.html" title="PlayerStates" alt="" coords="150,56,247,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="FileManager.UpdateFile" name="FileManager.UpdateFile">
+<area shape="rect" id="node2" href="$class_game_file_manager.html#a437b22f5103ce02ea945bb2ea4c89bfb" title="GameFileManager.SaveGameFile" alt="" coords="212,5,431,32"/>
+<area shape="rect" id="node3" href="$class_settings_file_manager.html#a22d0514e6a163ab71aba60b9aaa8eac5" title="SettingsFileManager.Save\lSettingsFile" alt="" coords="234,57,409,98"/>
+<area shape="rect" id="node4" href="$class_settings_file_manager.html#ae8fff6d7fe22a6922b81cb1928cb3a8a" title="SettingsFileManager.Initialize" alt="" coords="479,64,672,91"/>
+</map>

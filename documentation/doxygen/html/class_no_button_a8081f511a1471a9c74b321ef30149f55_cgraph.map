@@ -1,0 +1,5 @@
+<map id="NoButton.OnEnable" name="NoButton.OnEnable">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#aa12c5481d94b8deb4afe1f13042ddbcf" title="UIGenericButton.ChangeButton\lTextLanguage" alt="" coords="191,5,395,47"/>
+<area shape="rect" id="node3" href="$class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="443,13,684,39"/>
+<area shape="rect" id="node4" href="$class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="732,13,920,39"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CurrentResolutionButton.DisablePanel" name="CurrentResolutionButton.DisablePanel">
+<area shape="rect" id="node2" href="$class_current_resolution_button.html#a2cec51f33af6045e175ab0b9812d47bf" title="CurrentResolutionButton.\lOnEnable" alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node3" href="$class_current_resolution_button.html#a24969f7c24c55e55afd2be4258a7275b" title="CurrentResolutionButton.\lOnDisable" alt="" coords="220,71,387,112"/>
+</map>

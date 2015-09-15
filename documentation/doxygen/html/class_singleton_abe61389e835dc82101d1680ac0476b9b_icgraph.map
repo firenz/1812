@@ -1,0 +1,3 @@
+<map id="Singleton.InitializeOnAwake" name="Singleton.InitializeOnAwake">
+<area shape="rect" id="node2" href="$class_singleton.html#a811af5565edac7bf626f0c9a6a5f73f4" title="Al despertar el objeto al que este unido una clase en ejecucion que herede de Singleton, comprobara si ya hay una instancia previa de dicha clase. " alt="" coords="237,5,411,47"/>
+</map>

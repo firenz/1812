@@ -1,0 +1,6 @@
+<map id="OnClick" name="OnClick">
+<area shape="rect" id="node2" href="$class_audio_manager.html#ab395348b94982fdb20611fc354337c29" title="AudioManager.PlaySFX" alt="" coords="137,5,299,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a809222b9d9cc87c07101bdc1bf7804fc" title="WaitForSFXAndExecuteClick\lAction" alt="" coords="121,57,315,98"/>
+<area shape="rect" id="node4" href="$class_audio_manager.html#a2470cf30aac8c45ea84950d82f4c14c7" title="AudioManager.IsPlayingSFX" alt="" coords="363,39,552,65"/>
+<area shape="rect" id="node5" href="$class_u_i_generic_button.html#ae44ea52fb7d9e7c46e47a04d1114e9cb" title="ActionOnClick" alt="" coords="405,89,510,116"/>
+</map>

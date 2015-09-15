@@ -1,0 +1,5 @@
+<map id="LittleFlagBackground" name="LittleFlagBackground">
+<area shape="rect" id="node5" href="$class_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase y ..." alt="" coords="101,132,248,268"/>
+<area shape="rect" id="node3" href="$class_puzzle_map_manager.html" title="{PuzzleMapManager\n|+ bayFlagColor\l+ riverOrMarshlandFlagColor\l+ spanishBatteryFlagColor\l+ spanishFortificationFlag\lColor\l+ frenchAdvancedPartyFlagColor\l+ frenchBatteryFlagColor\l+ frenchFortificationFlagColor\l+ frenchMilitaryCampFlagColor\l+ bridgeFrontAssedyWarFlag\lColor\l+ sfxOnClickFlag\l+ maxFlagTypes\l|+ PuzzleCompleted()\l# InitializeOnAwake()\l}" alt="" coords="94,516,309,784"/>
+<area shape="rect" id="node4" href="$class_singleton.html" title="{Singleton\&lt; PuzzleMapManager \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="94,331,309,467"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ClearSlot" name="ClearSlot">
+<area shape="rect" id="node2" href="$class_game_slot_button.html#adf42bc7a6705b584d26a4bd7b366cc05" title="Initialize" alt="" coords="128,31,199,57"/>
+<area shape="rect" id="node3" href="$class_game_slot_button.html#a80cd06517a8ead35b2f5cd8a9145c7ca" title="Start" alt="" coords="342,5,393,32"/>
+<area shape="rect" id="node4" href="$class_located_text_manager.html#a761b0743c6c81890d660bbaf3f5e0cff" title="LocatedTextManager.GetLocatedText" alt="" coords="247,56,488,83"/>
+<area shape="rect" id="node5" href="$class_x_m_l_file_reader.html#aaae7ca3cd0d77719c67a00704107ba5a" title="XMLFileReader.GetNodeInfo" alt="" coords="536,56,724,83"/>
+</map>

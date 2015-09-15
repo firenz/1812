@@ -1,0 +1,27 @@
+<map id="HasEndedDisplayingText" name="HasEndedDisplayingText">
+<area shape="rect" id="node2" href="$class_actor.html#abac4bfd79426372a4d1a8fd19a92b797" title="Actor.WaitForSpeakCompleted" alt="" coords="221,638,423,665"/>
+<area shape="rect" id="node3" href="$class_actor.html#a34dfcf029edb599a0f6d7d0ea7cd98be" title="Actor.Speak" alt="" coords="471,638,565,665"/>
+<area shape="rect" id="node4" href="$class_librarian.html#a8224e736e448879c04918703e8a41577" title="Librarian.WaitForRightClick\lAction" alt="" coords="626,5,805,47"/>
+<area shape="rect" id="node5" href="$class_librarian.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Librarian.WaitForLeftClick\lAction" alt="" coords="630,71,801,112"/>
+<area shape="rect" id="node6" href="$class_interactive_element.html#adbe19079b737d5af0bd3ad2bb20e7c98" title="InteractiveElement.WaitFor\lLeftClickAction" alt="" coords="625,136,805,177"/>
+<area shape="rect" id="node8" href="$class_interactive_element.html#aa663438fa0dd8ed1732ed4609850af67" title="InteractiveElement.WaitFor\lRightClickAction" alt="" coords="625,201,805,243"/>
+<area shape="rect" id="node10" href="$class_pickable_element.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="PickableElement.WaitForLeft\lClickAction" alt="" coords="620,267,811,308"/>
+<area shape="rect" id="node11" href="$class_pickable_element.html#a1e8671a450452a08cfc140e8c275cf7b" title="PickableElement.OnPlayer\lTouchingAction" alt="" coords="626,332,805,373"/>
+<area shape="rect" id="node12" href="$class_corridor_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="633,397,798,439"/>
+<area shape="rect" id="node13" href="$class_plant.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Plant.WaitForLeftClickAction" alt="" coords="621,463,810,490"/>
+<area shape="rect" id="node14" href="$class_plant.html#a8224e736e448879c04918703e8a41577" title="Plant.WaitForRightClickAction" alt="" coords="617,514,814,541"/>
+<area shape="rect" id="node15" href="$class_shadow_to_w_c.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="ShadowToWC.WaitForLeftClick\lAction" alt="" coords="613,565,817,607"/>
+<area shape="rect" id="node16" href="$class_trash_bin.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="TrashBin.WaitForLeftClick\lAction" alt="" coords="628,631,803,672"/>
+<area shape="rect" id="node17" href="$class_trash_bin.html#a8224e736e448879c04918703e8a41577" title="TrashBin.WaitForRightClick\lAction" alt="" coords="624,696,807,737"/>
+<area shape="rect" id="node18" href="$class_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Door.WaitForLeftClickAction" alt="" coords="622,762,809,789"/>
+<area shape="rect" id="node19" href="$class_little_flags.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="LittleFlags.WaitForLeftClick\lAction" alt="" coords="624,813,807,855"/>
+<area shape="rect" id="node20" href="$class_little_flags.html#adfe8ffe3f6225d0394e9e0379b68fa82" title="LittleFlags.OnPlayerTouching\lAction" alt="" coords="619,879,812,920"/>
+<area shape="rect" id="node21" href="$class_map.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Map.WaitForLeftClickAction" alt="" coords="623,945,807,971"/>
+<area shape="rect" id="node22" href="$class_skull.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Skull.WaitForLeftClickAction" alt="" coords="621,995,809,1022"/>
+<area shape="rect" id="node23" href="$class_skull.html#a8224e736e448879c04918703e8a41577" title="Skull.WaitForRightClickAction" alt="" coords="617,1046,813,1073"/>
+<area shape="rect" id="node24" href="$class_window.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Window.WaitForLeftClickAction" alt="" coords="613,1097,817,1123"/>
+<area shape="rect" id="node25" href="$class_warper_element.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="WarperElement.WaitForLeft\lClickAction" alt="" coords="624,1148,807,1189"/>
+<area shape="rect" id="node26" href="$class_item_inventory.html#a8224e736e448879c04918703e8a41577" title="ItemInventory.WaitForRight\lClickAction" alt="" coords="625,1213,806,1255"/>
+<area shape="rect" id="node7" href="$class_interactive_element.html#a52b1258cf50994b5a5bb226baf59fcfa" title="InteractiveElement.LeftClick\lAction" alt="" coords="865,136,1052,177"/>
+<area shape="rect" id="node9" href="$class_interactive_element.html#adec39eb509f7857ed5b3d18a0bd22cc3" title="InteractiveElement.Right\lClickAction" alt="" coords="876,201,1041,243"/>
+</map>

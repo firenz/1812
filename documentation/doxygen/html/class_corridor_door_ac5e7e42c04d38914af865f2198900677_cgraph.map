@@ -1,0 +1,16 @@
+<map id="CorridorDoor.WaitForLeftClickAction" name="CorridorDoor.WaitForLeftClickAction">
+<area shape="rect" id="node2" href="$class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="269,5,363,32"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="232,57,400,98"/>
+<area shape="rect" id="node4" href="$class_actor.html#a43c11710c4e2be71a1f0118f54e5cc18" title="Actor.LookAtPosition" alt="" coords="243,123,389,149"/>
+<area shape="rect" id="node7" href="$class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="269,173,363,200"/>
+<area shape="rect" id="node11" href="$class_audio_manager.html#a45c8809c63fc702dab2bf00396bacbe2" title="AudioManager.PlaySFX" alt="" coords="235,224,397,251"/>
+<area shape="rect" id="node12" href="$class_audio_manager.html#a253066621b93ae908d8aebc63521192e" title="AudioManager.IsPlayingSFX" alt="" coords="221,275,411,301"/>
+<area shape="rect" id="node13" href="$class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="219,325,413,352"/>
+<area shape="rect" id="node14" href="$class_game_controller.html#a701eeee606bed7c711fc9f09ba524a0e" title="GameController.WarpToLevel" alt="" coords="220,376,412,403"/>
+<area shape="rect" id="node5" href="$class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="486,72,638,99"/>
+<area shape="rect" id="node6" href="$class_actor.html#a6e8fc1ce9421af80db947bd623de92a2" title="Actor.LookToTheLeft" alt="" coords="490,123,634,149"/>
+<area shape="rect" id="node8" href="$class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="461,173,663,200"/>
+<area shape="rect" id="node9" href="$class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="711,144,925,171"/>
+<area shape="rect" id="node10" href="$class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="715,195,921,237"/>
+<area shape="rect" id="node15" href="$class_game_state.html#a55ddf009140dc48a4d540f00430231b3" title="GameState.SaveGameState" alt="" coords="468,376,656,403"/>
+</map>

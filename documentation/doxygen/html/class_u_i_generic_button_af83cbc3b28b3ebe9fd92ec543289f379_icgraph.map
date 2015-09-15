@@ -1,0 +1,17 @@
+<map id="DisableButton" name="DisableButton">
+<area shape="rect" id="node2" href="$class_main_menu_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="MainMenuButton.OnEnable" alt="" coords="163,5,344,32"/>
+<area shape="rect" id="node3" href="$class_main_menu_button.html#acdab853f49ac7f0499afc94e493c44fb" title="MainMenuButton.OnDisable" alt="" coords="161,56,345,83"/>
+<area shape="rect" id="node4" href="$class_return_to_main_menu_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="ReturnToMainMenuButton.On\lEnable" alt="" coords="156,107,351,149"/>
+<area shape="rect" id="node5" href="$class_return_to_main_menu_button.html#acdab853f49ac7f0499afc94e493c44fb" title="ReturnToMainMenuButton.On\lDisable" alt="" coords="156,173,351,214"/>
+<area shape="rect" id="node6" href="$class_menu_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="MenuButton.OnEnable" alt="" coords="177,239,330,265"/>
+<area shape="rect" id="node7" href="$class_menu_button.html#acdab853f49ac7f0499afc94e493c44fb" title="MenuButton.OnDisable" alt="" coords="175,289,331,316"/>
+<area shape="rect" id="node8" href="$class_menu_button.html#aa14e9892785815f2b6984b45145f05b5" title="MenuButton.EnableMenu" alt="" coords="169,340,337,367"/>
+<area shape="rect" id="node11" href="$class_search_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="SearchButton.OnEnable" alt="" coords="172,391,335,417"/>
+<area shape="rect" id="node12" href="$class_search_button.html#acdab853f49ac7f0499afc94e493c44fb" title="SearchButton.OnDisable" alt="" coords="171,441,336,468"/>
+<area shape="rect" id="node13" href="$class_return_to_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="ReturnToButton.OnEnable" alt="" coords="166,492,341,519"/>
+<area shape="rect" id="node14" href="$class_return_to_button.html#acdab853f49ac7f0499afc94e493c44fb" title="ReturnToButton.OnDisable" alt="" coords="165,543,342,569"/>
+<area shape="rect" id="node15" href="$class_u_i_generic_button.html#a34316462014f78aba29c389590f6b104" title="OnEnable" alt="" coords="214,593,293,620"/>
+<area shape="rect" id="node16" href="$class_u_i_generic_button.html#a1aac1c9a4ae04ef3e2fbf26b0aa570cc" title="OnDisable" alt="" coords="212,644,295,671"/>
+<area shape="rect" id="node9" href="$class_menu_button.html#af89e595d95fb1d51fe480922320bc3e9" title="MenuButton.ActionOnClick" alt="" coords="412,315,591,341"/>
+<area shape="rect" id="node10" href="$class_exit_game_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ExitGameButton.ActionOnClick" alt="" coords="399,365,604,392"/>
+</map>

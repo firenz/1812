@@ -1,0 +1,4 @@
+<map id="FileManager.DecryptData" name="FileManager.DecryptData">
+<area shape="rect" id="node2" href="$class_game_file_manager.html#aaa30cf0189540c6ccd09d0994f358af4" title="GameFileManager.GetLastPlayed\lLevel" alt="" coords="223,5,441,47"/>
+<area shape="rect" id="node3" href="$class_game_file_manager.html#aad1386549148ca4bacead43adebfa045" title="GameFileManager.GetLastTime\lPlayed" alt="" coords="229,71,435,112"/>
+</map>

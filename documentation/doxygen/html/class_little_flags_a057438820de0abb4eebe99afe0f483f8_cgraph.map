@@ -1,0 +1,11 @@
+<map id="LittleFlags.WaitForLeftClickAction" name="LittleFlags.WaitForLeftClickAction">
+<area shape="rect" id="node2" href="$class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="286,5,381,32"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="249,57,417,98"/>
+<area shape="rect" id="node4" href="$class_actor.html#a6e8fc1ce9421af80db947bd623de92a2" title="Actor.LookToTheLeft" alt="" coords="261,123,405,149"/>
+<area shape="rect" id="node5" href="$class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="286,173,381,200"/>
+<area shape="rect" id="node9" href="$class_player.html#ac91ca711bcb2342507954b6d08aae52c" title="Player.Manipulate" alt="" coords="270,224,397,251"/>
+<area shape="rect" id="node10" href="$class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="236,275,431,301"/>
+<area shape="rect" id="node6" href="$class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="479,173,680,200"/>
+<area shape="rect" id="node7" href="$class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="728,144,943,171"/>
+<area shape="rect" id="node8" href="$class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="733,195,938,237"/>
+</map>

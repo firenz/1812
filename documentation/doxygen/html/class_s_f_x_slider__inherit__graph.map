@@ -1,0 +1,3 @@
+<map id="SFXSlider" name="SFXSlider">
+<area shape="rect" id="node2" href="$class_u_i_generic_slider.html" title="{UIGenericSlider\n|# sfxOnValueChange\l# thisSlider\l|+ OnValueChange()\l+ OnMouseOver()\l+ OnMouseExit()\l# OnEnable()\l# OnDisable()\l# ActionOnValueChange()\l# DisableSlider()\l# EnableSlider()\l}" alt="" coords="5,131,177,325"/>
+</map>

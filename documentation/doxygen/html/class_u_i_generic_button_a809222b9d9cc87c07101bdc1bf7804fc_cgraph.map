@@ -1,0 +1,4 @@
+<map id="WaitForSFXAndExecuteClickAction" name="WaitForSFXAndExecuteClickAction">
+<area shape="rect" id="node2" href="$class_audio_manager.html#a2470cf30aac8c45ea84950d82f4c14c7" title="AudioManager.IsPlayingSFX" alt="" coords="247,5,436,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#ae44ea52fb7d9e7c46e47a04d1114e9cb" title="ActionOnClick" alt="" coords="289,56,394,83"/>
+</map>

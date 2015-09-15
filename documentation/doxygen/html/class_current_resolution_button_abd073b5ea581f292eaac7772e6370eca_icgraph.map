@@ -1,0 +1,4 @@
+<map id="DisablePanel" name="DisablePanel">
+<area shape="rect" id="node2" href="$class_current_resolution_button.html#ad34f3aa16da2426e67c8ecc8a0b08008" title="OnEnable" alt="" coords="154,5,233,32"/>
+<area shape="rect" id="node3" href="$class_current_resolution_button.html#acdab853f49ac7f0499afc94e493c44fb" title="OnDisable" alt="" coords="152,56,235,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="CreateXMLFile" name="CreateXMLFile">
+<area shape="rect" id="node2" href="$class_game_file_manager.html#ab0051cd2129f931a057460ea3ce4ac5a" title="GameFileManager.SaveGameFile" alt="" coords="161,5,380,32"/>
+<area shape="rect" id="node3" href="$class_settings_file_manager.html#ac18c999c10323fc97d4bdbc4f9e05cb1" title="SettingsFileManager.Save\lSettingsFile" alt="" coords="183,57,358,98"/>
+<area shape="rect" id="node5" href="$class_settings_file_manager.html#ab91c52c03e70c56483d739909114311d" title="SettingsFileManager.Load\lSettingsFile" alt="" coords="184,122,357,163"/>
+<area shape="rect" id="node4" href="$class_settings_file_manager.html#a98b1050f09da390896f964fb7a892391" title="SettingsFileManager.Initialize" alt="" coords="428,97,621,124"/>
+</map>

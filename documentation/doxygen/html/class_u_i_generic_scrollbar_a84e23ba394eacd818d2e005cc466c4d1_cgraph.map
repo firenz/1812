@@ -1,0 +1,5 @@
+<map id="OnEnable" name="OnEnable">
+<area shape="rect" id="node2" href="$class_u_i_generic_scrollbar.html#a0b0a8402327309e2554c218967e472fe" title="Disable" alt="" coords="151,5,216,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_scrollbar.html#ab54a4752efd8105eb26e795c150a0e4c" title="Enable" alt="" coords="152,56,215,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_scrollbar.html#ab661b8d8259dac8444804d91809fbb0a" title="ResetPosition" alt="" coords="132,107,235,133"/>
+</map>

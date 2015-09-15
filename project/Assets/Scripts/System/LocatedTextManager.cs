@@ -4,8 +4,19 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Linq;
 
+/// <summary>
+/// Clase estatica encargada de obtener los textos del videojuego contenidos en los archivos <c>LocatedTexts.xml</c>.
+/// <seealso cref="XMLFileReader"/>
+/// </summary>
 public static class LocatedTextManager {
+	/// <summary>
+	/// ID del lenguaje actual en tiempo de ejecucion.
+	/// </summary>
 	private static string currentLanguage;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	private static XmlDocument locatedTextDoc;
 	
 	public delegate void CurrentLanguageChanged();

@@ -1,0 +1,4 @@
+<map id="ReturnToButton.ReturnToMenuModeActivated" name="ReturnToButton.ReturnToMenuModeActivated">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a10ef483ea002011d54a1f7caaf2bca21" title="ReturnToButton.OnEnable" alt="" coords="257,5,432,32"/>
+<area shape="rect" id="node3" href="$class_return_to_button.html#a948f2697b8022a95d975df82329c3a5b" title="ReturnToButton.OnDisable" alt="" coords="256,56,433,83"/>
+</map>

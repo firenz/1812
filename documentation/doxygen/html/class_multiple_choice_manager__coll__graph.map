@@ -1,0 +1,4 @@
+<map id="MultipleChoiceManager" name="MultipleChoiceManager">
+<area shape="rect" id="node2" href="$class_singleton.html" title="{Singleton\&lt; MultipleChoice\lManager \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="27,331,200,481"/>
+<area shape="rect" id="node3" href="$class_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase y ..." alt="" coords="40,132,187,268"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Player.IsIdle" name="Player.IsIdle">
+<area shape="rect" id="node2" href="$class_player.html#ac32bf3de9cc041af382ac405e27460ce" title="Player.AdditionalUpdateInformation" alt="" coords="148,5,375,32"/>
+<area shape="rect" id="node3" href="$class_player.html#abccf91b671f93492dfdb704ddf894ae3" title="Player.Update" alt="" coords="423,5,527,32"/>
+</map>

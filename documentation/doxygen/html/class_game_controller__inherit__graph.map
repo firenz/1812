@@ -1,0 +1,4 @@
+<map id="GameController" name="GameController">
+<area shape="rect" id="node2" href="$class_persistent_singleton.html" title="{PersistentSingleton\l\&lt; GameController \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="53,331,200,481"/>
+<area shape="rect" id="node3" href="$class_persistent_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase..." alt="" coords="43,132,210,268"/>
+</map>

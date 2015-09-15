@@ -1,0 +1,7 @@
+<map id="FileManager.EncryptData" name="FileManager.EncryptData">
+<area shape="rect" id="node2" href="$class_file_manager.html#ad64a8116434b04335e840429b0fd7f8b" title="FileManager.CreateXMLFile" alt="" coords="223,64,405,91"/>
+<area shape="rect" id="node3" href="$class_game_file_manager.html#a437b22f5103ce02ea945bb2ea4c89bfb" title="GameFileManager.SaveGameFile" alt="" coords="453,5,672,32"/>
+<area shape="rect" id="node4" href="$class_settings_file_manager.html#a22d0514e6a163ab71aba60b9aaa8eac5" title="SettingsFileManager.Save\lSettingsFile" alt="" coords="475,57,650,98"/>
+<area shape="rect" id="node6" href="$class_settings_file_manager.html#aeed1ed3a11be3d6a8167d9b3b5b763f1" title="SettingsFileManager.Load\lSettingsFile" alt="" coords="476,122,649,163"/>
+<area shape="rect" id="node5" href="$class_settings_file_manager.html#ae8fff6d7fe22a6922b81cb1928cb3a8a" title="SettingsFileManager.Initialize" alt="" coords="720,97,913,124"/>
+</map>

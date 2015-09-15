@@ -1,0 +1,11 @@
+<map id="GameController.WarpToLevel" name="GameController.WarpToLevel">
+<area shape="rect" id="node2" href="$class_in_game_menu_button.html#aabe67867b638828206ad7556ece7851c" title="InGameMenuButton.ActionOn\lClick" alt="" coords="258,5,454,47"/>
+<area shape="rect" id="node3" href="$class_new_game_main_menu_button.html#a28ff65a42f76743d70a92af25dc94c47" title="NewGameMainMenuButton.Action\lOnClick" alt="" coords="245,71,467,112"/>
+<area shape="rect" id="node4" href="$class_return_to_button.html#a9c4d76a785a6a9b8f01965d1a2588545" title="ReturnToButton.ChangeToScene" alt="" coords="249,137,463,163"/>
+<area shape="rect" id="node6" href="$class_corridor_door.html#ac5e7e42c04d38914af865f2198900677" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="273,188,439,229"/>
+<area shape="rect" id="node7" href="$class_door.html#ad4c5e848b4981ea9254fc492f6f02733" title="Door.WaitForLeftClickAction" alt="" coords="263,254,449,281"/>
+<area shape="rect" id="node8" href="$class_map.html#a136e9fbb918a34899d675d1e7691d28b" title="Map.OnPlayerTouchingAction" alt="" coords="259,305,453,331"/>
+<area shape="rect" id="node9" href="$class_warper_element.html#ab589fbe714d5ffe71cee5984727a289b" title="WarperElement.WaitForLeft\lClickAction" alt="" coords="265,356,447,397"/>
+<area shape="rect" id="node10" href="$class_u_i_return_to_professor_office_button.html#ab5eae8cd0b4957c1de6d334aaca7a5f4" title="UIReturnToProfessorOffice\lButton.ActionOnClick" alt="" coords="267,421,445,463"/>
+<area shape="rect" id="node5" href="$class_return_to_button.html#ab5483d44c1a1e5fc15880a2c0fbf7e7b" title="ReturnToButton.ActionOnClick" alt="" coords="515,137,715,163"/>
+</map>

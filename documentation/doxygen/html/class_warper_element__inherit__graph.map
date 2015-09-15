@@ -1,0 +1,6 @@
+<map id="WarperElement" name="WarperElement">
+<area shape="rect" id="node4" href="$class_corridor_door.html" title="{CorridorDoor\n||# WaitForLeftClickAction()\l}" alt="" coords="5,770,180,847"/>
+<area shape="rect" id="node5" href="$class_door.html" title="{Door\n||# WaitForLeftClickAction()\l}" alt="" coords="204,770,379,847"/>
+<area shape="rect" id="node6" href="$class_shadow_to_w_c.html" title="{ShadowToWC\n||# InitializeInformation()\l# WaitForLeftClickAction()\l}" alt="" coords="403,763,577,855"/>
+<area shape="rect" id="node2" href="$class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="187,131,395,560"/>
+</map>

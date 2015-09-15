@@ -1,0 +1,4 @@
+<map id="CustomCursorController" name="CustomCursorController">
+<area shape="rect" id="node2" href="$class_persistent_singleton.html" title="{PersistentSingleton\l\&lt; CustomCursorController \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="29,331,213,481"/>
+<area shape="rect" id="node3" href="$class_persistent_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase..." alt="" coords="37,132,204,268"/>
+</map>

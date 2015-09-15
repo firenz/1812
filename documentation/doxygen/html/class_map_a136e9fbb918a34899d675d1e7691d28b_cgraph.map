@@ -1,0 +1,4 @@
+<map id="Map.OnPlayerTouchingAction" name="Map.OnPlayerTouchingAction">
+<area shape="rect" id="node2" href="$class_game_controller.html#a701eeee606bed7c711fc9f09ba524a0e" title="GameController.WarpToLevel" alt="" coords="248,5,440,32"/>
+<area shape="rect" id="node3" href="$class_game_state.html#a55ddf009140dc48a4d540f00430231b3" title="GameState.SaveGameState" alt="" coords="488,5,676,32"/>
+</map>

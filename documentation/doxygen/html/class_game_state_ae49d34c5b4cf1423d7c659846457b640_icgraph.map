@@ -1,0 +1,5 @@
+<map id="ChangeScreenSettings" name="ChangeScreenSettings">
+<area shape="rect" id="node2" href="$class_change_resolution_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ChangeResolutionButton.Action\lOnClick" alt="" coords="208,5,415,47"/>
+<area shape="rect" id="node3" href="$class_fullscreen_toggle.html#a48751ad22e4a92358867e4c8dc187769" title="FullscreenToggle.SetOn" alt="" coords="230,71,393,98"/>
+<area shape="rect" id="node4" href="$class_fullscreen_toggle.html#a0a5c2cee84b21fcb95fdc15ddac9a9cc" title="FullscreenToggle.SetOff" alt="" coords="230,122,393,149"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="OnPlayerTouchingAction" name="OnPlayerTouchingAction">
+<area shape="rect" id="node2" href="$class_actor.html#a34dfcf029edb599a0f6d7d0ea7cd98be" title="Actor.Speak" alt="" coords="273,35,368,61"/>
+<area shape="rect" id="node6" href="$class_player.html#a3754b901287589edea1fbdbb4ad4398c" title="Player.GrabItem" alt="" coords="262,85,379,112"/>
+<area shape="rect" id="node7" href="$class_interactive_element.html#a1a702adf6bf22eba4cdddc80af4e7b6e" title="InteractiveElement.SetInactive" alt="" coords="220,136,421,163"/>
+<area shape="rect" id="node3" href="$class_actor.html#abac4bfd79426372a4d1a8fd19a92b797" title="Actor.WaitForSpeakCompleted" alt="" coords="469,35,671,61"/>
+<area shape="rect" id="node4" href="$class_display_dialogue_text.html#ae4d726e74dbbdf4437887b8f2c95a04f" title="DisplayDialogueText.DisplayText" alt="" coords="719,5,933,32"/>
+<area shape="rect" id="node5" href="$class_display_dialogue_text.html#aca2b23a8f8d430135da549ea37fd4481" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="723,57,929,98"/>
+</map>

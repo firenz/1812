@@ -1,0 +1,5 @@
+<map id="OnClick" name="OnClick">
+<area shape="rect" id="node2" href="$class_audio_manager.html#ab395348b94982fdb20611fc354337c29" title="AudioManager.PlaySFX" alt="" coords="121,5,283,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_toggle.html#aabf8caa1b584b785611e9de3f68e32ad" title="SetOn" alt="" coords="173,56,231,83"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_toggle.html#a2cd552cc4ccbbd70987bd86185108710" title="SetOff" alt="" coords="172,107,232,133"/>
+</map>

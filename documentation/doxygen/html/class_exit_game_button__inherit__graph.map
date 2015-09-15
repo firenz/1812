@@ -1,0 +1,4 @@
+<map id="ExitGameButton" name="ExitGameButton">
+<area shape="rect" id="node2" href="$class_menu_button.html" title="{MenuButton\n|# menuPanel\l# isThisMenuActive\l|+ SetMenuActive()\l+ EnableMenu()\l+ DisableMenu()\l# OnEnable()\l# OnDisable()\l# Start()\l# ActionOnClick()\l}" alt="" coords="39,491,177,671"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html" title="{UIGenericButton\n|# localizedTextGroupID\l# localizedTextElementID\l# localizedTextStringID\l# sfxOnClick\l# thisButton\l# buttonText\l|+ OnClick()\l+ OnMouseOver()\l+ OnMouseExit()\l+ EnableButton()\l+ DisableButton()\l# OnEnable()\l# OnDisable()\l# Start()\l# WaitForSFXAndExecuteClick\lAction()\l# ActionOnClick()\l# ChangeButtonTextLanguage()\l}" alt="" coords="5,131,211,443"/>
+</map>

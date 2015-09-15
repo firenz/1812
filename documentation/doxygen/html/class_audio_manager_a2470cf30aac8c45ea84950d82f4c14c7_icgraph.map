@@ -1,0 +1,9 @@
+<map id="IsPlayingSFX" name="IsPlayingSFX">
+<area shape="rect" id="node2" href="$class_return_to_button.html#a710085e265ce15d3fe40296f069e0528" title="ReturnToButton.ChangeToScene" alt="" coords="157,5,371,32"/>
+<area shape="rect" id="node4" href="$class_u_i_generic_button.html#a809222b9d9cc87c07101bdc1bf7804fc" title="UIGenericButton.WaitForSFXAnd\lExecuteClickAction" alt="" coords="156,57,372,98"/>
+<area shape="rect" id="node6" href="$class_corridor_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="181,122,347,163"/>
+<area shape="rect" id="node7" href="$class_shadow_to_w_c.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="ShadowToWC.WaitForLeftClick\lAction" alt="" coords="162,187,366,229"/>
+<area shape="rect" id="node8" href="$class_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Door.WaitForLeftClickAction" alt="" coords="171,253,357,280"/>
+<area shape="rect" id="node3" href="$class_return_to_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ReturnToButton.ActionOnClick" alt="" coords="420,5,620,32"/>
+<area shape="rect" id="node5" href="$class_u_i_generic_button.html#a3d5c6f40659aa6c4e6bf168bfc8bea05" title="UIGenericButton.OnClick" alt="" coords="436,64,604,91"/>
+</map>

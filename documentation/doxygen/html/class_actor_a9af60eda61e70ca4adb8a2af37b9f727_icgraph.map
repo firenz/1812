@@ -1,0 +1,17 @@
+<map id="LookToTheRight" name="LookToTheRight">
+<area shape="rect" id="node2" href="$class_actor.html#ae7182506583a87f06e9297f7c147e0b6" title="LookAtPosition" alt="" coords="214,98,325,125"/>
+<area shape="rect" id="node8" href="$class_actor.html#a9a0b10240dd35c06b9e43c3d3b55084e" title="CalculateMoveDirection" alt="" coords="190,189,349,215"/>
+<area shape="rect" id="node12" href="$class_librarian.html#a8224e736e448879c04918703e8a41577" title="Librarian.WaitForRightClick\lAction" alt="" coords="180,240,359,281"/>
+<area shape="rect" id="node13" href="$class_librarian.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Librarian.WaitForLeftClick\lAction" alt="" coords="184,305,355,347"/>
+<area shape="rect" id="node14" href="$class_plant.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Plant.WaitForLeftClickAction" alt="" coords="175,371,364,398"/>
+<area shape="rect" id="node15" href="$class_plant.html#a8224e736e448879c04918703e8a41577" title="Plant.WaitForRightClickAction" alt="" coords="171,422,368,449"/>
+<area shape="rect" id="node16" href="$class_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="Door.WaitForLeftClickAction" alt="" coords="176,473,363,499"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#adbe19079b737d5af0bd3ad2bb20e7c98" title="InteractiveElement.WaitFor\lLeftClickAction" alt="" coords="416,5,596,47"/>
+<area shape="rect" id="node5" href="$class_interactive_element.html#aa663438fa0dd8ed1732ed4609850af67" title="InteractiveElement.WaitFor\lRightClickAction" alt="" coords="416,71,596,112"/>
+<area shape="rect" id="node7" href="$class_corridor_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="423,136,589,177"/>
+<area shape="rect" id="node4" href="$class_interactive_element.html#a52b1258cf50994b5a5bb226baf59fcfa" title="InteractiveElement.LeftClick\lAction" alt="" coords="644,5,831,47"/>
+<area shape="rect" id="node6" href="$class_interactive_element.html#adec39eb509f7857ed5b3d18a0bd22cc3" title="InteractiveElement.Right\lClickAction" alt="" coords="655,71,820,112"/>
+<area shape="rect" id="node9" href="$class_actor.html#a51e004b2f1ecda6989dc7e84a17ebd5a" title="WaitUntilTargetedPosition\lIsReached" alt="" coords="420,201,592,243"/>
+<area shape="rect" id="node10" href="$class_actor.html#aaaf47d816f43b140d7f799f41355747d" title="WaitForGoToCompleted" alt="" coords="657,209,818,235"/>
+<area shape="rect" id="node11" href="$class_actor.html#a49be48e4b3192d785f56dd90534e1d1d" title="GoTo" alt="" coords="879,209,933,235"/>
+</map>

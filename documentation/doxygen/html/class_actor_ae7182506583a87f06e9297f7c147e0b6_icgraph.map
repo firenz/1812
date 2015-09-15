@@ -1,0 +1,7 @@
+<map id="LookAtPosition" name="LookAtPosition">
+<area shape="rect" id="node2" href="$class_interactive_element.html#adbe19079b737d5af0bd3ad2bb20e7c98" title="InteractiveElement.WaitFor\lLeftClickAction" alt="" coords="164,5,344,47"/>
+<area shape="rect" id="node4" href="$class_interactive_element.html#aa663438fa0dd8ed1732ed4609850af67" title="InteractiveElement.WaitFor\lRightClickAction" alt="" coords="164,71,344,112"/>
+<area shape="rect" id="node6" href="$class_corridor_door.html#a3e3c6843b46ed39ce690c34ebcb1f0e6" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="171,136,337,177"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a52b1258cf50994b5a5bb226baf59fcfa" title="InteractiveElement.LeftClick\lAction" alt="" coords="392,5,579,47"/>
+<area shape="rect" id="node5" href="$class_interactive_element.html#adec39eb509f7857ed5b3d18a0bd22cc3" title="InteractiveElement.Right\lClickAction" alt="" coords="403,71,568,112"/>
+</map>

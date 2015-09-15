@@ -1,0 +1,5 @@
+<map id="CalculateMoveDirection" name="CalculateMoveDirection">
+<area shape="rect" id="node2" href="$class_actor.html#a51e004b2f1ecda6989dc7e84a17ebd5a" title="WaitUntilTargetedPosition\lIsReached" alt="" coords="212,5,384,47"/>
+<area shape="rect" id="node3" href="$class_actor.html#aaaf47d816f43b140d7f799f41355747d" title="WaitForGoToCompleted" alt="" coords="432,13,593,39"/>
+<area shape="rect" id="node4" href="$class_actor.html#a49be48e4b3192d785f56dd90534e1d1d" title="GoTo" alt="" coords="641,13,696,39"/>
+</map>

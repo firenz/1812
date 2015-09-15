@@ -1,0 +1,4 @@
+<map id="SearchButton.OnDisable" name="SearchButton.OnDisable">
+<area shape="rect" id="node2" href="$class_u_i_generic_button.html#a4c0feec8bbfe3918501c2e04d59aa268" title="UIGenericButton.DisableButton" alt="" coords="219,5,421,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a3f022b8d5f1f10e6802f3d94a63fd06f" title="UIGenericButton.EnableButton" alt="" coords="220,56,420,83"/>
+</map>

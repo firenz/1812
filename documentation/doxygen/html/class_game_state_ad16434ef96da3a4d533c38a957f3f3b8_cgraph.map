@@ -1,0 +1,6 @@
+<map id="GameState.ChangeCurrentLanguage" name="GameState.ChangeCurrentLanguage">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#a5eb12d2ec9a393504462008814f3a4b5" title="LocatedTextManager.Change\lCurrentLanguage" alt="" coords="288,23,480,65"/>
+<area shape="rect" id="node3" href="$class_x_m_l_file_reader.html#af7a65f89b42bc565d0d405fb848f85b7" title="XMLFileReader.CloseXMLFile" alt="" coords="528,5,724,32"/>
+<area shape="rect" id="node4" href="$class_located_text_manager.html#abf32f125503d6301dcbc70be43ed33dd" title="LocatedTextManager.Initialize" alt="" coords="528,56,724,83"/>
+<area shape="rect" id="node5" href="$class_x_m_l_file_reader.html#a2e0da58f685c131abd6dcce3b6c57423" title="XMLFileReader.OpenXMLFile" alt="" coords="772,56,967,83"/>
+</map>

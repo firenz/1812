@@ -1,0 +1,4 @@
+<map id="UIGenericSlider" name="UIGenericSlider">
+<area shape="rect" id="node3" href="$class_music_slider.html" title="{MusicSlider\n||# ActionOnValueChange()\l}" alt="" coords="5,373,177,451"/>
+<area shape="rect" id="node4" href="$class_s_f_x_slider.html" title="{SFXSlider\n||# ActionOnValueChange()\l}" alt="" coords="201,373,373,451"/>
+</map>

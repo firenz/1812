@@ -1,0 +1,7 @@
+<map id="Initialize" name="Initialize">
+<area shape="rect" id="node2" href="$class_located_text_manager.html#abb2a8a0dd7f483f364da0acd9e6e61e1" title="InitializeLanguageSettings" alt="" coords="124,9,299,36"/>
+<area shape="rect" id="node4" href="$class_located_text_manager.html#a590bbee2a2ce35dcbbfe3b6e34571323" title="ChangeCurrentLanguage" alt="" coords="129,64,293,91"/>
+<area shape="rect" id="node3" href="$class_settings_file_manager.html#a98b1050f09da390896f964fb7a892391" title="SettingsFileManager.Initialize" alt="" coords="367,5,561,32"/>
+<area shape="rect" id="node5" href="$class_change_current_language_button.html#af89e595d95fb1d51fe480922320bc3e9" title="ChangeCurrentLanguageButton.\lActionOnClick" alt="" coords="361,57,567,98"/>
+<area shape="rect" id="node6" href="$class_game_state.html#a590bbee2a2ce35dcbbfe3b6e34571323" title="GameState.ChangeCurrentLanguage" alt="" coords="347,123,581,149"/>
+</map>

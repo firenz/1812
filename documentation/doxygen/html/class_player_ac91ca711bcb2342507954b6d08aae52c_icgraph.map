@@ -1,0 +1,5 @@
+<map id="Player.Manipulate" name="Player.Manipulate">
+<area shape="rect" id="node2" href="$class_pickable_element.html#a9aa4b1fe435180e11793a6506276aa20" title="PickableElement.WaitForLeft\lClickAction" alt="" coords="187,5,377,47"/>
+<area shape="rect" id="node3" href="$class_little_flags.html#a057438820de0abb4eebe99afe0f483f8" title="LittleFlags.WaitForLeftClick\lAction" alt="" coords="191,71,373,112"/>
+<area shape="rect" id="node4" href="$class_window.html#a8ee2d40431429cac8ecc9d00f7b4db21" title="Window.WaitForLeftClickAction" alt="" coords="180,137,384,163"/>
+</map>

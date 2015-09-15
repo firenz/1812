@@ -1,0 +1,10 @@
+<map id="CutScenesManager.IsPlaying" name="CutScenesManager.IsPlaying">
+<area shape="rect" id="node2" href="$class_librarian.html#a86df1ea2409dedd087ce08503b88406f" title="Librarian.Update" alt="" coords="307,5,423,32"/>
+<area shape="rect" id="node3" href="$class_player.html#ac32bf3de9cc041af382ac405e27460ce" title="Player.AdditionalUpdateInformation" alt="" coords="252,56,479,83"/>
+<area shape="rect" id="node5" href="$class_interactive_element.html#a50dd614811e32fdc6f330efe441ed7ff" title="InteractiveElement.LeftClick\lAction" alt="" coords="272,107,459,149"/>
+<area shape="rect" id="node6" href="$class_interactive_element.html#a1b025b112bbeabddc95d918add55558a" title="InteractiveElement.Right\lClickAction" alt="" coords="283,173,448,214"/>
+<area shape="rect" id="node7" href="$class_map.html#af4ee42bdc39bd4f7870c0bfe4c07264e" title="Map.ActionOnItemInventoryUsed" alt="" coords="258,239,473,265"/>
+<area shape="rect" id="node8" href="$class_window.html#a513884c46169d6c39bd478e14e1da9a9" title="Window.ActionOnItemInventoryUsed" alt="" coords="248,289,483,316"/>
+<area shape="rect" id="node9" href="$class_item_inventory.html#a4d866175e7ab25f28f1987c8956292d3" title="ItemInventory.Select" alt="" coords="294,340,437,367"/>
+<area shape="rect" id="node4" href="$class_player.html#abccf91b671f93492dfdb704ddf894ae3" title="Player.Update" alt="" coords="531,56,635,83"/>
+</map>

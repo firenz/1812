@@ -1,0 +1,7 @@
+<map id="Actor.LookAtPosition" name="Actor.LookAtPosition">
+<area shape="rect" id="node2" href="$class_interactive_element.html#a2bab48f960ccde54c5157db3552d588f" title="InteractiveElement.WaitFor\lLeftClickAction" alt="" coords="199,5,379,47"/>
+<area shape="rect" id="node4" href="$class_interactive_element.html#a5c4c788ab325d8917ba898cd8b4737c4" title="InteractiveElement.WaitFor\lRightClickAction" alt="" coords="199,71,379,112"/>
+<area shape="rect" id="node6" href="$class_corridor_door.html#ac5e7e42c04d38914af865f2198900677" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="206,136,371,177"/>
+<area shape="rect" id="node3" href="$class_interactive_element.html#a50dd614811e32fdc6f330efe441ed7ff" title="InteractiveElement.LeftClick\lAction" alt="" coords="427,5,613,47"/>
+<area shape="rect" id="node5" href="$class_interactive_element.html#a1b025b112bbeabddc95d918add55558a" title="InteractiveElement.Right\lClickAction" alt="" coords="437,71,603,112"/>
+</map>

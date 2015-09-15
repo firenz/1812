@@ -1,0 +1,4 @@
+<map id="MenuButton.ActionOnClick" name="MenuButton.ActionOnClick">
+<area shape="rect" id="node2" href="$class_menu_button.html#a3bbae201bbb7081419b9fd2d6bd0a053" title="MenuButton.EnableMenu" alt="" coords="232,5,400,32"/>
+<area shape="rect" id="node3" href="$class_u_i_generic_button.html#a4c0feec8bbfe3918501c2e04d59aa268" title="UIGenericButton.DisableButton" alt="" coords="448,5,651,32"/>
+</map>

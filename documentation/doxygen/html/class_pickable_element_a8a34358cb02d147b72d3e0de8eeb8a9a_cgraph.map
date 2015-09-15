@@ -1,0 +1,8 @@
+<map id="PickableElement.OnPlayerTouchingAction" name="PickableElement.OnPlayerTouchingAction">
+<area shape="rect" id="node2" href="$class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="285,35,380,61"/>
+<area shape="rect" id="node6" href="$class_player.html#a9489694c5045eb7e6ca54d78ba79e59d" title="Player.GrabItem" alt="" coords="274,85,391,112"/>
+<area shape="rect" id="node7" href="$class_interactive_element.html#afaa0115976fe666153abc1431686f261" title="InteractiveElement.SetInactive" alt="" coords="232,136,433,163"/>
+<area shape="rect" id="node3" href="$class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="481,35,683,61"/>
+<area shape="rect" id="node4" href="$class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="731,5,945,32"/>
+<area shape="rect" id="node5" href="$class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="735,57,941,98"/>
+</map>

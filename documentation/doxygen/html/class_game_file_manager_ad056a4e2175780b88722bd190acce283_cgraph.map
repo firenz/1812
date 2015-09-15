@@ -1,0 +1,4 @@
+<map id="LoadGameFile" name="LoadGameFile">
+<area shape="rect" id="node2" href="$class_file_manager.html#a9ff9a3157e5bea061f90b3c355f83169" title="FileManager.CheckDirectory" alt="" coords="160,5,347,32"/>
+<area shape="rect" id="node3" href="$class_file_manager.html#ae37330c1acc88a26b044ca69d953b0df" title="FileManager.CheckFile" alt="" coords="176,56,331,83"/>
+</map>
