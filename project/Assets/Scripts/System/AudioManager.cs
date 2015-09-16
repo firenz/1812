@@ -2,8 +2,16 @@
 using System;
 using System.Collections;
 
+/// <summary>
+/// Clase estatica que gestiona y controla los audios del juego.
+/// </summary>
 public static class AudioManager {
 
+	/// <summary>
+	/// Reproduce una cancion.
+	/// </summary>
+	/// <param name="name">Nombre de la cancion</param>
+	/// <param name="loop">Reproduce en bucle la cancion si se indica el valor <c>true</c>, por defecto solo se reproduce una vez</param>
 	public static void PlayMusic(string name, bool loop = false){
 		AudioClip _clip = null;
 		GameObject _audioGO = null;
@@ -38,6 +46,10 @@ public static class AudioManager {
 		}
 	}
 
+	/// <summary>
+	/// Pausa la cancion si se esta reproduciendo en bucle.
+	/// </summary>
+	/// <param name="name">Nombre de la cancion.</param>
 	public static void PauseMusic(string name){
 		AudioSource _source = null;
 		
@@ -56,6 +68,10 @@ public static class AudioManager {
 		}
 	}
 
+	/// <summary>
+	/// Termina de pausar una cancion en bucle pausada que no se esta reproduciendo.
+	/// </summary>
+	/// <param name="name">Nombre de la cancion.</param>
 	public static void UnpauseMusic(string name){
 		AudioSource _source = null;
 		
@@ -74,6 +90,10 @@ public static class AudioManager {
 		}
 	}
 
+	/// <summary>
+	/// Para de reproducir la cancion.
+	/// </summary>
+	/// <param name="name">Nombre de la cancion.</param>
 	public static void StopMusic(string name){
 		AudioSource _source = null;
 
@@ -89,6 +109,9 @@ public static class AudioManager {
 		MonoBehaviour.Destroy(_source.gameObject);
 	}
 
+	/// <summary>
+	/// Para de reproducir todas las canciones.
+	/// </summary>
 	public static void StopAllMusic(){
 		GameObject[] _musics = GameObject.FindGameObjectsWithTag("Music");
 		
@@ -97,6 +120,11 @@ public static class AudioManager {
 		}
 	}
 
+	/// <summary>
+	/// Reproduce un efecto sonoro.
+	/// </summary>
+	/// <param name="name">Nombre del efecto sonoro.</param>
+	/// <param name="loop">Reproduce en bucle el efecto sonoro si se indica el valor <c>true</c>, por defecto solo se reproduce una vez</param>
 	public static void PlaySFX(string name, bool loop = false){
 		AudioClip _clip = null;
 		GameObject _audioGO = null;
@@ -131,6 +159,10 @@ public static class AudioManager {
 		
 	}
 
+	/// <summary>
+	/// Para de reproducir el efecto sonoro.
+	/// </summary>
+	/// <param name="name">Nombre del efecto sonoro.</param>
 	public static void StopSFX(string name){
 		AudioSource _source = null;
 		
@@ -146,6 +178,11 @@ public static class AudioManager {
 		MonoBehaviour.Destroy(_source.gameObject);
 	}
 
+	/// <summary>
+	/// Determina si una cancion con el nombre especificado se esta reproduciendo.
+	/// </summary>
+	/// <returns>Devuelve <c>true</c> si la cancion especificada se esta reproduciendo; en otro caso, <c>false</c>.</returns>
+	/// <param name="name">Nombre de la cancion.</param>
 	public static bool IsPlayingMusic(string name){
 		AudioSource _source;
 
@@ -160,6 +197,11 @@ public static class AudioManager {
 		return _isPlaying;
 	}
 
+	/// <summary>
+	/// Determina si un efecto sonoro con el nombre especificado se esta reproduciendo.
+	/// </summary>
+	/// <returns>Devuelve <c>true</c> si la cancion especificada se esta reproduciendo; en otro caso, <c>false</c>.</returns>
+	/// <param name="name">Nombre del efecto sonoro.</param>
 	public static bool IsPlayingSFX(string name){
 		AudioSource _source;
 		
@@ -174,6 +216,10 @@ public static class AudioManager {
 		return _isPlaying;
 	}
 
+	/// <summary>
+	/// Cambia el volumen de todas las canciones que hay en escena.
+	/// </summary>
+	/// <param name="newMusicVolume">Nuevo volumen para las canciones.</param>
 	public static void ChangeVolumeAllCurrentMusics(int newMusicVolume){
 		GameState.SystemData.AudioVolumeSettings.music = newMusicVolume;
 		SettingsFileManager.Instance.SaveSettingsFile();
@@ -184,6 +230,10 @@ public static class AudioManager {
 		}
 	}
 
+	/// <summary>
+	/// Cambia el volumen de todos los efectos sonoros que hay en escena.
+	/// </summary>
+	/// <param name="newSFXVolume">Nuevo volumen para los efectos sonoros.</param>
 	public static void ChangeVolumeAllCurrentSFX(int newSFXVolume){
 		GameState.SystemData.AudioVolumeSettings.sfx = newSFXVolume;
 		SettingsFileManager.Instance.SaveSettingsFile();

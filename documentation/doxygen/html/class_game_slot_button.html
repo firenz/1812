@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">1812: La aventura
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Demo técnica del Motor de Aventuras Gráficas en Unity 2D</div>
   </td>
@@ -39,7 +39,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
       <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
@@ -55,20 +55,8 @@
 <div class="title">Referencia de la Clase GameSlotButton</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Diagrama de herencias de GameSlotButton</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button__inherit__graph.png" border="0" usemap="#_game_slot_button_inherit__map" alt="Inheritance graph"/></div>
-<map name="_game_slot_button_inherit__map" id="_game_slot_button_inherit__map">
-<area shape="rect" id="node2" href="class_u_i_generic_button.html" title="{UIGenericButton\n|# localizedTextGroupID\l# localizedTextElementID\l# localizedTextStringID\l# sfxOnClick\l# thisButton\l# buttonText\l|+ OnClick()\l+ OnMouseOver()\l+ OnMouseExit()\l+ EnableButton()\l+ DisableButton()\l# OnEnable()\l# OnDisable()\l# Start()\l# WaitForSFXAndExecuteClick\lAction()\l# ActionOnClick()\l# ChangeButtonTextLanguage()\l}" alt="" coords="9,131,215,443"/></map>
-</div>
-<div class="dynheader">
-Diagrama de colaboración para GameSlotButton:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button__coll__graph.png" border="0" usemap="#_game_slot_button_coll__map" alt="Collaboration graph"/></div>
-<map name="_game_slot_button_coll__map" id="_game_slot_button_coll__map">
-<area shape="rect" id="node2" href="class_u_i_generic_button.html" title="{UIGenericButton\n|# localizedTextGroupID\l# localizedTextElementID\l# localizedTextStringID\l# sfxOnClick\l# thisButton\l|+ OnClick()\l+ OnMouseOver()\l+ OnMouseExit()\l+ EnableButton()\l+ DisableButton()\l# OnEnable()\l# OnDisable()\l# Start()\l# WaitForSFXAndExecuteClick\lAction()\l# ActionOnClick()\l# ChangeButtonTextLanguage()\l}" alt="" coords="11,145,216,443"/></map>
-</div>
+
+<p>Herencias <a class="el" href="class_u_i_generic_button.html">UIGenericButton</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
@@ -88,30 +76,41 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:aaf4c8b5c3dd2cd216529acceb5e8c0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_u_i_generic_button"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_u_i_generic_button')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_u_i_generic_button.html">UIGenericButton</a></td></tr>
 <tr class="memitem:a154ea9c1a358f2a6fb192ed962707335 inherit pub_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a154ea9c1a358f2a6fb192ed962707335">OnClick</a> ()</td></tr>
+<tr class="memdesc:a154ea9c1a358f2a6fb192ed962707335 inherit pub_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que se ejecuta cuando se inicia el evento de click en el boton, primero comprueba que el boton es interactivo y que el cursor no esta oculto, si es asi, ejecuta la corrutina <code><a class="el" href="class_u_i_generic_button.html#a6c5222acaedfd5727150a4ed068a7165" title="Corrutina que espera que se ejecute el sonido de pulsado del boton, y luego llama al metodo UIGeneric...">UIGenericButton.WaitForSFXAndExecuteClickAction</a></code>.  <a href="#a154ea9c1a358f2a6fb192ed962707335">Más...</a><br /></td></tr>
 <tr class="separator:a154ea9c1a358f2a6fb192ed962707335 inherit pub_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e6ca5df22913670a504587a6549bcb0 inherit pub_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a1e6ca5df22913670a504587a6549bcb0">OnMouseOver</a> ()</td></tr>
+<tr class="memdesc:a1e6ca5df22913670a504587a6549bcb0 inherit pub_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que se ejecuta cuando se inicia el evento del cursor encima del boton.  <a href="#a1e6ca5df22913670a504587a6549bcb0">Más...</a><br /></td></tr>
 <tr class="separator:a1e6ca5df22913670a504587a6549bcb0 inherit pub_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39841ca619e00fec2f999ac5a09d0bfd inherit pub_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a39841ca619e00fec2f999ac5a09d0bfd">OnMouseExit</a> ()</td></tr>
+<tr class="memdesc:a39841ca619e00fec2f999ac5a09d0bfd inherit pub_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises the mouse exit event.  <a href="#a39841ca619e00fec2f999ac5a09d0bfd">Más...</a><br /></td></tr>
 <tr class="separator:a39841ca619e00fec2f999ac5a09d0bfd inherit pub_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f022b8d5f1f10e6802f3d94a63fd06f inherit pub_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a3f022b8d5f1f10e6802f3d94a63fd06f">EnableButton</a> ()</td></tr>
+<tr class="memdesc:a3f022b8d5f1f10e6802f3d94a63fd06f inherit pub_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que habilita que el boton sea interactivo.  <a href="#a3f022b8d5f1f10e6802f3d94a63fd06f">Más...</a><br /></td></tr>
 <tr class="separator:a3f022b8d5f1f10e6802f3d94a63fd06f inherit pub_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0feec8bbfe3918501c2e04d59aa268 inherit pub_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a4c0feec8bbfe3918501c2e04d59aa268">DisableButton</a> ()</td></tr>
+<tr class="memdesc:a4c0feec8bbfe3918501c2e04d59aa268 inherit pub_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que inhabilita que el boton sea interactivo.  <a href="#a4c0feec8bbfe3918501c2e04d59aa268">Más...</a><br /></td></tr>
 <tr class="separator:a4c0feec8bbfe3918501c2e04d59aa268 inherit pub_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Métodos protegidos</h2></td></tr>
 <tr class="memitem:a7230a12fd914b1b75436e0847f6adb37"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_slot_button.html#a7230a12fd914b1b75436e0847f6adb37">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a7230a12fd914b1b75436e0847f6adb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Al activarse el objeto que contiene una instancia de esta clase, se activan las escuchas de los eventos <code><a class="el" href="class_modal_window_handler.html#a34825e5349c6b502f90fdfedc38c75b3">ModalWindowHandler.beginQuestion</a></code>, <code><a class="el" href="class_modal_window_handler.html#ada11322e7be754ee12b51c78ec8b5de3">ModalWindowHandler.endedQuestion</a></code> y <code><a class="el" href="class_located_text_manager.html#a60a4e11600d729460a1c31d4864dc68f" title="Evento que llama al metodo delegado LocatedTextManager.CurrentLanguageChanged para que se ejecute...">LocatedTextManager.currentLanguageChanged</a></code>.  <a href="#a7230a12fd914b1b75436e0847f6adb37">Más...</a><br /></td></tr>
 <tr class="separator:a7230a12fd914b1b75436e0847f6adb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46fc5c44cab1a113fe100fdeacc259d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_slot_button.html#ad46fc5c44cab1a113fe100fdeacc259d">OnDisable</a> ()</td></tr>
+<tr class="memdesc:ad46fc5c44cab1a113fe100fdeacc259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Al volverse inactivo el objeto que contiene una instancia de esta clase, desactiva la escucha de los eventos <code><a class="el" href="class_modal_window_handler.html#a34825e5349c6b502f90fdfedc38c75b3">ModalWindowHandler.beginQuestion</a></code>, <code><a class="el" href="class_modal_window_handler.html#ada11322e7be754ee12b51c78ec8b5de3">ModalWindowHandler.endedQuestion</a></code> y <code><a class="el" href="class_located_text_manager.html#a60a4e11600d729460a1c31d4864dc68f" title="Evento que llama al metodo delegado LocatedTextManager.CurrentLanguageChanged para que se ejecute...">LocatedTextManager.currentLanguageChanged</a></code>.  <a href="#ad46fc5c44cab1a113fe100fdeacc259d">Más...</a><br /></td></tr>
 <tr class="separator:ad46fc5c44cab1a113fe100fdeacc259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe3132761f3a265ea297ba51b1adf0ce"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_slot_button.html#afe3132761f3a265ea297ba51b1adf0ce">Start</a> ()</td></tr>
+<tr class="memdesc:afe3132761f3a265ea297ba51b1adf0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Al iniciarse la instancia, obtiene el componente <code>Button</code> del objeto al que esta unido esta clase.  <a href="#afe3132761f3a265ea297ba51b1adf0ce">Más...</a><br /></td></tr>
 <tr class="separator:afe3132761f3a265ea297ba51b1adf0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eae1361d2a64962d63df43ca54c3dd0"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_slot_button.html#a9eae1361d2a64962d63df43ca54c3dd0">ActionOnClick</a> ()</td></tr>
+<tr class="memdesc:a9eae1361d2a64962d63df43ca54c3dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo abstracto que debe ser sobrecargado en las clases herederas para definir las acciones a realizar por el boton al ser pulsado.  <a href="#a9eae1361d2a64962d63df43ca54c3dd0">Más...</a><br /></td></tr>
 <tr class="separator:a9eae1361d2a64962d63df43ca54c3dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a607c5f61148486145740677166969ded"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_slot_button.html#a607c5f61148486145740677166969ded">ChangeButtonTextLanguage</a> ()</td></tr>
+<tr class="memdesc:a607c5f61148486145740677166969ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que se ejecuta en caso de que suceda el evento de que se cambie el idioma, en ese caso, comprueba si el boton tiene el componente <code>Text</code>, si es asi, entonces le cambia el texto localizado por el del nuevo idioma actual.  <a href="#a607c5f61148486145740677166969ded">Más...</a><br /></td></tr>
 <tr class="separator:a607c5f61148486145740677166969ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_u_i_generic_button"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_u_i_generic_button')"><img src="closed.png" alt="-"/>&#160;Métodos protegidos heredados desde <a class="el" href="class_u_i_generic_button.html">UIGenericButton</a></td></tr>
 <tr class="memitem:a6c5222acaedfd5727150a4ed068a7165 inherit pro_methods_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a6c5222acaedfd5727150a4ed068a7165">WaitForSFXAndExecuteClickAction</a> ()</td></tr>
+<tr class="memdesc:a6c5222acaedfd5727150a4ed068a7165 inherit pro_methods_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que espera que se ejecute el sonido de pulsado del boton, y luego llama al metodo <code><a class="el" href="class_u_i_generic_button.html#a70ee2d9a56607678246de8dd6aecd503" title="Metodo abstracto que debe ser sobrecargado en las clases herederas para definir las acciones a realiz...">UIGenericButton.ActionOnClick</a></code> que contiene las acciones a realizar por el boton al ser pulsado.  <a href="#a6c5222acaedfd5727150a4ed068a7165">Más...</a><br /></td></tr>
 <tr class="separator:a6c5222acaedfd5727150a4ed068a7165 inherit pro_methods_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -132,16 +131,22 @@ Eventos</h2></td></tr>
 Otros miembros heredados</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_u_i_generic_button"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_u_i_generic_button')"><img src="closed.png" alt="-"/>&#160;Atributos protegidos heredados desde <a class="el" href="class_u_i_generic_button.html">UIGenericButton</a></td></tr>
 <tr class="memitem:a35bba1f16243b25b7eff64e54d63f6cd inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a35bba1f16243b25b7eff64e54d63f6cd">localizedTextGroupID</a> = &quot;OPTIONS_MENU&quot;</td></tr>
+<tr class="memdesc:a35bba1f16243b25b7eff64e54d63f6cd inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID del grupo (en este caso el grupo seria un menu que englobase todos los textos de los elementos que vaya a contener)  <a href="#a35bba1f16243b25b7eff64e54d63f6cd">Más...</a><br /></td></tr>
 <tr class="separator:a35bba1f16243b25b7eff64e54d63f6cd inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a81bfd0e2e575594f45aa266cb171e6 inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a1a81bfd0e2e575594f45aa266cb171e6">localizedTextElementID</a> = &quot;SETTINGS&quot;</td></tr>
+<tr class="memdesc:a1a81bfd0e2e575594f45aa266cb171e6 inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID del elemento (en este caso el elemento es un boton de la interfaz) al que pertenece el texto localizado.  <a href="#a1a81bfd0e2e575594f45aa266cb171e6">Más...</a><br /></td></tr>
 <tr class="separator:a1a81bfd0e2e575594f45aa266cb171e6 inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddec3df516a5c2bfc5a658ee141c317 inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a9ddec3df516a5c2bfc5a658ee141c317">localizedTextStringID</a> = &quot;NAME&quot;</td></tr>
+<tr class="memdesc:a9ddec3df516a5c2bfc5a658ee141c317 inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID de la cadena de texto que hay que mostrar para el elemento especifico (en este caso boton) que hay en el texto localizado.  <a href="#a9ddec3df516a5c2bfc5a658ee141c317">Más...</a><br /></td></tr>
 <tr class="separator:a9ddec3df516a5c2bfc5a658ee141c317 inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af86b4d767d34b5271e8371486fc642db inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#af86b4d767d34b5271e8371486fc642db">sfxOnClick</a> = &quot;BlipSelect&quot;</td></tr>
+<tr class="memdesc:af86b4d767d34b5271e8371486fc642db inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre del sonido por defecto que se escucha al pulsar en el boton generico.  <a href="#af86b4d767d34b5271e8371486fc642db">Más...</a><br /></td></tr>
 <tr class="separator:af86b4d767d34b5271e8371486fc642db inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47169fc8e528157a7dc666fc40b6dd8f inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a47169fc8e528157a7dc666fc40b6dd8f">thisButton</a></td></tr>
+<tr class="memdesc:a47169fc8e528157a7dc666fc40b6dd8f inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente del objeto que contiene esta clase, controla las acciones que se pueden hacer con el boton.  <a href="#a47169fc8e528157a7dc666fc40b6dd8f">Más...</a><br /></td></tr>
 <tr class="separator:a47169fc8e528157a7dc666fc40b6dd8f inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f2a9c06db1cdb25bb18270748ec2bc inherit pro_attribs_class_u_i_generic_button"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_generic_button.html#a68f2a9c06db1cdb25bb18270748ec2bc">buttonText</a></td></tr>
+<tr class="memdesc:a68f2a9c06db1cdb25bb18270748ec2bc inherit pro_attribs_class_u_i_generic_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente del objeto que contiene esta clase, muestra el texto localizado de lo que hace el boton.  <a href="#a68f2a9c06db1cdb25bb18270748ec2bc">Más...</a><br /></td></tr>
 <tr class="separator:a68f2a9c06db1cdb25bb18270748ec2bc inherit pro_attribs_class_u_i_generic_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
@@ -166,16 +171,9 @@ Otros miembros heredados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementa <a class="el" href="class_u_i_generic_button.html#a70ee2d9a56607678246de8dd6aecd503">UIGenericButton</a>.</p>
+<p>Metodo abstracto que debe ser sobrecargado en las clases herederas para definir las acciones a realizar por el boton al ser pulsado. </p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a9eae1361d2a64962d63df43ca54c3dd0_cgraph.png" border="0" usemap="#class_game_slot_button_a9eae1361d2a64962d63df43ca54c3dd0_cgraph" alt=""/></div>
-<map name="class_game_slot_button_a9eae1361d2a64962d63df43ca54c3dd0_cgraph" id="class_game_slot_button_a9eae1361d2a64962d63df43ca54c3dd0_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a3720123c0a50df9543a2a9a6b6773b84" title="GameSlotButton.Selected" alt="" coords="259,5,432,32"/></map>
-</div>
-</p>
+<p>Implementa <a class="el" href="class_u_i_generic_button.html#a70ee2d9a56607678246de8dd6aecd503">UIGenericButton</a>.</p>
 
 </div>
 </div>
@@ -200,16 +198,10 @@ Gráfico de llamadas para esta función:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#aa12c5481d94b8deb4afe1f13042ddbcf">UIGenericButton</a>.</p>
+<p>Metodo que se ejecuta en caso de que suceda el evento de que se cambie el idioma, en ese caso, comprueba si el boton tiene el componente <code>Text</code>, si es asi, entonces le cambia el texto localizado por el del nuevo idioma actual. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="class_located_text_manager.html#a5eb12d2ec9a393504462008814f3a4b5" title="Metodo que cambia el languaje actual del juego. ">LocatedTextManager.ChangeCurrentLanguage</a></dd></dl>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a607c5f61148486145740677166969ded_cgraph.png" border="0" usemap="#class_game_slot_button_a607c5f61148486145740677166969ded_cgraph" alt=""/></div>
-<map name="class_game_slot_button_a607c5f61148486145740677166969ded_cgraph" id="class_game_slot_button_a607c5f61148486145740677166969ded_cgraph">
-<area shape="rect" id="node2" href="class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="257,13,499,39"/><area shape="rect" id="node3" href="class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="547,13,735,39"/></map>
-</div>
-</p>
+<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#aa12c5481d94b8deb4afe1f13042ddbcf">UIGenericButton</a>.</p>
 
 </div>
 </div>
@@ -226,15 +218,6 @@ Gráfico de llamadas para esta función:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_aaf4c8b5c3dd2cd216529acceb5e8c0e3_cgraph.png" border="0" usemap="#class_game_slot_button_aaf4c8b5c3dd2cd216529acceb5e8c0e3_cgraph" alt=""/></div>
-<map name="class_game_slot_button_aaf4c8b5c3dd2cd216529acceb5e8c0e3_cgraph" id="class_game_slot_button_aaf4c8b5c3dd2cd216529acceb5e8c0e3_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a7746872bf0f4c1f3d9a488bccfc181e0" title="GameSlotButton.Initialize" alt="" coords="228,31,399,57"/><area shape="rect" id="node3" href="class_game_slot_button.html#afe3132761f3a265ea297ba51b1adf0ce" title="GameSlotButton.Start" alt="" coords="492,5,643,32"/><area shape="rect" id="node4" href="class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="447,56,688,83"/><area shape="rect" id="node5" href="class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="736,56,924,83"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a7746872bf0f4c1f3d9a488bccfc181e0"></a>
@@ -250,24 +233,6 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_cgraph.png" border="0" usemap="#class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_cgraph" alt=""/></div>
-<map name="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_cgraph" id="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#afe3132761f3a265ea297ba51b1adf0ce" title="GameSlotButton.Start" alt="" coords="269,5,420,32"/><area shape="rect" id="node3" href="class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="224,56,465,83"/><area shape="rect" id="node4" href="class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="513,56,701,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_icgraph.png" border="0" usemap="#class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_icgraph" alt=""/></div>
-<map name="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_icgraph" id="class_game_slot_button_a7746872bf0f4c1f3d9a488bccfc181e0_icgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#aaf4c8b5c3dd2cd216529acceb5e8c0e3" title="GameSlotButton.ClearSlot" alt="" coords="224,5,399,32"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -307,15 +272,6 @@ Gráfico de llamadas a esta función:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_aa203780cf7f653f481594a3722f6ef19_cgraph.png" border="0" usemap="#class_game_slot_button_aa203780cf7f653f481594a3722f6ef19_cgraph" alt=""/></div>
-<map name="class_game_slot_button_aa203780cf7f653f481594a3722f6ef19_cgraph" id="class_game_slot_button_aa203780cf7f653f481594a3722f6ef19_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#afe3132761f3a265ea297ba51b1adf0ce" title="GameSlotButton.Start" alt="" coords="269,5,420,32"/><area shape="rect" id="node3" href="class_game_controller.html#a261bfe43ba9d4804a198a79d11641b6b" title="GameController.UnityScene\lNameToSceneNameID" alt="" coords="253,57,436,98"/><area shape="rect" id="node4" href="class_located_text_manager.html#af6f536633b675660f375f64eed7d22ab" title="LocatedTextManager.GetLocatedText" alt="" coords="224,123,465,149"/><area shape="rect" id="node5" href="class_x_m_l_file_reader.html#af3a69d661fe0a4474dbb41e57725c989" title="XMLFileReader.GetNodeInfo" alt="" coords="513,123,701,149"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ad46fc5c44cab1a113fe100fdeacc259d"></a>
@@ -339,16 +295,9 @@ Gráfico de llamadas para esta función:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a6dc1982a29b1929caec910c3f902a444">UIGenericButton</a>.</p>
+<p>Al volverse inactivo el objeto que contiene una instancia de esta clase, desactiva la escucha de los eventos <code><a class="el" href="class_modal_window_handler.html#a34825e5349c6b502f90fdfedc38c75b3">ModalWindowHandler.beginQuestion</a></code>, <code><a class="el" href="class_modal_window_handler.html#ada11322e7be754ee12b51c78ec8b5de3">ModalWindowHandler.endedQuestion</a></code> y <code><a class="el" href="class_located_text_manager.html#a60a4e11600d729460a1c31d4864dc68f" title="Evento que llama al metodo delegado LocatedTextManager.CurrentLanguageChanged para que se ejecute...">LocatedTextManager.currentLanguageChanged</a></code>. </p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_ad46fc5c44cab1a113fe100fdeacc259d_cgraph.png" border="0" usemap="#class_game_slot_button_ad46fc5c44cab1a113fe100fdeacc259d_cgraph" alt=""/></div>
-<map name="class_game_slot_button_ad46fc5c44cab1a113fe100fdeacc259d_cgraph" id="class_game_slot_button_ad46fc5c44cab1a113fe100fdeacc259d_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a7bbf472e8200ac485e744f1a3cfc6b86" title="GameSlotButton.UnSelected" alt="" coords="236,5,425,32"/></map>
-</div>
-</p>
+<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a6dc1982a29b1929caec910c3f902a444">UIGenericButton</a>.</p>
 
 </div>
 </div>
@@ -373,16 +322,9 @@ Gráfico de llamadas para esta función:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a5c342719685b8f8a89ca36bc5fd79790">UIGenericButton</a>.</p>
+<p>Al activarse el objeto que contiene una instancia de esta clase, se activan las escuchas de los eventos <code><a class="el" href="class_modal_window_handler.html#a34825e5349c6b502f90fdfedc38c75b3">ModalWindowHandler.beginQuestion</a></code>, <code><a class="el" href="class_modal_window_handler.html#ada11322e7be754ee12b51c78ec8b5de3">ModalWindowHandler.endedQuestion</a></code> y <code><a class="el" href="class_located_text_manager.html#a60a4e11600d729460a1c31d4864dc68f" title="Evento que llama al metodo delegado LocatedTextManager.CurrentLanguageChanged para que se ejecute...">LocatedTextManager.currentLanguageChanged</a></code>. </p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a7230a12fd914b1b75436e0847f6adb37_cgraph.png" border="0" usemap="#class_game_slot_button_a7230a12fd914b1b75436e0847f6adb37_cgraph" alt=""/></div>
-<map name="class_game_slot_button_a7230a12fd914b1b75436e0847f6adb37_cgraph" id="class_game_slot_button_a7230a12fd914b1b75436e0847f6adb37_cgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a7bbf472e8200ac485e744f1a3cfc6b86" title="GameSlotButton.UnSelected" alt="" coords="232,5,421,32"/></map>
-</div>
-</p>
+<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a5c342719685b8f8a89ca36bc5fd79790">UIGenericButton</a>.</p>
 
 </div>
 </div>
@@ -415,15 +357,6 @@ Gráfico de llamadas para esta función:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a3720123c0a50df9543a2a9a6b6773b84_icgraph.png" border="0" usemap="#class_game_slot_button_a3720123c0a50df9543a2a9a6b6773b84_icgraph" alt=""/></div>
-<map name="class_game_slot_button_a3720123c0a50df9543a2a9a6b6773b84_icgraph" id="class_game_slot_button_a3720123c0a50df9543a2a9a6b6773b84_icgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a9eae1361d2a64962d63df43ca54c3dd0" title="GameSlotButton.ActionOnClick" alt="" coords="227,5,432,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="afe3132761f3a265ea297ba51b1adf0ce"></a>
@@ -447,16 +380,10 @@ Gráfico de llamadas a esta función:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a9af700ec1c9e2821d65b0d1a0b2821c0">UIGenericButton</a>.</p>
+<p>Al iniciarse la instancia, obtiene el componente <code>Button</code> del objeto al que esta unido esta clase. </p>
+<p>Despues intenta obtener el componente <code>Text</code> del boton del objeto y le asigna el texto localizado, en caso de que no posea el componente <code>Text</code>, se inicializa a <code>null</code>. </p>
 
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_afe3132761f3a265ea297ba51b1adf0ce_icgraph.png" border="0" usemap="#class_game_slot_button_afe3132761f3a265ea297ba51b1adf0ce_icgraph" alt=""/></div>
-<map name="class_game_slot_button_afe3132761f3a265ea297ba51b1adf0ce_icgraph" id="class_game_slot_button_afe3132761f3a265ea297ba51b1adf0ce_icgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a7746872bf0f4c1f3d9a488bccfc181e0" title="GameSlotButton.Initialize" alt="" coords="204,5,375,32"/><area shape="rect" id="node3" href="class_game_slot_button.html#aaf4c8b5c3dd2cd216529acceb5e8c0e3" title="GameSlotButton.ClearSlot" alt="" coords="423,5,597,32"/></map>
-</div>
-</p>
+<p>Reimplementado de <a class="el" href="class_u_i_generic_button.html#a9af700ec1c9e2821d65b0d1a0b2821c0">UIGenericButton</a>.</p>
 
 </div>
 </div>
@@ -487,15 +414,6 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_slot_button_a7bbf472e8200ac485e744f1a3cfc6b86_icgraph.png" border="0" usemap="#class_game_slot_button_a7bbf472e8200ac485e744f1a3cfc6b86_icgraph" alt=""/></div>
-<map name="class_game_slot_button_a7bbf472e8200ac485e744f1a3cfc6b86_icgraph" id="class_game_slot_button_a7bbf472e8200ac485e744f1a3cfc6b86_icgraph">
-<area shape="rect" id="node2" href="class_game_slot_button.html#a7230a12fd914b1b75436e0847f6adb37" title="GameSlotButton.OnEnable" alt="" coords="245,5,423,32"/><area shape="rect" id="node3" href="class_game_slot_button.html#ad46fc5c44cab1a113fe100fdeacc259d" title="GameSlotButton.OnDisable" alt="" coords="243,56,425,83"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -582,12 +500,12 @@ Gráfico de llamadas a esta función:</div>
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
-<li>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Scripts/GUI/OptionsMenuButtons/SavedGameButtons/<a class="el" href="_game_slot_button_8cs.html">GameSlotButton.cs</a></li>
+<li>1812/project/Assets/Scripts/GUI/OptionsMenuButtons/SavedGameButtons/<a class="el" href="_game_slot_button_8cs.html">GameSlotButton.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 15 de Septiembre de 2015 00:45:54 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Jueves, 17 de Septiembre de 2015 00:18:09 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

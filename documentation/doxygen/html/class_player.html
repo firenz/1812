@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">1812: La aventura
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Demo técnica del Motor de Aventuras Gráficas en Unity 2D</div>
   </td>
@@ -39,7 +39,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
       <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
@@ -54,20 +54,8 @@
 <div class="title">Referencia de la Clase Player</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Diagrama de herencias de Player</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player__inherit__graph.png" border="0" usemap="#_player_inherit__map" alt="Inheritance graph"/></div>
-<map name="_player_inherit__map" id="_player_inherit__map">
-<area shape="rect" id="node2" href="class_actor.html" title="{Actor\n|+ currentTargetedPosition\l+ moveDirection\l+ isInteracting\l+ isWalking\l+ isSpeaking\l+ isInConversation\l+ isFacingLeft\l+ isFacingRight\l+ isActorActive\l+ originalTargetedPosition\l+ currentPosition\l# movementSpeed\l# walkingCoroutine\l# isPlayingAnimation\l# endOfAnimationEvent\l# dialogueHandler\l|+ BeginPlayerConversation()\l+ EndPlayerConversation()\l+ LookToTheRight()\l+ LookToTheLeft()\l+ LookAtPosition()\l+ GoTo()\l+ Speak()\l+ Speak()\l+ WaitForSpeakCompleted()\l+ IsIdle()\l# InitializeInformation()\l# InitializeAdditionalActor\lInformation()\l# Update()\l# AdditionalUpdateInformation()\l# WaitForGoToCompleted()\l# WaitUntilTargetedPosition\lIsReached()\l# CalculateMoveDirection()\l# BeginConversation()\l# EndConversation()\l}" alt="" coords="25,608,229,1199"/><area shape="rect" id="node3" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="23,131,231,560"/></map>
-</div>
-<div class="dynheader">
-Diagrama de colaboración para Player:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#_player_coll__map" alt="Collaboration graph"/></div>
-<map name="_player_coll__map" id="_player_coll__map">
-<area shape="rect" id="node2" href="class_actor.html" title="{Actor\n|+ currentTargetedPosition\l+ moveDirection\l+ isInteracting\l+ isWalking\l+ isSpeaking\l+ isInConversation\l+ isFacingLeft\l+ isFacingRight\l+ isActorActive\l+ originalTargetedPosition\l+ currentPosition\l# movementSpeed\l# walkingCoroutine\l# isPlayingAnimation\l# endOfAnimationEvent\l|+ BeginPlayerConversation()\l+ EndPlayerConversation()\l+ LookToTheRight()\l+ LookToTheLeft()\l+ LookAtPosition()\l+ GoTo()\l+ Speak()\l+ Speak()\l+ WaitForSpeakCompleted()\l+ IsIdle()\l# InitializeInformation()\l# InitializeAdditionalActor\lInformation()\l# Update()\l# AdditionalUpdateInformation()\l# WaitForGoToCompleted()\l# WaitUntilTargetedPosition\lIsReached()\l# CalculateMoveDirection()\l# BeginConversation()\l# EndConversation()\l}" alt="" coords="73,624,277,1200"/><area shape="rect" id="node3" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="5,132,213,561"/><area shape="rect" id="node5" href="class_display_dialogue_text.html" title="{DisplayDialogueText\n|+ secondsDisplayingText\l+ hasEndedDisplayingText\l|+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ HasEndedDisplayingText()\l}" alt="" coords="238,271,426,422"/></map>
-</div>
+
+<p>Herencias <a class="el" href="class_actor.html">Actor</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
@@ -330,24 +318,6 @@ Otros miembros heredados</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#a447f84c661c5d60aa5f2713c7189071d">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_ac32bf3de9cc041af382ac405e27460ce_cgraph.png" border="0" usemap="#class_player_ac32bf3de9cc041af382ac405e27460ce_cgraph" alt=""/></div>
-<map name="class_player_ac32bf3de9cc041af382ac405e27460ce_cgraph" id="class_player_ac32bf3de9cc041af382ac405e27460ce_cgraph">
-<area shape="rect" id="node2" href="class_player.html#af28754d2f8b159a5d7bd2cfe42a74853" title="Player.IsIdle" alt="" coords="330,5,425,32"/><area shape="rect" id="node3" href="class_cut_scenes_manager.html#aba449ad310f0656faef5bab1fb4abbb5" title="CutScenesManager.IsPlaying" alt="" coords="280,56,475,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_ac32bf3de9cc041af382ac405e27460ce_icgraph.png" border="0" usemap="#class_player_ac32bf3de9cc041af382ac405e27460ce_icgraph" alt=""/></div>
-<map name="class_player_ac32bf3de9cc041af382ac405e27460ce_icgraph" id="class_player_ac32bf3de9cc041af382ac405e27460ce_icgraph">
-<area shape="rect" id="node2" href="class_player.html#abccf91b671f93492dfdb704ddf894ae3" title="Player.Update" alt="" coords="280,5,384,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="aa9fdb8b152b92f74abcac434a27fd6ba"></a>
@@ -430,15 +400,6 @@ Gráfico de llamadas a esta función:</div>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#a78fe00432bbb1af1c4a674d058f45087">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_a6d7e3c8698341a4e9a31fe6fa287fd59_icgraph.png" border="0" usemap="#class_player_a6d7e3c8698341a4e9a31fe6fa287fd59_icgraph" alt=""/></div>
-<map name="class_player_a6d7e3c8698341a4e9a31fe6fa287fd59_icgraph" id="class_player_a6d7e3c8698341a4e9a31fe6fa287fd59_icgraph">
-<area shape="rect" id="node2" href="class_librarian.html#a459b17f8716a037d2250c72b9a982275" title="Librarian.WaitForRightClick\lAction" alt="" coords="161,5,339,47"/><area shape="rect" id="node3" href="class_librarian.html#a7667a72f6592d5e7ba8053922899c544" title="Librarian.WaitForLeftClick\lAction" alt="" coords="165,71,335,112"/><area shape="rect" id="node4" href="class_interactive_element.html#a2bab48f960ccde54c5157db3552d588f" title="InteractiveElement.WaitFor\lLeftClickAction" alt="" coords="160,136,340,177"/><area shape="rect" id="node6" href="class_interactive_element.html#a5c4c788ab325d8917ba898cd8b4737c4" title="InteractiveElement.WaitFor\lRightClickAction" alt="" coords="160,201,340,243"/><area shape="rect" id="node8" href="class_pickable_element.html#a9aa4b1fe435180e11793a6506276aa20" title="PickableElement.WaitForLeft\lClickAction" alt="" coords="155,267,345,308"/><area shape="rect" id="node9" href="class_corridor_door.html#ac5e7e42c04d38914af865f2198900677" title="CorridorDoor.WaitForLeft\lClickAction" alt="" coords="167,332,333,373"/><area shape="rect" id="node10" href="class_plant.html#aaa1a17db69d49e9b35e6c9580f03f516" title="Plant.WaitForLeftClickAction" alt="" coords="155,398,345,425"/><area shape="rect" id="node11" href="class_plant.html#a5c942f156ef3a5d65249ab40d20fdc6d" title="Plant.WaitForRightClickAction" alt="" coords="151,449,349,475"/><area shape="rect" id="node12" href="class_shadow_to_w_c.html#a98a1ea236127ea43e319c933af67b197" title="ShadowToWC.WaitForLeftClick\lAction" alt="" coords="148,500,352,541"/><area shape="rect" id="node13" href="class_trash_bin.html#a4424ea627a26ef417dc06f8d5aa51916" title="TrashBin.WaitForLeftClick\lAction" alt="" coords="163,565,337,607"/><area shape="rect" id="node14" href="class_trash_bin.html#ac7eaa8c0a2fdffa2f8afbdf34e07a4b3" title="TrashBin.WaitForRightClick\lAction" alt="" coords="159,631,341,672"/><area shape="rect" id="node15" href="class_door.html#ad4c5e848b4981ea9254fc492f6f02733" title="Door.WaitForLeftClickAction" alt="" coords="157,697,343,723"/><area shape="rect" id="node16" href="class_little_flags.html#a057438820de0abb4eebe99afe0f483f8" title="LittleFlags.WaitForLeftClick\lAction" alt="" coords="159,748,341,789"/><area shape="rect" id="node17" href="class_map.html#a2c38ad3e644e0473984ca6264c41650c" title="Map.WaitForLeftClickAction" alt="" coords="158,814,342,841"/><area shape="rect" id="node18" href="class_skull.html#aeb002a7918639de11ebcd73eebbc019d" title="Skull.WaitForLeftClickAction" alt="" coords="156,865,344,891"/><area shape="rect" id="node19" href="class_skull.html#aab4cdc92bf8f5d19e3cb0b3d5b7a6011" title="Skull.WaitForRightClickAction" alt="" coords="152,915,348,942"/><area shape="rect" id="node20" href="class_window.html#a8ee2d40431429cac8ecc9d00f7b4db21" title="Window.WaitForLeftClickAction" alt="" coords="148,966,352,993"/><area shape="rect" id="node21" href="class_warper_element.html#ab589fbe714d5ffe71cee5984727a289b" title="WarperElement.WaitForLeft\lClickAction" alt="" coords="159,1017,341,1059"/><area shape="rect" id="node5" href="class_interactive_element.html#a50dd614811e32fdc6f330efe441ed7ff" title="InteractiveElement.LeftClick\lAction" alt="" coords="400,136,587,177"/><area shape="rect" id="node7" href="class_interactive_element.html#a1b025b112bbeabddc95d918add55558a" title="InteractiveElement.Right\lClickAction" alt="" coords="411,201,576,243"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a9489694c5045eb7e6ca54d78ba79e59d"></a>
@@ -454,15 +415,6 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_a9489694c5045eb7e6ca54d78ba79e59d_icgraph.png" border="0" usemap="#class_player_a9489694c5045eb7e6ca54d78ba79e59d_icgraph" alt=""/></div>
-<map name="class_player_a9489694c5045eb7e6ca54d78ba79e59d_icgraph" id="class_player_a9489694c5045eb7e6ca54d78ba79e59d_icgraph">
-<area shape="rect" id="node2" href="class_pickable_element.html#a8a34358cb02d147b72d3e0de8eeb8a9a" title="PickableElement.OnPlayer\lTouchingAction" alt="" coords="178,5,357,47"/><area shape="rect" id="node3" href="class_little_flags.html#a04a6097dd597627a47377f4a2a65e86c" title="LittleFlags.OnPlayerTouching\lAction" alt="" coords="171,71,364,112"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -529,15 +481,6 @@ Gráfico de llamadas a esta función:</div>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#aedc96ab49bc3565baceec8a969537a04">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_af28754d2f8b159a5d7bd2cfe42a74853_icgraph.png" border="0" usemap="#class_player_af28754d2f8b159a5d7bd2cfe42a74853_icgraph" alt=""/></div>
-<map name="class_player_af28754d2f8b159a5d7bd2cfe42a74853_icgraph" id="class_player_af28754d2f8b159a5d7bd2cfe42a74853_icgraph">
-<area shape="rect" id="node2" href="class_player.html#ac32bf3de9cc041af382ac405e27460ce" title="Player.AdditionalUpdateInformation" alt="" coords="148,5,375,32"/><area shape="rect" id="node3" href="class_player.html#abccf91b671f93492dfdb704ddf894ae3" title="Player.Update" alt="" coords="423,5,527,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a8e48f4c551261a17009b5afbb78b6a88"></a>
@@ -568,15 +511,6 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_ac91ca711bcb2342507954b6d08aae52c_icgraph.png" border="0" usemap="#class_player_ac91ca711bcb2342507954b6d08aae52c_icgraph" alt=""/></div>
-<map name="class_player_ac91ca711bcb2342507954b6d08aae52c_icgraph" id="class_player_ac91ca711bcb2342507954b6d08aae52c_icgraph">
-<area shape="rect" id="node2" href="class_pickable_element.html#a9aa4b1fe435180e11793a6506276aa20" title="PickableElement.WaitForLeft\lClickAction" alt="" coords="187,5,377,47"/><area shape="rect" id="node3" href="class_little_flags.html#a057438820de0abb4eebe99afe0f483f8" title="LittleFlags.WaitForLeftClick\lAction" alt="" coords="191,71,373,112"/><area shape="rect" id="node4" href="class_window.html#a8ee2d40431429cac8ecc9d00f7b4db21" title="Window.WaitForLeftClickAction" alt="" coords="180,137,384,163"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -843,15 +777,6 @@ Gráfico de llamadas a esta función:</div>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#a2675f3580f1e1871f6245959cf7e0e1c">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_abccf91b671f93492dfdb704ddf894ae3_cgraph.png" border="0" usemap="#class_player_abccf91b671f93492dfdb704ddf894ae3_cgraph" alt=""/></div>
-<map name="class_player_abccf91b671f93492dfdb704ddf894ae3_cgraph" id="class_player_abccf91b671f93492dfdb704ddf894ae3_cgraph">
-<area shape="rect" id="node2" href="class_player.html#ac32bf3de9cc041af382ac405e27460ce" title="Player.AdditionalUpdateInformation" alt="" coords="157,31,384,57"/><area shape="rect" id="node3" href="class_player.html#af28754d2f8b159a5d7bd2cfe42a74853" title="Player.IsIdle" alt="" coords="482,5,577,32"/><area shape="rect" id="node4" href="class_cut_scenes_manager.html#aba449ad310f0656faef5bab1fb4abbb5" title="CutScenesManager.IsPlaying" alt="" coords="432,56,627,83"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a33449ed6b38e7ecbf6d2ed348af0da9e"></a>
@@ -1012,12 +937,12 @@ Gráfico de llamadas para esta función:</div>
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
-<li>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Scripts/Actors/<a class="el" href="_player_8cs.html">Player.cs</a></li>
+<li>1812/project/Assets/Scripts/Actors/<a class="el" href="_player_8cs.html">Player.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 15 de Septiembre de 2015 00:45:54 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Jueves, 17 de Septiembre de 2015 00:18:09 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

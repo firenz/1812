@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">1812: La aventura
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Demo técnica del Motor de Aventuras Gráficas en Unity 2D</div>
   </td>
@@ -39,7 +39,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
       <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
@@ -57,18 +57,8 @@
 
 <p>Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase, proporcionar un acceso fácil y global a la clase, y que el objeto al que este unido una clase heredera de esta no se borre al cambiar de escena.  
  <a href="class_persistent_singleton.html#details">Más...</a></p>
-<div class="dynheader">
-Diagrama de herencias de PersistentSingleton&lt; T &gt;</div>
-<div class="dyncontent">
-<div class="center"><img src="class_persistent_singleton__inherit__graph.png" border="0" usemap="#_persistent_singleton_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="_persistent_singleton_3_01_t_01_4_inherit__map" id="_persistent_singleton_3_01_t_01_4_inherit__map">
-<area shape="rect" id="node3" href="class_persistent_singleton.html" title="{PersistentSingleton\l\&lt; Inventory \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="29,331,175,481"/><area shape="rect" id="node5" href="class_persistent_singleton.html" title="{PersistentSingleton\l\&lt; CustomCursorController \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="214,331,398,481"/><area shape="rect" id="node7" href="class_persistent_singleton.html" title="{PersistentSingleton\l\&lt; GameController \&gt;\n|+ Instance\l# instance\l|# OnDestroy()\l# OnApplicationQuit()\l# Awake()\l# InitializeOnAwake()\l}" alt="" coords="478,331,625,481"/><area shape="rect" id="node4" href="class_inventory.html" title="{Inventory\n|+ isEnabled\l+ isActivated\l+ isClosed\l+ currentItemsInventory\l|+ AddItem()\l+ RemoveItem()\l+ UpdateAllItems()\l+ GetItems()\l+ GetItemsName()\l+ Open()\l+ Close()\l+ Enable()\l+ Disable()\l+ IsClosed()\l+ IsEnabled()\l+ Activate()\l+ DeleteAllItems()\l+ HasItem()\l+ IsInventoryFull()\l# InitializeOnAwake()\l}" alt="" coords="5,531,167,872"/><area shape="rect" id="node6" href="class_custom_cursor_controller.html" title="{CustomCursorController\n|+ isCursorHidden\l|+ ChangeCursorToDefault()\l+ ChangeCursorSprite()\l+ ChangeCursorOverInteractive\lElement()\l+ ChangeCursorIngameScene()\l+ ChangeCursorOverWarpElement()\l+ ChangeCursorOverUIElement()\l+ ChangeMenuCursorToIngame()\l+ ChangeIngameCursorToMenu()\l+ HideCursor()\l+ UnhideCursor()\l# InitializeOnAwake()\l}" alt="" coords="191,582,421,821"/><area shape="rect" id="node8" href="class_game_controller.html" title="{GameController\n||+ WarpToLevel()\l+ UnitySceneNameToSceneNameID()\l+ SceneNameIDToUnitySceneName()\l# InitializeOnAwake()\l}" alt="" coords="446,641,689,762"/></map>
-</div>
-<div class="dynheader">
-Diagrama de colaboración para PersistentSingleton&lt; T &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_persistent_singleton__coll__graph.png" border="0" usemap="#_persistent_singleton_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
-</div>
+
+<p>Herencias MonoBehaviour.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Métodos protegidos</h2></td></tr>
@@ -136,7 +126,7 @@ Propiedades</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Al despertar el objeto al que este unido una clase en ejecucion que herede de <code><a class="el" href="class_persistent_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase...">PersistentSingleton</a></code>, comprobara si ya hay una instancia previa de dicha clase. </p>
-<p>En caso de que no haya ninguna instancia previa, asigna <code>instance</code> a la clase en ejecucion actual y llama al metodo <code>Object.DontDestroyOnLoad</code> para que el objeto al que esta unido la clase de la instancia no se borre. En caso de que exista una instancia previa, significa que ya habia una instancia, y destruye esta instancia de esta clase en ejecucion. </p>
+<p>En caso de que no haya ninguna instancia previa, asigna <code>instance</code> a la clase en ejecucion actual y llama al metodo <code>DontDestroyOnLoad</code> para que el objeto al que esta unido la clase de la instancia no se borre. En caso de que exista una instancia previa, significa que ya habia una instancia, y destruye esta instancia de esta clase en ejecucion. </p>
 
 </div>
 </div>
@@ -163,16 +153,7 @@ Propiedades</h2></td></tr>
 
 <p>Metodo para inicializar otros atributos de la clase heredera de <code><a class="el" href="class_persistent_singleton.html" title="Clase generica y abstracta cuyo propósito es asegurarse que solo exista una instancia de una clase...">PersistentSingleton</a></code> durante el metodo <code>Awake</code> </p>
 
-<p>Implementado en <a class="el" href="class_inventory.html#ad6dacf321b34d74777bb73207c116cb8">Inventory</a>, <a class="el" href="class_custom_cursor_controller.html#a253581abc3d5a8e46c85313355e556c1">CustomCursorController</a> y <a class="el" href="class_game_controller.html#a67db188e3aec5cc3a716b9a540b294ad">GameController</a>.</p>
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_persistent_singleton_a6fe3090d6e965df093a27042a17170d8_icgraph.png" border="0" usemap="#class_persistent_singleton_a6fe3090d6e965df093a27042a17170d8_icgraph" alt=""/></div>
-<map name="class_persistent_singleton_a6fe3090d6e965df093a27042a17170d8_icgraph" id="class_persistent_singleton_a6fe3090d6e965df093a27042a17170d8_icgraph">
-<area shape="rect" id="node2" href="class_persistent_singleton.html#a9682000077c7b1390055e4e88befc729" title="Al despertar el objeto al que este unido una clase en ejecucion que herede de PersistentSingleton, comprobara si ya hay una instancia previa de dicha clase. " alt="" coords="240,5,423,47"/></map>
-</div>
-</p>
+<p>Implementado en <a class="el" href="class_custom_cursor_controller.html#a253581abc3d5a8e46c85313355e556c1">CustomCursorController</a>, <a class="el" href="class_inventory.html#ad6dacf321b34d74777bb73207c116cb8">Inventory</a> y <a class="el" href="class_game_controller.html#a67db188e3aec5cc3a716b9a540b294ad">GameController</a>.</p>
 
 </div>
 </div>
@@ -280,12 +261,12 @@ Gráfico de llamadas a esta función:</div>
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
-<li>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Scripts/GenericPatterns/<a class="el" href="_persistent_singleton_8cs.html">PersistentSingleton.cs</a></li>
+<li>1812/project/Assets/Scripts/GenericPatterns/<a class="el" href="_persistent_singleton_8cs.html">PersistentSingleton.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 15 de Septiembre de 2015 00:45:54 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Jueves, 17 de Septiembre de 2015 00:18:09 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">1812: La aventura
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Demo técnica del Motor de Aventuras Gráficas en Unity 2D</div>
   </td>
@@ -39,7 +39,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
       <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
@@ -56,20 +56,8 @@
 <div class="title">Referencia de la Clase Librarian</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Diagrama de herencias de Librarian</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian__inherit__graph.png" border="0" usemap="#_librarian_inherit__map" alt="Inheritance graph"/></div>
-<map name="_librarian_inherit__map" id="_librarian_inherit__map">
-<area shape="rect" id="node2" href="class_actor.html" title="{Actor\n|+ currentTargetedPosition\l+ moveDirection\l+ isInteracting\l+ isWalking\l+ isSpeaking\l+ isInConversation\l+ isFacingLeft\l+ isFacingRight\l+ isActorActive\l+ originalTargetedPosition\l+ currentPosition\l# movementSpeed\l# walkingCoroutine\l# isPlayingAnimation\l# endOfAnimationEvent\l# dialogueHandler\l|+ BeginPlayerConversation()\l+ EndPlayerConversation()\l+ LookToTheRight()\l+ LookToTheLeft()\l+ LookAtPosition()\l+ GoTo()\l+ Speak()\l+ Speak()\l+ WaitForSpeakCompleted()\l+ IsIdle()\l# InitializeInformation()\l# InitializeAdditionalActor\lInformation()\l# Update()\l# AdditionalUpdateInformation()\l# WaitForGoToCompleted()\l# WaitUntilTargetedPosition\lIsReached()\l# CalculateMoveDirection()\l# BeginConversation()\l# EndConversation()\l}" alt="" coords="7,608,211,1199"/><area shape="rect" id="node3" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="5,131,213,560"/></map>
-</div>
-<div class="dynheader">
-Diagrama de colaboración para Librarian:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian__coll__graph.png" border="0" usemap="#_librarian_coll__map" alt="Collaboration graph"/></div>
-<map name="_librarian_coll__map" id="_librarian_coll__map">
-<area shape="rect" id="node2" href="class_actor.html" title="{Actor\n|+ currentTargetedPosition\l+ moveDirection\l+ isInteracting\l+ isWalking\l+ isSpeaking\l+ isInConversation\l+ isFacingLeft\l+ isFacingRight\l+ isActorActive\l+ originalTargetedPosition\l+ currentPosition\l# movementSpeed\l# walkingCoroutine\l# isPlayingAnimation\l# endOfAnimationEvent\l|+ BeginPlayerConversation()\l+ EndPlayerConversation()\l+ LookToTheRight()\l+ LookToTheLeft()\l+ LookAtPosition()\l+ GoTo()\l+ Speak()\l+ Speak()\l+ WaitForSpeakCompleted()\l+ IsIdle()\l# InitializeInformation()\l# InitializeAdditionalActor\lInformation()\l# Update()\l# AdditionalUpdateInformation()\l# WaitForGoToCompleted()\l# WaitUntilTargetedPosition\lIsReached()\l# CalculateMoveDirection()\l# BeginConversation()\l# EndConversation()\l}" alt="" coords="73,624,277,1200"/><area shape="rect" id="node3" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="5,132,213,561"/><area shape="rect" id="node5" href="class_display_dialogue_text.html" title="{DisplayDialogueText\n|+ secondsDisplayingText\l+ hasEndedDisplayingText\l|+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ DisplayText()\l+ HasEndedDisplayingText()\l}" alt="" coords="238,271,426,422"/></map>
-</div>
+
+<p>Herencias <a class="el" href="class_actor.html">Actor</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
@@ -275,15 +263,6 @@ Otros miembros heredados</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#a636d62e471af618d0103315fe27ed42f">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian_ae1de42b222f1105ff7ba86c48132b284_cgraph.png" border="0" usemap="#class_librarian_ae1de42b222f1105ff7ba86c48132b284_cgraph" alt=""/></div>
-<map name="class_librarian_ae1de42b222f1105ff7ba86c48132b284_cgraph" id="class_librarian_ae1de42b222f1105ff7ba86c48132b284_cgraph">
-<area shape="rect" id="node2" href="class_interactive_element.html#afaa0115976fe666153abc1431686f261" title="InteractiveElement.SetInactive" alt="" coords="233,13,435,39"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a789697af6b912a4b12c997cbb6589d77"></a>
@@ -308,15 +287,6 @@ Gráfico de llamadas para esta función:</div>
 </div><div class="memdoc">
 
 <p>Reimplementado de <a class="el" href="class_actor.html#aedc96ab49bc3565baceec8a969537a04">Actor</a>.</p>
-
-<p><div class="dynheader">
-Gráfico de llamadas a esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian_a789697af6b912a4b12c997cbb6589d77_icgraph.png" border="0" usemap="#class_librarian_a789697af6b912a4b12c997cbb6589d77_icgraph" alt=""/></div>
-<map name="class_librarian_a789697af6b912a4b12c997cbb6589d77_icgraph" id="class_librarian_a789697af6b912a4b12c997cbb6589d77_icgraph">
-<area shape="rect" id="node2" href="class_librarian.html#a86df1ea2409dedd087ce08503b88406f" title="Librarian.Update" alt="" coords="160,5,276,32"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -343,15 +313,6 @@ Gráfico de llamadas a esta función:</div>
 
 <p>Reimplementado de <a class="el" href="class_actor.html#a2675f3580f1e1871f6245959cf7e0e1c">Actor</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian_a86df1ea2409dedd087ce08503b88406f_cgraph.png" border="0" usemap="#class_librarian_a86df1ea2409dedd087ce08503b88406f_cgraph" alt=""/></div>
-<map name="class_librarian_a86df1ea2409dedd087ce08503b88406f_cgraph" id="class_librarian_a86df1ea2409dedd087ce08503b88406f_cgraph">
-<area shape="rect" id="node2" href="class_librarian.html#a789697af6b912a4b12c997cbb6589d77" title="Librarian.IsIdle" alt="" coords="213,5,320,32"/><area shape="rect" id="node3" href="class_cut_scenes_manager.html#aba449ad310f0656faef5bab1fb4abbb5" title="CutScenesManager.IsPlaying" alt="" coords="169,56,364,83"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a7667a72f6592d5e7ba8053922899c544"></a>
@@ -377,15 +338,6 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Reimplementado de <a class="el" href="class_interactive_element.html#a2bab48f960ccde54c5157db3552d588f">InteractiveElement</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian_a7667a72f6592d5e7ba8053922899c544_cgraph.png" border="0" usemap="#class_librarian_a7667a72f6592d5e7ba8053922899c544_cgraph" alt=""/></div>
-<map name="class_librarian_a7667a72f6592d5e7ba8053922899c544_cgraph" id="class_librarian_a7667a72f6592d5e7ba8053922899c544_cgraph">
-<area shape="rect" id="node2" href="class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="260,5,355,32"/><area shape="rect" id="node3" href="class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="455,95,623,137"/><area shape="rect" id="node4" href="class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="231,107,383,133"/><area shape="rect" id="node5" href="class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="260,208,355,235"/><area shape="rect" id="node9" href="class_actor.html#a6380ea33ed8249b9e65af45ad883e302" title="Actor.BeginConversation" alt="" coords="224,157,391,184"/><area shape="rect" id="node10" href="class_actor.html#acfa4849ad82633d6ae239f69252f9a97" title="Actor.EndConversation" alt="" coords="229,259,385,285"/><area shape="rect" id="node11" href="class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="442,284,637,311"/><area shape="rect" id="node6" href="class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="439,208,640,235"/><area shape="rect" id="node7" href="class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="688,179,903,205"/><area shape="rect" id="node8" href="class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="693,230,898,271"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a459b17f8716a037d2250c72b9a982275"></a>
@@ -410,15 +362,6 @@ Gráfico de llamadas para esta función:</div>
 </div><div class="memdoc">
 
 <p>Reimplementado de <a class="el" href="class_interactive_element.html#a5c4c788ab325d8917ba898cd8b4737c4">InteractiveElement</a>.</p>
-
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_librarian_a459b17f8716a037d2250c72b9a982275_cgraph.png" border="0" usemap="#class_librarian_a459b17f8716a037d2250c72b9a982275_cgraph" alt=""/></div>
-<map name="class_librarian_a459b17f8716a037d2250c72b9a982275_cgraph" id="class_librarian_a459b17f8716a037d2250c72b9a982275_cgraph">
-<area shape="rect" id="node2" href="class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="282,5,377,32"/><area shape="rect" id="node3" href="class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="245,57,413,98"/><area shape="rect" id="node4" href="class_actor.html#acf0774be2dcbb6f33c90b87a0d602373" title="Actor.LookToTheRight" alt="" coords="253,123,405,149"/><area shape="rect" id="node5" href="class_actor.html#a6e8fc1ce9421af80db947bd623de92a2" title="Actor.LookToTheLeft" alt="" coords="257,173,401,200"/><area shape="rect" id="node6" href="class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="282,224,377,251"/><area shape="rect" id="node10" href="class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="232,275,427,301"/><area shape="rect" id="node7" href="class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="475,224,676,251"/><area shape="rect" id="node8" href="class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="724,195,939,221"/><area shape="rect" id="node9" href="class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="729,246,934,287"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -478,12 +421,12 @@ Gráfico de llamadas para esta función:</div>
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
-<li>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Scripts/Actors/<a class="el" href="_librarian_8cs.html">Librarian.cs</a></li>
+<li>1812/project/Assets/Scripts/Actors/<a class="el" href="_librarian_8cs.html">Librarian.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 15 de Septiembre de 2015 00:45:54 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Jueves, 17 de Septiembre de 2015 00:18:09 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

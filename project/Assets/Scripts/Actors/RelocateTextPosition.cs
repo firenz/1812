@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class RelocateTextPosition : MonoBehaviour {
-	public const float screenMargin = 20f;
+	public const float defaultScreenMargin = 20f;
 
 	private Transform panelTransform;
 	private Transform dialogTextTransform;
@@ -28,17 +28,19 @@ public class RelocateTextPosition : MonoBehaviour {
 
 	private void Relocate(){
 		if(dialogueText.text != ""){
+			float _newScreenMargin = RecalculateScreenMarginSize();
+
 			Vector2 _dialogueTextViewportPosition = Camera.main.WorldToViewportPoint(dialogTextTransform.position);
 			Vector2 _dialogueTextScreenPosition = new Vector2(
 				((_dialogueTextViewportPosition.x * actorCanvasRectTransform.sizeDelta.x) - (actorCanvasRectTransform.sizeDelta.x * 0.5f)),
 				((_dialogueTextViewportPosition.y * actorCanvasRectTransform.sizeDelta.y) - (actorCanvasRectTransform.sizeDelta.y * 0.5f)));
 			float _halfCurrentPanelWidth = (panelRectTransform.sizeDelta.x) * 0.5f;
 
-			if((_dialogueTextScreenPosition.x + _halfCurrentPanelWidth) >= (halfScreenWidth - screenMargin)){
-				panelRectTransform.anchoredPosition = new Vector2((halfScreenWidth - _halfCurrentPanelWidth) - screenMargin, panelRectTransform.anchoredPosition.y);
+			if((_dialogueTextScreenPosition.x + _halfCurrentPanelWidth) >= (halfScreenWidth - _newScreenMargin)){
+				panelRectTransform.anchoredPosition = new Vector2((halfScreenWidth - _halfCurrentPanelWidth) - _newScreenMargin, panelRectTransform.anchoredPosition.y);
 			}
-			else if((_dialogueTextScreenPosition.x - _halfCurrentPanelWidth) <= ((halfScreenWidth * -1f) + screenMargin)){
-				panelRectTransform.anchoredPosition = new Vector2((halfScreenWidth * -1f) + (_halfCurrentPanelWidth + screenMargin), panelRectTransform.anchoredPosition.y);
+			else if((_dialogueTextScreenPosition.x - _halfCurrentPanelWidth) <= ((halfScreenWidth * -1f) + _newScreenMargin)){
+				panelRectTransform.anchoredPosition = new Vector2((halfScreenWidth * -1f) + (_halfCurrentPanelWidth + _newScreenMargin), panelRectTransform.anchoredPosition.y);
 			}
 			else{
 				panelTransform.position = dialogTextTransform.position;
@@ -46,6 +48,16 @@ public class RelocateTextPosition : MonoBehaviour {
 		}
 		else{
 			panelTransform.position = dialogTextTransform.position;
+		}
+	}
+
+	private float RecalculateScreenMarginSize(){
+		if(Screen.width == 800){
+			return defaultScreenMargin;
+		}
+		else{
+			float _newMarginSize = (halfScreenWidth * defaultScreenMargin) / 400f;
+			return _newMarginSize;
 		}
 	}
 }

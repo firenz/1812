@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">1812: La aventura
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Demo técnica del Motor de Aventuras Gráficas en Unity 2D</div>
   </td>
@@ -39,7 +39,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
       <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
@@ -55,20 +55,10 @@
 <div class="title">Referencia de la Clase WarperElement</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Diagrama de herencias de WarperElement</div>
-<div class="dyncontent">
-<div class="center"><img src="class_warper_element__inherit__graph.png" border="0" usemap="#_warper_element_inherit__map" alt="Inheritance graph"/></div>
-<map name="_warper_element_inherit__map" id="_warper_element_inherit__map">
-<area shape="rect" id="node4" href="class_corridor_door.html" title="{CorridorDoor\n||# WaitForLeftClickAction()\l}" alt="" coords="5,770,180,847"/><area shape="rect" id="node5" href="class_door.html" title="{Door\n||# WaitForLeftClickAction()\l}" alt="" coords="204,770,379,847"/><area shape="rect" id="node6" href="class_shadow_to_w_c.html" title="{ShadowToWC\n||# InitializeInformation()\l# WaitForLeftClickAction()\l}" alt="" coords="403,763,577,855"/><area shape="rect" id="node2" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="187,131,395,560"/></map>
-</div>
-<div class="dynheader">
-Diagrama de colaboración para WarperElement:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_warper_element__coll__graph.png" border="0" usemap="#_warper_element_coll__map" alt="Collaboration graph"/></div>
-<map name="_warper_element_coll__map" id="_warper_element_coll__map">
-<area shape="rect" id="node2" href="class_interactive_element.html" title="{InteractiveElement\n|+ interactivePosition\l+ spriteWidth\l+ spriteHeight\l+ displayName\l+ isInactive\l# groupID\l# nameID\l# minDistance\l# thisSpriteRenderer\l# walkingPosition\l|+ BeginPlayerAction()\l+ EndPlayerAction()\l+ LeftClickAction()\l+ RightClickAction()\l+ ActionOnItemInventoryUsed()\l+ ChangeCursorOnMouseOver()\l+ SetInactive()\l+ SetActive()\l# Start()\l# InitializeInformation()\l# WaitForLeftClickAction()\l# WaitForRightClickAction()\l# CalculateSpriteWidth()\l# CalculateSpriteHeight()\l# BeginAction()\l# EndAction()\l}" alt="" coords="5,131,213,560"/></map>
-</div>
+
+<p>Herencias <a class="el" href="class_interactive_element.html">InteractiveElement</a>.</p>
+
+<p>Heredado por <a class="el" href="class_corridor_door.html">CorridorDoor</a>, <a class="el" href="class_door.html">Door</a> y <a class="el" href="class_shadow_to_w_c.html">ShadowToWC</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Tipos públicos</h2></td></tr>
@@ -228,15 +218,6 @@ Otros miembros heredados</h2></td></tr>
 
 <p>Reimplementado de <a class="el" href="class_interactive_element.html#a2bab48f960ccde54c5157db3552d588f">InteractiveElement</a>.</p>
 
-<p><div class="dynheader">
-Gráfico de llamadas para esta función:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_warper_element_ab589fbe714d5ffe71cee5984727a289b_cgraph.png" border="0" usemap="#class_warper_element_ab589fbe714d5ffe71cee5984727a289b_cgraph" alt=""/></div>
-<map name="class_warper_element_ab589fbe714d5ffe71cee5984727a289b_cgraph" id="class_warper_element_ab589fbe714d5ffe71cee5984727a289b_cgraph">
-<area shape="rect" id="node2" href="class_player.html#a6d7e3c8698341a4e9a31fe6fa287fd59" title="Player.GoTo" alt="" coords="286,5,381,32"/><area shape="rect" id="node3" href="class_interactive_element.html#a1f77ae211ad4083289670adc05dd4b6c" title="InteractiveElement.Begin\lAction" alt="" coords="249,57,417,98"/><area shape="rect" id="node4" href="class_actor.html#a9cbecf0b71e4969243f3a9ca3f38e2a2" title="Actor.Speak" alt="" coords="286,123,381,149"/><area shape="rect" id="node8" href="class_interactive_element.html#a4fb65dfbd1b72ded13e1b9642bb61ba6" title="InteractiveElement.EndAction" alt="" coords="236,173,431,200"/><area shape="rect" id="node9" href="class_game_controller.html#a701eeee606bed7c711fc9f09ba524a0e" title="GameController.WarpToLevel" alt="" coords="237,224,429,251"/><area shape="rect" id="node5" href="class_actor.html#a655b206b1bb06b6e94ac3da2fce36f15" title="Actor.WaitForSpeakCompleted" alt="" coords="479,123,680,149"/><area shape="rect" id="node6" href="class_display_dialogue_text.html#acab544789935227c2e4cda639d10e479" title="DisplayDialogueText.DisplayText" alt="" coords="728,93,943,120"/><area shape="rect" id="node7" href="class_display_dialogue_text.html#a5e0499845b519826246b7d4e5f340c24" title="DisplayDialogueText.HasEnded\lDisplayingText" alt="" coords="733,145,938,186"/><area shape="rect" id="node10" href="class_game_state.html#a55ddf009140dc48a4d540f00430231b3" title="GameState.SaveGameState" alt="" coords="485,224,673,251"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Documentación de los datos miembro</h2>
@@ -281,12 +262,12 @@ Gráfico de llamadas para esta función:</div>
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
-<li>C:/Users/Alicia/Documents/GitHub/demo_git/1812/project/Assets/Scripts/InteractiveElements/<a class="el" href="_warper_element_8cs.html">WarperElement.cs</a></li>
+<li>1812/project/Assets/Scripts/InteractiveElements/<a class="el" href="_warper_element_8cs.html">WarperElement.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 15 de Septiembre de 2015 00:45:54 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Jueves, 17 de Septiembre de 2015 00:18:09 para 1812: La aventura por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

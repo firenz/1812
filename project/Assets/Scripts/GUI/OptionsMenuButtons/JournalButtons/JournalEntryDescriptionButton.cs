@@ -6,7 +6,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Transform))]
 public class JournalEntryDescriptionButton : UIGenericButton {
 	private Transform thisTransform;
-	private Transform thisScrollbar;
+	private UIGenericScrollbar thisScrollbar;
 
 	protected override void OnEnable(){
 		base.OnEnable();
@@ -23,11 +23,7 @@ public class JournalEntryDescriptionButton : UIGenericButton {
 	protected override void Start(){
 		thisButton = this.GetComponent<Button>();
 		buttonText = this.transform.FindChild("ScrollView/Text").GetComponent<Text>();
-		thisScrollbar = this.transform.FindChild("Scrollbar");
-
-		localizedTextGroupID = JournalEntriesManager.localizedTextGroupID;
-		localizedTextElementID = JournalEntriesManager.localizedTextButtonID;
-		localizedTextStringID = "";
+		thisScrollbar = this.transform.FindChild("Scrollbar").GetComponent<UIGenericScrollbar>();
 		thisTransform = this.GetComponent<Transform>();
 		ResetPosition();
 	}
@@ -60,7 +56,7 @@ public class JournalEntryDescriptionButton : UIGenericButton {
 		thisTransform.SetAsFirstSibling();
 		buttonText.text = "";
 		thisScrollbar.gameObject.SetActive(true);
-		thisScrollbar.GetComponent<UIGenericScrollbar>().ResetPosition();
+		thisScrollbar.ResetPosition();
 	}
 
 	protected override void ChangeButtonTextLanguage(){}	

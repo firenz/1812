@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Gestor y controlador de escenas cinematicas.
+/// </summary>
 public class CutScenesManager : MonoBehaviour {
-	public const string nameProfessorOfficeScene = "ProfessorOffice";
-	public const string nameCorridorScene = "Corridor";
-
 	private static bool isPlaying = false;
 
 	private string localizedTextGroup = "CUTSCENES";
@@ -89,7 +89,7 @@ public class CutScenesManager : MonoBehaviour {
 		Inventory.Instance.AddItem("FailedTestInventory");
 		GameState.CutSceneData.isPlayedIntroCorridorPart = true;
 		isPlaying = false;
-		GameController.WarpToLevel(nameProfessorOfficeScene);
+		GameController.WarpToLevel("ProfessorOffice");
 	}
 
 	private IEnumerator PlayIntroProfessorOfficePart(){
@@ -186,7 +186,7 @@ public class CutScenesManager : MonoBehaviour {
 
 		GameState.CutSceneData.isPlayedCutsceneAfterMapPuzzleIsSolved = true;
 		isPlaying = false;
-		GameController.WarpToLevel(nameCorridorScene);
+		GameController.WarpToLevel("Corridor");
 	}
 
 	private IEnumerator PlayCutsceneAfterSolvingMapPuzzleInCorridor(){
