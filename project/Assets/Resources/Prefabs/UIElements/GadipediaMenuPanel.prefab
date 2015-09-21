@@ -697,7 +697,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11490266}
   m_HandleRect: {fileID: 22430330}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localizedTextGroupID: OPTIONS_MENU
-  localizedTextMenuID: JOURNAL
+  localizedTextMenuID: GADIPEDIA
   localizedTextLabelID: NAME
 --- !u!114 &11472686
 MonoBehaviour:
