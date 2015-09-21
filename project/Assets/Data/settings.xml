@@ -2,7 +2,7 @@
   <SystemSettings>
     <FirstSetup firstTimeLaunched="False" />
     <Screen Width="800" Height="600" FullScreen="False" />
-    <Language currentLanguage="EN" />
+    <Language currentLanguage="ES" />
     <SoundSettings musicVolume="75" SFXVolume="75" />
   </SystemSettings>
 </SettingsFile>
