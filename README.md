@@ -6,8 +6,6 @@ Proyecto Final de Carrera dedicado al diseño e implementación desde cero, sin 
 
 Aparte, para demostrar el potencial del motor se creó una demo técnica de lo que sería un juego llamado 1812: La aventura. Se trata de un videojuego del género de las aventura gráficas, en el que deberemos resolver un puzzle basado en los hechos históricos del Cádiz de 1812.
 
-##Sobre el proyecto
-
 ##Sobre la demo técnica
 En la demo técnica, controlaremos a un estudiante del Grado de Historia de la Universidad de Cádiz, en el que recientemente ha suspendido un examen y va al despacho a pedir una revisión para su nota, sin embargo, no logra encontrar al profesor y se embarcará en una aventura para descubrir su paradero, ayudándose de las pistas obtenidas al resolver los puzles que nos encontremos.
 
